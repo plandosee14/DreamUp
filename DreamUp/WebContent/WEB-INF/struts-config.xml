@@ -5,13 +5,14 @@
 <struts-config>
 
   <action-mappings>
-	 <action path="main"
-	         forward=".main">
-	 
-	 </action>
-
-
-
+	       <action path="/main"
+                   forward=".main"/>
+                   
+           <action path="/project"
+                   forward=".menu1"/>
+                   
+           <action path="/projectUp"
+                   forward=".menu2"/>
 
   </action-mappings>
   
