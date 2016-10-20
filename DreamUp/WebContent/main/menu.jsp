@@ -11,8 +11,8 @@
 <%-- menu.jsp --%>
 <body>
 
-<h:link action="/tiles/menu1">프로젝트</h:link>
-<h:link action="/tiles/menu2">프로젝트 등록</h:link>
+<h:link action="/project">프로젝트</h:link>
+<h:link action="/projectUp">프로젝트 등록</h:link>
 <a href="main.do">Dream Up</a>
 <a href="/struts/tiles/main.do">로그인</a>
 

@@ -7,8 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-test합니다~!!ㅎㅎㅎㅎ효ㅕ혀ㅛ효ㅕ혛효효
-료료ㅛ혀
+여기는 project list입니다~!!홀롤로로
 </body>
 </html>
