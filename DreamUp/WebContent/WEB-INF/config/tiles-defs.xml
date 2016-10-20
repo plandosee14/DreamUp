@@ -14,10 +14,10 @@
   
   <definition name=".menu1" extends=".main">
     <!-- extends: 부모definition에 정의된 put value를 사용하겠다! -->
-    <put name="body" value="/1007/menu1.jsp"></put>
+    <put name="body" value="/main/menu1.jsp"></put>
   </definition>
   
   <definition name=".menu2" extends=".main">
-    <put name="body" value="/1007/menu2.jsp"></put>
+    <put name="body" value="/main/menu2.jsp"></put>
   </definition>
 </tiles-definitions>
