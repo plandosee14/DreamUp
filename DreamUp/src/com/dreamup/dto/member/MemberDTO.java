@@ -4,125 +4,126 @@ import java.util.Date;
 
 public class MemberDTO {
 	
-	private int m_No;				
-	private String m_Id;
-	private String m_Password;
-	private String m_Email;	
-	private Date m_Date;
-	private String m_Name;
-	private String m_Supporting;
-	private String m_Phone;
-	private String m_Address;
-	private String m_Post;
-	private String m_Account;
+	private int m_no;				
+	private String m_id;
+	private String m_password;
+	private String m_email;	
+	private Date m_date;
+	private String m_name;
+	private String m_supporting;
+	private String m_phone;
+	private String m_address;
+	private String m_post;
+	private String m_account;
 	
 	public MemberDTO() {
 	}
 
-	public MemberDTO(int m_No, String m_Id, String m_Password, String m_Email, Date m_Date, String m_Name,
-			String m_Supporting, String m_Phone, String m_Address, String m_Post, String m_Account) {
+	public MemberDTO(int m_no, String m_id, String m_password, String m_email, Date m_date, String m_name,
+			String m_supporting, String m_phone, String m_address, String m_post, String m_account) {
 		super();
-		this.m_No = m_No;
-		this.m_Id = m_Id;
-		this.m_Password = m_Password;
-		this.m_Email = m_Email;
-		this.m_Date = m_Date;
-		this.m_Name = m_Name;
-		this.m_Supporting = m_Supporting;
-		this.m_Phone = m_Phone;
-		this.m_Address = m_Address;
-		this.m_Post = m_Post;
-		this.m_Account = m_Account;
+		this.m_no = m_no;
+		this.m_id = m_id;
+		this.m_password = m_password;
+		this.m_email = m_email;
+		this.m_date = m_date;
+		this.m_name = m_name;
+		this.m_supporting = m_supporting;
+		this.m_phone = m_phone;
+		this.m_address = m_address;
+		this.m_post = m_post;
+		this.m_account = m_account;
 	}
 
-	public int getM_No() {
-		return m_No;
+	public int getM_no() {
+		return m_no;
 	}
 
-	public void setM_No(int m_No) {
-		this.m_No = m_No;
+	public void setM_no(int m_no) {
+		this.m_no = m_no;
 	}
 
-	public String getM_Id() {
-		return m_Id;
+	public String getM_id() {
+		return m_id;
 	}
 
-	public void setM_Id(String m_Id) {
-		this.m_Id = m_Id;
+	public void setM_id(String m_id) {
+		this.m_id = m_id;
 	}
 
-	public String getM_Password() {
-		return m_Password;
+	public String getM_password() {
+		return m_password;
 	}
 
-	public void setM_Password(String m_Password) {
-		this.m_Password = m_Password;
+	public void setM_password(String m_password) {
+		this.m_password = m_password;
 	}
 
-	public String getM_Email() {
-		return m_Email;
+	public String getM_email() {
+		return m_email;
 	}
 
-	public void setM_Email(String m_Email) {
-		this.m_Email = m_Email;
+	public void setM_email(String m_email) {
+		this.m_email = m_email;
 	}
 
-	public Date getM_Date() {
-		return m_Date;
+	public Date getM_date() {
+		return m_date;
 	}
 
-	public void setM_Date(Date m_Date) {
-		this.m_Date = m_Date;
+	public void setM_date(Date m_date) {
+		this.m_date = m_date;
 	}
 
-	public String getM_Name() {
-		return m_Name;
+	public String getM_name() {
+		return m_name;
 	}
 
-	public void setM_Name(String m_Name) {
-		this.m_Name = m_Name;
+	public void setM_name(String m_name) {
+		this.m_name = m_name;
 	}
 
-	public String getM_Supporting() {
-		return m_Supporting;
+	public String getM_supporting() {
+		return m_supporting;
 	}
 
-	public void setM_Supporting(String m_Supporting) {
-		this.m_Supporting = m_Supporting;
+	public void setM_supporting(String m_supporting) {
+		this.m_supporting = m_supporting;
 	}
 
-	public String getM_Phone() {
-		return m_Phone;
+	public String getM_phone() {
+		return m_phone;
 	}
 
-	public void setM_Phone(String m_Phone) {
-		this.m_Phone = m_Phone;
+	public void setM_phone(String m_phone) {
+		this.m_phone = m_phone;
 	}
 
-	public String getM_Address() {
-		return m_Address;
+	public String getM_address() {
+		return m_address;
 	}
 
-	public void setM_Address(String m_Address) {
-		this.m_Address = m_Address;
+	public void setM_address(String m_address) {
+		this.m_address = m_address;
 	}
 
-	public String getM_Post() {
-		return m_Post;
+	public String getM_post() {
+		return m_post;
 	}
 
-	public void setM_Post(String m_Post) {
-		this.m_Post = m_Post;
+	public void setM_post(String m_post) {
+		this.m_post = m_post;
 	}
 
-	public String getM_Account() {
-		return m_Account;
+	public String getM_account() {
+		return m_account;
 	}
 
-	public void setM_Account(String m_Account) {
-		this.m_Account = m_Account;
+	public void setM_account(String m_account) {
+		this.m_account = m_account;
 	}
 	
 	
+
 
 }

@@ -4,149 +4,149 @@ import java.util.Date;
 
 public class ProjectDTO {
 	
-	private int pro_No; 		
-	private String m_Id;		
-	private String pro_Title;		
-	private String pro_Content;			
-	private Date pro_Start;		
-	private Date pro_End;			
-	private int pro_Goal;		
-	private String pro_Catagory;		
-	private String pro_Video;		
-	private String pro_ImageUrl;		
-	private String pro_Thumbnail;		
-	private int pro_Account;		
-	private int su_Count;		
+	private int pro_no; 		
+	private String m_id;		
+	private String pro_title;		
+	private String pro_content;			
+	private Date pro_start;		
+	private Date pro_end;			
+	private int pro_goal;		
+	private String pro_catagory;		
+	private String pro_video;		
+	private String pro_imageUrl;		
+	private String pro_thumbnail;		
+	private int pro_account;		
+	private int su_count;		
 	private int pro_state;		
-	private String nowAmount;
+	private String now_amount;
 	
 	public ProjectDTO() {
 		
 	}
 
-	public ProjectDTO(int pro_No, String m_Id, String pro_Title, String pro_Content, Date pro_Start, Date pro_End,
-			int pro_Goal, String pro_Catagory, String pro_Video, String pro_ImageUrl, String pro_Thumbnail,
-			int pro_Account, int su_Count, int pro_state, String nowAmount) {
+	public ProjectDTO(int pro_no, String m_id, String pro_title, String pro_content, Date pro_start, Date pro_end,
+			int pro_goal, String pro_catagory, String pro_video, String pro_imageUrl, String pro_thumbnail,
+			int pro_account, int su_count, int pro_state, String now_amount) {
 		super();
-		this.pro_No = pro_No;
-		this.m_Id = m_Id;
-		this.pro_Title = pro_Title;
-		this.pro_Content = pro_Content;
-		this.pro_Start = pro_Start;
-		this.pro_End = pro_End;
-		this.pro_Goal = pro_Goal;
-		this.pro_Catagory = pro_Catagory;
-		this.pro_Video = pro_Video;
-		this.pro_ImageUrl = pro_ImageUrl;
-		this.pro_Thumbnail = pro_Thumbnail;
-		this.pro_Account = pro_Account;
-		this.su_Count = su_Count;
+		this.pro_no = pro_no;
+		this.m_id = m_id;
+		this.pro_title = pro_title;
+		this.pro_content = pro_content;
+		this.pro_start = pro_start;
+		this.pro_end = pro_end;
+		this.pro_goal = pro_goal;
+		this.pro_catagory = pro_catagory;
+		this.pro_video = pro_video;
+		this.pro_imageUrl = pro_imageUrl;
+		this.pro_thumbnail = pro_thumbnail;
+		this.pro_account = pro_account;
+		this.su_count = su_count;
 		this.pro_state = pro_state;
-		this.nowAmount = nowAmount;
+		this.now_amount = now_amount;
 	}
 
-	public int getPro_No() {
-		return pro_No;
+	public int getPro_no() {
+		return pro_no;
 	}
 
-	public void setPro_No(int pro_No) {
-		this.pro_No = pro_No;
+	public void setPro_no(int pro_no) {
+		this.pro_no = pro_no;
 	}
 
-	public String getM_Id() {
-		return m_Id;
+	public String getM_id() {
+		return m_id;
 	}
 
-	public void setM_Id(String m_Id) {
-		this.m_Id = m_Id;
+	public void setM_id(String m_id) {
+		this.m_id = m_id;
 	}
 
-	public String getPro_Title() {
-		return pro_Title;
+	public String getPro_title() {
+		return pro_title;
 	}
 
-	public void setPro_Title(String pro_Title) {
-		this.pro_Title = pro_Title;
+	public void setPro_title(String pro_title) {
+		this.pro_title = pro_title;
 	}
 
-	public String getPro_Content() {
-		return pro_Content;
+	public String getPro_content() {
+		return pro_content;
 	}
 
-	public void setPro_Content(String pro_Content) {
-		this.pro_Content = pro_Content;
+	public void setPro_content(String pro_content) {
+		this.pro_content = pro_content;
 	}
 
-	public Date getPro_Start() {
-		return pro_Start;
+	public Date getPro_start() {
+		return pro_start;
 	}
 
-	public void setPro_Start(Date pro_Start) {
-		this.pro_Start = pro_Start;
+	public void setPro_start(Date pro_start) {
+		this.pro_start = pro_start;
 	}
 
-	public Date getPro_End() {
-		return pro_End;
+	public Date getPro_end() {
+		return pro_end;
 	}
 
-	public void setPro_End(Date pro_End) {
-		this.pro_End = pro_End;
+	public void setPro_end(Date pro_end) {
+		this.pro_end = pro_end;
 	}
 
-	public int getPro_Goal() {
-		return pro_Goal;
+	public int getPro_goal() {
+		return pro_goal;
 	}
 
-	public void setPro_Goal(int pro_Goal) {
-		this.pro_Goal = pro_Goal;
+	public void setPro_goal(int pro_goal) {
+		this.pro_goal = pro_goal;
 	}
 
-	public String getPro_Catagory() {
-		return pro_Catagory;
+	public String getPro_catagory() {
+		return pro_catagory;
 	}
 
-	public void setPro_Catagory(String pro_Catagory) {
-		this.pro_Catagory = pro_Catagory;
+	public void setPro_catagory(String pro_catagory) {
+		this.pro_catagory = pro_catagory;
 	}
 
-	public String getPro_Video() {
-		return pro_Video;
+	public String getPro_video() {
+		return pro_video;
 	}
 
-	public void setPro_Video(String pro_Video) {
-		this.pro_Video = pro_Video;
+	public void setPro_video(String pro_video) {
+		this.pro_video = pro_video;
 	}
 
-	public String getPro_ImageUrl() {
-		return pro_ImageUrl;
+	public String getPro_imageUrl() {
+		return pro_imageUrl;
 	}
 
-	public void setPro_ImageUrl(String pro_ImageUrl) {
-		this.pro_ImageUrl = pro_ImageUrl;
+	public void setPro_imageUrl(String pro_imageUrl) {
+		this.pro_imageUrl = pro_imageUrl;
 	}
 
-	public String getPro_Thumbnail() {
-		return pro_Thumbnail;
+	public String getPro_thumbnail() {
+		return pro_thumbnail;
 	}
 
-	public void setPro_Thumbnail(String pro_Thumbnail) {
-		this.pro_Thumbnail = pro_Thumbnail;
+	public void setPro_thumbnail(String pro_thumbnail) {
+		this.pro_thumbnail = pro_thumbnail;
 	}
 
-	public int getPro_Account() {
-		return pro_Account;
+	public int getPro_account() {
+		return pro_account;
 	}
 
-	public void setPro_Account(int pro_Account) {
-		this.pro_Account = pro_Account;
+	public void setPro_account(int pro_account) {
+		this.pro_account = pro_account;
 	}
 
-	public int getSu_Count() {
-		return su_Count;
+	public int getSu_count() {
+		return su_count;
 	}
 
-	public void setSu_Count(int su_Count) {
-		this.su_Count = su_Count;
+	public void setSu_count(int su_count) {
+		this.su_count = su_count;
 	}
 
 	public int getPro_state() {
@@ -157,12 +157,12 @@ public class ProjectDTO {
 		this.pro_state = pro_state;
 	}
 
-	public String getNowAmount() {
-		return nowAmount;
+	public String getNow_amount() {
+		return now_amount;
 	}
 
-	public void setNowAmount(String nowAmount) {
-		this.nowAmount = nowAmount;
+	public void setNow_amount(String now_amount) {
+		this.now_amount = now_amount;
 	}
 
 	

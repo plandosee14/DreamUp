@@ -4,41 +4,41 @@ import java.util.Date;
 
 public class ReplyDTO {
 	
-	private int rp_No;		
-	private int rro_No;
+	private int rp_no;		
+	private int pro_no;
 	private String m_id;
-	private String rp_Content;
-	private Date rp_Time;
-	private int thumbsUp;
+	private String rp_oontent;
+	private Date rp_time;
+	private int thumbsup;
 	
 	public ReplyDTO() {
 		
 	}
 
-	public ReplyDTO(int rp_No, int rro_No, String m_id, String rp_Content, Date rp_Time, int thumbsUp) {
+	public ReplyDTO(int rp_no, int pro_no, String m_id, String rp_oontent, Date rp_time, int thumbsup) {
 		super();
-		this.rp_No = rp_No;
-		this.rro_No = rro_No;
+		this.rp_no = rp_no;
+		this.pro_no = pro_no;
 		this.m_id = m_id;
-		this.rp_Content = rp_Content;
-		this.rp_Time = rp_Time;
-		this.thumbsUp = thumbsUp;
+		this.rp_oontent = rp_oontent;
+		this.rp_time = rp_time;
+		this.thumbsup = thumbsup;
 	}
 
-	public int getRp_No() {
-		return rp_No;
+	public int getRp_no() {
+		return rp_no;
 	}
 
-	public void setRp_No(int rp_No) {
-		this.rp_No = rp_No;
+	public void setRp_no(int rp_no) {
+		this.rp_no = rp_no;
 	}
 
-	public int getRro_No() {
-		return rro_No;
+	public int getPro_no() {
+		return pro_no;
 	}
 
-	public void setRro_No(int rro_No) {
-		this.rro_No = rro_No;
+	public void setPro_no(int pro_no) {
+		this.pro_no = pro_no;
 	}
 
 	public String getM_id() {
@@ -49,30 +49,32 @@ public class ReplyDTO {
 		this.m_id = m_id;
 	}
 
-	public String getRp_Content() {
-		return rp_Content;
+	public String getRp_oontent() {
+		return rp_oontent;
 	}
 
-	public void setRp_Content(String rp_Content) {
-		this.rp_Content = rp_Content;
+	public void setRp_oontent(String rp_oontent) {
+		this.rp_oontent = rp_oontent;
 	}
 
-	public Date getRp_Time() {
-		return rp_Time;
+	public Date getRp_time() {
+		return rp_time;
 	}
 
-	public void setRp_Time(Date rp_Time) {
-		this.rp_Time = rp_Time;
+	public void setRp_time(Date rp_time) {
+		this.rp_time = rp_time;
 	}
 
-	public int getThumbsUp() {
-		return thumbsUp;
+	public int getThumbsup() {
+		return thumbsup;
 	}
 
-	public void setThumbsUp(int thumbsUp) {
-		this.thumbsUp = thumbsUp;
+	public void setThumbsup(int thumbsup) {
+		this.thumbsup = thumbsup;
 	}
 	
+	
+
 	
 
 }

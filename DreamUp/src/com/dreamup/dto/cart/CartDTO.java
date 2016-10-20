@@ -4,54 +4,55 @@ import java.util.Date;
 
 public class CartDTO {
 	
-	private int c_No;			
-	private String m_Id;		
-	private int pro_No;			
-	private Date c_Date;
+	private int c_no;			
+	private String m_id;		
+	private int pro_no;			
+	private Date c_date;
 	
 	public CartDTO() {
 		
 	}
 
-	public CartDTO(int c_No, String m_Id, int pro_No, Date c_Date) {
+	public CartDTO(int c_no, String m_id, int pro_no, Date c_date) {
 		super();
-		this.c_No = c_No;
-		this.m_Id = m_Id;
-		this.pro_No = pro_No;
-		this.c_Date = c_Date;
+		this.c_no = c_no;
+		this.m_id = m_id;
+		this.pro_no = pro_no;
+		this.c_date = c_date;
 	}
 
-	public int getC_No() {
-		return c_No;
+	public int getC_no() {
+		return c_no;
 	}
 
-	public void setC_No(int c_No) {
-		this.c_No = c_No;
+	public void setC_no(int c_no) {
+		this.c_no = c_no;
 	}
 
-	public String getM_Id() {
-		return m_Id;
+	public String getM_id() {
+		return m_id;
 	}
 
-	public void setM_Id(String m_Id) {
-		this.m_Id = m_Id;
+	public void setM_id(String m_id) {
+		this.m_id = m_id;
 	}
 
-	public int getPro_No() {
-		return pro_No;
+	public int getPro_no() {
+		return pro_no;
 	}
 
-	public void setPro_No(int pro_No) {
-		this.pro_No = pro_No;
+	public void setPro_no(int pro_no) {
+		this.pro_no = pro_no;
 	}
 
-	public Date getC_Date() {
-		return c_Date;
+	public Date getC_date() {
+		return c_date;
 	}
 
-	public void setC_Date(Date c_Date) {
-		this.c_Date = c_Date;
+	public void setC_date(Date c_date) {
+		this.c_date = c_date;
 	}
+
 	
 	
 

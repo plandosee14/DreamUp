@@ -2,63 +2,64 @@ package com.dreamup.dto.reward;
 
 public class RewardDTO {
 	
-	private int re_No;		
-	private int pro_No;
-	private String re_Title;
-	private int re_Amount;
-	private String re_Item;
+	private int re_no;		
+	private int pro_no;
+	private String re_title;
+	private int re_amount;
+	private String re_item;
 	
 	public RewardDTO() {
 	}
 
-	public RewardDTO(int re_No, int pro_No, String re_Title, int re_Amount, String re_Item) {
+	public RewardDTO(int re_no, int pro_no, String re_title, int re_amount, String re_item) {
 		super();
-		this.re_No = re_No;
-		this.pro_No = pro_No;
-		this.re_Title = re_Title;
-		this.re_Amount = re_Amount;
-		this.re_Item = re_Item;
+		this.re_no = re_no;
+		this.pro_no = pro_no;
+		this.re_title = re_title;
+		this.re_amount = re_amount;
+		this.re_item = re_item;
 	}
 
-	public int getRe_No() {
-		return re_No;
+	public int getRe_no() {
+		return re_no;
 	}
 
-	public void setRe_No(int re_No) {
-		this.re_No = re_No;
+	public void setRe_no(int re_no) {
+		this.re_no = re_no;
 	}
 
-	public int getPro_No() {
-		return pro_No;
+	public int getPro_no() {
+		return pro_no;
 	}
 
-	public void setPro_No(int pro_No) {
-		this.pro_No = pro_No;
+	public void setPro_no(int pro_no) {
+		this.pro_no = pro_no;
 	}
 
-	public String getRe_Title() {
-		return re_Title;
+	public String getRe_title() {
+		return re_title;
 	}
 
-	public void setRe_Title(String re_Title) {
-		this.re_Title = re_Title;
+	public void setRe_title(String re_title) {
+		this.re_title = re_title;
 	}
 
-	public int getRe_Amount() {
-		return re_Amount;
+	public int getRe_amount() {
+		return re_amount;
 	}
 
-	public void setRe_Amount(int re_Amount) {
-		this.re_Amount = re_Amount;
+	public void setRe_amount(int re_amount) {
+		this.re_amount = re_amount;
 	}
 
-	public String getRe_Item() {
-		return re_Item;
+	public String getRe_item() {
+		return re_item;
 	}
 
-	public void setRe_Item(String re_Item) {
-		this.re_Item = re_Item;
+	public void setRe_item(String re_item) {
+		this.re_item = re_item;
 	}
+
 	
 	
 
