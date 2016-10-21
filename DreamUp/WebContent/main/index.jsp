@@ -11,7 +11,7 @@
 <body>
 	<table width="100%" border="1">
 	  <tr>
-	    <td  align="center">
+	    <td  align="center">  
 	      <tiles:insert attribute="header"/>
 	    </td>
 	  </tr>
