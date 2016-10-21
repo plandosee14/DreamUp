@@ -20,7 +20,7 @@ create table project(
 select * from member;
 insert into member values (member_seq.nextval, 'daemang', '1234', 'kancho33@naver.com', sysdate, '�̱���', '������?','010-3338-5525','���굿237-75','561-340','110-386969');
 	insert into project values (project_seq.nextval,'daemang2','MakingGame','alotofStrings',sysdate,sysdate,200000,'Game','com.dreamup.Video','com.dreamup.image','com.dreamup.testThumbnail',110411388284,'33','0','111111');
-
+s
 	select * from project;
 drop sequence project_seq;
 create sequence project_seq
