@@ -6,4 +6,8 @@
 	<insert id="join" parameterClass="member">
 		insert into member values (##,##,##,##,##)
 	</insert>
+	
+	<select id="select" resultClass="member">
+	select * from meme
+	</select>
 </sqlMap>

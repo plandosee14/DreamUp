@@ -3,11 +3,11 @@ package com.dreamup.dto.member;
 import java.util.Date;
 
 public class MemberDTO {
-	
-	private int m_no;				
+
+	private int m_no;
 	private String m_id;
 	private String m_password;
-	private String m_email;	
+	private String m_email;
 	private Date m_date;
 	private String m_name;
 	private String m_supporting;
@@ -15,7 +15,7 @@ public class MemberDTO {
 	private String m_address;
 	private String m_post;
 	private String m_account;
-	
+
 	public MemberDTO() {
 	}
 
@@ -122,8 +122,12 @@ public class MemberDTO {
 	public void setM_account(String m_account) {
 		this.m_account = m_account;
 	}
-	
-	
 
+	@Override
+	public String toString() {
+		return "MemberDTO [m_no=" + m_no + ", m_id=" + m_id + ", m_password=" + m_password + ", m_email=" + m_email
+				+ ", m_date=" + m_date + ", m_name=" + m_name + ", m_supporting=" + m_supporting + ", m_phone="
+				+ m_phone + ", m_address=" + m_address + ", m_post=" + m_post + ", m_account=" + m_account + "]";
+	}
 
 }
