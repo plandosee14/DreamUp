@@ -14,6 +14,20 @@ create table member(
 );
 	
 insert into member values (member_seq.nextval, 'daemang', '1234', 'kancho33@naver.com', sysdate, '최용석', '서포팅?','010-3338-5525','가산동237-75','561-340','110-386969');
+insert into member values (member_seq.nextval, 'daemang', '1234', 'kancho33@naver.com', sysdate, '이하은', '서포팅?','010-3338-5525','가산동237-75','561-340','110-386969');
+insert into member values (member_seq.nextval, 'daemang', '1234', 'kancho33@naver.com', sysdate, '기호창', '서포팅?','010-3338-5525','가산동237-75','561-340','110-386969');
+insert into member values (member_seq.nextval, 'daemang', '1234', 'kancho33@naver.com', sysdate, '전성원', '서포팅?','010-3338-5525','가산동237-75','561-340','110-386969');
+insert into member values (member_seq.nextval, 'daemang', '1234', 'kancho33@naver.com', sysdate, '정다운', '서포팅?','010-3338-5525','가산동237-75','561-340','110-386969');
+insert into member values (member_seq.nextval, 'daemang', '1234', 'kancho33@naver.com', sysdate, '이길재', '서포팅?','010-3338-5525','가산동237-75','561-340','110-386969');
+insert into member values (member_seq.nextval, 'daemang', '1234', 'kancho33@naver.com', sysdate, '', '서포팅?','010-3338-5525','가산동237-75','561-340','110-386969');
+insert into member values (member_seq.nextval, 'daemang', '1234', 'kancho33@naver.com', sysdate, '이길재', '서포팅?','010-3338-5525','가산동237-75','561-340','110-386969');
+insert into member values (member_seq.nextval, 'daemang', '1234', 'kancho33@naver.com', sysdate, '이길재', '서포팅?','010-3338-5525','가산동237-75','561-340','110-386969');
+insert into member values (member_seq.nextval, 'daemang', '1234', 'kancho33@naver.com', sysdate, '이길재', '서포팅?','010-3338-5525','가산동237-75','561-340','110-386969');
+insert into member values (member_seq.nextval, 'daemang', '1234', 'kancho33@naver.com', sysdate, '이길재', '서포팅?','010-3338-5525','가산동237-75','561-340','110-386969');
+
+
+
+
 insert into member values (member_seq.nextval, 'daemang', '1234', 'kancho33@naver.com', sysdate, '최용석');
 drop sequence member_seq;
 create sequence member_seq
