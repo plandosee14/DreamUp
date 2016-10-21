@@ -14,21 +14,20 @@
 	<table width="100%" border="1">
 	  <tr>
 	    <td  align="center">
-	    <%-- <%@include file="header.jsp"%> --%>
-	       <tiles:insert attribute="header"/>
+	  
+	      <jsp:include page="header.jsp" flush="true"></jsp:include>
 	    </td>
 	  </tr>
 	  <tr>
-	    <td><tiles:insert attribute="menu"/></td>
+	    <td><jsp:include page="menu.jsp" flush="true"></jsp:include></td>
 	  </tr>
 	  <tr>
-	    <td><tiles:insert attribute="body"/></td>
+	    <td><jsp:include page="body.jsp" flush="true"></jsp:include></td>
       </tr>
 	  <tr>
-	    <td  align="left"><tiles:insert attribute="footer"/></td> 
+	    <td><jsp:include page="footer.jsp" flush="true"></jsp:include></td> 
 	  </tr>
-	
-	
+
 	</table>
 </body>
 </html>

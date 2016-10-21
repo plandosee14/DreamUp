@@ -5,15 +5,10 @@
 <struts-config>
 
   <action-mappings>
-	       <action path="/main"
-                   forward=".main"/>
+	       <action path="/index"
+                   forward="/main/index.jsp"/>
                    
-           <action path="/project"
-                   forward=".menu1"/>
-                   
-           <action path="/projectUp"
-                   forward=".menu2"/>
-
+   
   </action-mappings>
   
    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/> 
