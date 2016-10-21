@@ -18,14 +18,15 @@ public class SqlMapConfig {
 	
 	static{
 		try {
-			String resource = "./iba/sqlMapConfig.xml";
+			String resource = "./com/dreamup/ibatis/sqlMapConfig.xml";
+			System.out.println("xml");
+			//현재패키지 밑에
 			Reader reader = Resources.getResourceAsReader(resource);
 			sqlMap = SqlMapClientBuilder.buildSqlMapClient(reader);
 		} catch (IOException e) {
 			e.printStackTrace();
 			throw new RuntimeException("MyAppSqlConfig초기화 중 에러: "+e);
 		}
-		
 	}
 	
 	public static SqlMapClient getSqlMapInstance(){

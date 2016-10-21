@@ -1,3 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd" >
-<sqlMap></sqlMap>
+<sqlMap namespace="member">
+	<typeAlias alias="member" type="com.dreamup.dto.member.MemberDTO" />
+
+	<insert id="join" parameterClass="member">
+		insert into member values (##,##,##,##,##)
+	</insert>
+</sqlMap>

@@ -12,7 +12,9 @@ create table member(
 	M_Post			varchar2(20),
 	M_Account		varchar2(20)
 );
-
+	
+insert into member values (member_seq.nextval, 'daemang', '1234', 'kancho33@naver.com', sysdate, '최용석', '서포팅?','010-3338-5525','가산동237-75','561-340','110-386969');
+insert into member values (member_seq.nextval, 'daemang', '1234', 'kancho33@naver.com', sysdate, '최용석');
 drop sequence member_seq;
 create sequence member_seq
 	start with 1
