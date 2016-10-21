@@ -18,6 +18,13 @@ public class MemberDAO {
 	}
 	
 	public boolean insert(MemberDTO member){
+		
+		try {
+			sqlMap.insert("member.insert",member);
+			return true;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 		return false;
 	}
 	
