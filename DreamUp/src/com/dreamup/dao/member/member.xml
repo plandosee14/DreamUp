@@ -2,13 +2,18 @@
 <!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd" >
 <sqlMap namespace="member">
 	<typeAlias alias="member" type="com.dreamup.dto.member.MemberDTO" />
-		
-		
-	<insert id="insert" parameterClass="member.dto.Member">
-		insert into member values (member_seq.nextval,#no#,#id#,#password#,#email#,#date#,#name#,#supporting#,#phone#,#address#,#post#,#account#)
+
+
+	<insert id="insert" parameterClass="member">
+	<!-- 	insert into member values
+		(member_seq.nextval,#no#,#id#,#password#,#email#,#date#,#name#,#supporting#,#phone#,#address#,#post#,#account#) -->
 	</insert>
-	
+
 	<select id="select" resultClass="member">
-	select * from member
+		select * from member where m_no=#m_no#
+	</select>
+
+	<select id="listMember" resultClass="member">
+		select * from member
 	</select>
 </sqlMap>
