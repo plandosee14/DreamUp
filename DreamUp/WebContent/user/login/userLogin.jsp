@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+로그인 페이지
+회원가입 갈래여~!
 </body>
 </html>

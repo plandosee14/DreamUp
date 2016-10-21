@@ -11,10 +11,10 @@
 <%-- menu.jsp --%>
 <body>
 
-<a href="menu1.do">프로젝트</a>
+<a href="project.do">프로젝트</a>
 <h:link action="/menu2">프로젝트 등록</h:link>
 <a href="main.do">Dream Up</a>
-<a href="/struts/tiles/main.do">로그인</a>
+<a href="login.do">로그인</a>
 
 </body>
 </html>
