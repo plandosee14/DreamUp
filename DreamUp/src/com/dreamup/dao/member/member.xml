@@ -8,6 +8,6 @@
 	</insert>
 	
 	<select id="select" resultClass="member">
-	select * from meme
+	select * from member
 	</select>
 </sqlMap>
