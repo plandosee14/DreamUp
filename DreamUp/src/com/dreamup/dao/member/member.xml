@@ -3,11 +3,17 @@
 <sqlMap namespace="member">
 	<typeAlias alias="member" type="com.dreamup.dto.member.MemberDTO" />
 
-	<insert id="join" parameterClass="member">
-		insert into member values (##,##,##,##,##)
+
+	<insert id="insert" parameterClass="member">
+	<!-- 	insert into member values
+		(member_seq.nextval,#no#,#id#,#password#,#email#,#date#,#name#,#supporting#,#phone#,#address#,#post#,#account#) -->
 	</insert>
-	
+
 	<select id="select" resultClass="member">
-	select * from member
+		select * from member where m_no=#m_no#
+	</select>
+
+	<select id="listMember" resultClass="member">
+		select * from member
 	</select>
 </sqlMap>
