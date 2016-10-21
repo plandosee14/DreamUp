@@ -28,6 +28,7 @@
   </definition>
   
   
+  
   <!-- 로그인 회원가입 --> 
   <definition name=".login" extends=".main">
     <put name="body" value="/user/login/userLogin.jsp"></put>
