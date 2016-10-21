@@ -1,3 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd" >
-<sqlMap></sqlMap>
+<sqlMap namespace="project">
+	<typeAlias alias="project" type="com.dreamup.dto.project.ProjectDTO" />
+	<insert id="insertBasic" parameterClass="project">
+		insert into project
+		(pro_title,pro_thumbnail,pro_catagory,pro_start,pro_end,pro_goal)
+		values (#pro_title#,#pro_thumbnail#,#pro_catagory#,#pro_start#,#pro_end#,#pro_goal#)
+	</insert>
+
+	<update id="updateStory" parameterClass="project">
+		update project set pro_re=#name#, pass=#pass#, email=#email#, tel=#tel#, contents=#contents# where id=#id#
+
+	</update>
+	<update id="updateProfile">
+
+	</update>
+
+	<update id="updateAccount">
+
+	</update>
+
+	<update id="updateProject">
+
+	</update>
+
+	<delete id="deleteProject" parameterClass="int">
+		delete from project
+		where pro_no = #pro_no#
+	</delete>
+
+	<select id="selectProject" parameterClass="int" resultClass="project">
+		select * from project where pro_no = #pro_no#
+	</select>
+
+	<select id="selectNewProject" parameterClass="java.sql.date"
+		resultClass="project">
+		select * from project where pro_start = sysdate
+	</select>
+
+	<select id="selectPopProject" parameterClass="int" resultClass="project">
+		select * from project where su_count <![CDATA[<]]>
+		#su_count#
+	</select>
+
+	<select id="selectCatagoryProject" parameterClass="int"
+		resultClass="project">
+		select * from project where pro_no =#pro_no#
+	</select>
+
+</sqlMap>

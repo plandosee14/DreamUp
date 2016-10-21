@@ -165,6 +165,22 @@ public class ProjectDTO {
 		this.now_amount = now_amount;
 	}
 
+	@Override
+	public String toString() {
+		return "ProjectDTO [pro_no=" + pro_no + ", m_id=" + m_id + ", pro_title=" + pro_title + ", pro_content="
+				+ pro_content + ", pro_start=" + pro_start + ", pro_end=" + pro_end + ", pro_goal=" + pro_goal
+				+ ", pro_catagory=" + pro_catagory + ", pro_video=" + pro_video + ", pro_imageUrl=" + pro_imageUrl
+				+ ", pro_thumbnail=" + pro_thumbnail + ", pro_account=" + pro_account + ", su_count=" + su_count
+				+ ", pro_state=" + pro_state + ", now_amount=" + now_amount + ", getPro_no()=" + getPro_no()
+				+ ", getM_id()=" + getM_id() + ", getPro_title()=" + getPro_title() + ", getPro_content()="
+				+ getPro_content() + ", getPro_start()=" + getPro_start() + ", getPro_end()=" + getPro_end()
+				+ ", getPro_goal()=" + getPro_goal() + ", getPro_catagory()=" + getPro_catagory() + ", getPro_video()="
+				+ getPro_video() + ", getPro_imageUrl()=" + getPro_imageUrl() + ", getPro_thumbnail()="
+				+ getPro_thumbnail() + ", getPro_account()=" + getPro_account() + ", getSu_count()=" + getSu_count()
+				+ ", getPro_state()=" + getPro_state() + ", getNow_amount()=" + getNow_amount() + ", getClass()="
+				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+	}
+
 	
 	
 
