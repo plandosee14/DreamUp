@@ -17,7 +17,14 @@
     <put name="body" value="/project/list/list.jsp"></put>
   </definition>
   
+  
   <definition name=".menu2" extends=".main">
     <put name="body" value="/project/register/proRegister1.jsp"></put>
   </definition>
+  
+  <definition name=".register2" extends=".main">
+    <put name="body" value="/project/register/proRegister2.jsp"></put>
+  </definition>
+  
+  
 </tiles-definitions>

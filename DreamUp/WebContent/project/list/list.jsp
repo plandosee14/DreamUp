@@ -6,7 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
+
 <body>
+
 여기는 project list입니다~!!홀롤로로
+
+
 </body>
+
 </html>

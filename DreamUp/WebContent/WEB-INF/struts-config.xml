@@ -6,9 +6,22 @@
 
   <action-mappings>
 	       <action path="/index"
-                   forward="/main/index.jsp"/>
+           forward="/main/index.jsp"/>
+	       <action path="/project"
+           forward="/project/list/list.jsp"/>
+	       <action path="/projectUp"
+           forward="/project/register/proRegister1.jsp"/>
+	       <action path="/index_iframe"
+           forward="/main/index_iframe.jsp"/>
+           
+	       <action path="/step1"
+	               type="com.dreamup.actions.project.StepAction">
+	          <forward name="scs" path="/register_2.do" redirect="true"/>
+	       </action>
                    
-   
+                   
+                   
+   			
   </action-mappings>
   
    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/> 

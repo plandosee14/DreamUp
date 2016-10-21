@@ -12,17 +12,17 @@
 	<table width="100%" border="1">
 	  <tr>
 	    <td  align="center">
-	      <tiles:insert attribute="header"/>
+	      <jsp:include page="../../main/header.jsp" flush="true"></jsp:include>
 	    </td>
 	  </tr>
 	  <tr>
-	    <td><tiles:insert attribute="menu"/></td>
+	    <td><jsp:include page="../../main/menu.jsp" flush="true"></jsp:include></td>
 	  </tr>
 	  <tr>
-	    <td><tiles:insert attribute="body"/></td>
+	    <td><jsp:include page="list.jsp" flush="true"></jsp:include></td>
       </tr>
 	  <tr>
-	    <td><tiles:insert attribute="footer"/></td> 
+	    <td><jsp:include page="../../main/footer.jsp" flush="true"></jsp:include></td> 
 	  </tr>
 
 	</table>

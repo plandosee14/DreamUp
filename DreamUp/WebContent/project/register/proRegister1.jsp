@@ -8,5 +8,13 @@
 </head>
 <body>
 여기는 프로젝트 만들것입니다~!
+  <br>
+  <form action="step1.do" method="post">
+       이름<input type="text" name="name">
+   <br><input type="submit" value="입력">
+  </form> 
+  
+  
+<!-- <a href="register_2.do">2단계></a> -->
 </body>
 </html>
