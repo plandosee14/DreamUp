@@ -7,6 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-2e단계입니다~!!!
+  <h3>리워즈 등록</h3>
+  <hr>
+   <input type="button" value="기본정보">
+   <input type="button" value="리워즈">
+   <input type="button" value="스토리">
+   <input type="button" value="프로필">
+   <input type="button" value="게좌">
+   <input type="button" value="미리보기">
+   <input type="submit" value="등록">
+   
+   리워드1:<
 </body>
 </html>
