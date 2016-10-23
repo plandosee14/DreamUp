@@ -15,23 +15,29 @@ public class ProjectDAO {
 	}
 
 	public boolean insertBacic(ProjectDTO project) {
+		int result;
+		try {
+			result = (int) sqlMap.insert("project.insertBasic",project);
+			if (result == 1) {
+				System.out.println("DAO입력 성공");
+				return true;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+	
+	public boolean updateStory(ProjectDTO project) {
 		return false;
 	}
 
-	public boolean insertStory(ProjectDTO project) {
+	public boolean updateProfile(ProjectDTO project) {
 		return false;
 	}
 
-	public boolean insertProfile(ProjectDTO project) {
+	public boolean updateAccount(ProjectDTO project) {
 		return false;
-	}
-
-	public boolean insertAccount(ProjectDTO project) {
-		return false;
-	}
-
-	public ProjectDTO selectTempProject(int ptNo) {
-		return null;
 	}
 
 	public boolean insertProject(ProjectDTO project) {
@@ -41,7 +47,7 @@ public class ProjectDAO {
 	public boolean deleteProject(int pro_no) {
 		try {
 			if (1 == (sqlMap.delete("project.deleteProject", pro_no))) {
-				System.out.println("ProjectDAO _deleteProject :  NO="+pro_no+" 삭제성공");
+				System.out.println("ProjectDAO _deleteProject :  NO=" + pro_no + " 삭제성공");
 				return true;
 			}
 		} catch (SQLException e) {
@@ -55,7 +61,7 @@ public class ProjectDAO {
 	public ProjectDTO selectProject(int pro_no) {
 		ProjectDTO project;
 		try {
-			project = (ProjectDTO) sqlMap.queryForObject("project.selectProject",pro_no);
+			project = (ProjectDTO) sqlMap.queryForObject("project.selectProject", pro_no);
 			return project;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
