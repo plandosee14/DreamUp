@@ -1,10 +1,18 @@
 package com.dreamup.dao.reward;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import com.dreamup.dto.reward.RewardDTO;
+import com.dreamup.ibatis.SqlMapConfig;
+import com.ibatis.sqlmap.client.SqlMapClient;
 
 public class RewardDAO {
+	SqlMapClient sqlMap;
+	public RewardDAO() {
+		sqlMap = SqlMapConfig.getSqlMapInstance();
+	}
+	
 	public boolean insertTempReward(RewardDTO reward) {
 		return false;
 	}
@@ -25,7 +33,15 @@ public class RewardDAO {
 		return null;
 	}
 
-	public boolean insertReward(List<RewardDTO> list) {
+	public boolean insertReward(RewardDTO reward) {
+		List<RewardDTO> rewardList;
+		
+		try {
+			rewardList = (List<RewardDTO>) sqlMap.insert("reward.insertReward");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return false;
 	}
 

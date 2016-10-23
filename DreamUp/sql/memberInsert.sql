@@ -24,3 +24,8 @@ insert into member values (member_seq.nextval, 'daemang21', '1234', 'kancho33@na
 insert into member values (member_seq.nextval, 'daemang22', '1234', 'kancho33@naver.com', sysdate, '권성준', '서포팅?','010-3338-5525','가산동237-75','561-340','110-386969');
 insert into member values (member_seq.nextval, 'daemang23', '1234', 'kancho33@naver.com', sysdate, '최예나', '서포팅?','010-3338-5525','가산동237-75','561-340','110-386969');
 insert into member values (member_seq.nextval, 'daemang24', '1234', 'kancho33@naver.com', sysdate, '이소영', '서포팅?','010-3338-5525','가산동237-75','561-340','110-386969');
+insert into member values (member_seq.nextval, 'daemang25', '1234', 'kancho33@naver.com', sysdate, '정혜윤', '서포팅?','010-3338-5525','가산동237-75','561-340','110-386969');
+
+select * from project
+
+select pro_no, pro_start, pro_end from project order by pro_start desc;
