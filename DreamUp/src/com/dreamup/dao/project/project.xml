@@ -3,13 +3,17 @@
 <sqlMap namespace="project">
 	<typeAlias alias="project" type="com.dreamup.dto.project.ProjectDTO" />
 	<insert id="insertBasic" parameterClass="project">
-		insert into project
-		(pro_title,pro_thumbnail,pro_catagory,pro_start,pro_end,pro_goal)
-		values (#pro_title#,#pro_thumbnail#,#pro_catagory#,#pro_start#,#pro_end#,#pro_goal#)
+		insert into
+		project
+		(pro_no,m_id,pro_thumbnail,pro_title,pro_catagory,pro_start,pro_end,pro_goal)
+		values
+		(project_seq.nextval,#m_id#,#pro_thumbnail#,#pro_title#,#pro_catagory#,sysdate,#pro_end#,#pro_goal#)
 	</insert>
 
 	<update id="updateStory" parameterClass="project">
-		update project set pro_re=#name#, pass=#pass#, email=#email#, tel=#tel#, contents=#contents# where id=#id#
+		update project set
+		pro_re=#name#, pass=#pass#, email=#email#, tel=#tel#,
+		contents=#contents# where id=#id#
 
 	</update>
 	<update id="updateProfile">
@@ -28,6 +32,10 @@
 		delete from project
 		where pro_no = #pro_no#
 	</delete>
+
+	<select id="selectProjectNo" parameterClass="int" resultClass="int">
+		select pro_no from project where pro_no =#pro_no#
+	</select>
 
 	<select id="selectProject" parameterClass="int" resultClass="project">
 		select * from project where pro_no = #pro_no#
