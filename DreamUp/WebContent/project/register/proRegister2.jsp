@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<<<<<<< HEAD
   <h3>리워즈 등록</h3>
   <hr>
    <input type="button" value="기본정보">
@@ -18,11 +17,5 @@
    <input type="button" value="미리보기">
    <input type="submit" value="등록">
    
-   리워드1:<
-=======
-2e단계입니다~!!!
-
-3단계~!
->>>>>>> branch 'master' of https://github.com/plandosee14/DreamUp.git
 </body>
 </html>
