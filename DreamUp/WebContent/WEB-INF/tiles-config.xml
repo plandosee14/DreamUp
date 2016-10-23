@@ -10,7 +10,7 @@
 	<action path="/project"
    			         forward=".project"/>
    			         
-   			         
+    <!-- 프로젝트 등록 --> 			         
    	<action path="/menu2"
    			         forward=".menu2"/> 			         
    	<action path="/register_2"
@@ -19,6 +19,10 @@
    	<!-- 로그인/회원가입 -->
    	<action path="/login"
    			         forward=".login"/>
+   	<action path="/join"
+   			         forward=".join"/>
+   			         
+   			         
    			         
   </action-mappings>
 </struts-config>
