@@ -7,15 +7,19 @@ create table project(
 	Pro_Start		date		not null,
 	Pro_End			date		not null,
 	Pro_Goal		integer		not null,
-	Pro_Catagory		varchar2(13)	not null,
+	Pro_Catagory	varchar2(13)	not null,
 	Pro_Video		varchar2(30),
-	Pro_ImageUrl		varchar2(30)	,
-	Pro_Thumbnail		varchar2(30)	,
+	Pro_ImageUrl	varchar2(30)	,
+	Pro_Thumbnail	varchar2(30)	,
 	Pro_Account		integer		,
+	Pro_link		varchar2(30),
 	Su_Count		integer,
 	Pro_state		integer,	
 	NowAmount		varchar2(255)
+	
 );
+
+alter table project ADD(pro_link varchar2(255));
 
 
 	insert into project
