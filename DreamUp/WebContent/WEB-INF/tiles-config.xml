@@ -21,6 +21,8 @@
    			         forward=".login"/>
    	<action path="/join"
    			         forward=".join"/>
+   	<action path="/joinOK"
+   			         forward=".joinOK"/>
    			         
    			         
    			         

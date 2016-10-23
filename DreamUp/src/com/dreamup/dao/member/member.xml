@@ -4,10 +4,10 @@
 	<typeAlias alias="member" type="com.dreamup.dto.member.MemberDTO" />
 
 
-	<insert id="insert" parameterClass="member">
-	<!-- 	insert into member values
-		(member_seq.nextval,#no#,#id#,#password#,#email#,#date#,#name#,#supporting#,#phone#,#address#,#post#,#account#) -->
-	</insert>
+	<!-- <insert id="insert" parameterClass="member">
+		insert into member values
+		(member_seq.nextval,#no#,#id#,#password#,#email#,#date#,#name#,#supporting#,#phone#,#address#,#post#,#account#)
+	</insert> -->
 
 	<select id="select" resultClass="member">
 		select * from member where m_no=#m_no#

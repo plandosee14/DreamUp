@@ -36,6 +36,9 @@
   <definition name=".join" extends=".main">
     <put name="body" value="/user/join/join.jsp"></put>
   </definition>
+  <definition name=".joinOK" extends=".main">
+    <put name="body" value="/user/join/userJoinOk.jsp"></put>
+  </definition>
   
   
 </tiles-definitions>

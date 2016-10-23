@@ -18,10 +18,12 @@
 	               type="com.dreamup.actions.project.StepAction">
 	          <forward name="scs" path="/register_2.do" redirect="true"/>
 	       </action>
-                   
-                   
-                   
-   			
+	       
+	       <action path="/login-ing"
+	               type="com.dreamup.actions.member.JoinAction">
+	          <forward name="scs" path="/joinOK.do" redirect="true"/>
+	       </action>
+	       
   </action-mappings>
   
    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/> 

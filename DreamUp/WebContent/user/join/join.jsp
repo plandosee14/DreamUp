@@ -8,11 +8,11 @@
 </head>
 <body>
 	회원가입폼
-   <form action="">
+   <form action="login-ing.do">
      <table cellpadding="10" bgcolor="#FFF29E">
     <tr>
         <td>ID: </td> 
-        <td> <input type="text" size="15" name="id" readonly="readonly" > <input type="button" value="중복확인" onclick="overOpen()"> </td>
+        <td> <input type="text" size="15" name="id"> <input type="button" value="중복확인" onclick="overOpen()"> </td>
     </tr>
     <tr>
         <td>비 번:</td>
@@ -28,12 +28,11 @@
     </tr>
     <tr>
         <td>이메일:</td>
-        <td><input type="text" size="15" name="name"></td>
+        <td><input type="text" size="15" name="email"></td>
     </tr>
 
-   
     <tr>
-        <td colspan="2" align="center"><input type="button" value="등록" onclick="vaildCheck()"> <input type="reset" value="취소"></td>
+        <td colspan="2" align="center"><input type="submit" value="등록" > <input type="reset" value="취소"></td>
     </tr>
   
   </table>

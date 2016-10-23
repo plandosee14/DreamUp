@@ -27,9 +27,7 @@
   <sqlMap resource="./com/dreamup/dao/cart/cart.xml"/>
   <sqlMap resource="./com/dreamup/dao/member/member.xml"/>
   <sqlMap resource="./com/dreamup/dao/project/project.xml"/>
-  <sqlMap resource="./com/dreamup/dao/cart/cart.xml"/>
-  <sqlMap resource="./com/dreamup/dao/cart/cart.xml"/>
-  <sqlMap resource="./com/dreamup/dao/cart/cart.xml"/>
+
 
 </sqlMapConfig>
 
