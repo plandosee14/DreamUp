@@ -251,7 +251,7 @@ public class SHA256 {
 	private static final int GetData(byte[] x, int x_offset) {
 		return byte_to_int(x, x_offset, ENDIAN);
 	}
-	
+
 	private static void SHA256_Transform(byte[] Message, int[] ChainVar) {
 		int abcdefgh[] = new int[8];
 		//int T1[] = new int[1];
@@ -328,7 +328,6 @@ public class SHA256 {
 		arraycopy_offset(Info.szBuffer, 0, pszMessage, pszMessage_offset, uDataLen);
 	}
 
-
 	public static void SHA256_Close( SHA256_INFO Info, byte[] pszDigest ) {
 		int i, Index;
 
@@ -357,7 +356,6 @@ public class SHA256 {
 		for (i = 0; i < SHA256_DIGEST_VALUELEN; i += 4)
 			BIG_D2B((Info.uChainVar)[i / 4], pszDigest, i);
 	}
-
 
 	public static void SHA256_Encrypt( byte[] pszMessage, int uPlainTextLen, byte[] pszDigest ) {
 		SHA256_INFO info = new SHA256_INFO();

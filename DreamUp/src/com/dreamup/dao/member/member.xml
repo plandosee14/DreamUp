@@ -16,7 +16,8 @@
 
 	<!-- 암호화할 아이디와 비밀번호 -->
 	<select id="encryptionPwd">
-		select m_id, m_password from member where m_no = #m_no#
+		select m_id, m_password from member where m_no =
+		#m_no#
 	</select>
 
 	<!-- 회원탈퇴 -->
@@ -32,8 +33,11 @@
 	</select>
 
 	<!-- 비밀번호 재설정 -->
-	<!-- <update id="resetPwd" parameterClass="member" > update member set m_password 
-		= #m_password# where </update> -->
+	<update id="resetPwd" parameterClass="member">
+		update member set
+		m_password = #m_password# where m_id=#m_id# and m_email=#m_email# and
+		m_name =#m_name#
+	</update>
 
 	<!-- 중복검사 -->
 	<select id="IdDuplicationCheck" parameterClass="String"
@@ -48,11 +52,40 @@
 		where m_id = #m_id# and m_password = #m_password#
 	</select>
 
-	<!--개인정보 수정 -->
-	<!-- <update id="update" parameterClass="member"> update member set </update> -->
 
-	<!--사용자 후원정보 입력시 추가되는 컬럼 -->
-	<!-- <update id="update" parameterClass="member"> update member set </update> -->
+	<!-- 한번이라도 후원한적이 있는 사용자가 배송주소를 당사자 주소지로 할 경우 판단 = m_SupportingCount > 0 -->
+	<!-- 한번도 후원한적이 없는 사용자가 배송주소를 당사자 주소지로 할 경우 판별 = m_SupportingCount == 0 -->
+	<select id="supportingCount" parameterClass="String"
+		resultClass="int">
+		select m_SupportingCount from member where m_id = #m_id#
+	</select>
+
+	<!-- 사용자 후원정보 입력시 가입정보가 본인인경우 -->
+	<select id="selectOwn" parameterClass="String" resultClass="member">
+		select m_name, m_address, m_phone, m_post from member where m_id =
+		#m_id#
+	</select>
+
+	<!--개인정보 수정 -->
+	<update id="updateInfo" parameterClass="String">
+		update member
+		set
+		m_name = #m_name#,m_password = #m_password#, m_email = #m_email#, 
+		m_phone = #m_phone#, m_address = #m_address#, m_post =#m_post#, 
+		m_bankname=#m_bankname#, m_account=#m_account#
+		where m_id = #m_id#
+	</update>
+	
+	<!-- 한번도 후원한 적이 없는 사용자가 사용자 후원정보 입력시 배송주소를 당사자 주소지로 할경우 -->
+	<update id="updateSupport" parameterClass="String">
+		update member
+		set
+		m_phone =##, m_address=##, m_post = ##, m_bankname=##, m_account=##
+		where m_id
+		= #m_id#
+	</update>
+
+	<!-- 사용자 후원정보 입력시 배송주소를 타인의 주소지로 할경우는 support.xml에서 insert 처리 -->
 
 	<!-- 회원 정보 조회 -->
 	<select id="selectMember" parameterClass="int" resultClass="member">

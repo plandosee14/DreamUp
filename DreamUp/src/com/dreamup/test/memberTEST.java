@@ -11,6 +11,10 @@ public class memberTEST {
 	public static void main(String[] args) {
 		MemberDTO member = new MemberDTO();
 		MemberDAO dao = new MemberDAO();
+		member.setM_id("11");
+		member.setM_password("11");
+		
+		System.out.println(dao.login(member));
 //		System.out.println(dao.selectMember(40));
 		//System.out.println(dao.selectMember(18).toString());
 		

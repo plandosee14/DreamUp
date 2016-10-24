@@ -2,7 +2,7 @@
 <!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd" >
 <sqlMap namespace="project">
 	<typeAlias alias="project" type="com.dreamup.dto.project.ProjectDTO" />
-<!-- 
+
 	<insert id="insertBasic" parameterClass="project">
 		insert into
 		project
@@ -63,5 +63,5 @@
 		resultClass="project">
 		select * from project where pro_no =#pro_no#
 	</select>
- -->
+
 </sqlMap>

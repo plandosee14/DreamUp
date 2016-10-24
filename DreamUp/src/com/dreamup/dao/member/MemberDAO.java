@@ -29,7 +29,7 @@ public class MemberDAO {
 	}
 
 	// 비밀번호 암호화
-	public boolean encryptionPwd(String m_password){
+	public boolean encryptionPwd(String m_password) {
 		int result;
 		try {
 			result = (int) sqlMap.queryForObject("member.encryptionPwd", m_password);
@@ -111,11 +111,11 @@ public class MemberDAO {
 		return false;
 	}
 
-	// 마이페이지 개인 정보 수정
-	public boolean update(MemberDTO member) {
+	// 한번이라도 후원한 적이 있는 사용자가 배송주소를 당사자 주소지로 할 경우
+	public boolean supportingCount(String m_id) {
 		int result;
 		try {
-			result = sqlMap.update("member.update", member);
+			result = (int) sqlMap.queryForObject("member.supportingCount", m_id);
 			return true;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -124,20 +124,45 @@ public class MemberDAO {
 		return false;
 	}
 
-	// 사용자 후원정보 입력시 추가 되는 정보
-	public boolean updateSupport(MemberDTO member) {
-		int result = 0;
+	// 사용자 후원정보 입력시 가입정보가 본인인경우
+	public MemberDTO selectOwn(String m_id) {
+		MemberDTO member;
 		try {
-			result = sqlMap.update("member.updateSupport", member);
+			member = (MemberDTO) sqlMap.queryForObject("member.selectOwn", m_id);
+			return member;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	// 마이페이지 개인 정보 수정
+	public boolean updateInfo(MemberDTO member) {
+		int result;
+		try {
+			result = sqlMap.update("member.updateInfo", member);
 			return true;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 		return false;
 	}
-
+	
+	// 한번도 후원한 적이 없는 사용자가 사용자 후원정보 입력시 배송주소를 당사자 주소지로 할경우
+	public boolean updateSupport(String m_id) {
+		int result;
+		try {
+			result = sqlMap.update("member.updateSupport", m_id);
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+	}
+	
 	// project테이블/support테이블에 속하는 멤버 컬럼의 값을 가져오기 위함
 	// 사용자 세션 부여시
 	public MemberDTO selectMember(int i) {
