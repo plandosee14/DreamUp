@@ -3,17 +3,25 @@
 <sqlMap namespace="member">
 	<typeAlias alias="member" type="com.dreamup.dto.member.MemberDTO" />
 
+	<insert id="insert" parameterClass="member">
+		insert into member
+		(m_no,
+		m_id, m_password, m_email, m_name, m_date)
+		values
+		(member_seq.nextval,
+		#m_id#, #m_password#, #m_email#, #m_name#, sysdate)
+	</insert>
 
-	<!-- <insert id="insert" parameterClass="member">
-		insert into member values
-		(member_seq.nextval,#no#,#id#,#password#,#email#,#date#,#name#,#supporting#,#phone#,#address#,#post#,#account#)
-	</insert> -->
-
-	<select id="select" resultClass="member">
-		select * from member where m_no=#m_no#
+	<select id="selectMember" parameterClass="int" resultClass="member">
+		select * from member where m_no = #m_no#
 	</select>
 
-	<select id="listMember" resultClass="member">
-		select * from member
-	</select>
+	<!-- <select id="select" resultClass="member"> select * from member where 
+		m_no=#m_no# </select> <select id="listMember" resultClass="member"> select 
+		* from member </select> -->
+		
+		<select id="">
+		
+		select count(*) from member where m_no = #m_no# and 
+		</select>
 </sqlMap>

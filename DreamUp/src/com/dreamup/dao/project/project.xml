@@ -2,7 +2,7 @@
 <!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd" >
 <sqlMap namespace="project">
 	<typeAlias alias="project" type="com.dreamup.dto.project.ProjectDTO" />
-
+<!-- 
 	<insert id="insertBasic" parameterClass="project">
 		insert into
 		project
@@ -18,13 +18,13 @@
 		pro_video=#pro_video#,
 		pro_content=#pro_content#,
 		pro_link=#pro_link#
-		where pro_id=#pro_id#  ->여기
+		where pro_no=#pro_no#  
 	</update>
 
 	<update id="updateProfile" parameterClass="project">
 		update project set
 		pro_imageUrl=#pro_imageUrl#,
-		m_id=#m_id#, ->여기
+		m_id=#m_id#,
 		pro_intro=#pro_intro
 		m_address=#select m_address from member where m_id=#m_id# ->여기
 		pro_sns=#pro_sns#,
@@ -38,8 +38,8 @@
 		where pro_no=#pro_no#
 	</update>
 
-	<!-- <delete id="deleteProject" parameterClass="int"> delete from project 
-		where pro_no = #pro_no# </delete> -->
+	<delete id="deleteProject" parameterClass="int"> delete from project 
+		where pro_no = #pro_no# </delete>
 
 	<select id="selectProjectNo" parameterClass="int" resultClass="int">
 		select pro_no from project where pro_no =#pro_no#
@@ -63,5 +63,5 @@
 		resultClass="project">
 		select * from project where pro_no =#pro_no#
 	</select>
-
+ -->
 </sqlMap>
