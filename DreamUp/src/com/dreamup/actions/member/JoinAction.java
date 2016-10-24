@@ -18,12 +18,13 @@ public class JoinAction extends Action{
 		
 		MemberDTO member = new MemberDTO();
 		          member.setM_id(request.getParameter("id"));
-		          member.setM_id(request.getParameter("pass"));
-		          member.setM_id(request.getParameter("name"));
-		          member.setM_id(request.getParameter("email"));
+		          member.setM_password(request.getParameter("pass"));
+		          member.setM_name(request.getParameter("name"));
+		          member.setM_email(request.getParameter("email"));
 		  
+		          System.out.println(member.toString());
 		MemberDAO dao = new MemberDAO(); 
-		System.out.println(member.toString());
+		dao.insert(member);
 		
 		return mapping.findForward("scs");
 	}
