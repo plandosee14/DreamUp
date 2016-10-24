@@ -1,10 +1,7 @@
 package com.dreamup.dao.member;
 
-import java.net.StandardSocketOptions;
 import java.sql.SQLException;
 import java.util.List;
-
-import org.eclipse.jdt.internal.compiler.batch.Main;
 
 import com.dreamup.dto.member.MemberDTO;
 import com.dreamup.ibatis.SqlMapConfig;
@@ -19,11 +16,25 @@ public class MemberDAO {
 
 	// 회원가입
 	public boolean insert(MemberDTO member) {
+		boolean result = false;
 		try {
-			System.out.println("dao" + member.toString());
+			System.out.println("before insert to member : " + member.toString());
 			sqlMap.insert("member.insert", member);
-			return true;
+
+			result = true;
 		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+	// 비밀번호 암호화
+	public boolean encryptionPwd(String m_password){
+		int result;
+		try {
+			result = (int) sqlMap.queryForObject("member.encryptionPwd", m_password);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return false;
@@ -59,9 +70,46 @@ public class MemberDAO {
 
 	// 비밀번호 재설정
 	public boolean resetPwd(int m_no) {
+		int result;
+		try {
+			result = sqlMap.update("member.resetPwd", m_no);
+			if (result == 1) {
+				return true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return false;
 	}
+
+	// 중복검사
+	public boolean IdDuplicationCheck(String m_id) {
+		int result;
+		try {
+			result = (int) sqlMap.queryForObject("member.IdDuplicationCheck", m_id);
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+	}
+
 	// 로그인
+	public boolean login(MemberDTO member) {
+		int result;
+		try {
+			result = (int) sqlMap.queryForObject("member.login", member);
+			if (result == 1) {
+				return true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+	}
 
 	// 마이페이지 개인 정보 수정
 	public boolean update(MemberDTO member) {
@@ -118,7 +166,4 @@ public class MemberDAO {
 		return null;
 	}
 
-	public boolean LoginCheck(String id, String pass) {
-		return false;
-	}
 }

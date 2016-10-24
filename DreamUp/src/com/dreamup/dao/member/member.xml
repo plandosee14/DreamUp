@@ -2,7 +2,9 @@
 <!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd" >
 <sqlMap namespace="member">
 	<typeAlias alias="member" type="com.dreamup.dto.member.MemberDTO" />
+	<typeAlias alias="list" type="java.util.List" />
 
+	<!-- 회원가입 -->
 	<insert id="insert" parameterClass="member">
 		insert into member
 		(m_no,
@@ -12,16 +14,54 @@
 		#m_id#, #m_password#, #m_email#, #m_name#, sysdate)
 	</insert>
 
+	<!-- 암호화할 아이디와 비밀번호 -->
+	<select id="encryptionPwd">
+		select m_id, m_password from member where m_no = #m_no#
+	</select>
+
+	<!-- 회원탈퇴 -->
+	<delete id="delete" parameterClass="String">
+		delete from member where m_id
+		= #m_id#
+	</delete>
+
+	<!-- 아이디찾기 -->
+	<select id="findId" parameterClass="member" resultClass="String">
+		select
+		m_id from member where m_name = #m_name# and m_email = #m_email#
+	</select>
+
+	<!-- 비밀번호 재설정 -->
+	<!-- <update id="resetPwd" parameterClass="member" > update member set m_password 
+		= #m_password# where </update> -->
+
+	<!-- 중복검사 -->
+	<select id="IdDuplicationCheck" parameterClass="String"
+		resultClass="int">
+		select count(*) from member where m_id=#m_id#
+	</select>
+
+	<!-- 로그인 -->
+	<select id="login" parameterClass="member" resultClass="int">
+		select
+		count(*) from member
+		where m_id = #m_id# and m_password = #m_password#
+	</select>
+
+	<!--개인정보 수정 -->
+	<!-- <update id="update" parameterClass="member"> update member set </update> -->
+
+	<!--사용자 후원정보 입력시 추가되는 컬럼 -->
+	<!-- <update id="update" parameterClass="member"> update member set </update> -->
+
+	<!-- 회원 정보 조회 -->
 	<select id="selectMember" parameterClass="int" resultClass="member">
 		select * from member where m_no = #m_no#
 	</select>
 
-	<!-- <select id="select" resultClass="member"> select * from member where 
-		m_no=#m_no# </select> <select id="listMember" resultClass="member"> select 
-		* from member </select> -->
-		
-		<select id="">
-		
-		select count(*) from member where m_no = #m_no# and 
-		</select>
+	<!-- 전체 회원 정보 -->
+	<select id="listMember" parameterClass="member" resultClass="list">
+		select * from member
+	</select>
+
 </sqlMap>

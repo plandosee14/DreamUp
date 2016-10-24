@@ -19,7 +19,7 @@ public class SqlMapConfig {
 	static{
 		try {
 			String resource = "./com/dreamup/ibatis/sqlMapConfig.xml";
-			System.out.println("xml");
+			System.out.println("SqlMapConfig.xml");
 			//현재패키지 밑에
 			Reader reader = Resources.getResourceAsReader(resource);
 			sqlMap = SqlMapClientBuilder.buildSqlMapClient(reader);
