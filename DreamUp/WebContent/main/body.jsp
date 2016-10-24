@@ -8,6 +8,7 @@
 </head>
 <%-- body.jsp --%>
 <body>
+${login_id}
   <br><br>
   <b>첫화면</b>
 </body>
