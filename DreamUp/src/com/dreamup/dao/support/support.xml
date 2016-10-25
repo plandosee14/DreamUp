@@ -1,3 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd" >
-<sqlMap namespace="support"></sqlMap>
+<sqlMap namespace="support">
+<!-- 로그인한 사용자의 정보와 배송지 정보가 다를 경우 -->
+<insert id="">
+insert into support m_id
+
+</insert>
+
+
+
+</sqlMap>

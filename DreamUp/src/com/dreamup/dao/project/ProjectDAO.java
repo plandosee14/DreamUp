@@ -14,6 +14,7 @@ public class ProjectDAO {
 		sqlMap = SqlMapConfig.getSqlMapInstance();
 	}
 
+	// 프로젝트 기본 정보 입력
 	public boolean insertBacic(ProjectDTO project) {
 		int result;
 		try {
@@ -28,6 +29,7 @@ public class ProjectDAO {
 		return false;
 	}
 
+	//프로젝트 스토리 정보 입력
 	public boolean updateStory(ProjectDTO project) {
 		int result;
 		try {
@@ -43,6 +45,7 @@ public class ProjectDAO {
 		return false;
 	}
 
+	//프로젝트 프로필 정보 입력
 	public boolean updateProfile(ProjectDTO project) {
 		int result;
 		try {
@@ -59,6 +62,7 @@ public class ProjectDAO {
 		return false;
 	}
 
+	//프로필 계좌 정보 입력
 	public boolean updateAccount(ProjectDTO project) {
 		int result;
 		try {
@@ -73,21 +77,8 @@ public class ProjectDAO {
 		}
 		return false;
 	}
-
-	public boolean deleteProject(int pro_no) {
-		try {
-			if (1 == (sqlMap.delete("project.deleteProject", pro_no))) {
-				System.out.println("DAO : 프로젝트 삭제 성공");
-				return true;
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		return false;
-	}
-	//프로젝트 사진or타이틀 클릭시 보이는 상세화면
+	
+	//프로젝트 사진 or 타이틀 클릭 시 보이는 프로젝트 상세 화면
 	public ProjectDTO selectProject(int pro_no) {
 		ProjectDTO project;
 		try {
@@ -166,4 +157,6 @@ public class ProjectDAO {
 		}
 		return null;
 	}
+	
+/*	public List<ProjectDTO> searchProjectBy*/
 }

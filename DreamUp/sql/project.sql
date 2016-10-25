@@ -8,6 +8,11 @@ create table project(
 	Pro_Start		date			not null, -- 프로젝트 시작일(sysdate)
 	Pro_End			date			not null, -- 프로젝트 끝일(sysdate+a)
 	Pro_Goal		integer			not null, -- 프로젝트 목표금액
+	Pro_state		integer, 	
+	--Pro_state
+	--0 : 현재 등록중
+	--1 : 등록 완료 & 후원 진행중
+	--2 : 후원 기간 마감		
 	--프로젝트 기본 정보 입력시 필요 컬럼
 	
 	Pro_Video		varchar2(2000), -- 프로젝트 비디오 url
@@ -25,12 +30,7 @@ create table project(
 	Pro_Account		integer	, 	  -- 후원 달성시 입금받을 계좌명
 	--프로젝트 계좌 정보 입력시 필요 컬럼
 	
-	Su_Count		integer,
-	Pro_state		integer, 	
-	--Pro_state
-	--0 : 현재 등록중
-	--1 : 등록 완료 & 후원 진행중
-	--2 : 후원 기간 마감					
+	Su_Count		integer, -- 현재 프로젝트가 후원받은 수
 				
 	NowAmount		varchar2(255) --현재까지 후원된 금액
 );
