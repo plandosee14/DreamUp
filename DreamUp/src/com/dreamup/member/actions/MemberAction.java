@@ -1,4 +1,4 @@
-package com.dreamup.actions.member;
+package com.dreamup.member.actions;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

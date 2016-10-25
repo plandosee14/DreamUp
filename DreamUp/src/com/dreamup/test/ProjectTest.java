@@ -1,7 +1,7 @@
 package com.dreamup.test;
 
-import com.dreamup.dao.project.ProjectDAO;
-import com.dreamup.dto.project.ProjectDTO;
+import com.dreamup.project.dao.ProjectDAO;
+import com.dreamup.project.dto.ProjectDTO;
 
 public class ProjectTest {
 	public static void main(String[] args) {
@@ -14,8 +14,9 @@ public class ProjectTest {
 //		project.setPro_end(pro_end);
 		project.setPro_goal(300000);
 		project.setPro_state(0);
-		
-		
-		dao.insertBacic(project);
+
+		if(dao.insertBacic(project)){
+			System.out.println("입력성공");
+		}
 	}
 }

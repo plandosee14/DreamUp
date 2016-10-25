@@ -1,10 +1,10 @@
-package com.dreamup.dao.project;
+package com.dreamup.project.dao;
 
 import java.sql.SQLException;
 import java.util.List;
 
-import com.dreamup.dto.project.ProjectDTO;
 import com.dreamup.ibatis.SqlMapConfig;
+import com.dreamup.project.dto.ProjectDTO;
 import com.ibatis.sqlmap.client.SqlMapClient;
 
 public class ProjectDAO {

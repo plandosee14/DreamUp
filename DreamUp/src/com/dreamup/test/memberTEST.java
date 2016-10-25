@@ -3,8 +3,11 @@ package com.dreamup.test;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.dreamup.dao.member.MemberDAO;
-import com.dreamup.dto.member.MemberDTO;
+
+import com.dreamup.member.dao.MemberDAO;
+import com.dreamup.member.dto.MemberDTO;
+
+
 
 public class memberTEST {
 

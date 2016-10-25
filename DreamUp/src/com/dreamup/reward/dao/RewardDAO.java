@@ -1,10 +1,11 @@
-package com.dreamup.dao.reward;
+package com.dreamup.reward.dao;
 
 import java.sql.SQLException;
 import java.util.List;
 
-import com.dreamup.dto.reward.RewardDTO;
+
 import com.dreamup.ibatis.SqlMapConfig;
+import com.dreamup.reward.dto.RewardDTO;
 import com.ibatis.sqlmap.client.SqlMapClient;
 
 public class RewardDAO {

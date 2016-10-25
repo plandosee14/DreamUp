@@ -1,4 +1,4 @@
-package com.dreamup.dto.project;
+package com.dreamup.project.dto;
 
 import java.util.Date;
 

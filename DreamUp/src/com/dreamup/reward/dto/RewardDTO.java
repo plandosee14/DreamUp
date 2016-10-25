@@ -1,4 +1,4 @@
-package com.dreamup.dto.reward;
+package com.dreamup.reward.dto;
 
 import java.sql.Date;
 

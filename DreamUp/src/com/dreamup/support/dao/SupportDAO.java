@@ -1,8 +1,9 @@
-package com.dreamup.dao.support;
+package com.dreamup.support.dao;
 
 import java.util.List;
 
-import com.dreamup.dto.support.SupportDTO;
+import com.dreamup.support.dto.SupportDTO;
+
 
 public class SupportDAO {
 	public boolean insertSupport(SupportDTO support){

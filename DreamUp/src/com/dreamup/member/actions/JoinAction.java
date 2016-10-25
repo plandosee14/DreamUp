@@ -1,4 +1,4 @@
-package com.dreamup.actions.member;
+package com.dreamup.member.actions;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -8,8 +8,11 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
-import com.dreamup.dao.member.MemberDAO;
-import com.dreamup.dto.member.MemberDTO;
+
+import com.dreamup.member.dao.MemberDAO;
+import com.dreamup.member.dto.MemberDTO;
+
+
 
 public class JoinAction extends Action{
 	@Override

@@ -1,10 +1,10 @@
-package com.dreamup.dao.member;
+package com.dreamup.member.dao;
 
 import java.sql.SQLException;
 import java.util.List;
 
-import com.dreamup.dto.member.MemberDTO;
 import com.dreamup.ibatis.SqlMapConfig;
+import com.dreamup.member.dto.MemberDTO;
 import com.ibatis.sqlmap.client.SqlMapClient;
 
 public class MemberDAO {
