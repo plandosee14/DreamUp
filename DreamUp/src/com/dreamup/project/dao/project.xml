@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd" >
 <sqlMap namespace="project">
-	<typeAlias alias="project" type="com.dreamup.dto.project.ProjectDTO" />
+	<typeAlias alias="project" type="com.dreamup.project.dto.ProjectDTO" />
 
 	<!-- 프로젝트 기본 정보 입력 -->
 	<insert id="insertBasic" parameterClass="project">

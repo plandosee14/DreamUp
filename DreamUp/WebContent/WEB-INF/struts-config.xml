@@ -7,17 +7,17 @@
   <action-mappings>
            
 	       <action path="/step1"
-	               type="com.dreamup.actions.project.StepAction">
+	               type="com.dreamup.project.actions.StepAction">
 	          <forward name="scs" path="/register_2.do" redirect="true"/>
 	       </action>
 	       
 	       <action path="/login-ing"
-	               type="com.dreamup.actions.member.JoinAction">
+	               type="com.dreamup.member.actions.JoinAction">
 	          <forward name="scs" path="/joinOK.do" redirect="true"/>
 	       </action>
 	       
 	       <action path="/login-ing"
-	               type="com.dreamup.actions.member.LoginAction">
+	               type="com.dreamup.member.actions.LoginAction">
 	          <forward name="scs" path="/main.do" redirect="true"/>
 	          <forward name="fail" path="/login.do"/>
 	       </action>
