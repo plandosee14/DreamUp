@@ -3,7 +3,8 @@ package com.dreamup.dao.cart;
 import java.util.List;
 
 import com.dreamup.dto.cart.CartDTO;
-import com.dreamup.dto.project.ProjectDTO;
+import com.dreamup.project.dto.ProjectDTO;
+
 
 public class CartDAO {
 

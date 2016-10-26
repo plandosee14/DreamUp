@@ -2,7 +2,8 @@ package com.dreamup.dao.cart.reply;
 
 import java.util.List;
 
-import com.dreamup.dto.cart.reply.ReplyDTO;
+import com.dreamup.reply.dto.ReplyDTO;
+
 
 public class ReplyDAO {
 	
