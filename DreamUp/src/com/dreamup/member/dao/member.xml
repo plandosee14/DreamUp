@@ -93,7 +93,7 @@
 	</select>
 
 	<!-- 전체 회원 정보 -->
-	<select id="listMember" parameterClass="member" resultClass="list">
+	<select id="listMember" resultClass="member">
 		select * from member
 	</select>
 
