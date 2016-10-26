@@ -14,7 +14,7 @@ public class MemberDAO {
 		sqlMap = SqlMapConfig.getSqlMapInstance();
 	}
 
-	// 회원가입
+	// 회원가입 : 다운 ok
 	public boolean insert(MemberDTO member) {
 		boolean result = false;
 		try {
@@ -40,7 +40,7 @@ public class MemberDAO {
 		return false;
 	}
 
-	// 회원탈퇴
+	// 회원탈퇴 : 다운ok
 	public boolean delete(String m_id) {
 		int result;
 		try {
@@ -68,13 +68,15 @@ public class MemberDAO {
 		return null;
 	}
 
-	// 비밀번호 재설정
-	public boolean resetPwd(int m_no) {
+	// 비밀번호 재설정 : 다운ok
+	public boolean resetPwd(MemberDTO member) {
 		int result;
 		try {
-			result = sqlMap.update("member.resetPwd", m_no);
+			result = sqlMap.update("member.resetPwd", member);
 			if (result == 1) {
 				return true;
+			}else{
+				System.out.println("이름, 메일, 아이디 입력값을 확인하세요");
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

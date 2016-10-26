@@ -10,11 +10,14 @@ import com.dreamup.member.dao.MemberDAO;
 import com.dreamup.member.dto.MemberDTO;
 import com.sun.corba.se.impl.oa.poa.ActiveObjectMap.Key;
 
+import sun.print.resources.serviceui;
+
 public class memberTEST {
 
 	public static void main(String[] args) {
 
 		// MemberDAO dao = new MemberDAO();
+		//
 		// member.setM_id("11");
 		// member.setM_password("11");
 
@@ -50,6 +53,7 @@ public class memberTEST {
 		// member.setM_date(null);
 
 		// boolean t= dao.insert(member);
+
 		//
 		// if (t) {
 		// System.out.println("after insert to member : "+member.toString());
@@ -77,22 +81,35 @@ public class memberTEST {
 		// List<MemberDTO> list = new ArrayList<>();
 		// 2-1-4.생성된 바구니에 메소드의 리턴값을 할당
 		// 3.메소드의 리턴값을 출력
-		
+
 		MemberDAO dao = new MemberDAO();
-		//클래스다오 객체 생성
-		
-		List<MemberDTO> memberList;
-		//listMember리턴형 바구니 만들기
-		
-		memberList = dao.listMember();
-		//메소드 호출한 결과를 생성한 바구니에 넣기
-		
-		for (int i = 0; i < memberList.size(); i++) {
-			
-			MemberDTO member;
-			member = memberList.get(i);
-			
-			System.out.println(member);
-		}
+		// 클래스다오 객체 생성
+		MemberDTO dto = new MemberDTO();
+
+//		dao.delete("11");
+
+		dto.setM_id("test1");
+		dto.setM_email("kancho33@naver.com");
+		dto.setM_name("최용석");
+		dto.setM_password("1234");
+		dao.resetPwd(dto);
+		System.out.println(dao.selectMember(40));
+
+		// System.out.println(dao.selectMember(46).toString());
+
+//		List<MemberDTO> memberList;
+//		// listMember리턴형 바구니 만들기
+//
+//		memberList = dao.listMember();
+//		// 메소드 호출한 결과를 생성한 바구니에 넣기
+//
+//		for (int i = 0; i < memberList.size(); i++) {
+//
+//			MemberDTO member;
+//			member = memberList.get(i);
+//
+//			System.out.println(member);
+//		}
+
 	}
 }
