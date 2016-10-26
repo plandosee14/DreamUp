@@ -33,7 +33,7 @@
      <filter-name>DreamUpFilter</filter-name>
      <filter-class>com.dreamup.filter.DreamUpFilter</filter-class>
      <init-param>
-        <param-name>EncType</param-name>
+        <param-name>encType</param-name>
         <param-value>UTF-8</param-value>
      </init-param>
   </filter>

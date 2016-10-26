@@ -15,7 +15,7 @@ public class DreamUpFilter implements Filter {
 
    @Override
    public void init(FilterConfig config) throws ServletException {
-      System.out.println("Filter_init() =  encType을 얻어옵니다.");
+      System.out.println("DreamUpFilter_init() =  encType을 얻어옵니다.");
       encType = config.getInitParameter("encType");
       System.out.println("encType : " + encType);
    }
