@@ -131,7 +131,10 @@ public class MemberDAO {
 		int result;
 		try {
 			result = (int) sqlMap.queryForObject("member.supportingCount", m_id);
+			if(result==0){
+				
 			return true;
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -152,14 +155,16 @@ public class MemberDAO {
 		return null;
 	}
 
-	// 마이페이지 개인 정보 수정
+	// 마이페이지 개인 정보 수정 ok
 	public boolean updateInfo(MemberDTO member) {
 		int result;
 		try {
 			result = sqlMap.update("member.updateInfo", member);
-			
+		if (result == 1) {
 			return true;
-			
+		  }else{
+			  System.out.println("아이디가 일치하지 않습니다.");
+		  }
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

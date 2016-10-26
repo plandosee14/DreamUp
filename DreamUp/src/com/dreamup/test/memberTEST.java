@@ -16,7 +16,7 @@ public class memberTEST {
 
 	public static void main(String[] args) {
 
-		// MemberDAO dao = new MemberDAO();
+//		 MemberDAO dao = new MemberDAO();
 		//
 		// member.setM_id("11");
 		// member.setM_password("11");
@@ -25,30 +25,34 @@ public class memberTEST {
 		// System.out.println(dao.selectMember(40));
 		// System.out.println(dao.selectMember(18).toString());
 
-		// member.setM_id("test1");
-		// member.setM_password("1234");
-		// member.setM_email("kancho33@naver.com");
-		// member.setM_name("최용석");
+//	MemberDTO member = new MemberDTO();
+//		 member.setM_id("test1");
+//		 member.setM_password("1234");
+//		 member.setM_email("kancho33@naver.com");
+//		 member.setM_name("최용석");
 
-		// member.setM_id("test2");
-		// member.setM_password("1234");
-		// member.setM_email("hololoo@naver.com");
-		// member.setM_name("기호창");
-		//
-		// member.setM_id("test3");
-		// member.setM_password("1234");
-		// member.setM_email("4eyes@naver.com");
-		// member.setM_name("이하은");
-		//
-		// member.setM_id("test4");
-		// member.setM_password("1234");
-		// member.setM_email("frendly@naver.com");
-		// member.setM_name("정다운");
-		// MemberDTO member = new MemberDTO();
-		// member.setM_id("test5");
-		// member.setM_password("1234");
-		// member.setM_email("what?@naver.com");
-		// member.setM_name("전성원");
+		 
+//		 member.setM_id("test2");
+//		 member.setM_password("1234");
+//		 member.setM_email("hololoo@naver.com");
+//		 member.setM_name("기호창");
+//		
+//		 member.setM_id("test3");
+//		 member.setM_password("1234");
+//		 member.setM_email("4eyes@naver.com");
+//		 member.setM_name("이하은");
+//		
+//		 member.setM_id("test4");
+//		 member.setM_password("1234");
+//		 member.setM_email("frendly@naver.com");
+//		 member.setM_name("정다운");
+//		 dao.insert(member);
+//
+//		 member.setM_id("test5");
+//		 member.setM_password("1234");
+//		 member.setM_email("what?@naver.com");
+//		 member.setM_name("전성원");
+
 
 		// member.setM_date(null);
 
@@ -86,17 +90,20 @@ public class memberTEST {
 		// 클래스다오 객체 생성
 		MemberDTO dto = new MemberDTO();
 		
-		dto.setM_id("test1");
-		dto.setM_name("최용대맹이");
-		dto.setM_password("1234");
-		dto.setM_email("kancho33@naver.com");
-		dto.setM_phone(null);
-		dto.setM_address(null);
-		dto.setM_post(null);
-		dto.setM_bankName(null);
-		dto.setM_account(null);
-		dao.updateInfo(dto);
-		System.out.println(dao.selectMember(40));
+		
+		dao.supportingCount("test1");
+//		
+//		dto.setM_id("test3");
+//		dto.setM_name("최용자");
+//		dto.setM_password("1234");
+//		dto.setM_email("kancho33@naver.com");
+//		dto.setM_phone(null);
+//		dto.setM_address(null);
+//		dto.setM_post(null);
+//		dto.setM_bankName(null);
+//		dto.setM_account(null);
+//		dao.updateInfo(dto);
+//		System.out.println(dao.selectMember(1));
 		
 //		dto.setM_id("test1");
 //		dto.setM_password("1234");
