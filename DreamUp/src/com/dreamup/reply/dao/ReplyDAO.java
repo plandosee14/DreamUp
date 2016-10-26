@@ -1,4 +1,4 @@
-package com.dreamup.dao.cart.reply;
+package com.dreamup.reply.dao;
 
 import java.util.List;
 

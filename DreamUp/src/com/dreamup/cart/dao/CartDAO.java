@@ -1,8 +1,8 @@
-package com.dreamup.dao.cart;
+package com.dreamup.cart.dao;
 
 import java.util.List;
 
-import com.dreamup.dto.cart.CartDTO;
+import com.dreamup.cart.dto.CartDTO;
 import com.dreamup.project.dto.ProjectDTO;
 
 

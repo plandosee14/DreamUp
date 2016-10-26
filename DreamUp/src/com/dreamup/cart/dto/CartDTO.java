@@ -1,4 +1,4 @@
-package com.dreamup.dto.cart;
+package com.dreamup.cart.dto;
 
 import java.util.Date;
 
