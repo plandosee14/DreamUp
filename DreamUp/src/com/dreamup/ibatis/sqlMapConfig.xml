@@ -24,9 +24,8 @@
      </dataSource>
   </transactionManager>
   
-  <sqlMap resource="./com/dreamup/dao/cart/cart.xml"/>
-  <sqlMap resource="./com/dreamup/dao/member/member.xml"/>
-  <sqlMap resource="./com/dreamup/dao/project/project.xml"/>
+  <sqlMap resource="./com/dreamup/member/dao/member.xml"/>
+  <sqlMap resource="./com/dreamup/project/dao/project.xml"/>
 
 
 </sqlMapConfig>
