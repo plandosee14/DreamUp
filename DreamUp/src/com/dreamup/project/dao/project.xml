@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd" >
 <sqlMap namespace="project">
-	<typeAlias alias="project" type="com.dreamup.project.dto.ProjectDTO" />
+	<!-- <typeAlias alias="project" type="com.dreamup.project.dto.ProjectDTO" />
 
-	<!-- 프로젝트 기본 정보 입력 -->
+	프로젝트 기본 정보 입력
 	<insert id="insertBasic" parameterClass="project">
 		insert into
 		project
@@ -13,15 +13,15 @@
 		(project_seq.nextval,#m_id#,#pro_thumbnail#,#pro_title#,#pro_catagory#,
 		sysdate,sysdate+#pro_end-sysdate#,#pro_goal#,0)
 		
-		<!-- pro_end 구하기 
+		pro_end 구하기 
 		1.현재날짜 조회하는 메소드정의(dao) + select문정의(.xml)
 		  입력받은 끝날짜 - 현재날짜로 추출된 일수를 파라미터 a로 넘김
 		  = project에 a에 해당하는 컬럼을 하나 생성할것
 		2.pro_end = sysdate + #pro_end - sysdate#
-		-->
+		
 	</insert>
 
-	<!-- 프로젝트 스토리 정보 입력 -->
+	프로젝트 스토리 정보 입력
 	<update id="updateStory" parameterClass="project">
 		update project set
 		pro_video=#pro_video#,
@@ -31,7 +31,7 @@
 		where pro_no=#pro_no#  
 	</update>
 	
-	<!-- 프로젝트 프로필 정보 입력 -->
+	프로젝트 프로필 정보 입력
 	<update id="updateProfile" parameterClass="project">
 		update project set
 		Pro_fileImage=#Pro_fileImage#,
@@ -40,7 +40,7 @@
 		where pro_no=#pro_no#
 	</update>
 
-	<!-- 프로필 계좌 정보 입력 -->
+	프로필 계좌 정보 입력
 	<update id="updateAccount" parameterClass="project">
 		update project set
 		Pro_Bank = #Pro_Bank#,
@@ -48,42 +48,42 @@
 		where pro_no = #pro_no#
 	</update>
 	
-	<!-- 모든 프로젝트 관련 정보가 입력 완료 되었을시 -->
+	모든 프로젝트 관련 정보가 입력 완료 되었을시
 	<update id="updateSubmit">
 		update project set pro_state = 1
 	</update>
 	
-		<!-- 해당 프로젝트 목표기간이 만료 되었을시 -->
+		해당 프로젝트 목표기간이 만료 되었을시
 	<update id="updateSubmit">
 		update project set pro_state = 2
 	</update>
 	
-		<!-- pro state를 action에서 넘겨준 값으로 조작 : 관리자? -->
+		pro state를 action에서 넘겨준 값으로 조작 : 관리자?
 	<update id="updateSubmit" parameterClass="int">
 		update project set pro_state = #num#
 	</update>
 
-	<!-- 프로젝트 사진 or 타이틀 클릭 시 보이는 프로젝트 상세 화면 -->
+	프로젝트 사진 or 타이틀 클릭 시 보이는 프로젝트 상세 화면
 	<select id="selectProject" parameterClass="int" resultClass="project">
 		select Pro_Title, Pro_Video,
-		<!-- 상단 타이틀, 프로젝트 소개영상 -->
+		상단 타이틀, 프로젝트 소개영상
 		Su_Count, NowAmount ,Pro_Goal, Pro_Start, Pro_End,
-		<!-- 우측 상단 프로젝트 관련 정보 -->
-		<!-- pro_start와 pro_end는 잔여기간 연산을 위함 -->
+		우측 상단 프로젝트 관련 정보
+		pro_start와 pro_end는 잔여기간 연산을 위함
 		Pro_Content, Pro_Image, 
-		<!-- 프로젝트 상세 관련 정보 -->
+		프로젝트 상세 관련 정보
 		Pro_fileImage, Pro_fileSns
-		<!-- 프로젝트 등록자 관련 정보 -->  
+		프로젝트 등록자 관련 정보  
 		from project where pro_no = #pro_no#
 	</select>
 	
 	
-	<!-- 신규 등록 프로젝트 목록 -->
+	신규 등록 프로젝트 목록
 	<select id="selectNewProject" resultClass="list">
 		select Pro_Thumbnail, Pro_Title from project where pro_start = sysdate oreder by sysdate desc
 	</select>
 	
-	<!-- 선택한 카테고리의 신규 등록 프로젝트 목록 안해시버ㅣㅏ런ㅇ마ㅣ럼ㄴ아ㅣ러-->
+	선택한 카테고리의 신규 등록 프로젝트 목록 안해시버ㅣㅏ런ㅇ마ㅣ럼ㄴ아ㅣ러
 	<select id="selectCatagoryNewProject" parameterClass="project" resultClass="list">
 		select Pro_Thumbnail, Pro_Title from project where pro_start = sysdate and Pro_Catagory = #Pro_Catagory# oreder by sysdate desc
 	</select>
@@ -95,6 +95,6 @@
 	<select id="selectCatagoryProject" parameterClass="int"
 		resultClass="project">
 		select * from project where pro_no =#pro_no#
-	</select>
+	</select> -->
 
 </sqlMap>
