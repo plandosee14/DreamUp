@@ -67,12 +67,12 @@
 	</select>
 
 	<!--개인정보 수정 -->
-	<update id="updateInfo" parameterClass="String">
+	<update id="updateInfo" parameterClass="member">
 		update member
 		set
 		m_name = #m_name#,m_password = #m_password#, m_email = #m_email#, 
 		m_phone = #m_phone#, m_address = #m_address#, m_post =#m_post#, 
-		m_bankname=#m_bankname#, m_account=#m_account#
+		m_bankName=#m_bankName#, m_account=#m_account#
 		where m_id = #m_id#
 	</update>
 	

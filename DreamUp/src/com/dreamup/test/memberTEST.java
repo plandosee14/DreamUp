@@ -85,15 +85,40 @@ public class memberTEST {
 		MemberDAO dao = new MemberDAO();
 		// 클래스다오 객체 생성
 		MemberDTO dto = new MemberDTO();
+		
+		dto.setM_id("test1");
+		dto.setM_name("최용대맹이");
+		dto.setM_password("1234");
+		dto.setM_email("kancho33@naver.com");
+		dto.setM_phone(null);
+		dto.setM_address(null);
+		dto.setM_post(null);
+		dto.setM_bankName(null);
+		dto.setM_account(null);
+		dao.updateInfo(dto);
+		System.out.println(dao.selectMember(40));
+		
+//		dto.setM_id("test1");
+//		dto.setM_password("1234");
+//		System.out.println(dao.login(dto));
+		
+		//dao.IdDuplicationCheck("test1");
+		
+		
+//		dto.setM_name("최용석");
+//		dto.setM_email("kancho33@naver.com");
+//		System.out.println(dao.findId(dto));
 
+		
 //		dao.delete("11");
 
-		dto.setM_id("test1");
-		dto.setM_email("kancho33@naver.com");
-		dto.setM_name("최용석");
-		dto.setM_password("1234");
-		dao.resetPwd(dto);
-		System.out.println(dao.selectMember(40));
+		
+//		dto.setM_id("test1");
+//		dto.setM_email("kancho33@naver.com");
+//		dto.setM_name("최용석");
+//		dto.setM_password("1234");
+//		dao.resetPwd(dto);
+//		System.out.println(dao.selectMember(40));
 
 		// System.out.println(dao.selectMember(46).toString());
 

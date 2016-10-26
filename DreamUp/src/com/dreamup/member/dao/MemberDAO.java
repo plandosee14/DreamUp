@@ -53,13 +53,17 @@ public class MemberDAO {
 		return false;
 	}
 
-	// 아이디 찾기 : m_name과 m_email 두개의 속성을 가진 memberDTO를 받음
+	// 아이디 찾기  ok
 	public String findId(MemberDTO member) {
 
 		String m_id = null;
 		try {
 			m_id = (String) sqlMap.queryForObject("member.findId", member);
-			return m_id;
+			if(m_id != null){
+				return m_id;
+			}else{
+				System.out.println("이름, 메일 입력값을 확인하세요");
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -85,12 +89,17 @@ public class MemberDAO {
 		return false;
 	}
 
-	// 중복검사
+	// 중복검사 ok
 	public boolean IdDuplicationCheck(String m_id) {
 		int result;
 		try {
 			result = (int) sqlMap.queryForObject("member.IdDuplicationCheck", m_id);
+			if(result == 0){
+				System.out.println("사용가능한 아이디 입니다.");
 			return true;
+			}else {
+				System.out.println("이미 존재하는 아이디 입니다.\n아이디를 다시 입력해주세요.");
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -98,13 +107,17 @@ public class MemberDAO {
 		return false;
 	}
 
-	// 로그인
+	// 로그인 ok
 	public boolean login(MemberDTO member) {
 		int result;
 		try {
 			result = (int) sqlMap.queryForObject("member.login", member);
 			if (result == 1) {
+				System.out.println("로그인 성공");
 				return true;
+			}else{
+				//아이디 불일치 or 비번 불일치는 유효성검사인가?
+				System.out.println("아이디와 비밀번호를 다시 입력해주세요");
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -144,7 +157,9 @@ public class MemberDAO {
 		int result;
 		try {
 			result = sqlMap.update("member.updateInfo", member);
+			
 			return true;
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -180,7 +195,7 @@ public class MemberDAO {
 		return null;
 	}
 
-	// 전체 유저 정보 조회
+	// 전체 유저 정보 조회 ok
 	public List<MemberDTO> listMember() {
 		List<MemberDTO> memberList;
 		try {
