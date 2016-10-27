@@ -16,20 +16,21 @@ public class memberTEST {
 
 	public static void main(String[] args) {
 
-//		 MemberDAO dao = new MemberDAO();
+		 MemberDAO dao = new MemberDAO();
+		 MemberDTO member = new MemberDTO();
 		//
-		// member.setM_id("11");
-		// member.setM_password("11");
+		 member.setM_id("11");
+		 member.setM_password("11");
 
 		// System.out.println(dao.login(member));
 		// System.out.println(dao.selectMember(40));
 		// System.out.println(dao.selectMember(18).toString());
 
-//	MemberDTO member = new MemberDTO();
 //		 member.setM_id("test1");
 //		 member.setM_password("1234");
-//		 member.setM_email("kancho33@naver.com");
-//		 member.setM_name("최용석");
+		 member.setM_email("kancho33@naver.com");
+		 member.setM_name("최용석");
+		 System.out.println(dao.insert(member));
 
 		 
 //		 member.setM_id("test2");
@@ -86,13 +87,13 @@ public class memberTEST {
 		// 2-1-4.생성된 바구니에 메소드의 리턴값을 할당
 		// 3.메소드의 리턴값을 출력
 
-		MemberDAO dao = new MemberDAO();
-		// 클래스다오 객체 생성
-		MemberDTO dto = new MemberDTO();
-		
-		
-		dao.supportingCount("test1");
+//		MemberDAO dao = new MemberDAO();
+//		// 클래스다오 객체 생성
+//		MemberDTO dto = new MemberDTO();
 //		
+//		
+//		dao.supportingCount("test1");
+////		
 //		dto.setM_id("test3");
 //		dto.setM_name("최용자");
 //		dto.setM_password("1234");

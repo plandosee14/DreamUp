@@ -3,6 +3,9 @@ package com.dreamup.project.dao;
 import java.sql.SQLException;
 import java.util.List;
 
+
+import javax.servlet.http.HttpServletRequest;
+
 import com.dreamup.ibatis.SqlMapConfig;
 import com.dreamup.project.dto.ProjectDTO;
 import com.ibatis.sqlmap.client.SqlMapClient;
@@ -12,6 +15,13 @@ public class ProjectDAO {
 
 	public ProjectDAO() {
 		sqlMap = SqlMapConfig.getSqlMapInstance();
+	}
+	
+	public String insertProImage(HttpServletRequest request,String directory){
+		String filename="";
+		request.getSession().getServletContext().getRealPath("");
+				
+		return filename;
 	}
 
 	// 프로젝트 기본 정보 입력

@@ -31,18 +31,25 @@
 <div>
 기본정보
 </div>
-<input type="textArea">
+
 
  <br>
  <br>
 
+  <form action="result4.jsp" method="post" 
+         enctype="multipart/form-data">
+          
  <table border ="1" width="400" height="100">
  <tr>
   <td>
    &nbsp;&nbsp;
    타이틀 사진 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <input type="image" size="2"> 
+   이름: <input type="text" name="name"> <br>
+   파일: <input type="file" name="myfile"> <br>
+ 
+
+
   </td>
  </tr>
  </table>
@@ -68,10 +75,12 @@
   카테고리
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <select name="category">
-       <option>하은</option>
-       <option>하은2</option>
-       <option>하은3</option>
-       <option>하은4</option>
+       <option>음악</option>
+       <option>미술</option>
+       <option>아이디어</option>
+       <option>영화/비디오</option>
+       <option>디자인</option>
+       <option>식품</option>
    </select>
   </td>
  </tr>
@@ -86,9 +95,9 @@
   <div>
   후원기간
   </div> 
-  기간<input type="Radio" size="2" > 
+  기간<input type="Radio" size="2" name="day-type" > <input type="text" name="days" size=10><br>
 
-  마감일<input type="Radio" size="2" > 
+  마감일<input type="Radio" size="2" name="day-type" > 
   </td>
    
 
@@ -105,7 +114,7 @@
   <td>
    금액
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <input type="text" size="2">
+  <input type="text" size="20">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
   </td>
@@ -117,12 +126,12 @@
 <table width="400" height="30">
  <tr>
   <td align="right">
-  <input type="button" size="2" value ="다음단계">
+  <input type="submit" size="2" value ="다음단계">
   </td>
  </tr>
  </table>
 
-
+   </form>
 
 
 
