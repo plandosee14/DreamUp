@@ -1,5 +1,7 @@
 package com.dreamup.project.actions;
 
+import java.sql.Date;
+
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,14 +24,18 @@ public class ProBasicAction extends Action{
 		
 		ProjectDTO project = new ProjectDTO();
 		project.setM_id(request.getParameter("m_id"));
+		System.out.println(request.getParameter("m_id"));
 		project.setPro_title(request.getParameter("pro_title"));
-		project.setM_id(request.getParameter("m_id"));
-		project.setM_id(request.getParameter("m_id"));
-		project.setM_id(request.getParameter("m_id"));
-		project.setM_id(request.getParameter("m_id"));
+		project.setPro_catagory(request.getParameter("pro_category"));
+		//project.setPro_end(request.getParameter("pro_End"));
+		System.out.println(request.getParameter("pro_goal"));
+		project.setPro_goal(Integer.parseInt(request.getParameter("pro_goal")));
+//		Date d= Date.valueOf(request.getParameter("pro_End"));
 		
+		java.sql.Date d= java.sql.Date.valueOf(request.getParameter("pro_End"));
+		System.out.println(project.toString()); 
 		
-		return super.execute(mapping, form, request, response);
+		return mapping.findForward("scs");
 	}
 
 }

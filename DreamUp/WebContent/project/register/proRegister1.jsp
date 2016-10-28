@@ -36,7 +36,9 @@
  <br>
 
   <form action="pro_basic.do" method="post" 
-         enctype="multipart/form-data">
+         enctype="multipart/form-data"> 
+         
+  
           
  <table border ="1" width="400" height="100">
  <tr>
@@ -44,11 +46,10 @@
    &nbsp;&nbsp;
    타이틀 사진 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   이름: <input type="text" name="pro_title"> <br>
+
    파일: <input type="file" name="myfile"> <br>
    <input type="text" name="m_id" value="${login_id}">
-  ${login_id}
- 
+
 
 
   </td>
@@ -62,7 +63,7 @@
   &nbsp;&nbsp;
   제목
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <input type="text" size="10" name="title"> 
+  <input type="text" size="10" name="pro_title"> 
   </td>
  </tr>
  </table>
@@ -98,7 +99,7 @@
   </div> 
   기간<input type="Radio" size="2" name="day-type" > <input type="text" name="pro_End" size=10><br>
 
-  마감일<input type="Radio" size="2" name="day-type" > <input type="text" name="pro_End" size=10><br>
+  마감일<input type="Radio" size="2" name="day-type" > <input type="date" name="pro_End" size=10><br>
   </td>
    
 
