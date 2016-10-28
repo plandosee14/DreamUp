@@ -1,5 +1,6 @@
 package com.dreamup.project.dao;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -9,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import com.dreamup.ibatis.SqlMapConfig;
 import com.dreamup.project.dto.ProjectDTO;
 import com.ibatis.sqlmap.client.SqlMapClient;
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 public class ProjectDAO {
 	SqlMapClient sqlMap;
@@ -17,11 +20,23 @@ public class ProjectDAO {
 		sqlMap = SqlMapConfig.getSqlMapInstance();
 	}
 	
-	public String insertProImage(HttpServletRequest request,String directory){
-		String filename="";
-		request.getSession().getServletContext().getRealPath("");
+	public String insertProImage(HttpServletRequest request){
+		String path="";
+		try {
+			int maxSize=15*1024*1024;
+			String saveDirectory = request.getSession().getServletContext().getRealPath("upload");
 				
-		return filename;
+			MultipartRequest mr = 
+					 new MultipartRequest(request,saveDirectory,maxSize,"euc-kr",
+							new DefaultFileRenamePolicy());
+			
+			String filename = mr.getFilesystemName("myfile");
+			path = saveDirectory+"/" + filename;
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return path;
 	}
 
 	// 프로젝트 기본 정보 입력

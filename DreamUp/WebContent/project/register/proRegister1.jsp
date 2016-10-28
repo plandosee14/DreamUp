@@ -10,7 +10,6 @@
 여기는 프로젝트 만들것입니다~!
   <br>
 
-  
    <center>
   
   <div >
@@ -45,8 +44,10 @@
    &nbsp;&nbsp;
    타이틀 사진 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   이름: <input type="text" name="name"> <br>
+   이름: <input type="text" name="pro_title"> <br>
    파일: <input type="file" name="myfile"> <br>
+   <input type="text" name="m_id" value="${login_id}">
+  ${login_id}
  
 
 
