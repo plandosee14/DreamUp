@@ -35,7 +35,7 @@
  <br>
  <br>
 
-  <form action="result4.jsp" method="post" 
+  <form action="pro_basic.do" method="post" 
          enctype="multipart/form-data">
           
  <table border ="1" width="400" height="100">
@@ -62,7 +62,7 @@
   &nbsp;&nbsp;
   제목
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <input type="textArea" size="10" name="title"> 
+  <input type="text" size="10" name="title"> 
   </td>
  </tr>
  </table>
@@ -75,7 +75,7 @@
   &nbsp;&nbsp;
   카테고리
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <select name="category">
+  <select name="pro_category">
        <option>음악</option>
        <option>미술</option>
        <option>아이디어</option>
@@ -96,9 +96,9 @@
   <div>
   후원기간
   </div> 
-  기간<input type="Radio" size="2" name="day-type" > <input type="text" name="days" size=10><br>
+  기간<input type="Radio" size="2" name="day-type" > <input type="text" name="pro_End" size=10><br>
 
-  마감일<input type="Radio" size="2" name="day-type" > 
+  마감일<input type="Radio" size="2" name="day-type" > <input type="text" name="pro_End" size=10><br>
   </td>
    
 
@@ -113,9 +113,9 @@
 <table border ="1" width="400" height="30">
  <tr>
   <td>
-   금액
+   목표금액
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <input type="text" size="20">
+  <input type="text" size="20" name="pro_goal">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
   </td>
