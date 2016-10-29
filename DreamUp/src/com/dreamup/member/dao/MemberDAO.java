@@ -15,17 +15,19 @@ public class MemberDAO {
    }
    //회원가입ok
    public boolean insert(MemberDTO member) {
-      boolean result = false;
+     
       try {
-         System.out.println("before insert to member : " + member.toString());
+    	  System.out.println("before insert to member : " + member.toString());
          sqlMap.insert("member.insert", member);
 
-         result = true;
+         return true;
       } catch (SQLException e) {
          e.printStackTrace();
       }
-      return result;
+      return false;
    }
+   
+   
    // 비밀번호 암호화
       public boolean encryptionPwd(String m_password) {
          int result;
@@ -100,9 +102,13 @@ public class MemberDAO {
    }
    // 로그인 ok
    public boolean login(MemberDTO member){
+	    int result;
       try {
-         sqlMap.queryForObject("member.login",member);
-         return true;
+         result = (int) sqlMap.queryForObject("member.login",member);
+         System.out.println(result);
+         if (result==1){
+        	 return true;
+         }
       } catch (SQLException e) {
          // TODO Auto-generated catch block
          e.printStackTrace();

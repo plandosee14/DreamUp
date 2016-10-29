@@ -18,7 +18,7 @@
 여기는 로그인 페이지입니다
  <h3>로그인 폼</h3>
   <hr>
-  <form action="login-ing.do" method="get" enctype="application/x-www-form-urlencoded">
+  <form action="login-ing.do" method="get">
           아이디:  <input type="text" name="id"><br>
           비밀번호: <input type="password" name="pass"><br>
      <input type="submit" value="로그인">

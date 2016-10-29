@@ -24,7 +24,15 @@ public class JoinAction extends Action {
 
 		System.out.println(member.toString());
 		MemberDAO dao = new MemberDAO();
-		dao.insert(member);
+		
+		ActionForward forward;
+		
+		if(dao.insert(member)){
+			forward = mapping.findForward("scs");
+		}else{
+			forward = mapping.findForward("fail");
+			
+		}
 
 		return mapping.findForward("scs");
 	}

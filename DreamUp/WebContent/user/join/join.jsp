@@ -8,7 +8,7 @@
 </head>
 <body>
 	회원가입폼
-   <form action="login-ing.do">
+   <form action="Join-ing.do">
      <table cellpadding="10" bgcolor="#FFF29E">
     <tr>
         <td>ID: </td> 

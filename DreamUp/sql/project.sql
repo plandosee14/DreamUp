@@ -4,7 +4,7 @@ create table project(
 	M_Id			varchar2(20) 	not null references member(M_id),
 	Pro_Thumbnail	varchar2(2000)	not null, -- 썸네일 이미지 url
 	Pro_Title		varchar2(300)	not null, -- 프로젝트 타이틀
-	Pro_Catagory	varchar2(13)	not null, -- 프로젝트 카테고리
+	Pro_Catagory	varchar2(50)	not null, -- 프로젝트 카테고리
 	Pro_Start		date			not null, -- 프로젝트 시작일(sysdate)
 	Pro_End			date			not null, -- 프로젝트 끝일(sysdate+a)
 	Pro_Goal		integer			not null, -- 프로젝트 목표금액
@@ -47,6 +47,7 @@ values (project_seq.nextval,'test1','dreamup','코알라.jpg','영화',sysdate,sysdat
 
 
 select * from member;
+select * from project;
 
 	
 select * from project;

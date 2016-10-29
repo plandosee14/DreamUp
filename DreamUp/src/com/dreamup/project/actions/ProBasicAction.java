@@ -38,6 +38,8 @@ public class ProBasicAction extends Action{
 		System.out.println("파일이름: "+filename);
 		System.out.println(mr.getParameter("m_id"));
 		System.out.println(mr.getParameter("pro_title"));
+		System.out.println(mr.getParameter("pro_title"));
+		System.out.println(mr.getParameter("pro_title"));
 	
 		
 		ProjectDTO project = new ProjectDTO();
@@ -51,7 +53,7 @@ public class ProBasicAction extends Action{
 		System.out.println(project.toString());
 		
 		ProjectDAO dao = new ProjectDAO();
-//		
+		dao.insertBacic(project);
 		
 		return mapping.findForward("scs");
 	}

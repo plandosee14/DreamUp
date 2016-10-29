@@ -116,7 +116,7 @@
   <td>
    목표금액
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <input type="text" size="20" name="pro_goal">
+  <input type="text" size="50" name="pro_goal">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
   </td>

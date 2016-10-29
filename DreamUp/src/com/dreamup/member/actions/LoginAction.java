@@ -21,13 +21,16 @@ public class LoginAction extends Action{
 		  MemberDTO member = new MemberDTO();
 		  member.setM_id(request.getParameter("id"));
 		  member.setM_password(request.getParameter("pass"));
+		  
 		  System.out.println(member.toString());
 		  
 		  MemberDAO dao = new MemberDAO();
 		  ActionForward forward;
 		  if(dao.login(member)){
+			  System.out.println("로그인 성공");
 			  request.getSession().setAttribute("login_id", request.getParameter("id"));
 			  forward = mapping.findForward("scs");
+			  
 		  }else{	  
 			  request.setAttribute("login-fail", "fail");
 			  forward = mapping.findForward("fail");
@@ -35,7 +38,7 @@ public class LoginAction extends Action{
 		  
 		  
 	
-		return mapping.findForward("scs");
+		return forward;
 	}
 
 }

@@ -11,15 +11,16 @@
 	          <forward name="scs" path="/register_2.do" redirect="true"/>
 	       </action>
 	       
-	       <action path="/login-ing"
+	       <action path="/Join-ing"
 	               type="com.dreamup.member.actions.JoinAction">
 	          <forward name="scs" path="/joinOK.do" redirect="true"/>
+	          <forward name="fail" path="/join.do" redirect="true"/>
 	       </action>
 	       
 	       <action path="/login-ing"
 	               type="com.dreamup.member.actions.LoginAction">
 	          <forward name="scs" path="/main.do" redirect="true"/>
-	          <forward name="fail" path="/login.do"/>
+	          <forward name="fail" path="/login.do" redirect="true"/>
 	       </action>
 	       
 	       <action path="/pro_basic"
