@@ -22,6 +22,11 @@ public class ProBasicAction extends Action{
 		ProjectDAO dao = new ProjectDAO();
 		String path = dao.insertProImage(request);
 		
+		
+		
+		
+		
+		
 		ProjectDTO project = new ProjectDTO();
 		project.setM_id(request.getParameter("m_id"));
 		System.out.println(request.getParameter("m_id"));
