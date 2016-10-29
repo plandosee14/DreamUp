@@ -16,14 +16,30 @@ create table member(
    M_Account      varchar2(20), -- 환불시 계좌번호
    --후원정보 입력시 입력 받는 컬럼 (UPDATE)
    
-   m_SupportingCount      int, -- 내가 후원하는 프로젝트 수 총합계 (후원시 +1)
-   m_supportedCount      int -- 내 프로젝트 총 후원합계 (환불시 -1)
+   m_SupportingCount      int default '0', -- 내가 후원하는 프로젝트 수 총합계 (후원시 +1)
+   m_supportedCount      int default '0'-- 내 프로젝트 총 후원합계 (환불시 -1)
 );
    
       insert into member
       (m_no, m_id, m_password, m_email, m_name, m_date)
       values
       (member_seq.nextval, 'test1', '1234', 'kancho33@naver.com', '최용석', sysdate);
+      
+      insert into member
+      (m_no, m_id, m_password, m_email, m_name, m_date)
+      values
+      (member_seq.nextval, 'test2', '5678', 'daun33@naver.com', '정다운', sysdate);
+      
+      insert into member
+      (m_no, m_id, m_password, m_email, m_name, m_date)
+      values
+      (member_seq.nextval, 'test3', '1111', 'plan33@naver.com', '이하은', sysdate);
+      
+      insert into member
+      (m_no, m_id, m_password, m_email, m_name, m_date)
+      values
+      (member_seq.nextval, 'test4', '5555', 'daemaeng33@naver.com', '박대맹', sysdate);
+      
       
 select * from member   
 select * from member where m_no = 6
