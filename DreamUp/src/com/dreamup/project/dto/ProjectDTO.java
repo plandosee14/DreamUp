@@ -10,7 +10,7 @@ public class ProjectDTO {
 	private String pro_title;
 	private String pro_catagory;
 	private Date pro_start;
-	private Date pro_end;
+	private String pro_end;
 	private int pro_goal;
 
 	private String pro_video;
@@ -35,7 +35,7 @@ public class ProjectDTO {
 	}
 
 	public ProjectDTO(int pro_no, String m_id, String pro_thumbnail, String pro_title, String pro_catagory,
-			Date pro_start, Date pro_end, int pro_goal, String pro_video, String pro_content, String pro_link,
+			Date pro_start, String pro_end, int pro_goal, String pro_video, String pro_content, String pro_link,
 			String pro_Image, String pro_fileImage, String pro_fileIntro, String pro_fileSns, String pro_Bank,
 			int pro_account, int su_count, int pro_state, String now_amount) {
 		super();
@@ -109,11 +109,11 @@ public class ProjectDTO {
 		this.pro_start = pro_start;
 	}
 
-	public Date getPro_end() {
+	public String getPro_end() {
 		return pro_end;
 	}
 
-	public void setPro_end(Date pro_end) {
+	public void setPro_end(String pro_end) {
 		this.pro_end = pro_end;
 	}
 
