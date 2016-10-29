@@ -21,30 +21,37 @@ public class ProBasicAction extends Action{
 	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		 
-		ProjectDAO dao = new ProjectDAO();
 		
+		//이미지 저장
 		
-		int maxSize=15*1024*1024;
+		int maxSize=15*1024*1024; //크기
 		String saveDirectory = request.getSession().getServletContext().getRealPath("img/thumnail");
-			
+		//디렉토리설정
 		MultipartRequest mr = 
-				 new MultipartRequest(request,saveDirectory,maxSize,"euc-kr",
+				 new MultipartRequest(request,saveDirectory,maxSize,"UTF-8",
 						new DefaultFileRenamePolicy());
+		//사진저장
 		
 		String filename = mr.getFilesystemName("myfile");
+		//사진이름 얻어오기
+		
+		System.out.println("파일이름: "+filename);
+		System.out.println(mr.getParameter("m_id"));
+		System.out.println(mr.getParameter("pro_title"));
+	
 		
 		ProjectDTO project = new ProjectDTO();
-		project.setM_id(request.getParameter("m_id"));
-		System.out.println(request.getParameter("m_id"));
-		project.setPro_title(request.getParameter("pro_title"));
-		project.setPro_catagory(request.getParameter("pro_category"));
-		//project.setPro_end(request.getParameter("pro_End"));
-		System.out.println(request.getParameter("pro_goal"));
-		project.setPro_goal(Integer.parseInt(request.getParameter("pro_goal")));
-//		Date d= Date.valueOf(request.getParameter("pro_End"));
+		project.setM_id(mr.getParameter("m_id"));
+		project.setPro_title(mr.getParameter("pro_title"));
+		project.setPro_catagory(mr.getParameter("pro_category"));
+		project.setPro_goal(Integer.parseInt(mr.getParameter("pro_goal")));
+		project.setPro_end(mr.getParameter("pro_End"));
+		project.setPro_thumbnail(mr.getFilesystemName("myfile"));
 		
-		java.sql.Date d= java.sql.Date.valueOf(request.getParameter("pro_End"));
-		System.out.println(project.toString()); 
+		System.out.println(project.toString());
+		
+		ProjectDAO dao = new ProjectDAO();
+//		
 		
 		return mapping.findForward("scs");
 	}
