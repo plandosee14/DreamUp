@@ -20,24 +20,6 @@ public class ProjectDAO {
 		sqlMap = SqlMapConfig.getSqlMapInstance();
 	}
 	
-	public String insertProImage(HttpServletRequest request){
-		String path="";
-		try {
-			int maxSize=15*1024*1024;
-			String saveDirectory = request.getSession().getServletContext().getRealPath("img/thumnail");
-				
-			MultipartRequest mr = 
-					 new MultipartRequest(request,saveDirectory,maxSize,"euc-kr",
-							new DefaultFileRenamePolicy());
-			
-			String filename = mr.getFilesystemName("myfile");
-			path = saveDirectory;
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return path;
-	}
 
 	// 프로젝트 기본 정보 입력
 	public boolean insertBacic(ProjectDTO project) {

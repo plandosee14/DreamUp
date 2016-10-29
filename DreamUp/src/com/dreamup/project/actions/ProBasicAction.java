@@ -13,6 +13,8 @@ import org.apache.struts.action.ActionMapping;
 
 import com.dreamup.project.dao.ProjectDAO;
 import com.dreamup.project.dto.ProjectDTO;
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 public class ProBasicAction extends Action{
 	@Override
@@ -20,12 +22,16 @@ public class ProBasicAction extends Action{
 			HttpServletResponse response) throws Exception {
 		 
 		ProjectDAO dao = new ProjectDAO();
-		String path = dao.insertProImage(request);
 		
 		
+		int maxSize=15*1024*1024;
+		String saveDirectory = request.getSession().getServletContext().getRealPath("img/thumnail");
+			
+		MultipartRequest mr = 
+				 new MultipartRequest(request,saveDirectory,maxSize,"euc-kr",
+						new DefaultFileRenamePolicy());
 		
-		
-		
+		String filename = mr.getFilesystemName("myfile");
 		
 		ProjectDTO project = new ProjectDTO();
 		project.setM_id(request.getParameter("m_id"));
