@@ -38,25 +38,20 @@ create table project(
 
 
 
-
-
-
-
-
-
-
 alter table project ADD(pro_link varchar2(255));
 alter table project ADD(pro_sns varchar2(255));
 
 insert into project
-(pro_title,pro_thumbnail,pro_catagory,pro_start,pro_end,pro_goal)
-values (#pro_title#,#pro_thumbnail#,#pro_catagory#,#pro_start#,#pro_end#,#pro_goal#)
+(pro_No,m_id,pro_title,pro_thumbnail,pro_catagory,pro_start,pro_end,pro_goal)
+values (project_seq.nextval,'test1','dreamup','코알라.jpg','영화',sysdate,sysdate,2000000)
 
 
 select * from member;
 
 	
 select * from project;
+
+
 drop sequence project_seq;
 create sequence project_seq
 	start with 1

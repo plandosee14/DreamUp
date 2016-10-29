@@ -12,11 +12,13 @@ public class ProjectDTO {
 	private Date pro_start;
 	private String pro_end;
 	private int pro_goal;
+	private int pro_days; //프로젝트 기간
+
 
 	private String pro_video;
 	private String pro_content;
 	private String pro_link;
-	private String Pro_Image;
+	private String Pro_image;
 
 	private String Pro_fileImage;
 	private String Pro_fileIntro;
@@ -35,9 +37,9 @@ public class ProjectDTO {
 	}
 
 	public ProjectDTO(int pro_no, String m_id, String pro_thumbnail, String pro_title, String pro_catagory,
-			Date pro_start, String pro_end, int pro_goal, String pro_video, String pro_content, String pro_link,
-			String pro_Image, String pro_fileImage, String pro_fileIntro, String pro_fileSns, String pro_Bank,
-			int pro_account, int su_count, int pro_state, String now_amount) {
+			Date pro_start, String pro_end, int pro_goal, int pro_days, String pro_video, String pro_content,
+			String pro_link, String pro_image, String pro_fileImage, String pro_fileIntro, String pro_fileSns,
+			String pro_Bank, int pro_account, int su_count, int pro_state, String now_amount) {
 		super();
 		this.pro_no = pro_no;
 		this.m_id = m_id;
@@ -47,10 +49,11 @@ public class ProjectDTO {
 		this.pro_start = pro_start;
 		this.pro_end = pro_end;
 		this.pro_goal = pro_goal;
+		this.pro_days = pro_days;
 		this.pro_video = pro_video;
 		this.pro_content = pro_content;
 		this.pro_link = pro_link;
-		Pro_Image = pro_Image;
+		Pro_image = pro_image;
 		Pro_fileImage = pro_fileImage;
 		Pro_fileIntro = pro_fileIntro;
 		Pro_fileSns = pro_fileSns;
@@ -125,6 +128,14 @@ public class ProjectDTO {
 		this.pro_goal = pro_goal;
 	}
 
+	public int getPro_days() {
+		return pro_days;
+	}
+
+	public void setPro_days(int pro_days) {
+		this.pro_days = pro_days;
+	}
+
 	public String getPro_video() {
 		return pro_video;
 	}
@@ -149,12 +160,12 @@ public class ProjectDTO {
 		this.pro_link = pro_link;
 	}
 
-	public String getPro_Image() {
-		return Pro_Image;
+	public String getPro_image() {
+		return Pro_image;
 	}
 
-	public void setPro_Image(String pro_Image) {
-		Pro_Image = pro_Image;
+	public void setPro_image(String pro_image) {
+		Pro_image = pro_image;
 	}
 
 	public String getPro_fileImage() {
@@ -225,11 +236,20 @@ public class ProjectDTO {
 	public String toString() {
 		return "ProjectDTO [pro_no=" + pro_no + ", m_id=" + m_id + ", pro_thumbnail=" + pro_thumbnail + ", pro_title="
 				+ pro_title + ", pro_catagory=" + pro_catagory + ", pro_start=" + pro_start + ", pro_end=" + pro_end
-				+ ", pro_goal=" + pro_goal + ", pro_video=" + pro_video + ", pro_content=" + pro_content + ", pro_link="
-				+ pro_link + ", Pro_Image=" + Pro_Image + ", Pro_fileImage=" + Pro_fileImage + ", Pro_fileIntro="
-				+ Pro_fileIntro + ", Pro_fileSns=" + Pro_fileSns + ", Pro_Bank=" + Pro_Bank + ", pro_account="
-				+ pro_account + ", su_count=" + su_count + ", pro_state=" + pro_state + ", now_amount=" + now_amount
-				+ "]";
+				+ ", pro_goal=" + pro_goal + ", pro_days=" + pro_days + ", pro_video=" + pro_video + ", pro_content="
+				+ pro_content + ", pro_link=" + pro_link + ", Pro_image=" + Pro_image + ", Pro_fileImage="
+				+ Pro_fileImage + ", Pro_fileIntro=" + Pro_fileIntro + ", Pro_fileSns=" + Pro_fileSns + ", Pro_Bank="
+				+ Pro_Bank + ", pro_account=" + pro_account + ", su_count=" + su_count + ", pro_state=" + pro_state
+				+ ", now_amount=" + now_amount + "]";
 	}
+	
+	
+	
+	
 
+
+
+
+	
+	
 }

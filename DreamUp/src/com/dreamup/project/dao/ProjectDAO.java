@@ -21,26 +21,41 @@ public class ProjectDAO {
 	}
 	
 
-	// 프로젝트 기본 정보 입력
+	// 프로젝트 기본 정보 입력 ok
 	public boolean insertBacic(ProjectDTO project) {
-		int result;
+		 
 		try {
-			result = (int) sqlMap.insert("project.insertBasic", project);
-			if (result == 1) {
+			sqlMap.insert("project.insertBasic", project);
+			
 				System.out.println("DAO : 프로젝트 기본정보 입력 성공");
 				return true;
-			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+	
+	public boolean insertBacic2(ProjectDTO project) {
+		 
+		try {
+			sqlMap.insert("project.insertBasic2", project);
+			
+				System.out.println("DAO : 프로젝트 기본정보 입력 성공");
+				return true;
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return false;
 	}
 
-	//프로젝트 스토리 정보 입력
+
+	//프로젝트 스토리 정보 입력 ok
 	public boolean updateStory(ProjectDTO project) {
 		int result;
 		try {
-			result = sqlMap.update("prject.updateStory", project);
+			result = sqlMap.update("project.updateStory", project);
 			if (result == 1) {
 				System.out.println("DAO : 프로젝트 스토리정보 입력 성공");
 				return true;
