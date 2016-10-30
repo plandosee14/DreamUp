@@ -36,6 +36,7 @@ public class ProjectDAO {
 		return false;
 	}
 	
+	//ok
 	public boolean insertBacic2(ProjectDTO project) {
 		 
 		try {
@@ -67,7 +68,7 @@ public class ProjectDAO {
 		return false;
 	}
 
-	//프로젝트 프로필 정보 입력
+	//프로젝트 프로필 정보 입력 ok
 	public boolean updateProfile(ProjectDTO project) {
 		int result;
 		try {
@@ -180,7 +181,7 @@ public class ProjectDAO {
 		return null;
 	}
 	
-	//등록버튼 눌렀을때 state를 1로 바꿈 
+	//등록버튼 눌렀을때 state를 1로 바꿈 ok
 	public boolean submitProject(){
 		int result;
 		try {

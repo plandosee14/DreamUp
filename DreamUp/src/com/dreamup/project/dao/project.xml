@@ -46,8 +46,16 @@
 		update project set
 		Pro_fileImage=#Pro_fileImage#,
 		Pro_fileIntro=#Pro_fileIntro#,
+		
 		Pro_fileSns=#Pro_fileSns#
 		where pro_no=#pro_no#
+	</update>
+	
+	<update id="updateAccount" parameterClass="project">
+		update project set
+		
+		where pro_no=#pro_no#
+		
 	</update>
 	
 	<update id="submitProject">

@@ -1,5 +1,6 @@
 package com.dreamup.test;
 
+import com.dreamup.member.dto.MemberDTO;
 import com.dreamup.project.dao.ProjectDAO;
 import com.dreamup.project.dto.ProjectDTO;
 
@@ -8,25 +9,36 @@ public class ProjectTest {
 		ProjectDTO project = new ProjectDTO();
 		ProjectDAO dao = new ProjectDAO();
 		
-		System.out.println(dao.submitProject());
 		
-		project.setM_id("test3");
-		project.setPro_thumbnail("thumbnail");
-		project.setPro_title("test입니당");
-		project.setPro_catagory("음악");
-		project.setPro_days(30);
-		project.setPro_goal(300000);
-		project.setPro_state(0);
+//		System.out.println(dao.submitProject());
 		
-		System.out.println(dao.insertBacic2(project));
+//		project.setM_id("test3");
+//		project.setPro_thumbnail("thumbnail");
+//		project.setPro_title("test입니당");
+//		project.setPro_catagory("음악");
+//		project.setPro_days(30);
+//		project.setPro_goal(300000);
+//		project.setPro_state(0);
 //		
-//		project.setPro_no(2);
+//		System.out.println(dao.insertBacic2(project));
+//		
+//		project.setPro_no(15);
 //		project.setPro_video("https://www.youtube.com/");
 //		project.setPro_content("이 프로젝트는 테스트다 졸리당");
 //		project.setPro_link("www.naver.com");
 //		project.setPro_image("dfsdf");
 //		
 //		System.out.println(dao.updateStory(project));
+		
+		project.setPro_no(15);
+		project.setPro_fileImage("사진url");
+		project.setPro_fileIntro("나는 정다운이당");
+		project.setPro_fileSns("snsurl");
+		
+		
+		System.out.println(dao.updateProfile(project));
+		
+		
 
 			
 		
