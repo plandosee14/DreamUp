@@ -97,7 +97,7 @@
   <div>
   후원기간
   </div> 
-  기간<input type="Radio" size="2" name="day-type" value="days"> <input type="text" name="pro_End" size=10><br>
+  기간<input type="Radio" size="2" name="day-type" value="days"> <input type="text" name="pro_days" size=10><br>
 
   마감일<input type="Radio" size="2" name="day-type" value="end-day"> <input type="date" name="pro_End" size=10><br>
   </td>

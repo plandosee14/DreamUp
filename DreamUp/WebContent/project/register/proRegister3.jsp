@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+여기는 스토리 입력입니다~!!
 </body>
 </html>

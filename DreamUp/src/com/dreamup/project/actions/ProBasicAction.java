@@ -36,11 +36,7 @@ public class ProBasicAction extends Action{
 		//사진이름 얻어오기
 		
 		System.out.println("파일이름: "+filename);
-		System.out.println(mr.getParameter("m_id"));
-		System.out.println(mr.getParameter("pro_title"));
-		System.out.println(mr.getParameter("pro_title"));
-		System.out.println(mr.getParameter("pro_title"));
-	
+			
 		
 		ProjectDTO project = new ProjectDTO();
 		project.setM_id(mr.getParameter("m_id"));
@@ -48,22 +44,24 @@ public class ProBasicAction extends Action{
 		project.setPro_catagory(mr.getParameter("pro_category"));
 		project.setPro_goal(Integer.parseInt(mr.getParameter("pro_goal")));
 		project.setPro_thumbnail(mr.getFilesystemName("myfile"));
-		project.setPro_end(mr.getParameter("pro_End"));
 		
-		System.out.println(mr.getParameter("day-type"));
 		ProjectDAO dao = new ProjectDAO();
 		
 		ActionForward forward;
 		
+		System.out.println(mr.getParameter("day-type"));
 		//day-type이 기간으로 체크되어있을 경우 기간insertDAO 호출
 		if(mr.getParameter("day-type").equals("days")){
+			System.out.println("days 찍어보기: "+mr.getParameter("pro_days"));
+			project.setPro_days(Integer.parseInt(mr.getParameter("pro_days")));
+			System.out.println(project.toString());
 			if(dao.insertBacic2(project)){
-				System.out.println(project.toString());
 				forward = mapping.findForward("scs");
 			}else{
 				forward = mapping.findForward("fail");
 			}
 		}else{
+			project.setPro_end(mr.getParameter("pro_End"));
 		   if(dao.insertBacic(project)){
 			   System.out.println(project.toString());	
 			   forward = mapping.findForward("scs");

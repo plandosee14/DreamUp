@@ -27,6 +27,10 @@
     <put name="body" value="/project/register/proRegister2.jsp"></put>
   </definition>
   
+  <definition name=".register3" extends=".main">
+    <put name="body" value="/project/register/proRegister3.jsp"></put>
+  </definition>
+  
   
   
   <!-- 로그인 회원가입 --> 

@@ -10,7 +10,7 @@
 	               type="com.dreamup.project.actions.ProBasicAction">
 	          <forward name="scs" path="/register_2.do" redirect="true"/>
 	       </action>
-	       
+	       <!-- 로그인/회원가입 -->
 	       <action path="/Join-ing"
 	               type="com.dreamup.member.actions.JoinAction">
 	          <forward name="scs" path="/joinOK.do" redirect="true"/>
@@ -23,9 +23,17 @@
 	          <forward name="fail" path="/login.do" redirect="true"/>
 	       </action>
 	       
+	       <!-- 프로젝트 등록 step -->
+	       <!-- 기본정보 등록 -->
 	       <action path="/pro_basic"
 	               type="com.dreamup.project.actions.ProBasicAction">
 	          <forward name="scs" path="/register_2.do" redirect="true"/>
+	
+	       </action>
+	       <!-- 리워드 등록 -->
+	       <action path="/pro_reward"
+	               type="com.dreamup.reward.actions.RewardAddAction">
+	          <forward name="scs" path="/register_3.do" redirect="true"/>
 	
 	       </action>
 	       
