@@ -9,15 +9,15 @@ public class RewardDTO {
 	private int re_money;
 	private String re_title;
 	private String re_item;
-	private Date re_delivery;
-	private int re_amount;
+	private String re_delivery;
+	private int re_limite;
 
 	public RewardDTO() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public RewardDTO(int re_no, int pro_no, int re_money, String re_title, String re_item, Date re_delivery,
-			int re_amount) {
+	public RewardDTO(int re_no, int pro_no, int re_money, String re_title, String re_item, String re_delivery,
+			int re_limite) {
 		super();
 		this.re_no = re_no;
 		this.pro_no = pro_no;
@@ -25,7 +25,7 @@ public class RewardDTO {
 		this.re_title = re_title;
 		this.re_item = re_item;
 		this.re_delivery = re_delivery;
-		this.re_amount = re_amount;
+		this.re_limite = re_limite;
 	}
 
 	public int getRe_no() {
@@ -68,26 +68,28 @@ public class RewardDTO {
 		this.re_item = re_item;
 	}
 
-	public Date getRe_delivery() {
+	public String getRe_delivery() {
 		return re_delivery;
 	}
 
-	public void setRe_delivery(Date re_delivery) {
+	public void setRe_delivery(String re_delivery) {
 		this.re_delivery = re_delivery;
 	}
 
-	public int getRe_amount() {
-		return re_amount;
+	public int getRe_limite() {
+		return re_limite;
 	}
 
-	public void setRe_amount(int re_amount) {
-		this.re_amount = re_amount;
+	public void setRe_limite(int re_limite) {
+		this.re_limite = re_limite;
 	}
 
 	@Override
 	public String toString() {
 		return "RewardDTO [re_no=" + re_no + ", pro_no=" + pro_no + ", re_money=" + re_money + ", re_title=" + re_title
-				+ ", re_item=" + re_item + ", re_delivery=" + re_delivery + ", re_amount=" + re_amount + "]";
+				+ ", re_item=" + re_item + ", re_delivery=" + re_delivery + ", re_limite=" + re_limite + "]";
 	}
+
+	
 	
 }

@@ -10,47 +10,39 @@ import com.ibatis.sqlmap.client.SqlMapClient;
 
 public class RewardDAO {
 	SqlMapClient sqlMap;
+	
 	public RewardDAO() {
 		sqlMap = SqlMapConfig.getSqlMapInstance();
 	}
 	
-	public boolean insertTempReward(RewardDTO reward) {
-		return false;
-	}
-
-	public boolean updateTempReward(RewardDTO reward) {
-		return false;
-	}
-
-	public boolean deleteTempReward(int rtNo) {
-		return false;
-	}
-
-	public RewardDTO selectTempReward(int rtNo) {
-		return null;
-	}
-
-	public List<RewardDTO> selectAllTempReward(int pno) {
-		return null;
-	}
-
 	public boolean insertReward(RewardDTO reward) {
-		List<RewardDTO> rewardList;
 		
 		try {
-			rewardList = (List<RewardDTO>) sqlMap.insert("reward.insertReward");
+			 sqlMap.insert("reward.insertReward",reward);
+			 System.out.println("DAO : 리워드 입력 성공");
+			 return true;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return false;
 	}
-
-	public List<RewardDTO> selectAllReward() {
+	
+	//리워드 하나 선택
+	public boolean selectReward(int reNo) {
+		return false;
+	}
+	
+	//한 프로젝트에서 제공하는 리워드 리스트(where절 프로젝트 번호일치시)
+	public List<RewardDTO> selectProReward() {
 		return null;
 	}
 
-	public boolean selectReward(int reNo) {
+	public boolean updateReward(RewardDTO reward) {
+		return false;
+	}
+	
+	public boolean deleteReward(int rtNo) {
 		return false;
 	}
 }

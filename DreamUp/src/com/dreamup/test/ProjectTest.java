@@ -8,6 +8,8 @@ public class ProjectTest {
 		ProjectDTO project = new ProjectDTO();
 		ProjectDAO dao = new ProjectDAO();
 		
+		System.out.println(dao.submitProject());
+		
 		project.setM_id("test3");
 		project.setPro_thumbnail("thumbnail");
 		project.setPro_title("test¿‘¥œ¥Á");

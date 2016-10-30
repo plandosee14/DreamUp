@@ -8,7 +8,7 @@ create table project(
 	Pro_Start		date			not null, -- 프로젝트 시작일(sysdate)
 	Pro_End			date			not null, -- 프로젝트 끝일(sysdate+a)
 	Pro_Goal		integer			not null, -- 프로젝트 목표금액
-	Pro_state		integer, 	
+	Pro_state		integer 	default '0',
 	--Pro_state
 	--0 : 현재 등록중
 	--1 : 등록 완료 & 후원 진행중

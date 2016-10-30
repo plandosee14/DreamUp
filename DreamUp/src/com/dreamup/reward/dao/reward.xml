@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd" >
 <sqlMap namespace="reward">
-<typeAlias alias="reward" type="com.dreamup.dto.reward.RewardDTO"/>
+<typeAlias alias="reward" type="com.dreamup.reward.dto.RewardDTO"/>
+
 	<insert id="insertReward" parameterClass="reward">
 		insert into reward
-		(re_no,pro_no,re_title,re_amount,re_item)
+		(re_no,pro_no,re_money,re_title,re_item,
+		re_delivery,re_limite)
 		values
-		(reward_seq.nextval,#pro_no#,#pro_title#,#pro_catagory#,#pro_start#,#pro_end#,#pro_goal#)
+		(reward_seq.nextval,#pro_no#,#re_money#,
+		#re_title#,#re_item#,#re_delivery#,#re_limite#)
 	</insert>
 </sqlMap>

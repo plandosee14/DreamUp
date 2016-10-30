@@ -71,7 +71,7 @@ public class ProjectDAO {
 	public boolean updateProfile(ProjectDTO project) {
 		int result;
 		try {
-			result = sqlMap.update("prject.updateProfile", project);
+			result = sqlMap.update("project.updateProfile", project);
 			if (result == 1) {
 				System.out.println("DAO : 프로젝트 등록자 프로필정보 입력 성공");
 				return true;
@@ -88,7 +88,7 @@ public class ProjectDAO {
 	public boolean updateAccount(ProjectDTO project) {
 		int result;
 		try {
-			result = sqlMap.update("prject.updateAccount", project);
+			result = sqlMap.update("project.updateAccount", project);
 			if (result == 1) {
 				System.out.println("DAO : 프로젝트 계좌정보 입력 성공");
 				return true;
@@ -178,6 +178,22 @@ public class ProjectDAO {
 			e.printStackTrace();
 		}
 		return null;
+	}
+	
+	//등록버튼 눌렀을때 state를 1로 바꿈 
+	public boolean submitProject(){
+		int result;
+		try {
+			result = sqlMap.update("project.submitProject");
+			if (result == 1) {
+				System.out.println("성공");
+				return true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
 	}
 	
 /*	public List<ProjectDTO> searchProjectBy*/

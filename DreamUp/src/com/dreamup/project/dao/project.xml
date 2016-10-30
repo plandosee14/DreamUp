@@ -49,5 +49,10 @@
 		Pro_fileSns=#Pro_fileSns#
 		where pro_no=#pro_no#
 	</update>
+	
+	<update id="submitProject">
+	    update project set
+	    Pro_state = 1
+	</update>
 
 </sqlMap>
