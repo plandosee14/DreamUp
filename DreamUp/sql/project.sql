@@ -37,7 +37,7 @@ create table project(
 
 
 
-
+alter table project ADD(company_address varchar2(255));
 alter table project ADD(pro_link varchar2(255));
 alter table project ADD(pro_sns varchar2(255));
 
