@@ -47,15 +47,34 @@ public class ProBasicAction extends Action{
 		project.setPro_title(mr.getParameter("pro_title"));
 		project.setPro_catagory(mr.getParameter("pro_category"));
 		project.setPro_goal(Integer.parseInt(mr.getParameter("pro_goal")));
-		project.setPro_end(mr.getParameter("pro_End"));
 		project.setPro_thumbnail(mr.getFilesystemName("myfile"));
+		project.setPro_end(mr.getParameter("pro_End"));
 		
-		System.out.println(project.toString());
-		
+		System.out.println(mr.getParameter("day-type"));
 		ProjectDAO dao = new ProjectDAO();
-		dao.insertBacic(project);
 		
-		return mapping.findForward("scs");
+		ActionForward forward;
+		
+		//day-type이 기간으로 체크되어있을 경우 기간insertDAO 호출
+		if(mr.getParameter("day-type").equals("days")){
+			if(dao.insertBacic2(project)){
+				System.out.println(project.toString());
+				forward = mapping.findForward("scs");
+			}else{
+				forward = mapping.findForward("fail");
+			}
+		}else{
+		   if(dao.insertBacic(project)){
+			   System.out.println(project.toString());	
+			   forward = mapping.findForward("scs");
+		   }else{	   
+			   forward = mapping.findForward("fail");
+		   }
+		    
+		}
+		
+		
+		return forward;
 	}
 
 }
