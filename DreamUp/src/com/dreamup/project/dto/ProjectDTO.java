@@ -22,6 +22,7 @@ public class ProjectDTO {
 
 	private String Pro_fileImage;
 	private String Pro_fileIntro;
+	private String Pro_address;
 	private String Pro_fileSns;
 
 	private String Pro_Bank;
@@ -38,8 +39,8 @@ public class ProjectDTO {
 
 	public ProjectDTO(int pro_no, String m_id, String pro_thumbnail, String pro_title, String pro_catagory,
 			Date pro_start, String pro_end, int pro_goal, int pro_days, String pro_video, String pro_content,
-			String pro_link, String pro_image, String pro_fileImage, String pro_fileIntro, String pro_fileSns,
-			String pro_Bank, int pro_account, int su_count, int pro_state, String now_amount) {
+			String pro_link, String pro_image, String pro_fileImage, String pro_fileIntro, String pro_address,
+			String pro_fileSns, String pro_Bank, int pro_account, int su_count, int pro_state, String now_amount) {
 		super();
 		this.pro_no = pro_no;
 		this.m_id = m_id;
@@ -56,6 +57,7 @@ public class ProjectDTO {
 		Pro_image = pro_image;
 		Pro_fileImage = pro_fileImage;
 		Pro_fileIntro = pro_fileIntro;
+		Pro_address = pro_address;
 		Pro_fileSns = pro_fileSns;
 		Pro_Bank = pro_Bank;
 		this.pro_account = pro_account;
@@ -184,6 +186,14 @@ public class ProjectDTO {
 		Pro_fileIntro = pro_fileIntro;
 	}
 
+	public String getPro_address() {
+		return Pro_address;
+	}
+
+	public void setPro_address(String pro_address) {
+		Pro_address = pro_address;
+	}
+
 	public String getPro_fileSns() {
 		return Pro_fileSns;
 	}
@@ -238,17 +248,10 @@ public class ProjectDTO {
 				+ pro_title + ", pro_catagory=" + pro_catagory + ", pro_start=" + pro_start + ", pro_end=" + pro_end
 				+ ", pro_goal=" + pro_goal + ", pro_days=" + pro_days + ", pro_video=" + pro_video + ", pro_content="
 				+ pro_content + ", pro_link=" + pro_link + ", Pro_image=" + Pro_image + ", Pro_fileImage="
-				+ Pro_fileImage + ", Pro_fileIntro=" + Pro_fileIntro + ", Pro_fileSns=" + Pro_fileSns + ", Pro_Bank="
-				+ Pro_Bank + ", pro_account=" + pro_account + ", su_count=" + su_count + ", pro_state=" + pro_state
-				+ ", now_amount=" + now_amount + "]";
+				+ Pro_fileImage + ", Pro_fileIntro=" + Pro_fileIntro + ", Pro_address=" + Pro_address + ", Pro_fileSns="
+				+ Pro_fileSns + ", Pro_Bank=" + Pro_Bank + ", pro_account=" + pro_account + ", su_count=" + su_count
+				+ ", pro_state=" + pro_state + ", now_amount=" + now_amount + "]";
 	}
-	
-	
-	
-	
-
-
-
 
 	
 	

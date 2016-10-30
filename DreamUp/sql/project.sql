@@ -23,6 +23,7 @@ create table project(
 	
 	Pro_fileImage	varchar2(30), -- 등록자 사진url
 	Pro_fileIntro 		varchar2(255), --등록자 소개 정보 (lontext로 자료형 변환 할것
+	Pro_address			varchar2(255), --프로필등록 회사주소
 	Pro_fileSns			varchar2(255), -- 등록자 sns url
 	--프로젝트 등록자 프로필 정보 입력시 필요 컬럼
 	
@@ -37,7 +38,7 @@ create table project(
 
 
 
-alter table project ADD(company_address varchar2(255));
+
 alter table project ADD(pro_link varchar2(255));
 alter table project ADD(pro_sns varchar2(255));
 
