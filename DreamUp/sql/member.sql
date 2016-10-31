@@ -9,6 +9,7 @@ create table member(
     --회원가입시 입력 받는 컬럼 (INSERT)
     
    M_Phone         varchar2(13), --1.후원할때 or 2.프로젝트 등록시 입력
+   M_Zip          varchar2(13),
    M_Address      varchar2(255), -- 1.후원할때 배송지 정보 or 2.프로젝트 등록시 주소정보 입력
    M_Post         varchar2(20), -- 1.후원할때 배송지 정보 or 2.프로젝트 등록시 주소정보 입력
    
