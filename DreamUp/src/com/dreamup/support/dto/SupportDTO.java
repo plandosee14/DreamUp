@@ -19,7 +19,7 @@ public class SupportDTO {
 	private String su_refundBank;
 	private String su_refundAccount;
 
-	private String su_state;
+	private String su_state; 
 
 	public SupportDTO() {
 		// TODO Auto-generated constructor stub

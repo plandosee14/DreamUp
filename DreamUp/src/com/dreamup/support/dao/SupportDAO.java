@@ -1,57 +1,66 @@
 package com.dreamup.support.dao;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import com.dreamup.ibatis.SqlMapConfig;
 import com.dreamup.support.dto.SupportDTO;
 import com.ibatis.sqlmap.client.SqlMapClient;
 
-
 public class SupportDAO {
 	SqlMapClient sqlMap;
-	
+
 	public SupportDAO() {
-	  sqlMap = SqlMapConfig.getSqlMapInstance();	
+		sqlMap = SqlMapConfig.getSqlMapInstance();
 	}
-	
-	//후원정보 입력
-	public boolean insertSupport(SupportDTO support){
+
+	// 후원정보 입력
+	public boolean insertSupport(SupportDTO support) {
+
 		
+		try {
+			System.out.println("before insert to support : " + support.toString());
+			sqlMap.insert("support.insertSupport", support);
+
+			return true;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 		return false;
 	}
 
-	public boolean updateSupport(SupportDTO support){
-		
+	public boolean updateSupport(SupportDTO support) {
+
 		return false;
 	}
-	
-	public boolean deleteSupport(int suNO){
-		
+
+	public boolean deleteSupport(int suNO) {
+
 		return false;
 	}
-	
-	public List<SupportDTO> selectSupporter(int pNO){
-		
+
+	public List<SupportDTO> selectSupporter(int pNO) {
+
 		return null;
 	}
-	
-	public List<SupportDTO> selectAllSupporter(){
-		
+
+	public List<SupportDTO> selectAllSupporter() {
+
 		return null;
 	}
-	
-	public boolean upProjectSupporter(int pNo){
-		
+
+	public boolean upProjectSupporter(int pNo) {
+
 		return false;
 	}
-	
-	public boolean upUserSupporter(int pNo){
-		
+
+	public boolean upUserSupporter(int pNo) {
+
 		return false;
 	}
-	
-	public boolean upUserSupporting(String id){
-		
+
+	public boolean upUserSupporting(String id) {
+
 		return false;
 	}
 }

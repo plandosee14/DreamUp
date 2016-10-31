@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd" >
 <sqlMap namespace="support">
-<!-- 로그인한 사용자의 정보와 배송지 정보가 다를 경우 -->
-<insert id="">
-insert into support m_id
+	<typeAlias alias="support" type="com.dreamup.support.dto.SupportDTO" />
+	<typeAlias alias="list" type="java.util.List" />
 
-</insert>
+	<!-- 로그인한 사용자의 정보와 배송지 정보가 다를 경우 -->
+	<insert id="insertSupport" parameterClass="support">
+
+
+		insert into support
+		(su_no,m_id,pro_no,re_no,su_money,su_name, su_address,
+		su_zip,su_phone,paymentPlan,su_refundAccount,su_refundBank,su_date)
+		values
+		(support_seq.nextval,#m_id#,#pro_no#,#re_no#,#su_money#,#su_name#,
+		#su_address#,
+		#su_zip#,#su_phone#,#paymentPlan#,#su_refundAccount#,#su_refundBank#,sysdate)
+
+
+	</insert>
 
 
 

@@ -16,10 +16,16 @@ create table support(
 	Su_Date			date		not null, -- 후원 날짜
 	--프로젝트 후원 정보 입력시 필요 컬럼
 
-	Su_State		varchar2(1)	not null  default '0' --환불여부
+	Su_State		varchar2(1)	 default '0' --환불여부
 
 );
 
+insert into support (su_no,m_id,pro_no,re_no,su_money,su_name, su_address,
+		             su_zip,su_phone,paymentPlan,su_refundAccount,su_refundBank,su_date)
+		values
+		            (support_seq.nextval,'test1',1,1,1300,'정다우니','수원시팔달구',
+		             '34012','01084685154','현금','23112312','국민은행',sysdate);
+		
 drop sequence support_seq;
 create sequence support_seq
 	start with 1
