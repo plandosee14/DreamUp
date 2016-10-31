@@ -33,7 +33,7 @@ create table project(
 	
 	Su_Count		integer, -- 현재 프로젝트가 후원받은 수
 				
-	Now_Amount		varchar2(255) --현재까지 후원된 금액
+	Now_Amount		integer --현재까지 후원된 금액
 );
 
 
@@ -47,7 +47,7 @@ insert into project
 pro_video,su_count,now_amount,Pro_fileImage,Pro_fileIntro,
 Pro_fileSns,pro_content,Pro_image)
 values (project_seq.nextval,'test2','dreamup','코알라.jpg','영화',
-	sysdate,sysdate,2000000,'비디오',100,'50000000','정다운.jpg','내용입니당','페북','ㄴㄴ','사진')
+	sysdate,sysdate,2000000,'비디오',100,50000000,'정다운.jpg','내용입니당','페북','ㄴㄴ','사진');
 
 
 select * from member;
