@@ -5,7 +5,7 @@ create table reply(
 	M_id		varchar2(20)	not null references member(M_id),
 	Rp_Content	varchar2(100)	not null,
 	Rp_Time		date		not null,
-	ThumbsUp	integer
+	ThumbsUp	integer default '0'
 );
 
 drop sequence reply_seq;
