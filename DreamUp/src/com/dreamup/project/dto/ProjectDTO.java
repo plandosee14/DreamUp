@@ -25,8 +25,8 @@ public class ProjectDTO {
 	private String Pro_address;
 	private String Pro_fileSns;
 
-	private String Pro_Bank;
-	private int pro_account;
+	private String Pro_bank;
+	private String pro_account;
 
 	private int su_count;
 	private int pro_state;
@@ -40,7 +40,7 @@ public class ProjectDTO {
 	public ProjectDTO(int pro_no, String m_id, String pro_thumbnail, String pro_title, String pro_catagory,
 			Date pro_start, String pro_end, int pro_goal, int pro_days, String pro_video, String pro_content,
 			String pro_link, String pro_image, String pro_fileImage, String pro_fileIntro, String pro_address,
-			String pro_fileSns, String pro_Bank, int pro_account, int su_count, int pro_state, String now_amount) {
+			String pro_fileSns, String pro_bank, String pro_account, int su_count, int pro_state, String now_amount) {
 		super();
 		this.pro_no = pro_no;
 		this.m_id = m_id;
@@ -59,7 +59,7 @@ public class ProjectDTO {
 		Pro_fileIntro = pro_fileIntro;
 		Pro_address = pro_address;
 		Pro_fileSns = pro_fileSns;
-		Pro_Bank = pro_Bank;
+		Pro_bank = pro_bank;
 		this.pro_account = pro_account;
 		this.su_count = su_count;
 		this.pro_state = pro_state;
@@ -202,19 +202,19 @@ public class ProjectDTO {
 		Pro_fileSns = pro_fileSns;
 	}
 
-	public String getPro_Bank() {
-		return Pro_Bank;
+	public String getPro_bank() {
+		return Pro_bank;
 	}
 
-	public void setPro_Bank(String pro_Bank) {
-		Pro_Bank = pro_Bank;
+	public void setPro_bank(String pro_bank) {
+		Pro_bank = pro_bank;
 	}
 
-	public int getPro_account() {
+	public String getPro_account() {
 		return pro_account;
 	}
 
-	public void setPro_account(int pro_account) {
+	public void setPro_account(String pro_account) {
 		this.pro_account = pro_account;
 	}
 
@@ -249,7 +249,7 @@ public class ProjectDTO {
 				+ ", pro_goal=" + pro_goal + ", pro_days=" + pro_days + ", pro_video=" + pro_video + ", pro_content="
 				+ pro_content + ", pro_link=" + pro_link + ", Pro_image=" + Pro_image + ", Pro_fileImage="
 				+ Pro_fileImage + ", Pro_fileIntro=" + Pro_fileIntro + ", Pro_address=" + Pro_address + ", Pro_fileSns="
-				+ Pro_fileSns + ", Pro_Bank=" + Pro_Bank + ", pro_account=" + pro_account + ", su_count=" + su_count
+				+ Pro_fileSns + ", Pro_bank=" + Pro_bank + ", pro_account=" + pro_account + ", su_count=" + su_count
 				+ ", pro_state=" + pro_state + ", now_amount=" + now_amount + "]";
 	}
 

@@ -11,4 +11,11 @@
 		(reward_seq.nextval,#pro_no#,#re_money#,
 		#re_title#,#re_item#,#re_delivery#,#re_limite#)
 	</insert>
+	
+<!-- 	<select id="selectReward" parameterClass="">
+		select 
+		from reward
+		where 
+	</select> -->
+	
 </sqlMap>

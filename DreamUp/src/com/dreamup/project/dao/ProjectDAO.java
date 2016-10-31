@@ -18,6 +18,7 @@ public class ProjectDAO {
 
 	public ProjectDAO() {
 		sqlMap = SqlMapConfig.getSqlMapInstance();
+		System.out.println(sqlMap);
 	}
 	
 
@@ -85,7 +86,7 @@ public class ProjectDAO {
 		return false;
 	}
 
-	//프로필 계좌 정보 입력
+	//프로필 계좌 정보 입력 ok
 	public boolean updateAccount(ProjectDTO project) {
 		int result;
 		try {
@@ -101,12 +102,14 @@ public class ProjectDAO {
 		return false;
 	}
 	
-	//프로젝트 사진 or 타이틀 클릭 시 보이는 프로젝트 상세 화면
+	//프로젝트 사진 or 타이틀 클릭 시 보이는 프로젝트 상세 화면ok
 	public ProjectDTO selectProject(int pro_no) {
-		ProjectDTO project;
+		
+		ProjectDTO result;
 		try {
-			project = (ProjectDTO) sqlMap.queryForObject("project.selectProject", pro_no);
-			return project;
+			result = (ProjectDTO) sqlMap.queryForObject("project.selectProject", pro_no);
+			System.out.println(result);
+			return result;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -114,6 +117,7 @@ public class ProjectDAO {
 
 		return null;
 	}
+	
 	
 	//마이페이지 자신의 아이디로 등록한 프로젝트 목록
 	public List<ProjectDTO> selectProjectById(String id) {
@@ -181,6 +185,8 @@ public class ProjectDAO {
 		return null;
 	}
 	
+	
+	
 	//등록버튼 눌렀을때 state를 1로 바꿈 ok
 	public boolean submitProject(){
 		int result;
@@ -194,6 +200,11 @@ public class ProjectDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return false;
+	}
+	
+	//등록중이었던 프로젝트들중 가장 최근에 등록하다가 만 프로젝트 넘버를 조회
+	public boolean selectinsertingProjectNo(){
 		return false;
 	}
 	

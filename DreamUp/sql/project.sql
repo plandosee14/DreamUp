@@ -28,12 +28,12 @@ create table project(
 	--프로젝트 등록자 프로필 정보 입력시 필요 컬럼
 	
 	Pro_Bank		varchar2(40), -- 후원 달성시 입금받을 은행명
-	Pro_Account		integer	, 	  -- 후원 달성시 입금받을 계좌명
+	Pro_Account		varchar2(50)	, 	  -- 후원 달성시 입금받을 계좌명
 	--프로젝트 계좌 정보 입력시 필요 컬럼
 	
 	Su_Count		integer, -- 현재 프로젝트가 후원받은 수
 				
-	NowAmount		varchar2(255) --현재까지 후원된 금액
+	Now_Amount		varchar2(255) --현재까지 후원된 금액
 );
 
 
@@ -43,8 +43,11 @@ alter table project ADD(pro_link varchar2(255));
 alter table project ADD(pro_sns varchar2(255));
 
 insert into project
-(pro_No,m_id,pro_title,pro_thumbnail,pro_catagory,pro_start,pro_end,pro_goal)
-values (project_seq.nextval,'test1','dreamup','코알라.jpg','영화',sysdate,sysdate,2000000)
+(pro_No,m_id,pro_title,pro_thumbnail,pro_catagory,pro_start,pro_end,pro_goal,
+pro_video,su_count,now_amount,Pro_fileImage,Pro_fileIntro,
+Pro_fileSns,pro_content,Pro_image)
+values (project_seq.nextval,'test2','dreamup','코알라.jpg','영화',
+	sysdate,sysdate,2000000,'비디오',100,'50000000','정다운.jpg','내용입니당','페북','ㄴㄴ','사진')
 
 
 select * from member;
@@ -60,3 +63,10 @@ create sequence project_seq
 	increment by 1
 	nocycle
 	nocache;
+	
+	select pro_video,su_count,now_amount,pro_goal,
+		Pro_fileImage,Pro_fileIntro,Pro_fileSns,
+		pro_content,Pro_image
+		from
+		project
+		where pro_no=20

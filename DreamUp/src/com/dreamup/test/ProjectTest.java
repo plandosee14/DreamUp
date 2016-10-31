@@ -12,7 +12,7 @@ public class ProjectTest {
 		
 //		System.out.println(dao.submitProject());
 		
-//		project.setM_id("test3");
+//		project.setM_id("test4");
 //		project.setPro_thumbnail("thumbnail");
 //		project.setPro_title("test입니당");
 //		project.setPro_catagory("음악");
@@ -30,15 +30,26 @@ public class ProjectTest {
 //		
 //		System.out.println(dao.updateStory(project));
 		
-		project.setPro_no(15);
-		project.setPro_fileImage("사진url");
-		project.setPro_fileIntro("나는 정다운이당");
-		project.setPro_fileSns("snsurl");
+//		project.setPro_no(18);
+//		project.setPro_fileImage("사진url");
+//		project.setPro_fileIntro("나는 정다운이당");
+//		project.setPro_address("수웟시 권선구");
+//		project.setPro_fileSns("snsurl");
+//		
+//		
+//		System.out.println(dao.updateProfile(project));
 		
 		
-		System.out.println(dao.updateProfile(project));
+//		project.setPro_no(18);
+//		project.setPro_bank("우리은행");
+//		project.setPro_account("10002-536-4444");
+//		
+//		System.out.println(dao.updateAccount(project));
 		
 		
+		
+		
+//		System.out.println(dao.selectProject(20));
 
 			
 		
