@@ -16,7 +16,7 @@ create table support(
 	Su_Date			date		not null, -- 후원 날짜
 	--프로젝트 후원 정보 입력시 필요 컬럼
 
-	Su_State		character(1)	not null --환불여부
+	Su_State		varchar2(1)	not null  default '0' --환불여부
 
 );
 
