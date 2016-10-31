@@ -71,7 +71,7 @@
 		from project
 		where m_id=#m_id#
 	</select> -->
-	
+
 	<select id="selectinsertingProjectNo" parameterClass="String" resultClass="int">
 	  select max(pro_no)
 	  from project

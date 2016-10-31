@@ -202,7 +202,7 @@ public class ProjectDAO {
 		}
 		return false;
 	}
-	
+
 	//등록중이었던 프로젝트들중 가장 최근에 등록하다가 만 프로젝트 넘버를 조회ok
 	public int selectinsertingProjectNo(String m_id){
 		int pro_no=0;
