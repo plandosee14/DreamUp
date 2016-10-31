@@ -2,10 +2,19 @@ package com.dreamup.support.dao;
 
 import java.util.List;
 
+import com.dreamup.ibatis.SqlMapConfig;
 import com.dreamup.support.dto.SupportDTO;
+import com.ibatis.sqlmap.client.SqlMapClient;
 
 
 public class SupportDAO {
+	SqlMapClient sqlMap;
+	
+	public SupportDAO() {
+	  sqlMap = SqlMapConfig.getSqlMapInstance();	
+	}
+	
+	//후원정보 입력
 	public boolean insertSupport(SupportDTO support){
 		
 		return false;

@@ -11,10 +11,13 @@ public class SupportDTO {
 
 	private int su_money;
 	private String su_name;
+	private String su_zip;
 	private String su_address;
 	private String su_phone;
 	private String paymentPlan;
 	private Date su_date;
+	private String su_refundBank;
+	private String su_refundAccount;
 
 	private String su_state;
 
@@ -22,8 +25,11 @@ public class SupportDTO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public SupportDTO(int su_no, int pro_no, String m_id, int re_no, int su_money, String su_name, String su_address,
-			String su_phone, String paymentPlan, Date su_date, String su_state) {
+
+
+	public SupportDTO(int su_no, int pro_no, String m_id, int re_no, int su_money, String su_name, String su_zip,
+			String su_address, String su_phone, String paymentPlan, Date su_date, String su_refundBank,
+			String su_refundAccount, String su_state) {
 		super();
 		this.su_no = su_no;
 		this.pro_no = pro_no;
@@ -31,12 +37,41 @@ public class SupportDTO {
 		this.re_no = re_no;
 		this.su_money = su_money;
 		this.su_name = su_name;
+		this.su_zip = su_zip;
 		this.su_address = su_address;
 		this.su_phone = su_phone;
 		this.paymentPlan = paymentPlan;
 		this.su_date = su_date;
+		this.su_refundBank = su_refundBank;
+		this.su_refundAccount = su_refundAccount;
 		this.su_state = su_state;
 	}
+
+
+
+	public String getSu_refundBank() {
+		return su_refundBank;
+	}
+
+
+
+	public void setSu_refundBank(String su_refundBank) {
+		this.su_refundBank = su_refundBank;
+	}
+
+
+
+	public String getSu_refundAccount() {
+		return su_refundAccount;
+	}
+
+
+
+	public void setSu_refundAccount(String su_refundAccount) {
+		this.su_refundAccount = su_refundAccount;
+	}
+
+
 
 	public int getSu_no() {
 		return su_no;
@@ -86,6 +121,14 @@ public class SupportDTO {
 		this.su_name = su_name;
 	}
 
+	public String getSu_zip() {
+		return su_zip;
+	}
+
+	public void setSu_zip(String su_zip) {
+		this.su_zip = su_zip;
+	}
+
 	public String getSu_address() {
 		return su_address;
 	}
@@ -126,11 +169,19 @@ public class SupportDTO {
 		this.su_state = su_state;
 	}
 
+
+
 	@Override
 	public String toString() {
 		return "SupportDTO [su_no=" + su_no + ", pro_no=" + pro_no + ", m_id=" + m_id + ", re_no=" + re_no
-				+ ", su_money=" + su_money + ", su_name=" + su_name + ", su_address=" + su_address + ", su_phone="
-				+ su_phone + ", paymentPlan=" + paymentPlan + ", su_date=" + su_date + ", su_state=" + su_state + "]";
+				+ ", su_money=" + su_money + ", su_name=" + su_name + ", su_zip=" + su_zip + ", su_address="
+				+ su_address + ", su_phone=" + su_phone + ", paymentPlan=" + paymentPlan + ", su_date=" + su_date
+				+ ", su_refundBank=" + su_refundBank + ", su_refundAccount=" + su_refundAccount + ", su_state="
+				+ su_state + "]";
 	}
+
+	
+
+	
 
 }

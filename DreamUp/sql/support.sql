@@ -7,13 +7,16 @@ create table support(
 	
 	Su_Money		integer		not null, --후원금액
 	Su_Name			varchar2(20)	not null, -- 배송 받을 사람 이름
-	Su_Address		varchar2(20)	not null, -- 배송지 주소
+	Su_Zip          varchar2(20)    not null, -- 배송우편번호
+	Su_Address		varchar2(255)	not null, -- 배송지 주소
 	Su_Phone		varchar2(20)	not null, -- 배송 받을 사람 번호
 	PaymentPlan		varchar2(20)	not null, --결제방식
+	Su_refundAccount varchar2(30) not null, --환불계좌
+	Su_refundBank    varchar2(30) not null, --환불은행
 	Su_Date			date		not null, -- 후원 날짜
 	--프로젝트 후원 정보 입력시 필요 컬럼
 
-	Su_State		character(1)	not null, --환불여부
+	Su_State		character(1)	not null --환불여부
 
 );
 

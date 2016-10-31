@@ -13,12 +13,13 @@ public class RewardAddAction extends Action{
 	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		
+		int cnt = Integer.parseInt(request.getParameter("cnt"));
 		System.out.println("cnt°¹¼ö: "+request.getParameter("cnt"));
 		System.out.println("»èÁ¦list: "+request.getParameter("deleteList"));
 		
-		//for(){
+		for(int i=0; i<cnt; i++){
 			
-		//}
+		}
 		
 		return mapping.findForward("scs");
 	}
