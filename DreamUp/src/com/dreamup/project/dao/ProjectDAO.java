@@ -119,25 +119,12 @@ public class ProjectDAO {
 	}
 	
 	
-	//마이페이지 자신의 아이디로 등록한 프로젝트 목록
-//	public List<ProjectDTO> selectProjectById(String m_id) {
-//		List<ProjectDTO> projcetList;
-//		try {
-//			projcetList = sqlMap.queryForList("project.selectNewProject",m_id);
-//			System.out.println("DAO : 신규 프로젝트 목록 조회 성공");
-//			return projcetList;
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		return null;
-//	}
-	
-	public List<ProjectDTO> selectProjectByTitle(String id) {
+	//마이페이지 자신의 아이디로 등록한 프로젝트 목록ok
+	public List<ProjectDTO> selectProjectById(String m_id) {
 		List<ProjectDTO> projcetList;
 		try {
-			projcetList = sqlMap.queryForList("project.selectNewProject");
-			System.out.println("DAO : 신규 프로젝트 목록 조회 성공");
+			projcetList = sqlMap.queryForList("project.selectProjectById",m_id);
+		
 			return projcetList;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -145,12 +132,25 @@ public class ProjectDAO {
 		}
 		return null;
 	}
-	
+	//메인 화면에서 프로젝트 검색 ok
+	public List<ProjectDTO> selectProjectByTitle(String pro_title) {
+		List<ProjectDTO> projectList = null;
+		try {
+
+			projectList = (List<ProjectDTO>)sqlMap.queryForList("project.selectProjectByTitle","%"+pro_title+"%");
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return projectList;
+	}
+	//메인 신규아이디어 상품 (최신순)ok
 	public List<ProjectDTO> selectNewProject() {
 		List<ProjectDTO> projcetList;
 		try {
 			projcetList = sqlMap.queryForList("project.selectNewProject");
-			System.out.println("DAO : 신규 프로젝트 목록 조회 성공");
+			
 			return projcetList;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -158,12 +158,12 @@ public class ProjectDAO {
 		}
 		return null;
 	}
-
+	//메인 이달의 아이디어 상품(후원자가 많은 순)
 	public List<ProjectDTO> selectPopProject() {
 		List<ProjectDTO> projcetList;
 		try {
 			projcetList = sqlMap.queryForList("project.selectPopProject");
-			System.out.println("DAO : 신규 프로젝트 목록 조회 성공");
+			
 			return projcetList;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -171,7 +171,7 @@ public class ProjectDAO {
 		}
 		return null;
 	}
-
+	//카테고리별 프로젝트
 	public List<ProjectDTO> selectCatagoryProject(String catagory) {
 		List<ProjectDTO> projcetList;
 		try {
