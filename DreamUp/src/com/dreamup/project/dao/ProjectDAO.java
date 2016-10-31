@@ -105,11 +105,11 @@ public class ProjectDAO {
 	//프로젝트 사진 or 타이틀 클릭 시 보이는 프로젝트 상세 화면ok
 	public ProjectDTO selectProject(int pro_no) {
 		
-		ProjectDTO result;
+		ProjectDTO project;
 		try {
-			result = (ProjectDTO) sqlMap.queryForObject("project.selectProject", pro_no);
-			System.out.println(result);
-			return result;
+			project = (ProjectDTO) sqlMap.queryForObject("project.selectProject", pro_no);
+			System.out.println(project);
+			return project;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -120,18 +120,18 @@ public class ProjectDAO {
 	
 	
 	//마이페이지 자신의 아이디로 등록한 프로젝트 목록
-	public List<ProjectDTO> selectProjectById(String id) {
-		List<ProjectDTO> projcetList;
-		try {
-			projcetList = sqlMap.queryForList("project.selectNewProject");
-			System.out.println("DAO : 신규 프로젝트 목록 조회 성공");
-			return projcetList;
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return null;
-	}
+//	public List<ProjectDTO> selectProjectById(String m_id) {
+//		List<ProjectDTO> projcetList;
+//		try {
+//			projcetList = sqlMap.queryForList("project.selectNewProject",m_id);
+//			System.out.println("DAO : 신규 프로젝트 목록 조회 성공");
+//			return projcetList;
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		return null;
+//	}
 	
 	public List<ProjectDTO> selectProjectByTitle(String id) {
 		List<ProjectDTO> projcetList;
@@ -203,9 +203,18 @@ public class ProjectDAO {
 		return false;
 	}
 	
-	//등록중이었던 프로젝트들중 가장 최근에 등록하다가 만 프로젝트 넘버를 조회
-	public boolean selectinsertingProjectNo(){
-		return false;
+	//등록중이었던 프로젝트들중 가장 최근에 등록하다가 만 프로젝트 넘버를 조회ok
+	public int selectinsertingProjectNo(String m_id){
+		int pro_no=0;
+		try {
+			pro_no = (int) sqlMap.queryForObject("project.selectinsertingProjectNo",m_id);
+			return pro_no;
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return pro_no;
 	}
 	
 /*	public List<ProjectDTO> searchProjectBy*/

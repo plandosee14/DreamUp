@@ -5,7 +5,7 @@
 
 	<insert id="insertBasic" parameterClass="project">
 		insert into
-		project
+		project 
 		(pro_no,m_id,pro_thumbnail,pro_title,pro_catagory
 		,pro_start,pro_end,pro_goal,pro_state)
 		values
@@ -62,15 +62,21 @@
 		select pro_video,su_count,now_amount,pro_goal,
 		Pro_fileImage,Pro_fileIntro,Pro_fileSns,
 		pro_content,Pro_image
-		from
-		project
+		from project
 		where pro_no=#pro_no#
 	</select> 
 	
-	<!--  <select id="selectProjectById" parameterClass="String" resultClass="">
-		select 
+	 <!--   <select id="selectProjectById" parameterClass="String" resultClass="project">
+		select *
 		from project
+		where m_id=#m_id#
 	</select> -->
+	
+	<select id="selectinsertingProjectNo" parameterClass="String" resultClass="int">
+	  select max(pro_no)
+	  from project
+	  where pro_state=0 and m_id=#m_id#
+	</select>
 	
 	<update id="submitProject">
 		update project set
