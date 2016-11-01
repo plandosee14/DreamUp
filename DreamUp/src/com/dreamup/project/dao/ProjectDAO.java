@@ -158,7 +158,7 @@ public class ProjectDAO {
 		}
 		return null;
 	}
-	//메인 이달의 아이디어 상품(후원자가 많은 순)
+	//메인 이달의 아이디어 상품(후원자가 많은 순)ok
 	public List<ProjectDTO> selectPopProject() {
 		List<ProjectDTO> projcetList;
 		try {
@@ -171,12 +171,12 @@ public class ProjectDAO {
 		}
 		return null;
 	}
-	//카테고리별 프로젝트
+	//카테고리별 프로젝트ok
 	public List<ProjectDTO> selectCatagoryProject(String catagory) {
 		List<ProjectDTO> projcetList;
 		try {
-			projcetList = sqlMap.queryForList("project.selectCatagoryProject");
-			System.out.println("DAO : 신규 프로젝트 목록 조회 성공");
+			projcetList = sqlMap.queryForList("project.selectCatagoryProject",catagory);
+			
 			return projcetList;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

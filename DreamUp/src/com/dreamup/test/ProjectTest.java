@@ -78,14 +78,23 @@ public class ProjectTest {
 //		
 //		 }
 		
-		List<ProjectDTO> projcetList = dao.selectPopProject();
-		
-		 for (int i = 0; i < projcetList.size(); i++) {
-		 ProjectDTO project;
-		 project=projcetList.get(i);
-		 System.out.println(project.toString());
-		
-		 }
+//		List<ProjectDTO> projcetList = dao.selectPopProject();
+//		
+//		 for (int i = 0; i < projcetList.size(); i++) {
+//		 ProjectDTO project;
+//		 project=projcetList.get(i);
+//		 System.out.println(project.toString());
+//		
+//		 }
+		 
+//		 List<ProjectDTO> projcetList = dao.selectCatagoryProject("À½¾Ç");
+//			
+//		 for (int i = 0; i < projcetList.size(); i++) {
+//		 ProjectDTO project;
+//		 project=projcetList.get(i);
+//		 System.out.println(project.toString());
+//		
+//		 }
 	
 		// System.out.println(dao.selectProjectById("test1"));
 

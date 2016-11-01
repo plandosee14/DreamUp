@@ -44,10 +44,9 @@ alter table project ADD(pro_sns varchar2(255));
 
 insert into project
 (pro_No,m_id,pro_title,pro_thumbnail,pro_catagory,pro_start,pro_end,pro_goal,
-pro_video,su_count,now_amount,Pro_fileImage,Pro_fileIntro,
-Pro_fileSns,pro_content,Pro_image)
-values (project_seq.nextval,'test2','dreamup','코알라.jpg','영화',
-	sysdate,sysdate,2000000,'비디오',100,50000000,'정다운.jpg','내용입니당','페북','ㄴㄴ','사진');
+su_count)
+values (project_seq.nextval,'test2','dreamup','코알라.jpg','음악',
+	sysdate,sysdate,2000000,200);
 
 
 select * from member;
@@ -70,3 +69,8 @@ create sequence project_seq
 		from
 		project
 		where pro_no=20
+		
+		
+		select pro_no,pro_thumbnail,pro_title
+		from project
+		where upper(pro_title) like upper('%D%')
