@@ -115,5 +115,20 @@
 		update project set
 		Pro_state = 1
 	</update>
+	
+	<!-- 현재 프로젝트가 후원받은 수 카운트 -->
+	<update id="proSupportingCount" parameterClass="int">
+		update project set
+		su_count=su_count+1
+		where pro_no=#pro_no#
+	</update>
+	
+	<!-- 현재 프로젝트가 후원받은 금액-->
+	<update id="proSupportMoney" parameterClass="com.dreamup.support.dto.SupportDTO">
+	    update project set
+	    now_amount=now_amount+#su_money#
+	    where pro_no=#pro_no#
+	</update> 
+	
 
 </sqlMap>

@@ -50,7 +50,7 @@ values (project_seq.nextval,'test2','dreamup','코알라.jpg','음악',
 
 
 select * from member;
-select * from project;
+
 
 	
 select * from project;

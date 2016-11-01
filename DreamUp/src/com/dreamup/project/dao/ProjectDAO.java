@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import com.dreamup.ibatis.SqlMapConfig;
 import com.dreamup.project.dto.ProjectDTO;
+import com.dreamup.support.dto.SupportDTO;
 import com.ibatis.sqlmap.client.SqlMapClient;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
@@ -202,6 +203,35 @@ public class ProjectDAO {
 		}
 		return false;
 	}
+	
+	//현재 프로젝트가 후원받은 수 카운트 ok
+	public boolean proSupportingCount(int pro_no){
+		int result;
+		try {
+			result = sqlMap.update("project.proSupportingCount",pro_no);
+			if (result == 1) {
+				System.out.println("성공");
+				return true;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+	//현재 프로젝트가 후원받은 금액
+	public boolean proSupportMoney(SupportDTO support){
+		int result;
+		try {
+			result = sqlMap.update("project.proSupportMoney",support);
+			if (result == 1) {
+				System.out.println("성공");
+				return true;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
 
 	//등록중이었던 프로젝트들중 가장 최근에 등록하다가 만 프로젝트 넘버를 조회ok
 	public int selectinsertingProjectNo(String m_id){
@@ -216,6 +246,8 @@ public class ProjectDAO {
 		}
 		return pro_no;
 	}
+	
+	
 	
 /*	public List<ProjectDTO> searchProjectBy*/
 }

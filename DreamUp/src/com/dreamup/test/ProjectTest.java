@@ -5,12 +5,32 @@ import java.util.List;
 import com.dreamup.member.dto.MemberDTO;
 import com.dreamup.project.dao.ProjectDAO;
 import com.dreamup.project.dto.ProjectDTO;
+import com.dreamup.subank.dao.SuBankDAO;
+import com.dreamup.subank.dto.SuBankDTO;
+import com.dreamup.support.dto.SupportDTO;
 
 public class ProjectTest {
 
 	public static void main(String[] args) {
-		// ProjectDTO project = new ProjectDTO();
+		ProjectDTO project = new ProjectDTO();
 		ProjectDAO dao = new ProjectDAO();
+		SupportDTO support = new SupportDTO();
+		support.setSu_money(1000);
+		support.setPro_no(29);
+		
+		
+		System.out.println(dao.proSupportMoney(support));
+		
+//		dao.proSupportingCount(29);
+		
+//		SuBankDAO dao = new SuBankDAO();
+//		SuBankDTO subank = new SuBankDTO();
+//		
+//		subank.setSu_no(29);
+//		subank.setBankAccount("555-555");
+//		subank.setBankName("신한은행");
+//		
+//		System.out.println(dao.insert(subank));
 
 		// System.out.println(dao.submitProject());
 
@@ -95,7 +115,7 @@ public class ProjectTest {
 //		 System.out.println(project.toString());
 //		
 //		 }
-	
+//	
 		// System.out.println(dao.selectProjectById("test1"));
 
 		// System.out.println(dao.selectProject(20));
