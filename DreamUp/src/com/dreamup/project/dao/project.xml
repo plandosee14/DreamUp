@@ -94,10 +94,15 @@
 		select pro_no,su_count,
 		m_id,pro_thumbnail,pro_title,pro_content,pro_goal,pro_catagory,pro_start,pro_end
 		from project
-		order by su_count
+		order by su_count desc
 	</select>
-	<!-- <select id="selectPopProject" resultClass="project"> select su_count 
-		from project order by su_count </select> -->
+		
+	<select id="selectCatagoryProject" parameterClass="String" resultClass="project">
+	   	select pro_no,pro_catagory,pro_thumbnail,pro_title,pro_content,pro_goal,pro_start
+	   	from project
+	   	where pro_catagory=#pro_catagory#
+	</select>
+	
 
 	<select id="selectinsertingProjectNo" parameterClass="String"
 		resultClass="int">
