@@ -11,14 +11,45 @@
 		insert into support
 		(su_no,m_id,pro_no,re_no,su_money,su_name, su_address,
 		su_zip,su_phone,paymentPlan,su_refundAccount,su_refundBank,su_date)
+		
 		values
+		
 		(support_seq.nextval,#m_id#,#pro_no#,#re_no#,#su_money#,#su_name#,
 		#su_address#,
 		#su_zip#,#su_phone#,#paymentPlan#,#su_refundAccount#,#su_refundBank#,sysdate)
 
-
 	</insert>
+	
+	<!-- 후원정보 수정 -->
+	<update id="updateSupport" parameterClass="support">
+	update support	set
+	su_money = #su_money# , su_name = #su_name# ,
+	su_address = #su_address# , su_zip = #su_zip# ,
+	su_phone = #su_phone# ,  paymentPlan = #paymentPlan# , su_refundAccount = #su_refundAccount# 
+	
+	
+	where su_no = #su_no#
 
+	</update>
+	
+	<!-- 후원정보 삭제 -->
+	<delete id="deleteSupport" parameterClass="int">
+	delete from support where su_no = #su_no#
+	</delete>
+	
+	
+	<!--  프로젝트 후원한 서포터즈 목록 -->
+	<select id="selectSupporter" resultClass="support"  parameterClass="int">
+		select su_no,m_id,pro_no,re_no,su_money,su_name, su_address,
+		su_zip,su_phone,paymentPlan,su_refundAccount,su_refundBank,su_date from support 
+        where pro_No = #pro_No#
+	</select>
+	
+	<!--  모든 서포터즈 목록  -->
+	<select id="selectAllSupporter" resultClass="support">
+		select su_no,m_id,pro_no,re_no,su_money,su_name, su_address,
+		su_zip,su_phone,paymentPlan,su_refundAccount,su_refundBank,su_date from support
+	</select>
 
-
+	
 </sqlMap>

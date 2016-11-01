@@ -27,6 +27,7 @@
   <sqlMap resource="./com/dreamup/member/dao/member.xml"/>
   <sqlMap resource="./com/dreamup/project/dao/project.xml"/>
   <sqlMap resource="./com/dreamup/reward/dao/reward.xml"/>
+  <sqlMap resource="./com/dreamup/support/dao/support.xml"/>
   
 
 
