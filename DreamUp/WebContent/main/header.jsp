@@ -8,6 +8,10 @@
 </head>
 <%--header.jsp --%>
 <body>
-  <h2>DreamUp!</h2>
+  <!-- <h2>DreamUp!</h2> -->
+  <center>
+  <a href="main.do">
+  <img src="image/Logo.png"></a>
+  </center>
 </body>
 </html>

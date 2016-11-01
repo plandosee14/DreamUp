@@ -36,6 +36,12 @@ create table project(
 	Now_Amount		integer default '0'--현재까지 후원된 금액
 );
 
+drop sequence project_seq;
+create sequence project_seq
+	start with 1
+	increment by 1
+	nocycle
+	nocache;
 
 
 
@@ -56,12 +62,6 @@ select * from member;
 select * from project;
 
 
-drop sequence project_seq;
-create sequence project_seq
-	start with 1
-	increment by 1
-	nocycle
-	nocache;
 	
 	select pro_video,su_count,now_amount,pro_goal,
 		Pro_fileImage,Pro_fileIntro,Pro_fileSns,

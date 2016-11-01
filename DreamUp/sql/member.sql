@@ -20,6 +20,13 @@ create table member(
    m_SupportingCount      int default '0', -- 내가 후원하는 프로젝트 수 총합계 (후원시 +1)
    m_supportedCount      int default '0'-- 내 프로젝트 총 후원합계 (환불시 -1)
 );
+
+drop sequence member_seq;
+create sequence member_seq
+   start with 1
+   increment by 1
+   nocycle
+   nocache;
    
       insert into member
       (m_no, m_id, m_password, m_email, m_name, m_date)
@@ -57,12 +64,7 @@ drop table project
 
 delete * from member where M_ID='damang';
 
-drop sequence member_seq;
-create sequence member_seq
-   start with 1
-   increment by 1
-   nocycle
-   nocache;
+
    
    
          update member

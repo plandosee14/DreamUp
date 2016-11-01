@@ -10,6 +10,13 @@ create table reward(
 	--프로젝트 리워드 등록시 필요 컬럼
 );
 
+drop sequence reward_seq;
+create sequence reward_seq
+	start with 1
+	increment by 1
+	nocycle
+	nocache;
+	
 alter table reward add colum re_delivery 
 
 alter table reward ADD(re_delivery date not null);
@@ -22,10 +29,3 @@ insert into reward
 (Re_No,Pro_No,Re_Money,Re_Title,Re_Item,Re_delivery,Re_Limite)
 values
 (reward_seq.nextval, 1,15000,'대밍이부시기','옥수수',to_date('16-11-23'),15);
-
-drop sequence reward_seq;
-create sequence reward_seq
-	start with 1
-	increment by 1
-	nocycle
-	nocache;

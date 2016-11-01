@@ -48,8 +48,9 @@
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
    파일: <input type="file" name="myfile"> <br>
-   <input type="text" name="m_id" value="${login_id}">
-
+<%--    <input type="text" name="m_id" value="${login_id}"> --%>
+등록자 ID : ${login_id}
+<input type="hidden" name="m_id" value="${login_id}">
 
 
   </td>
