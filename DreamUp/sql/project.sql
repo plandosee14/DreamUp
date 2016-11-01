@@ -33,7 +33,7 @@ create table project(
 	
 	Su_Count		integer default '0', -- 현재 프로젝트가 후원받은 수
 				
-	Now_Amount		integer --현재까지 후원된 금액
+	Now_Amount		integer default '0'--현재까지 후원된 금액
 );
 
 
