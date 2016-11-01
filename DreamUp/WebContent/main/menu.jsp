@@ -72,7 +72,7 @@ menu.jsp
 								class="glyphicon glyphicon-user"></span> ${login_id }
 							</a></div>
 							<ul class="dropdown-menu">
-							<li><a href="#mypage.do">마이페이지</a>
+							<li><a href="mypage.do">마이페이지</a>
 							<li class="divider"></li>
 							<li><a href="#">등록 프로젝트</a></li>
 							<li><a href="#">후원 프로젝트</a></li>

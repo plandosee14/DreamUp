@@ -48,5 +48,11 @@
     <put name="body" value="/user/join/userJoinOk.jsp"></put>
   </definition>
   
+  <!-- 마이페이지 포워딩 테스트 -->
+  <definition name=".mypage" extends=".main">
+  <put name="body" value="/user/info/myPage.jsp"></put>
+  </definition>
+  
+  
   
 </tiles-definitions>

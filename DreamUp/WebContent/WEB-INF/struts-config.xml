@@ -42,6 +42,9 @@
 	          <forward name="scs" path="/register_4.do" redirect="true"/>	
 	       </action>
 	       
+	       
+	       
+	       
   </action-mappings>
   
    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/> 

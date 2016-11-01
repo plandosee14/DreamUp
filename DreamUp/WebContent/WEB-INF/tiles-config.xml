@@ -31,7 +31,8 @@
    	<action path="/joinOK"
    			         forward=".joinOK"/>
    			         
-   			         
+   	<!-- 마이페이지 포워딩 테스트 -->
+   	<action path="/mypage" forward=".mypage"></action>         
    			         
   </action-mappings>
 </struts-config>
