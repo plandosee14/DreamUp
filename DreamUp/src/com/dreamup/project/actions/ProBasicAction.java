@@ -55,7 +55,9 @@ public class ProBasicAction extends Action{
 			System.out.println("days Âï¾îº¸±â: "+mr.getParameter("pro_days"));
 			project.setPro_days(Integer.parseInt(mr.getParameter("pro_days")));
 			System.out.println(project.toString());
+			
 			if(dao.insertBacic2(project)){
+				
 				forward = mapping.findForward("scs");
 			}else{
 				forward = mapping.findForward("fail");
@@ -70,6 +72,9 @@ public class ProBasicAction extends Action{
 		   }
 		    
 		}
+		
+		int pro_No = dao.selectinsertingProjectNo(mr.getParameter("m_id"));
+		request.setAttribute("pro_No", pro_No);
 		
 		
 		return forward;

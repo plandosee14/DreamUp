@@ -24,9 +24,9 @@
     		 +'<label for="name">제목:</label>'
     		 +'<input type="text" id="title" name="title'+cnt+'"><br>'
     		 +'<label for="name">아이템:</label>'
-    		 +'<input type="text" id="id" name="id'+cnt+'"><br>'
+    		 +'<input type="text" id="id" name="item'+cnt+'"><br>'
     		 +'<label for="name">배송예정일:</label>'
-    		 +'<input type="text" id="duedate" name="duedate'+cnt+'"><br>'
+    		 +'<input type="date" id="duedate" name="duedate'+cnt+'"><br>'
     		 +'<label for="name">한정수량:</label>'
     		 +'<input type="text" id="amount" name="amount'+cnt+'"><br>'
     		 +'<button type="button" onclick="removeItem('+cnt+')" style="right:200px; width: 100px; onclick=removeItem('+cnt+')">삭제</button></fieldset>'
@@ -75,6 +75,8 @@
     <li>프로필</li>
     <li>계좌</li>
   </ul>
+  
+  ${pro_No}
     	
   <form name="reward" action="pro_reward.do" method="post">		
   
@@ -82,6 +84,7 @@
    <div id="itemList"></div>
    <input type="text" name="cnt" value="">
    <input type="text" name="deleteList" value="">
+   <input type="text" name="m_id" value="${login_id}">
    
    <input type="button"  value="추가" onclick="addItem()">
    <input type="button" value="다음단계" onclick="nextStep()">
