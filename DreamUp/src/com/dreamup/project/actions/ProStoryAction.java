@@ -18,15 +18,15 @@ public class ProStoryAction extends Action{
 			HttpServletResponse response) throws Exception {
 
 		int maxSize=5*1024*1024;//1kb--> 1mb  5Mb 사이즈 제한
-	     String saveDirectory=request.getSession().getServletContext().getRealPath("img/thumnail").getRealPath("upload");
+	     //String saveDirectory=request.getSession().getServletContext().getRealPath("img/thumnail").getRealPath("upload");
 	     String filename="";
 	     
-	      MultipartRequest mr = 
+	   /*   MultipartRequest mr = 
 	    		 new MultipartRequest(request,saveDirectory,maxSize,"euc-kr",
 	    				new DefaultFileRenamePolicy());
-	     
+	     */
 		//System.out.println(mr.getParameter(""));
-	      mr.getFilesystemName("myfile");
+	      //mr.getFilesystemName("myfile");
 		return super.execute(mapping, form, request, response);
 	}
 }
