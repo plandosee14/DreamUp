@@ -26,7 +26,7 @@
     		 +'<label for="name">아이템:</label>'
     		 +'<input type="text" id="id" name="item'+cnt+'"><br>'
     		 +'<label for="name">배송예정일:</label>'
-    		 +'<input type="text" id="duedate" name="duedate'+cnt+'"><br>'
+    		 +'<input type="date" id="duedate" name="duedate'+cnt+'"><br>'
     		 +'<label for="name">한정수량:</label>'
     		 +'<input type="text" id="amount" name="amount'+cnt+'"><br>'
     		 +'<button type="button" onclick="removeItem('+cnt+')" style="right:200px; width: 100px; onclick=removeItem('+cnt+')">삭제</button></fieldset>'
