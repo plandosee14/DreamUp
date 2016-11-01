@@ -25,29 +25,54 @@ public class RewardAddAction extends Action{
 		
 		ProjectDAO pdao = new ProjectDAO();
 		int pro_No = pdao.selectinsertingProjectNo(request.getParameter("m_id"));
-		for(int i=0; i<cnt; i++){
-			for(int j=0; j<delList.length; j++){
-				System.out.println(delList[j]);
-				if(i != Integer.parseInt(delList[j])){
-					RewardDTO reward = new RewardDTO();
-					reward.setPro_no(pro_No);
-					reward.setRe_money(Integer.parseInt(request.getParameter("re_money"+i)));
-					reward.setRe_title(request.getParameter("title"+i));
-					reward.setRe_item(request.getParameter("item"+i));
-					reward.setRe_delivery(request.getParameter("duedate"+i));
-					reward.setRe_limite(Integer.parseInt(request.getParameter("amount"+i)));
-					
-					RewardDAO dao = new RewardDAO();
-					if(dao.insertReward(reward)){
-						forward = mapping.findForward("scs");
-					}else{
-						forward = mapping.findForward("fail");					
+		
+		if(delList.length<1){ //삭제한 리워즈가 없을경우 cnt만큼 돌림
+			for(int i=0; i<cnt; i++){
+				RewardDTO reward = new RewardDTO();
+				reward.setPro_no(pro_No);
+				reward.setRe_money(Integer.parseInt(request.getParameter("re_money"+i)));
+				reward.setRe_title(request.getParameter("title"+i));
+				reward.setRe_item(request.getParameter("item"+i));
+				reward.setRe_delivery(request.getParameter("duedate"+i));
+				reward.setRe_limite(Integer.parseInt(request.getParameter("amount"+i)));
+				
+				RewardDAO dao = new RewardDAO();
+				if(dao.insertReward(reward)){
+					forward = mapping.findForward("scs");
+				}else{
+					forward = mapping.findForward("fail");					
+				}
+			}
+		}else{ //삭제했을경우 delList부분 뺴고 돌림
+			for(int i=0; i<cnt; i++){
+				
+				
+				for(int j=0; j<delList.length; j++){
+					System.out.println(delList[j]);
+					if((delList==null) || (i != Integer.parseInt(delList[j]))){
+						RewardDTO reward = new RewardDTO();
+						reward.setPro_no(pro_No);
+						reward.setRe_money(Integer.parseInt(request.getParameter("re_money"+i)));
+						reward.setRe_title(request.getParameter("title"+i));
+						reward.setRe_item(request.getParameter("item"+i));
+						reward.setRe_delivery(request.getParameter("duedate"+i));
+						reward.setRe_limite(Integer.parseInt(request.getParameter("amount"+i)));
+						
+						RewardDAO dao = new RewardDAO();
+						if(dao.insertReward(reward)){
+							forward = mapping.findForward("scs");
+						}else{
+							forward = mapping.findForward("fail");					
+						}
 					}
 				}
+				
+				
 			}
 			
 			
 		}
+		
 		
 		return forward;
 	}

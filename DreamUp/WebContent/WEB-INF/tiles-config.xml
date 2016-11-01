@@ -19,6 +19,9 @@
    	<action path="/register_3"
    			         forward=".register3"/>
    	
+   	<action path="/register_4"
+   			         forward=".register4"/>
+   	
    			         
    	<!-- 로그인/회원가입 -->
    	<action path="/login"
