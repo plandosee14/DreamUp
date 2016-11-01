@@ -35,9 +35,10 @@
 	               type="com.dreamup.reward.actions.RewardAddAction">
 	          <forward name="scs" path="/register_3.do" redirect="true"/>	
 	       </action>
+	       
 	       <!-- 스토리 등록 -->
-	       <action path="/pro_reward"
-	               type="com.dreamup.reward.actions.ProStoryAction">
+	       <action path="/pro_story"
+	               type="com.dreamup.project.actions.ProStoryAction">
 	          <forward name="scs" path="/register_4.do" redirect="true"/>	
 	       </action>
 	       

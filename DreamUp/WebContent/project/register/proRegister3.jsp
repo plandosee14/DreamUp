@@ -8,7 +8,7 @@
 <!-- Smart Editor -->
 <script type="text/javascript" src="<%=request.getContextPath()%>/project/se2/js/HuskyEZCreator.js" charset="utf-8"></script>
 <!-- <script type="text/javascript" src="../se2/photo_uploader/plugin/hp_SE2M_AttachQuickPhoto.js" charset="utf-8"></script> -->
- 
+ <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
  
 </head>
 <body>
@@ -24,7 +24,7 @@
 <br>
 <br>
 
-<form action="pro_reward.do"method="post" 
+<form action="pro_story.do"method="post" 
          enctype="multipart/form-data" id="frm">
 비디오: <input type="file" name="myfile"><br>
 
@@ -34,7 +34,7 @@
 링크 : <input type="text" name="link">
 
 
-<input type="submit" value="다음단계">
+<input type="button" id="save" value="다음단계"/>
 
 
 </form>
@@ -82,6 +82,11 @@ function submitContents(elClickedObj) {
      
     }
 }
+	
+	 $("#save").click(function(){
+         oEditors.getById["ir1"].exec("UPDATE_CONTENTS_FIELD", []);
+         $("#frm").submit();
+     });    
  
 
 
