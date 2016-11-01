@@ -31,7 +31,7 @@ create table project(
 	Pro_Account		varchar2(50)	, 	  -- 후원 달성시 입금받을 계좌명
 	--프로젝트 계좌 정보 입력시 필요 컬럼
 	
-	Su_Count		integer, -- 현재 프로젝트가 후원받은 수
+	Su_Count		integer default '0', -- 현재 프로젝트가 후원받은 수
 				
 	Now_Amount		integer --현재까지 후원된 금액
 );
