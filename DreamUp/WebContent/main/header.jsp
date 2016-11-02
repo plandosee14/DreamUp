@@ -11,7 +11,7 @@
   <!-- <h2>DreamUp!</h2> -->
   <center>
   <a href="main.do">
-  <img src="image/Logo.png"></a>
+  <img src="image/logolo.png" width=40%></a>
   </center>
 </body>
 </html>
