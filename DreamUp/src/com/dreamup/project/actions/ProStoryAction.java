@@ -20,7 +20,7 @@ public class ProStoryAction extends Action{
 			HttpServletResponse response) throws Exception {
 
 		ActionForward forward;
-		int maxSize=5*1024*1024;//1kb--> 1mb  5Mb 사이즈 제한
+		int maxSize=50*1024*1024;//1kb--> 1mb  5Mb 사이즈 제한
 	     String saveDirectory=request.getSession().getServletContext().getRealPath("video");
 	     
 	     MultipartRequest mr = 
