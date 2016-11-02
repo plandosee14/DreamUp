@@ -5,13 +5,43 @@
 <title>마이페이지</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
+<!-- <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style>
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+<script type="text/javascript" src="js/jquery-1.min.js"></script>
+<script type="text/javascript">
+/* 	$(function() {
+		$('#memberInfo').click(function() {
+				alert('11');
+			 $.ajax({
+				url : 'memberInfoView.do',
+				success : function(memberInfo){
+					$('#memberInfo').html(memberInfo);
+				};//성공시 데이터 뿌리기 
+			});//ajax 사용자 정보 뿌리기
+		});//memberInfo click event
+	});//ready */
+	/* $(function(){
+		$('#memberInfo').click(function(){
+			//alert($('#m_id').val());
+			 $.ajax({
+				url : 'checkPwdView.do',
+				data : {
+					m_id : $('#m_id').val()
+				},
+				type : 'POST',
+				success : function(checkPwdView){
+					alert(checkPwdView);
+					$('#resultView').html(checkPwdView);
+				}//success
+			});//ajax 
+		});
+	}); */
+</script>
+<!-- <style>
 .container {
 	padding: 80px 120px;
 }
@@ -27,49 +57,49 @@
 .person:hover {
 	border-color: #f1f1f1;
 }
-.row{
+
+.row {
 	margin-left: 25%;
 }
-</style>
+</style> -->
 </head>
 <body>
-<center>
-	<div class="row">
-		<div class="col-sm-4" style="background-color: lavender;">
-			후원받은숫자
-			후원한숫자?
-			색깔바꿀것</div>
-		<div class="col-sm-4" style="background-color: lavenderblush;">
+	<!-- 	<center>
+		<div class="topView">
 			<div class="row">
-				<div class="col-sm-8">
-					<p class="text-center">
-						<strong>정대맹</strong>
-					</p>
-					<br> <a href="#demo3" data-toggle="collapse"> <img
-						src="image/daemang2.jpg" class="img-circle person"
-						alt="Random Name" width="233" height="233">
-					</a>
-					<div id="demo3" class="collapse">
-						<a><p>프로필 사진 수정</p></a>
-						<a><p>하단메뉴2</p></a>
-						<a><p>생각이안나유</p></a>
+				<div class="col-sm-4" style="background-color: lavender;">
+					후원받은숫자 후원한숫자? 색깔바꿀것</div>
+				<div class="col-sm-4" style="background-color: lavenderblush;">
+					<div class="row">
+						<div class="col-sm-8">
+							<p class="text-center">
+								<strong>정대맹</strong>
+							</p>
+							<br> <a href="#demo3" data-toggle="collapse"> <img
+								src="image/daemang2.jpg" class="img-circle person"
+								alt="Random Name" width="233" height="233">
+							</a>
+							<div id="demo3" class="collapse">
+								<a><p>프로필 사진 수정</p></a> <a><p>하단메뉴2</p></a> <a><p>생각이안나유</p></a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-</center>
-
+	</center> -->
 	<div class="container">
 		<h2>마이페이징</h2>
 		<ul class="nav nav-tabs">
 			<li class="active"><a data-toggle="tab" href="#home">등록 프로젝트</a></li>
 			<li><a data-toggle="tab" href="#menu1">후원 프로젝트</a></li>
 			<li><a data-toggle="tab" href="#menu2">결제 목록</a></li>
-			<li><a data-toggle="tab" href="#menu3">내정보 수정</a></li>
+			<li id="memberInfo"><a href="checkPwdView.do">내정보
+					수정
+			</a></li>
 		</ul>
-
+<!-- 		<ul><li><a href="checkPwdView.do">비밀번호 재입력창</a></li></ul> -->
 		<div class="tab-content">
-			<div id="home" class="tab-pane fade in active">
+			<!-- 			<div id="home" class="tab-pane fade in active">
 				<h3>HOME</h3>
 				등록 프로젝트 출력 // 마감된 등록 프로젝트 목록 출력 // 등록프로젝트가 없을시 등록중인 프로젝트 목록
 				출력(max(su_date?))
@@ -82,14 +112,10 @@
 				<h3>Menu 2</h3>
 				결제 목록 출력 // 금액 정보 및 프로젝트 사진or타이틀 컬럼에 링크삽입하여 해당 링크 클릭시 프로젝트 상세조회 화면으로
 				이동
-			</div>
-			<div id="menu3" class="tab-pane fade">
-				<h3>Menu 3</h3>
-				내정보 수정!
-			</div>
+			</div> -->
+			<div id="resultView" class="tab-pane fade"></div>
 		</div>
 	</div>
-
 </body>
 </html>
 
