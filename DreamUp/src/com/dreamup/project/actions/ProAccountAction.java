@@ -28,7 +28,9 @@ public class ProAccountAction extends Action{
 		
 		if(dao.updateAccount(project)){
 			forward = mapping.findForward("scs");
-			//.dao.project = dao
+			
+			project = dao.selectProject(pro_no);
+			System.out.println(project.toString());
 			//request.setAttribute("project", dao.selectProject(pro_no));
 		}else{
 			forward = mapping.findForward("fail");
