@@ -4,69 +4,66 @@
           "http://struts.apache.org/dtds/struts-config_1_3.dtd">
 <struts-config>
 
-  <action-mappings>
-           
-	       <action path="/step1"
-	               type="com.dreamup.project.actions.ProBasicAction">
-	          <forward name="scs" path="/register_2.do" redirect="true"/>
-	       </action>
-	       <!-- 로그인/회원가입 -->
-	       <action path="/Join-ing"
-	               type="com.dreamup.member.actions.JoinAction">
-	          <forward name="scs" path="/joinOK.do" redirect="true"/>
-	          <forward name="fail" path="/join.do" redirect="true"/>
-	       </action>
-	       
-	       <action path="/login-ing"
-	               type="com.dreamup.member.actions.LoginAction">
-	          <forward name="scs" path="/main.do" redirect="true"/>
-	          <forward name="fail" path="/login.do" redirect="true"/>
-	       </action>
-	       
-	       <!-- 프로젝트 등록 step -->
-	       <!-- 기본정보 등록 -->
-	       <action path="/pro_basic"
-	               type="com.dreamup.project.actions.ProBasicAction">
-	          <forward name="scs" path="/register_2.do" redirect="true"/>
-	
-	       </action>
-	       <!-- 리워드 등록 -->
-	       <action path="/pro_reward"
-	               type="com.dreamup.reward.actions.RewardAddAction">
-	          <forward name="scs" path="/register_3.do" redirect="true"/>	
-	       </action>
-	       
-	       <!-- 스토리 등록 -->
-	       <action path="/pro_story"
-	               type="com.dreamup.project.actions.ProStoryAction">
-	          <forward name="scs" path="/register_4.do" redirect="true"/>	
-	       </action>
-	       
-	        <!-- 프로필 등록 -->
-	       <action path="/pro_file"
-	               type="com.dreamup.project.actions.ProfileAction">
-	          <forward name="scs" path="/register_5.do" redirect="true"/>	
-	       </action>
-	       
-	       <!-- 계좌 등록 -->
-	       <action path="/pro_account"
-	               type="com.dreamup.project.actions.ProAccountAction">
-	          <forward name="scs" path="/register_6.do" />	
-	       </action>
-	       
-	       
-	       
-	       
-  </action-mappings>
-  
-   <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/> 
-  
+	<action-mappings>
 
-<plug-in className="org.apache.struts.tiles.TilesPlugin">
-<set-property property="definitions-config" value="/WEB-INF/config/tiles-defs.xml"/>
-<set-property property="definitions-debug" value="2"/>
-<set-property property="definitions-parser-details" value="2"/>
-<set-property property="definitions-parser-validate" value="true"/>
-</plug-in>
+		<action path="/step1" type="com.dreamup.project.actions.ProBasicAction">
+			<forward name="scs" path="/register_2.do" redirect="true" />
+		</action>
+		<!-- 로그인/회원가입 -->
+		<action path="/Join-ing" type="com.dreamup.member.actions.JoinAction">
+			<forward name="scs" path="/joinOK.do" redirect="true" />
+			<forward name="fail" path="/join.do" redirect="true" />
+		</action>
+
+		<action path="/login-ing" type="com.dreamup.member.actions.LoginAction">
+			<forward name="scs" path="/main.do" redirect="true" />
+			<forward name="fail" path="/login.do" redirect="true" />
+		</action>
+
+		<!-- 프로젝트 등록 step -->
+		<!-- 기본정보 등록 -->
+		<action path="/pro_basic" type="com.dreamup.project.actions.ProBasicAction">
+			<forward name="scs" path="/register_2.do" redirect="true" />
+
+		</action>
+		<!-- 리워드 등록 -->
+		<action path="/pro_reward" type="com.dreamup.reward.actions.RewardAddAction">
+			<forward name="scs" path="/register_3.do" redirect="true" />
+		</action>
+
+		<!-- 스토리 등록 -->
+		<action path="/pro_story" type="com.dreamup.project.actions.ProStoryAction">
+			<forward name="scs" path="/register_4.do" redirect="true" />
+		</action>
+
+		<!-- 프로필 등록 -->
+		<action path="/pro_file" type="com.dreamup.project.actions.ProfileAction">
+			<forward name="scs" path="/register_5.do" redirect="true" />
+		</action>
+
+		<!-- 계좌 등록 -->
+		<action path="/pro_account" type="com.dreamup.project.actions.ProAccountAction">
+			<forward name="scs" path="/register_6.do" />
+		</action>
+		<!-- 회원정보 수정 폼 -->
+		<action path="/checkPwd" type="com.dreamup.member.actions.MemberInfoAction">
+			<forward name="success" path="/memberInfoView.do"></forward>
+		</action>
+
+
+
+	</action-mappings>
+
+	<controller processorClass="org.apache.struts.tiles.TilesRequestProcessor" />
+
+
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config" value="/WEB-INF/config/tiles-defs.xml" />
+		<set-property property="definitions-debug" value="2" />
+		<set-property property="definitions-parser-details"
+			value="2" />
+		<set-property property="definitions-parser-validate"
+			value="true" />
+	</plug-in>
 
 </struts-config>
