@@ -26,7 +26,7 @@ public class RewardAddAction extends Action{
 		ProjectDAO pdao = new ProjectDAO();
 		int pro_No = pdao.selectinsertingProjectNo(request.getParameter("m_id"));
 		
-		if(delList.length<1){ //삭제한 리워즈가 없을경우 cnt만큼 돌림
+		if(deleteStr.length()==0){ //삭제한 리워즈가 없을경우 cnt만큼 돌림
 			for(int i=0; i<cnt; i++){
 				RewardDTO reward = new RewardDTO();
 				reward.setPro_no(pro_No);
@@ -49,7 +49,7 @@ public class RewardAddAction extends Action{
 				
 				for(int j=0; j<delList.length; j++){
 					System.out.println(delList[j]);
-					if((delList==null) || (i != Integer.parseInt(delList[j]))){
+					if(i != Integer.parseInt(delList[j])){
 						RewardDTO reward = new RewardDTO();
 						reward.setPro_no(pro_No);
 						reward.setRe_money(Integer.parseInt(request.getParameter("re_money"+i)));

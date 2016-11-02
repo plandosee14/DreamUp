@@ -34,6 +34,14 @@
   <definition name=".register4" extends=".main">
     <put name="body" value="/project/register/proRegister4.jsp"></put>
   </definition>
+
+  <definition name=".register5" extends=".main">
+    <put name="body" value="/project/register/proRegister5.jsp"></put>
+  </definition>
+  
+  <definition name=".preview" extends=".main">
+    <put name="body" value="/project/register/preview.jsp"></put>
+  </definition>
   
   
   

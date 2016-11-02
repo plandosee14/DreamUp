@@ -42,6 +42,18 @@
 	          <forward name="scs" path="/register_4.do" redirect="true"/>	
 	       </action>
 	       
+	        <!-- 프로필 등록 -->
+	       <action path="/pro_file"
+	               type="com.dreamup.project.actions.ProfileAction">
+	          <forward name="scs" path="/register_5.do" redirect="true"/>	
+	       </action>
+	       
+	       <!-- 계좌 등록 -->
+	       <action path="/pro_account"
+	               type="com.dreamup.project.actions.ProAccountAction">
+	          <forward name="scs" path="/register_6.do" redirect="true"/>	
+	       </action>
+	       
 	       
 	       
 	       

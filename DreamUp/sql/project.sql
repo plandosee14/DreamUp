@@ -21,8 +21,9 @@ create table project(
 	Pro_Image		varchar2(2000), -- 프로젝트 소개 사진 url
  	--프로젝트 스토리 정보 입력시 필요 컬럼
 	
-	Pro_fileImage	varchar2(30), -- 등록자 사진url
-	Pro_fileIntro 		varchar2(255), --등록자 소개 정보 (lontext로 자료형 변환 할것
+	Pro_fileImage	varchar2(40), -- 등록자 사진url
+	Pro_fileIntro 		varchar2(2000), --등록자 소개 정보 (lontext로 자료형 변환 할것
+	Pro_zip             varchar2(30),
 	Pro_address			varchar2(255), --프로필등록 회사주소
 	Pro_fileSns			varchar2(255), -- 등록자 sns url
 	--프로젝트 등록자 프로필 정보 입력시 필요 컬럼

@@ -21,6 +21,12 @@
    	
    	<action path="/register_4"
    			         forward=".register4"/>
+   			         
+   	<action path="/register_5"
+   			         forward=".register5"/>
+   			         
+ 	<action path="/register_6"
+   			         forward=".preview"/>
    	
    			         
    	<!-- 로그인/회원가입 -->
