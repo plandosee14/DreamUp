@@ -33,7 +33,7 @@ public class LoginAction extends Action {
 		EncryptionPwd encryptionPwd = new EncryptionPwd();
 
 		ActionForward forward;
-
+		System.out.println(BCrypt.checkpw(encryptionPwd.shaPwd(member), dao.getPwd(member.getM_id())));
 		if (BCrypt.checkpw(encryptionPwd.shaPwd(member), dao.getPwd(member.getM_id()))) {
 			System.out.println("로그인 성공");
 			request.getSession().setAttribute("login_id", request.getParameter("id"));

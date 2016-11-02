@@ -18,16 +18,19 @@ public class MemberInfoAction extends Action {
 	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		String m_id = request.getParameter("m_id");
+		
 		System.out.println("현재 로그인 아이디 : " +m_id);
 		MemberDAO dao = new MemberDAO();
 		MemberDTO member = new MemberDTO();
 		member = dao.selectMember(m_id);
-		
+		member.setM_password(request.getParameter("m_password"));
+		System.out.println("member : " +member.toString());
 		EncryptionPwd encryptionPwd = new EncryptionPwd();
 		ActionForward actionForward = null;
 		System.out.println("shaPwd() : " +encryptionPwd.shaPwd(member));
-		System.out.println("dao.getPwd() : " +dao.getPwd(member.getM_password()));
+		System.out.println("dao.getPwd() : " +dao.getPwd(member.getM_id()));
 		
+		System.out.println(BCrypt.checkpw(encryptionPwd.shaPwd(member), dao.getPwd(member.getM_id())));
 		if (BCrypt.checkpw(encryptionPwd.shaPwd(member), dao.getPwd(member.getM_id()))) {
 			System.out.println("비밀번호 확인 성공");
 			member = dao.selectMember(m_id);
