@@ -8,6 +8,9 @@
 </head>
 <body>
 미리보기페이지입니다~!
+${project.pro_no}
+너는 왜 안ㄴ나오니??
+
 
 </body>
 </html>

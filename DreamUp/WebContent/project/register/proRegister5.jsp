@@ -69,8 +69,7 @@
 <table width="400" height="30">
  <tr>
   <td align="right">
-  <input type="button" size="2" value ="미리보기">
-  <input type="submit" size="2" value ="등록">
+  <input type="submit" size="2" value ="미리보기">
   </td>
  </tr>
  </table>

@@ -9,7 +9,7 @@
 </head>
 <%--base.jsp(레이아웃 설정페이지 ==> table,div) --%>
 <body>
-	<table width="100%" border="1">
+	<table width="100%" >
 	  <tr>
 	    <td  align="center">
 	      <tiles:insert attribute="header"/>

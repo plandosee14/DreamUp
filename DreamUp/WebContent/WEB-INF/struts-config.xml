@@ -51,7 +51,7 @@
 	       <!-- 계좌 등록 -->
 	       <action path="/pro_account"
 	               type="com.dreamup.project.actions.ProAccountAction">
-	          <forward name="scs" path="/register_6.do" redirect="true"/>	
+	          <forward name="scs" path="/register_6.do" />	
 	       </action>
 	       
 	       
