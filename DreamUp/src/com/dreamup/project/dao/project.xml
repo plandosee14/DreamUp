@@ -34,8 +34,7 @@
 		update project set
 		pro_video=#pro_video#,
 		pro_content=#pro_content#,
-		pro_link=#pro_link#,
-		pro_image=#pro_image#
+		pro_link=#pro_link#
 		where pro_no=#pro_no#
 	</update>
 
@@ -59,9 +58,7 @@
 	</update>
 
 	<select id="selectProject" parameterClass="int" resultClass="project">
-		select pro_no,pro_video,su_count,now_amount,pro_goal,
-		Pro_fileImage,Pro_fileIntro,Pro_fileSns,
-		pro_content,Pro_image
+		select *
 		from
 		project
 		where pro_no=#pro_no#

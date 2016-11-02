@@ -109,7 +109,7 @@ public class ProjectDAO {
 		ProjectDTO project;
 		try {
 			project = (ProjectDTO) sqlMap.queryForObject("project.selectProject", pro_no);
-			System.out.println(project);
+			System.out.println("DAO : "+project.toString());
 			return project;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

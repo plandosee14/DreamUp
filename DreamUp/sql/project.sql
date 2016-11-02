@@ -18,7 +18,6 @@ create table project(
 	Pro_Video		varchar2(2000), -- 프로젝트 비디오 url
 	Pro_Content		varchar2(2000), -- 프로젝트 소개 내용
 	Pro_link		varchar2(2000), -- 프로젝트 관련 링크 url
-	Pro_Image		varchar2(2000), -- 프로젝트 소개 사진 url
  	--프로젝트 스토리 정보 입력시 필요 컬럼
 	
 	Pro_fileImage	varchar2(2000), -- 등록자 사진url
@@ -64,6 +63,10 @@ select * from member;
 	
 select * from project;
 
+alter table project drop (pro_image)
+ALTER TABLE TABLE_NAME  DROP(columnName );
+
+
 
 	
 	select pro_video,su_count,now_amount,pro_goal,
@@ -77,3 +80,10 @@ select * from project;
 		select pro_no,pro_thumbnail,pro_title
 		from project
 		where upper(pro_title) like upper('%D%')
+		
+		
+		select pro_no,pro_video,su_count,now_amount,pro_goal,
+		Pro_fileImage,Pro_fileIntro,Pro_fileSns
+		from
+		project
+		where pro_no=4

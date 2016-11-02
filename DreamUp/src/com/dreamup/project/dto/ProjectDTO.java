@@ -18,7 +18,6 @@ public class ProjectDTO {
 	private String pro_video;
 	private String pro_content;
 	private String pro_link;
-	private String Pro_image;
 
 	private String Pro_fileImage;
 	private String Pro_fileIntro;
@@ -54,7 +53,6 @@ public class ProjectDTO {
 		this.pro_video = pro_video;
 		this.pro_content = pro_content;
 		this.pro_link = pro_link;
-		Pro_image = pro_image;
 		Pro_fileImage = pro_fileImage;
 		Pro_fileIntro = pro_fileIntro;
 		Pro_address = pro_address;
@@ -162,13 +160,6 @@ public class ProjectDTO {
 		this.pro_link = pro_link;
 	}
 
-	public String getPro_image() {
-		return Pro_image;
-	}
-
-	public void setPro_image(String pro_image) {
-		Pro_image = pro_image;
-	}
 
 	public String getPro_fileImage() {
 		return Pro_fileImage;
@@ -247,10 +238,10 @@ public class ProjectDTO {
 		return "ProjectDTO [pro_no=" + pro_no + ", m_id=" + m_id + ", pro_thumbnail=" + pro_thumbnail + ", pro_title="
 				+ pro_title + ", pro_catagory=" + pro_catagory + ", pro_start=" + pro_start + ", pro_end=" + pro_end
 				+ ", pro_goal=" + pro_goal + ", pro_days=" + pro_days + ", pro_video=" + pro_video + ", pro_content="
-				+ pro_content + ", pro_link=" + pro_link + ", Pro_image=" + Pro_image + ", Pro_fileImage="
-				+ Pro_fileImage + ", Pro_fileIntro=" + Pro_fileIntro + ", Pro_address=" + Pro_address + ", Pro_fileSns="
-				+ Pro_fileSns + ", Pro_bank=" + Pro_bank + ", pro_account=" + pro_account + ", su_count=" + su_count
-				+ ", pro_state=" + pro_state + ", now_amount=" + now_amount + "]";
+				+ pro_content + ", pro_link=" + pro_link + ", Pro_fileImage=" + Pro_fileImage + ", Pro_fileIntro="
+				+ Pro_fileIntro + ", Pro_address=" + Pro_address + ", Pro_fileSns=" + Pro_fileSns + ", Pro_bank="
+				+ Pro_bank + ", pro_account=" + pro_account + ", su_count=" + su_count + ", pro_state=" + pro_state
+				+ ", now_amount=" + now_amount + "]";
 	}
 
 	
