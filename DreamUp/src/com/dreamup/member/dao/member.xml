@@ -1,117 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd" >
 <sqlMap namespace="member">
-   <typeAlias alias="member" type="com.dreamup.member.dto.MemberDTO" />
-   <typeAlias alias="list" type="java.util.List" />
+	<typeAlias alias="member" type="com.dreamup.member.dto.MemberDTO" />
+	<typeAlias alias="list" type="java.util.List" />
 
-   <!-- 회원가입 -->
-   <insert id="insert" parameterClass="member">
-      insert into member
-      (m_no,
-      m_id, m_password, m_email, m_name, m_date)
-      values
-      (member_seq.nextval,
-      #m_id#, #m_password#, #m_email#, #m_name#, sysdate)
-   </insert>
+	<!-- 회원가입 -->
+	<insert id="insert" parameterClass="member">
+		insert into member
+		(m_no,
+		m_id, m_password, m_email, m_name, m_date)
+		values
+		(member_seq.nextval,
+		#m_id#, #m_password#, #m_email#, #m_name#, sysdate)
+	</insert>
 
-   <!-- 암호화할 아이디와 비밀번호 -->
-   <select id="encryptionPwd">
-      select m_id, m_password from member where m_no =
-      #m_no#
-   </select>
+	<!-- 비밀번호 암호화 -->
+	<update id="encrytionPwd" parameterClass="String">
+		update m_password set
+		m_password = #m_password#
+	</update>
 
-   <!-- 회원탈퇴 -->
-   <delete id="delete" parameterClass="String">
-      delete from member where m_id
-      = #m_id#
-   </delete>
+	<select id="getPwd" parameterClass="String" resultClass="String">
+		select
+		m_password
+		from member
+		where m_id = #m_id#
+	</select>
 
-   <!-- 아이디찾기 -->
-   <select id="findId" parameterClass="member" resultClass="String">
-      select
-      m_id from member where m_name = #m_name# and m_email = #m_email#
-   </select>
+	<!-- 회원탈퇴 -->
+	<delete id="delete" parameterClass="String">
+		delete from member where m_id
+		= #m_id#
+	</delete>
 
-   <!-- 비밀번호 재설정 -->
-   <update id="resetPwd" parameterClass="member">
-      update member set
-      m_password = #m_password# 
-      where m_id=#m_id# and m_email=#m_email# and
-      m_name =#m_name#
-   </update>
+	<!-- 아이디찾기 -->
+	<select id="findId" parameterClass="member" resultClass="String">
+		select
+		m_id from member where m_name = #m_name# and m_email = #m_email#
+	</select>
 
-   <!-- 중복검사 -->
-   <select id="IdDuplicationCheck" parameterClass="String"
-      resultClass="int">
-      select count(*) from member where m_id=#m_id#
-   </select>
+	<!-- 비밀번호 재설정 -->
+	<update id="resetPwd" parameterClass="member">
+		update member set
+		m_password = #m_password#
+		where m_id=#m_id# and m_email=#m_email# and
+		m_name =#m_name#
+	</update>
 
-   <!-- 로그인 -->
-   <select id="login" parameterClass="member" resultClass="int">
-      select
-      count(*) from member
-      where m_id = #m_id# and m_password = #m_password#
-   </select>
+	<!-- 중복검사 -->
+	<select id="IdDuplicationCheck" parameterClass="String"
+		resultClass="int">
+		select count(*) from member where m_id=#m_id#
+	</select>
+
+	<!-- 로그인 -->
+	<select id="login" parameterClass="member" resultClass="int">
+		select
+		count(*) from member
+		where m_id = #m_id# and m_password = #m_password#
+	</select>
 
 
-   <!-- 한번이라도 후원한적이 있는 사용자가 배송주소를 당사자 주소지로 할 경우 판단 = m_SupportingCount > 0 -->
-   <!-- 한번도 후원한적이 없는 사용자가 배송주소를 당사자 주소지로 할 경우 판별 = m_SupportingCount == 0 -->
-   <select id="supportingCount" parameterClass="String"
-      resultClass="int">
-      select m_SupportingCount from member where m_id = #m_id#
-   </select>
+	<!-- 한번이라도 후원한적이 있는 사용자가 배송주소를 당사자 주소지로 할 경우 판단 = m_SupportingCount > 0 -->
+	<!-- 한번도 후원한적이 없는 사용자가 배송주소를 당사자 주소지로 할 경우 판별 = m_SupportingCount == 0 -->
+	<select id="supportingCount" parameterClass="String"
+		resultClass="int">
+		select m_SupportingCount from member where m_id = #m_id#
+	</select>
 
-   <!-- 사용자 후원정보 입력시 가입정보가 본인인경우 -->
-   <select id="selectOwn" parameterClass="String" resultClass="member">
-      select m_name, m_address, m_phone, m_post from member where m_id =
-      #m_id#
-   </select>
+	<!-- 사용자 후원정보 입력시 가입정보가 본인인경우 -->
+	<select id="selectOwn" parameterClass="String" resultClass="member">
+		select m_name, m_address, m_phone, m_post from member where m_id =
+		#m_id#
+	</select>
 
-   <!--개인정보 수정 -->
-   <update id="updateInfo" parameterClass="member">
-      update member
-      set
-      m_name = #m_name#,m_password = #m_password#, m_email = #m_email#, 
-      m_phone = #m_phone#, m_address = #m_address#, m_post =#m_post#, 
-      m_bankName=#m_bankName#, m_account=#m_account#
-      where m_id = #m_id#
-   </update>
-   
-   <!-- 한번도 후원한 적이 없는 사용자가 사용자 후원정보 입력시 배송주소를 당사자 주소지로 할경우 -->
-   <update id="updateSupport" parameterClass="member">
-      update member
-      set
-      m_phone =#m_phone#, m_address=#m_address#, m_post = #m_post#
-      where m_id= #m_id#
-   </update>
+	<!--개인정보 수정 -->
+	<update id="updateInfo" parameterClass="member">
+		update member
+		set
+		m_name = #m_name#,m_password = #m_password#, m_email = #m_email#,
+		m_phone = #m_phone#, m_address = #m_address#, m_post =#m_post#,
+		m_bankName=#m_bankName#, m_account=#m_account#
+		where m_id = #m_id#
+	</update>
 
-   <!-- 사용자 후원정보 입력시 배송주소를 타인의 주소지로 할경우는 support.xml에서 insert 처리 -->
+	<!-- 한번도 후원한 적이 없는 사용자가 사용자 후원정보 입력시 배송주소를 당사자 주소지로 할경우 -->
+	<update id="updateSupport" parameterClass="member">
+		update member
+		set
+		m_phone =#m_phone#, m_address=#m_address#, m_post = #m_post#
+		where m_id= #m_id#
+	</update>
 
-   <!-- 회원 정보 조회 -->
-   <select id="selectMember" parameterClass="int" resultClass="member">
-      select * from member where m_no = #m_no#
-   </select>
+	<!-- 사용자 후원정보 입력시 배송주소를 타인의 주소지로 할경우는 support.xml에서 insert 처리 -->
 
-   <!-- 전체 회원 정보 -->
-   <select id="listMember" resultClass="member">
-      select * from member
-   </select>
-   
-   <!-- 내가 후원하는 프로젝트 수 총합계 (후원시 +1) -->
-   <update id="addSupportingCount" parameterClass="String">
-      update member
-      set
-      m_supportingCount=m_supportingCount+1
-      where m_id= #m_id# 
-   </update>
-   
-   <!-- 내 프로젝트 총 후원합계 -->
-   <update id="updateSupportedCount" parameterClass="member">
-      update member
-      set
-      m_supportedCount=#m_supportedCount# 
-      where m_id= #m_id# 
-   </update>
-   
+	<!-- 회원 정보 조회 -->
+	<!-- <select id="selectMember" parameterClass="int" resultClass="member"> 
+		select * from member where m_no = #m_no# </select> -->
+	<!-- 회원 정보 조회(아이디로 조회) -->
+	<select id="selectMember" parameterClass="String" resultClass="member">
+		select * from member where m_id = #m_id#
+	</select>
+
+	<!-- 전체 회원 정보 -->
+	<select id="listMember" resultClass="member">
+		select * from member
+	</select>
+
+	<!-- 내가 후원하는 프로젝트 수 총합계 (후원시 +1) -->
+	<update id="addSupportingCount" parameterClass="String">
+		update member
+		set
+		m_supportingCount=m_supportingCount+1
+		where m_id= #m_id#
+	</update>
+
+	<!-- 내 프로젝트 총 후원합계 -->
+	<update id="updateSupportedCount" parameterClass="member">
+		update member
+		set
+		m_supportedCount=#m_supportedCount#
+		where m_id= #m_id#
+	</update>
+
 
 </sqlMap>

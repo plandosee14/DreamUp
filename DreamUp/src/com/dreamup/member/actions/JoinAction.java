@@ -25,6 +25,11 @@ public class JoinAction extends Action {
 		System.out.println(member.toString());
 		MemberDAO dao = new MemberDAO();
 		
+		EncryptionPwd encryptionPwd = new EncryptionPwd();
+		String shaPwd = encryptionPwd.shaPwd(member);
+		String bcryptPwd = encryptionPwd.bCryptPwd(shaPwd);
+		member.setM_password(bcryptPwd);
+		
 		ActionForward forward;
 		
 		if(dao.insert(member)){

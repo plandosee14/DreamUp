@@ -29,16 +29,31 @@ public class MemberDAO {
    
    
    // 비밀번호 암호화
-      public boolean encryptionPwd(String m_password) {
-         int result;
-         try {
-            result = (int) sqlMap.queryForObject("member.encryptionPwd", m_password);
-         } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-         }
-         return false;
-      }
+	public boolean encrytionPwd(String bcryptPwd) {
+		int result;
+		try {
+			result = sqlMap.update("member.encrytionPwd", bcryptPwd);
+			if (result == 1) {
+				return true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return false;
+	}
+	
+	public String getPwd(String m_id) {
+		try {
+			String dbPwd = (String) sqlMap.queryForObject("member.getPwd", m_id);
+			return dbPwd;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
       // 회원탈퇴 : 다운ok
       public boolean delete(String m_id) {
          int result;
@@ -173,16 +188,28 @@ public class MemberDAO {
    }
    // project테이블/support테이블에 속하는 멤버 컬럼의 값을 가져오기 위함
       // 사용자 세션 부여시
-   public MemberDTO selectMember(int m_no){
-      try {
-         MemberDTO result;
-         result = (MemberDTO) sqlMap.queryForObject("member.selectMember",m_no);
-         return result;
-      } catch (SQLException e) {
-         // TODO Auto-generated catch block
-         e.printStackTrace();
-      }
-      return null;
+/*   public MemberDTO selectMember(int m_no){
+	   try {
+		   MemberDTO result;
+		   result = (MemberDTO) sqlMap.queryForObject("member.selectMember",m_no);
+		   return result;
+	   } catch (SQLException e) {
+		   // TODO Auto-generated catch block
+		   e.printStackTrace();
+	   }
+	   return null;
+   }*/
+   
+   public MemberDTO selectMember(String m_id){
+	   try {
+		   MemberDTO result;
+		   result = (MemberDTO) sqlMap.queryForObject("member.selectMember",m_id);
+		   return result;
+	   } catch (SQLException e) {
+		   // TODO Auto-generated catch block
+		   e.printStackTrace();
+	   }
+	   return null;
    }
    // 전체 유저 정보 조회 ok
    public List<MemberDTO> listMember(MemberDTO member){
