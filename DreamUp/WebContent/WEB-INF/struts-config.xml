@@ -49,7 +49,11 @@
 		<action path="/checkPwd" type="com.dreamup.member.actions.MemberInfoAction">
 			<forward name="success" path="/memberInfoView.do"></forward>
 		</action>
-
+		
+		<!-- 메인뷰 프로젝트 리스트 -->
+		<action path="/projectList" type="com.dreamup.project.actions.ProjectListAction">
+			<forward name="success" path="/project.do"></forward>
+		</action>
 
 
 	</action-mappings>

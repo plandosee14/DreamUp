@@ -40,6 +40,7 @@ public class ProBasicAction extends Action{
 		
 		ProjectDTO project = new ProjectDTO();
 		project.setM_id(mr.getParameter("m_id"));
+		System.out.println(mr.getParameter("m_id"));
 		project.setPro_title(mr.getParameter("pro_title"));
 		project.setPro_catagory(mr.getParameter("pro_category"));
 		project.setPro_goal(Integer.parseInt(mr.getParameter("pro_goal")));

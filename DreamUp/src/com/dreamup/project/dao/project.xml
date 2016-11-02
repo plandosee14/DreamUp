@@ -125,7 +125,8 @@
 	    update project set
 	    now_amount=now_amount+#su_money#
 	    where pro_no=#pro_no#
-	</update> 
+	</update>
 	
+
 
 </sqlMap>

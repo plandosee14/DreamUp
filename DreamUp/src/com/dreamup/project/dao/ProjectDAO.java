@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import com.dreamup.ibatis.SqlMapConfig;
 import com.dreamup.project.dto.ProjectDTO;
+import com.dreamup.project.dto.ProjectListDTO;
 import com.dreamup.support.dto.SupportDTO;
 import com.ibatis.sqlmap.client.SqlMapClient;
 import com.oreilly.servlet.MultipartRequest;
@@ -246,6 +247,8 @@ public class ProjectDAO {
 		}
 		return pro_no;
 	}
+	
+
 	
 	
 	

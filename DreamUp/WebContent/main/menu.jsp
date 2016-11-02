@@ -51,7 +51,7 @@ menu.jsp
 		<div class="collapse navbar-collapse" id="myNavbar">
 
 			<ul class="nav navbar-nav">
-				<li><a href="project.do">프로젝트 보기</a></li>
+				<li><a href="projectList.do">프로젝트 보기</a></li>
 				<li><a href="menu2.do">프로젝트 등록</a></li>
 			</ul>
 			<div>

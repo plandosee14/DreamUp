@@ -58,27 +58,30 @@
 	<div class="container-fluid text-center bg-grey">
 		<h2>프로젝트 소개</h2>
 		<br>
-<%-- 		<c:forEach items="" var=""> --%>
+		<c:forEach items="${projectList }" var="projectList">
 			<div class="row text-center">
 				<div class="col-sm-4">
 					<div class="thumbnail">
-						<img src="image/paris.png" alt="Paris" width="800" height="600">
+						<img src="img/thumnail/${projectList.pro_thumbnail}" alt="${projectList.pro_thumbnail}" width="800"
+							height="600">
 						<div class="container">
 							<div class="progress">
 								<div class="progress-bar progress-bar-striped active"
-									role="progressbar" aria-valuenow="40" aria-valuemin="0"
-									aria-valuemax="100" style="width: 50%">50%</div>
+									role="progressbar" aria-valuenow="${projectList.progress}" aria-valuemin="0"
+									aria-valuemax="100" style="width: 50%">${projectList.progress}%</div>
 							</div>
 						</div>
 
 						<p>
-							<strong>프로젝트 제목 1</strong>
+							<strong>${projectList.pro_title}</strong>
 						</p>
-						<p>프로젝트 소개 1</p>
+						<p>${projectList.pro_end}</p>
+						<p>${projectList.pro_goal}</p>
+						<p>${projectList.due_date}</p>
 					</div>
 				</div>
-<%-- 		</c:forEach> --%>
-		<div class="col-sm-4">
+		</c:forEach>
+		<!-- <div class="col-sm-4">
 			<div class="thumbnail">
 				<img src="image/paris.png" alt="Paris" width="200" height="70">
 				<div class="container">
@@ -125,7 +128,7 @@
 				</p>
 				<p>프로젝트 소개 4</p>
 			</div>
-		</div>
+		</div> -->
 	</div>
 
 

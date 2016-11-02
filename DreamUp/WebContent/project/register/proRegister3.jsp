@@ -27,7 +27,7 @@
 <form action="pro_story.do"method="post" 
          enctype="multipart/form-data" id="frm">
          <br><br>
-아이디: <input type="text" value="${login_id}" name="login_id">
+등록자 아이디 : ${login_id} <br>
 비디오: <input type="file" name="myfile"><br>
 
 내용 : <br>

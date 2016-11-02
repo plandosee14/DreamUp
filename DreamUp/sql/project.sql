@@ -58,7 +58,7 @@ values (project_seq.nextval,'test2','dreamup','ÄÚ¾Ë¶ó.jpg','À½¾Ç',
 
 
 select * from member;
-
+update project set now_amount=2000
 
 	
 select * from project;
@@ -67,6 +67,11 @@ alter table project drop (pro_image)
 ALTER TABLE TABLE_NAME  DROP(columnName );
 
 
+
+select (now_amount/pro_goal)*100 as goal from project where pro_no = #pro_no#
+select (pro_end - pro_start) from project
+
+select pro_goal, pro_end, pro_thumbnail, pro_title, trunc((now_amount/pro_goal)*100) as goal, round(pro_end - pro_start)as duedate from project;
 
 	
 	select pro_video,su_count,now_amount,pro_goal,
