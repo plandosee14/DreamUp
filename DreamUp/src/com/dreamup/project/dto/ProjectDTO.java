@@ -1,6 +1,6 @@
 package com.dreamup.project.dto;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class ProjectDTO {
 
@@ -13,7 +13,7 @@ public class ProjectDTO {
 	private String pro_end;
 	private int pro_goal;
 	private int pro_days; //프로젝트 기간
-
+	
 
 	private String pro_video;
 	private String pro_content;
