@@ -13,17 +13,15 @@
 <script type="text/javascript">
 	$(function() {
 		$('#save').click(function() {
-			if(!$('#file').val(){
-				alert('영상 업로드는 필수 사항입니다.');
-			} else if ($('#id').val() == "") {
-				alert('아이디를 입력하세요');
-				$('#id').focus();
+			if(!$('#file').val()){
+				alert('동영상 업로드는 필수사항입니다. 50mb이하 영상을 업로드하세요');
 				return false;
-			} else if ($('#pass').val() == "") {
-				alert('비밀번호를 입력하세요');
-				$('#pass').focus();
+			} else if($('#link').val()==""){
+				alert('프로젝트 관련 link주소를 입력하세요');
+				$('#link').focus();
 				return false;
 			}
+	         $("#frm").submit();
 		});//click event
 	});//ready
 </script>
@@ -51,7 +49,7 @@
 <br>
 내용 : <br>
 <textarea name="content" id="ir1" rows="10" cols="100" style="width:766px; height:412px; display:none;"></textarea>
-링크 : <input type="text" name="link">
+링크 : <input type="text" name="link" id="link">
 <input type="button" id="save" value="다음단계"/>
 
 
@@ -103,7 +101,7 @@ function submitContents(elClickedObj) {
 	
 	 $("#save").click(function(){
          oEditors.getById["ir1"].exec("UPDATE_CONTENTS_FIELD", []);
-         $("#frm").submit();
+
      });    
 
 </script>
