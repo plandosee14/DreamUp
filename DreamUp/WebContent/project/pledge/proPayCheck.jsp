@@ -22,15 +22,19 @@
 	<h3>프로젝트 후원(결제정보확인)</h3>
 	<hr>
 
-
 	
 	<p class="checkPayInfo">
+<center>
 	<form>
 
-
-		이름: <input type="text" name="name" size="6"><br> 배송주소: <input
-			type="text" name="add1" size="4">- <input type="text"
-			name="add2" size="4"> <input type="submit" value="주소찾기"><br>
+		
+		이름: ${support.su_name}
+		<br> 배송우편번호: ${support.su_zip } <br>
+		 배송주소: ${support.su_address } <br>
+		핸드폰 : ${support.su_phone } <br>
+		결제방식: ${support.paymentPlan} <br>
+		 환불은행 : ${support.su_refundAccount } <br>
+		 환불계좌: ${support.su_refundBank } <br>
 		<input type="text" name="add3" size="27"><br> 핸드폰: <input
 			type="text" name="phone1" size="3">- <input type="text"
 			name="phone2" size="3">- <input type="text" name="phone3"
@@ -45,6 +49,8 @@
 		</tr>
 		<br> 상품도착예정일:<br> <input type="submit" value="결제하기"><br>
 	</form>
+	</center>
+	
 	</p>
 </body>
 </html>

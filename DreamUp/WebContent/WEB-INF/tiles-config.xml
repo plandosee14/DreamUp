@@ -15,6 +15,7 @@
 		<action path="/support_reward" forward=".support1" />
 		<action path="/support_pay" forward=".support2" />
 		<action path="/support_payCheck" forward=".support3" />
+		<action path="/support_payOk" forward=".support4" />
 		
 
 		<!-- 프로젝트 등록 -->

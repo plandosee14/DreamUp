@@ -9,7 +9,7 @@
 <body>
   <h3>프로젝트 후원(개인정보입력) 폼</h3>
  <hr>
- <form action="suPaySend.do">
+ <form action="suPaySend.do" method="post">
 <h3> 프로젝트 제목 : ${project.pro_title}</h3> <br>
 [리워즈]<br>
 후원금액 : ${su_money}<br>

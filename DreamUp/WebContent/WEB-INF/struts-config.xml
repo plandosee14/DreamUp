@@ -87,6 +87,10 @@
 		<action path="/suPaySend" type="com.dreamup.support.actions.SuPaySendAction">
 			<forward name="scs" path="/support_payCheck.do" />
 		</action>
+		<!-- 서포트 결제insert, 성공: 결제성공 -->
+		<action path="/supportInsert" type="com.dreamup.support.actions.SuInsertAction">
+			<forward name="scs" path="/support_payOk.do" />
+		</action>
 
 
 

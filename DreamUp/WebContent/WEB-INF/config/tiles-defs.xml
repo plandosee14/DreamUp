@@ -35,6 +35,10 @@
 	<definition name=".support3" extends=".main">
 		<put name="body" value="/project/pledge/proPayCheck.jsp"></put>
 	</definition>
+	<!-- 결제완료 -->
+	<definition name=".support4" extends=".main">
+		<put name="body" value="/project/pledge/proPayOk.jsp"></put>
+	</definition>
 	
 	
 
