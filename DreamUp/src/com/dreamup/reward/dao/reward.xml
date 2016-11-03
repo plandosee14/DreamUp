@@ -9,7 +9,7 @@
 		re_delivery,re_limite)
 		values
 		(reward_seq.nextval,#pro_no#,#re_money#,
-		#re_title#,#re_item#,#re_delivery#,#re_limite#)
+		#re_title#,#re_item#,to_date(#re_delivery#),#re_limite#)
 	</insert>
 	
 	 <select id="selectReward" parameterClass="int" resultClass="reward">
