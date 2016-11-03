@@ -11,6 +11,9 @@
 		<!-- 프로젝트 상세 -->
 		<action path="/projectDetail" forward=".proDetail" />
 
+		<!-- 후원등록 -->
+		<action path="/support_reward" forward=".support1" />
+		
 
 		<!-- 프로젝트 등록 -->
 		<action path="/menu2" forward=".menu2" />
