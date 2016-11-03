@@ -28,7 +28,7 @@ insert into support (su_no,m_id,pro_no,re_no,su_money,su_name, su_address,
 		            (support_seq.nextval,'test1',1,1,1300,'정다우니','수원시팔달구',
 		             '34012','01084685154','현금','23112312','국민은행',sysdate);
 		
-             
+                
            ALTER TABLE support  DROP(columnName );
            alter table support MODIFY (Re_No integer);
 		             
