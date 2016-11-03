@@ -42,18 +42,18 @@
 	<input type="button" name="supponrt" id="supponrt" value="후원하기">
 	<input type="hidden" name="pro_no" id="pro_no" value="${project.pro_no}">
 	<div class="pro-info">
-		<h1>${project.pro_title}</h1>
+		<h1>${project.pro_title}</h1><h2>프로젝트 번호 : ${project.pro_no}</h2>
 		
 		<center>
 			<div class="row">
 				<div class="col-sm-6" style="background-color: yellow;">동영상pro_video</div>
 
-				<div class="col-sm-3" style="background-color: yellow;">su_count
-					정보</div>
+				<div class="col-sm-3" style="background-color: yellow;"><b>${project.su_count}</b><br>후원자수<br>
+				<b>현재 후원액 : ${project.now_amount}</b><br>목표액:${proDetail.pro_goal}<br><b>${proDetail.due_date}일</b><br>잔여기간</div>
 			</div>
 			<div class="row">
 
-				<div class="col-sm-6" style="background-color: pink;">등록자 사진</div>
+				<div class="col-sm-6" style="background-color: pink;">${project.pro_goal}등록자 사진</div>
 				<div class="col-sm-3" style="background-color: pink;">등록자 정보</div>
 			</div>
 

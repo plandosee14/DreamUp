@@ -16,11 +16,16 @@ public class ProjectTest {
 	public static void main(String[] args) {
 		ProjectListDAO dao = new ProjectListDAO();
 		ProjectListDTO listDTO = new ProjectListDTO();
-		List<ProjectListDTO> projectList;
+		listDTO = dao.projcetData(26);
+		System.out.println(listDTO.toString());
+		
+		
+		
+		/*List<ProjectListDTO> projectList;
 		projectList = dao.projectListData();
 		for (int i = 0; i < projectList.size(); i++) {
 			listDTO = projectList.get(i);
 			System.out.println(listDTO.toString());
-		}
+		}*/
 	}
 }
