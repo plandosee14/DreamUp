@@ -10,12 +10,9 @@
 
 		insert into support
 		(su_no,m_id,pro_no,re_no,su_money,su_name, su_address,
-		su_zip,su_phone,paymentPlan,su_refundAccount,su_refundBank,su_date)
-		
-		values
-		
-		(support_seq.nextval,#m_id#,#pro_no#,#re_no#,#su_money#,#su_name#,
-		#su_address#,
+		su_zip,su_phone,paymentPlan,su_refundAccount,su_refundBank,su_date)		
+		values		
+		(support_seq.nextval,#m_id#,#pro_no#,#re_no#,#su_money#,#su_name#,#su_address#,
 		#su_zip#,#su_phone#,#paymentPlan#,#su_refundAccount#,#su_refundBank#,sysdate)
 
 	</insert>

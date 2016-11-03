@@ -25,29 +25,34 @@
 	
 	<p class="checkPayInfo">
 <center>
-	<form>
+	<form action="supportInsert.do" method="post">
 
-		
+		[리워즈]<br>
+ 후원금액 : ${support.su_money}<br>
+ 리워즈 금액:  ${reward.re_money}<br>
+ 리워즈 아이템: ${reward.re_item}<br>
+ 상품도착예정일: ${reward.re_delivery}<br><br>
+		[결제정보]
 		이름: ${support.su_name}
 		<br> 배송우편번호: ${support.su_zip } <br>
 		 배송주소: ${support.su_address } <br>
 		핸드폰 : ${support.su_phone } <br>
 		결제방식: ${support.paymentPlan} <br>
 		 환불은행 : ${support.su_refundAccount } <br>
-		 환불계좌: ${support.su_refundBank } <br>
-		<input type="text" name="add3" size="27"><br> 핸드폰: <input
-			type="text" name="phone1" size="3">- <input type="text"
-			name="phone2" size="3">- <input type="text" name="phone3"
-			size="3"><br> 서약금액:<input type="text" name="pay"
-			size="4"><br> 리워즈:
-		<tr bgcolor="#99ccff">
-			<th></th>
-			<th></th>
-			<th></th>
-			<th></th>
-			<th></th>
-		</tr>
-		<br> 상품도착예정일:<br> <input type="submit" value="결제하기"><br>
+		 환불계좌: ${support.su_refundBank} <br>
+		 
+		 <input type="hidden" name="pro_no" value="${support.su_no}">
+		 <input type="hidden" name="re_no" value="${support.re_no}">
+		 <input type="hidden" name="su_money" value="${support.su_money}">
+		 <input type="hidden" name="su_name" value="${support.su_name}">
+		 <input type="hidden" name="su_zip" value="${support.su_zip}">
+		 <input type="hidden" name="su_address" value="${support.su_address}">
+		 <input type="hidden" name="su_phone" value="${support.su_phone}">
+		 <input type="hidden" name="su_paymentPlan" value="${support.paymentPlan}">
+		<input type="submit" value="결제하기"><br>
+		 <input type="hidden" name="su_refundAccount" value="${support.su_refundAccount}">
+		 <input type="hidden" name="su_refundBank" value="${support.su_refundBank}">
+		
 	</form>
 	</center>
 	

@@ -8,6 +8,8 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
+import com.dreamup.reward.dao.RewardDAO;
+import com.dreamup.reward.dto.RewardDTO;
 import com.dreamup.support.dto.SupportDTO;
 
 public class SuPaySendAction extends Action{
@@ -17,7 +19,7 @@ public class SuPaySendAction extends Action{
 			HttpServletResponse response) throws Exception {
 		     
 		SupportDTO support = new SupportDTO();
-		support.setM_id("¾ÆÀÌµð: "+request.getSession().getAttribute("login_id"));
+		support.setM_id((String)request.getSession().getAttribute("login_id"));
 		support.setPro_no(Integer.parseInt(request.getParameter("pro_no")));
 		support.setRe_no(Integer.parseInt(request.getParameter("re_no")));
 		support.setSu_money(Integer.parseInt(request.getParameter("su_money")));
@@ -29,9 +31,12 @@ public class SuPaySendAction extends Action{
 		support.setSu_refundAccount(request.getParameter("account"));
 		support.setSu_refundBank(request.getParameter("bank"));
 		
-		System.out.println(support.toString());
+		RewardDTO reward = new RewardDTO();
+		RewardDAO rdao = new RewardDAO();
+		reward = rdao.selectReward(Integer.parseInt(request.getParameter("re_no")));
 
 		request.setAttribute("support", support);
+		request.setAttribute("reward", reward);
 		return mapping.findForward("scs");
 	}
 }
