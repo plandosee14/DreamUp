@@ -20,7 +20,7 @@ public class ProfileAction extends Action{
 		ActionForward forward=null;
 		
 		int maxSize=5*1024*1024;//1kb--> 1mb  5Mb 사이즈 제한
-	     String saveDirectory=request.getSession().getServletContext().getRealPath("video");
+	     String saveDirectory=request.getSession().getServletContext().getRealPath("profile");
 	     
 	     MultipartRequest mr = 
 	    		 new MultipartRequest(request,saveDirectory,maxSize,"UTF-8",
