@@ -9,7 +9,7 @@
 <body>
   <h3>프로젝트 후원(개인정보입력) 폼</h3>
  <hr>
- <form>
+ <form action="suPaySend.do">
 <h3> 프로젝트 제목 : ${project.pro_title}</h3> <br>
 [리워즈]<br>
 후원금액 : ${su_money}<br>
@@ -27,7 +27,7 @@
   배송주소: <input type="text" name="add1" size="4">-
   <input type="text" name="add2" size="4">
   <input type="submit" value="주소찾기"><br>
-  <input type="text" name="add3" size="27"><br>
+  <input type="text" name="address" size="27"><br>
   핸드폰: <input type="text" name="phone1" size="3">-
   <input type="text" name="phone2" size="3">-
   <input type="text" name="phone3" size="3"><br>
@@ -41,6 +41,7 @@
        <option>하나</option>
     </select><br>
  입금자:<input type="text" name="name" size="6"><br>
+ 
   <hr><br>환불받을계좌<br>
   은행:<select name="bank">
        <option>신한</option>
@@ -48,7 +49,7 @@
        <option>국민</option>
        <option>하나</option>
     </select><br>
-    계좌번호:<input type="text" name="name" size="15"><br>
+    계좌번호:<input type="text" name="account" size="15"><br>
   <input type="submit" value="다음"><br>
   
  </form>
