@@ -40,7 +40,7 @@
 </head>
 <body>
 	<input type="button" name="supponrt" id="supponrt" value="후원하기">
-	<input type="hidden" name="pro_no" id="pro_no" value="3">
+	<input type="hidden" name="pro_no" id="pro_no" value="${project.pro_no}">
 	<div class="pro-info">
 		<h1>${project.pro_title}</h1>
 		
