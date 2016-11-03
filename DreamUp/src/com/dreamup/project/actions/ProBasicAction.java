@@ -66,7 +66,7 @@ public class ProBasicAction extends Action{
 		}else{
 			project.setPro_end(mr.getParameter("pro_End"));
 		   if(dao.insertBacic(project)){
-			   System.out.println(project.toString());	
+			   System.out.println("프로젝트입력성공: "+project.toString());	
 			   forward = mapping.findForward("scs");
 		   }else{	   
 			   forward = mapping.findForward("fail");
