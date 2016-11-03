@@ -10,6 +10,8 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
+import com.dreamup.member.dao.MemberDAO;
+import com.dreamup.member.dto.MemberDTO;
 import com.dreamup.project.dao.ProjectDAO;
 import com.dreamup.project.dao.ProjectListDAO;
 import com.dreamup.project.dto.ProjectDTO;
@@ -27,6 +29,10 @@ public class ProjectDetailAction extends Action{
 		ProjectDAO dao = new ProjectDAO();
 		ProjectDTO project = dao.selectProject(pro_no);
 		request.setAttribute("project", project );
+		
+		MemberDTO member = new MemberDTO();
+		member = dao.selectProjectRegister(pro_no);
+		request.setAttribute("member", member);
 		
 		ProjectListDAO proDetailDAO = new ProjectListDAO();
 		ProjectListDTO proDetail = new ProjectListDTO();

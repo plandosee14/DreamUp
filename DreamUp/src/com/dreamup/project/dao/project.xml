@@ -88,46 +88,56 @@
 	</select>
 
 	<select id="selectPopProject" resultClass="project">
-		select pro_no,su_count,
+		select
+		pro_no,su_count,
 		m_id,pro_thumbnail,pro_title,pro_content,pro_goal,pro_catagory,pro_start,pro_end
 		from project
 		order by su_count desc
 	</select>
-		
-	<select id="selectCatagoryProject" parameterClass="String" resultClass="project">
-	   	select pro_no,pro_catagory,pro_thumbnail,pro_title,pro_content,pro_goal,pro_start
-	   	from project
-	   	where pro_catagory=#pro_catagory#
+
+	<select id="selectCatagoryProject" parameterClass="String"
+		resultClass="project">
+		select
+		pro_no,pro_catagory,pro_thumbnail,pro_title,pro_content,pro_goal,pro_start
+		from project
+		where pro_catagory=#pro_catagory#
 	</select>
-	
+
 
 	<select id="selectinsertingProjectNo" parameterClass="String"
 		resultClass="int">
 		select max(pro_no)
 		from project
-		where pro_state=0 and m_id=#m_id#
+		where pro_state=0 and
+		m_id=#m_id#
 	</select>
 
 	<update id="submitProject" parameterClass="int">
 		update project set
 		Pro_state = 1
-		where pro_np = #pro_no#
+		where pro_no = #pro_no#
 	</update>
-	
+
 	<!-- 현재 프로젝트가 후원받은 수 카운트 -->
 	<update id="proSupportingCount" parameterClass="int">
-		update project set
+		update project
+		set
 		su_count=su_count+1
 		where pro_no=#pro_no#
 	</update>
-	
-	<!-- 현재 프로젝트가 후원받은 금액-->
+
+	<!-- 현재 프로젝트가 후원받은 금액 -->
 	<update id="proSupportMoney" parameterClass="com.dreamup.support.dto.SupportDTO">
-	    update project set
-	    now_amount=now_amount+#su_money#
-	    where pro_no=#pro_no#
+		update project set
+		now_amount=now_amount+#su_money#
+		where pro_no=#pro_no#
 	</update>
-	
+
+	<select id="selectProjectRegister" parameterClass="int"
+		resultClass="member">
+		select * from member where pro_no = #pro_no#
+	</select>
+
 
 
 </sqlMap>

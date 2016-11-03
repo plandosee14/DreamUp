@@ -18,7 +18,7 @@
 	$(function() {
 		$('#supponrt').click(function() {
 			alert($('#pro_no').val());
-			location.replace('supportForm.do?pro_no='+$('#pro_no').val());
+			location.replace('supportForm.do?pro_no=' + $('#pro_no').val());
 		});//click event
 	});//ready
 </script>
@@ -40,32 +40,43 @@
 </head>
 <body>
 	<input type="button" name="supponrt" id="supponrt" value="후원하기">
-	<input type="hidden" name="pro_no" id="pro_no" value="${project.pro_no}">
+	<input type="hidden" name="pro_no" id="pro_no"
+		value="${project.pro_no}">
 	<div class="pro-info">
-		<h1>${project.pro_title}</h1><h2>프로젝트 번호 : ${project.pro_no}</h2>
-		
+		<h1>${project.pro_title}</h1>
+		<h2>프로젝트 번호 : ${project.pro_no}</h2>
+
 		<center>
 			<div class="row">
-				<div class="col-sm-6" style="background-color: yellow;">동영상pro_video</div>
+				<div class="col-sm-6" style="background-color: yellow;">
+					<embed src="video/${project.pro_video }" width="600" height="300"
+						showstatusbar="1">
+				</div>
 
-				<div class="col-sm-3" style="background-color: yellow;"><b>${project.su_count}</b><br>후원자수<br>
-				<b>현재 후원액 : ${project.now_amount}</b><br>목표액:${proDetail.pro_goal}<br><b>${proDetail.due_date}일</b><br>잔여기간</div>
-			</div>
-			<div class="row">
-
-				<div class="col-sm-6" style="background-color: pink;">${project.pro_goal}등록자 사진</div>
-				<div class="col-sm-3" style="background-color: pink;">등록자 정보</div>
-			</div>
-
-			<div class="row">
-				<div class="col-sm-6" style="background-color: yellow;">프로젝트
-					소개 정보</div>
-
-				<div class="col-sm-3" style="background-color: yellow;">리워드 정보
+				<div class="col-sm-3" style="background-color: yellow;">
+					<b>${project.su_count}</b><br>후원자수<br> <b>현재 후원액 :
+						${project.now_amount}</b><br>목표액:${proDetail.pro_goal}<br>
+					<b>${proDetail.due_date}일</b><br>잔여기간
 				</div>
 			</div>
+		</center>
+		<div class="row">
+
+			<div class="col-sm-6" style="background-color: pink;">
+				<img src="img/profile/${project.pro_fileImage}"
+					alt="${project.pro_fileImage}" width="100" height="150">${member.m_name }<br>
+					${member.m_email }<br>${project.pro_fileSns}
+			</div>
+			<div class="col-sm-3" style="background-color: pink;">${project.pro_fileIntro}</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-6" style="background-color: yellow;">${project.pro_content}</div>
+
+			<div class="col-sm-3" style="background-color: yellow;">리워드 정보
+			</div>
+		</div>
 	</div>
-	</center>
 
 </body>
 </html>
