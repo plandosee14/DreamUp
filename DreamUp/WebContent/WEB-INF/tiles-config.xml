@@ -6,8 +6,11 @@
 	<action-mappings>
 		<action path="/main" forward=".main" />
 
-
+		<!-- 프로젝트 list -->
 		<action path="/project" forward=".project" />
+		<!-- 프로젝트 상세 -->
+		<action path="/projectDetail" forward=".proDetail" />
+
 
 		<!-- 프로젝트 등록 -->
 		<action path="/menu2" forward=".menu2" />

@@ -54,6 +54,10 @@
 		<action path="/projectList" type="com.dreamup.project.actions.ProjectListAction">
 			<forward name="success" path="/project.do"></forward>
 		</action>
+		<!-- 프로젝트 상세  페이지-->
+		<action path="/projectList" type="com.dreamup.project.actions.ProjectDetailAction">
+			<forward name="success" path="/projectDetail.do"></forward>
+		</action>
 
 
 	</action-mappings>
