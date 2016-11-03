@@ -62,8 +62,8 @@
 			<div class="row text-center">
 				<div class="col-sm-4">
 					<div class="thumbnail">
-						<img src="img/thumnail/${projectList.pro_thumbnail}" alt="${projectList.pro_thumbnail}" width="800"
-							height="600">
+						<a href="projectView.do?pro_no=${projectList.pro_no}"><img src="img/thumnail/${projectList.pro_thumbnail}" alt="${projectList.pro_thumbnail}" width="800"
+							height="600"></a>
 						<div class="container">
 							<div class="progress">
 								<div class="progress-bar progress-bar-striped active"
