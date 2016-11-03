@@ -45,10 +45,19 @@
 		<action path="/pro_account" type="com.dreamup.project.actions.ProAccountAction">
 			<forward name="scs" path="/register_6.do" />
 		</action>
+		
+		<!-- 프로젝트 등록 -->
+		<action path="/confirmPro" type="com.dreamup.project.actions.ProUpAction">
+			<forward name="scs" path="/register_6.do" redirect="true"/>
+		</action>
+
+
 		<!-- 회원정보 수정 폼 -->
 		<action path="/checkPwd" type="com.dreamup.member.actions.MemberInfoAction">
 			<forward name="success" path="/memberInfoView.do"></forward>
 		</action>
+		
+		
 		
 		<!-- 메인뷰 프로젝트 리스트 -->
 		<action path="/projectList" type="com.dreamup.project.actions.ProjectListAction">

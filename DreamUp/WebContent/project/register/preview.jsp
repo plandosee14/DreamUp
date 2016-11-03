@@ -47,6 +47,6 @@ ${project.pro_no}
 비디오: 
 <embed src="video/${project.pro_video }" width="500" height="700" showstatusbar="1">
 <input type="hidden" value="${project.pro_no}" name="pro_no" id="pro_no">
-<input type="button" value="등록" onclick="" id="reg">
+<input type="button" value="등록" id="reg">
 </body>
 </html>
