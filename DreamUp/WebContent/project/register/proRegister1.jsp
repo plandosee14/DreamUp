@@ -9,19 +9,17 @@
 
 <script type="text/javascript" src="js/jquery-1.min.js"></script>
 <script type="text/javascript">
-/* 	$('input[name=myfile]').change(fucntion(){
-alert($('input[name=myfile]').val();
-}); */
 $(function(){
 	$('#basicOk').click(function(){
-		if($('#pro_title').val()==""){
+		if(!$('#file').val()){
+			alert('파일첨부는 필수사항입니다.');
+			return false;
+		} else if($('#pro_title').val()==""){
 			alert('프로젝트 제목을 입력하세요');
+			//alert($('#'))
 			$('#pro_title').focus();
-			alert($('#insertDay').val());
 			return false;
 		} else if($('#inputDay').val()=="" || $('#insertDay').val()==""){
-			alert($('#inputDay').val());
-
 			alert('프로젝트 종료기간을 설정하세요');
 			$('#inputDay').focus();
 			return false;y
@@ -29,13 +27,14 @@ $(function(){
 			alert('목표 금액을 입력하세요');
 			return false;
 		}
-	});
-});
+	});//click
+	
+});//ready
 
 </script>
 </head>
 <body>
-<%-- 	<c:if test="${empty login_id }">
+	<%-- 	<c:if test="${empty login_id }">
 
 	</c:if>
 	여기는 프로젝트 만들것입니다~!
@@ -53,19 +52,20 @@ $(function(){
 		</div>
 
 		<br>
-		<div><h3>기본정보</h3></div>
+		<div>
+			<h3>기본정보</h3>
+		</div>
 		<hr>
-		<br><br>
+		<br>
+		<br>
 
 		<form action="pro_basic.do" method="post"
 			enctype="multipart/form-data">
 			<table border="1" width="400" height="100">
 				<tr>
-					<td>&nbsp;&nbsp; <b>타이틀 사진</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						파일:<input type="file" name="myfile"> <br>파일
+					<td><b>타이틀 사진</b> 파일:<input type="file" name="myfile" id="file"> <br>파일
 						</div> 등록자 ID : ${login_id} <input type="hidden" name="m_id"
-						value="${login_id}">
-					</td>
+						value="${login_id}"></td>
 				</tr>
 			</table>
 
@@ -78,8 +78,7 @@ $(function(){
 
 			<table border="1" width="400" height="30">
 				<tr>
-					<td>&nbsp;&nbsp; 카테고리 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <select
-						name="pro_category">
+					<td>카테고리<select name="pro_category">
 							<option>음악</option>
 							<option>미술</option>
 							<option>아이디어</option>
@@ -96,23 +95,24 @@ $(function(){
 			<table border="1" width="400" height="100">
 				<tr>
 					<td>&nbsp;&nbsp;
-						<div><b>후원기간</b></div> 
-						기간 : <input type="Radio" size="2"  name="day-type" value="days"> 
-						<input type="text" name="pro_days" size=10 id="inputDay"><br> 
-						마감일 : <input type="Radio" checked="checked" size="2"  name="day-type" value="end-day">
-						<input type="date" name="pro_End" size=10 id="insertDay"><br>
+						<div>
+							<b>후원기간</b>
+						</div> 기간 : <input type="Radio" size="2" name="day-type" value="days">
+						<input type="text" name="pro_days" size=10 id="inputDay"><br>
+
+						마감일 : <input type="Radio" checked="checked" size="2"
+						name="day-type" value="end-day"> <input type="date"
+						name="pro_End" size=10 id="insertDay"><br>
 					</td>
 				</tr>
 			</table>
 
 			<table border="1" width="400" height="30">
 				<tr>
-					<td>목표금액 : <input type="text" size="30" name="pro_goal" id="pro_goal">
-					</td>
+					<td><b>목표금액</b> : <input type="text" size="30" name="pro_goal"
+						id="pro_goal"></td>
 				</tr>
 			</table>
-
-
 
 			<table width="400" height="30">
 				<tr>
@@ -120,10 +120,7 @@ $(function(){
 						value="다음단계"></td>
 				</tr>
 			</table>
-
 		</form>
-
-
 
 	</center>
 	<!-- <a href="register_2.do">2단계></a> -->

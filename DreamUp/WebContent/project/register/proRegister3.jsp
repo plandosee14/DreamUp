@@ -8,8 +8,24 @@
 <!-- Smart Editor -->
 <script type="text/javascript" src="<%=request.getContextPath()%>/project/se2/js/HuskyEZCreator.js" charset="utf-8"></script>
 <!-- <script type="text/javascript" src="../se2/photo_uploader/plugin/hp_SE2M_AttachQuickPhoto.js" charset="utf-8"></script> -->
- <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
- 
+<!--  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.min.js"></script>  -->
+<script type="text/javascript" src="js/jquery-1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#register').click(function() {
+			if ($('#id').val() == "") {
+				alert('아이디를 입력하세요');
+				$('#id').focus();
+				return false;
+			} else if ($('#pass').val() == "") {
+				alert('비밀번호를 입력하세요');
+				$('#pass').focus();
+				return false;
+			}
+
+		});//click event
+	});//ready
+</script>
 </head>
 <body>
 여기는 스토리 입력입니다~!!
@@ -34,15 +50,12 @@
 <br>
 내용 : <br>
 <textarea name="content" id="ir1" rows="10" cols="100" style="width:766px; height:412px; display:none;"></textarea>
-
 링크 : <input type="text" name="link">
-
-
 <input type="button" id="save" value="다음단계"/>
 
 
 </form>
-</center>
+</center> 
 
 <script type="text/javascript">
 
@@ -91,10 +104,6 @@ function submitContents(elClickedObj) {
          oEditors.getById["ir1"].exec("UPDATE_CONTENTS_FIELD", []);
          $("#frm").submit();
      });    
- 
-
-
-
 
 </script>
 
