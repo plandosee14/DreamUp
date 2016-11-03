@@ -9,6 +9,7 @@
 <body>
   <h3>프로젝트 후원(리워드) 폼</h3>
  <hr>
+ ${project.pro_title}
  <form>
  <table border="1" cellpadding="5">
    <tr>
