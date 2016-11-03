@@ -19,6 +19,7 @@ public class ProAccountAction extends Action{
 		ActionForward forward;
 		ProjectDAO dao = new ProjectDAO();
 		
+		System.out.println(request.getParameter("m_id"));
 		int pro_no = dao.selectinsertingProjectNo(request.getParameter("m_id"));
 		
 		ProjectDTO project = new ProjectDTO();
