@@ -19,6 +19,8 @@
 /* 전체 배경화면 색 */
 .bg-grey {
 	background-color: white;
+	margin-left: 7%;
+	margin-right: 7%;
 }
 
 .thumbnail {
@@ -62,22 +64,27 @@
 			<div class="row text-center">
 				<div class="col-sm-4">
 					<div class="thumbnail">
-						<a href="projectView.do?pro_no=${projectList.pro_no}"><img src="img/thumnail/${projectList.pro_thumbnail}" alt="${projectList.pro_thumbnail}" width="800"
-							height="600"></a>
+						<a href="projectView.do?pro_no=${projectList.pro_no}"><img
+							src="img/thumnail/${projectList.pro_thumbnail}"
+							alt="${projectList.pro_thumbnail}" width="800" height="600"></a>
 						<div class="container">
 							<div class="progress">
 								<div class="progress-bar progress-bar-striped active"
-									role="progressbar" aria-valuenow="${projectList.progress}" aria-valuemin="0"
-									aria-valuemax="100" style="width: ${projectList.progress}%">${projectList.progress}%</div>
+									role="progressbar" aria-valuenow="${projectList.progress}"
+									aria-valuemin="0" aria-valuemax="100"
+									style="width: ${projectList.progress}%">${projectList.progress}%</div>
 							</div>
 						</div>
 
 						<p>
-							<strong>${projectList.pro_title}</strong>
+							<strong>타이틀 : ${projectList.pro_title}</strong>
 						</p>
-						<p>${projectList.pro_end}</p>
-						<p>${projectList.pro_goal}</p>
-						<p>${projectList.due_date}</p>
+
+						<p>목표 금액 : ${projectList.pro_goal}원</p>
+						<p>종료 기간 : ${projectList.pro_end}</p>
+						<p>잔여 기간 : ${projectList.due_date}일</p>
+						<p>현재 달성률 : ${projectList.progress}%</p>
+						
 					</div>
 				</div>
 		</c:forEach>
