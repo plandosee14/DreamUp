@@ -52,7 +52,7 @@ ${project.pro_no}
 프로젝트 등록자 사진 : <img src="img/profile/${project.pro_fileImage}" alt="${project.pro_thumbnail}" width="300px"
 							height="200px"><br>
 프로젝트 등록자 소개 정보 : ${project.pro_fileIntro }<br>
-우편번호 : ${project.pro_zip }<br>
+
 프로필등록 회사주소 : ${project.pro_address	 }<br>
 등록자 SNS : ${project.pro_fileSns	 }<br>
 후원 달성시 입금받을 은행명 : ${project.pro_bank}<br>
