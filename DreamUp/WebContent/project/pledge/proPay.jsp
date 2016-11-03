@@ -18,6 +18,7 @@
 상품도착예정일: ${reward.re_delivery}<br>
  
  <input type="hidden" name="pro_no" value="${project.pro_no }"><br>
+ <input type="hidden" name="re_no" value="${reward.re_no}"><br>
  <input type="text" name="su_money" value="${su_money}"><br>
  
     <input type="radio" name="person" value="1">새로입력
@@ -26,7 +27,7 @@
    이름: <input type="text" name="name" size="6"><br>
   배송주소: <input type="text" name="add1" size="4">-
   <input type="text" name="add2" size="4">
-  <input type="submit" value="주소찾기"><br>
+  <input type="button" value="주소찾기"><br>
   <input type="text" name="address" size="27"><br>
   핸드폰: <input type="text" name="phone1" size="3">-
   <input type="text" name="phone2" size="3">-
