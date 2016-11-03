@@ -43,6 +43,7 @@ public class ProjectDetailAction extends Action{
 		RewardDTO reward = new RewardDTO();
 		List<RewardDTO> rewardList;
 		rewardList = rdao.selectProReward(pro_no);
+		request.setAttribute("rewardList", rewardList);
 		
 		return mapping.findForward("scs");
 	}
