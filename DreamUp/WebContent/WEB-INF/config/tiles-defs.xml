@@ -27,8 +27,13 @@
 	<definition name=".support1" extends=".main">
 		<put name="body" value="/project/pledge/proPledge.jsp"></put>
 	</definition>
+	<!-- su:결제정보선택 -->
 	<definition name=".support2" extends=".main">
 		<put name="body" value="/project/pledge/proPay.jsp"></put>
+	</definition>
+	<!-- su: 결제체크 -->
+	<definition name=".support3" extends=".main">
+		<put name="body" value="/project/pledge/proPayCheck.jsp"></put>
 	</definition>
 	
 	
