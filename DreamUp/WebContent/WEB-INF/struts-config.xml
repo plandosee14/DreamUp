@@ -74,9 +74,14 @@
 		</action>
 		
 		<!-- 후원 step -->
-		<!-- 프로젝트-리워드 리스트 -->
+		<!-- 서포트리워드 리스트 -->
 		<action path="/suReward" type="com.dreamup.support.actions.SuRewardListAction">
 			<forward name="scs" path="/support_reward.do" />
+		</action>
+		
+		<!-- 서포트 리워드 전달, 성공: 결제정보 폼 -->
+		<action path="/suRewardSend" type="com.dreamup.support.actions.SuRewardSendAction">
+			<forward name="scs" path="/support_pay.do" />
 		</action>
 
 

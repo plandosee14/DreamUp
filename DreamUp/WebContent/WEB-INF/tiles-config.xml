@@ -13,6 +13,7 @@
 
 		<!-- 후원등록 -->
 		<action path="/support_reward" forward=".support1" />
+		<action path="/support_pay" forward=".support2" />
 		
 
 		<!-- 프로젝트 등록 -->

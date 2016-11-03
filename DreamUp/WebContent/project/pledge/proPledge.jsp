@@ -13,12 +13,12 @@
  ${project.pro_title}
 
 				<center>
-			  <form>
+			  <form action="suRewardSend.do">
 				
 					<table align="center" >
 						<tr>
 							<td>보상 없는 후원</td>
-						
+						<input type="hidden" name="pro_no" value="${project.pro_no }">
 						</tr>
 						<tr>
 							금액 :
@@ -26,7 +26,7 @@
 							
 						</tr>
 						<tr>
-							<input type="button" name="next" id="next" value="계속하기">
+							<input type="submit" name="next" id="next" value="계속하기">
 						</tr>
 					</table>
 				 </form>
@@ -35,8 +35,9 @@
 					
 					
 					<center>
-					<form action="">
+					<form action="suRewardSend.do">
 						<input type="hidden" name="re_no" value="${rewardList.re_no }">
+						<input type="hidden" name="pro_no" value="${project.pro_no }">
 						${rewardList.re_title}<br>
 					<table align="center" >
 						<tr>
@@ -49,7 +50,7 @@
 						<input type="text" name="re_money" id="re_money" value="${rewardList.re_money}">원
 						</td></tr>
 						<tr><td>
-						<input type="button" name="next" id="next" value="계속하기">
+						<input type="submit" name="next" id="next" value="계속하기">
 						</td></tr>
 					</table>
 					</form>

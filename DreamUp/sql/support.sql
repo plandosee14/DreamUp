@@ -29,7 +29,7 @@ insert into support (su_no,m_id,pro_no,re_no,su_money,su_name, su_address,
 		             '34012','01084685154','현금','23112312','국민은행',sysdate);
 		
              
-		             
+            
 		             
 drop sequence support_seq;
 create sequence support_seq

@@ -34,6 +34,14 @@ values
 (reward_seq.nextval,34,15000,'대밍이부시기','옥수수',to_date('16-11-23'),15);
 
 insert into reward
+(Re_No,Pro_No,Re_Money,Re_Title,Re_Item,Re_delivery,Re_Limite)
+values
+(reward_seq.nextval,34,15000,'대밍이부시기','옥수수',to_date('16-11-23'),15);
+
+
+
+
+insert into reward
 (re_no, pro_no) values(reward_seq.nextval, 34)
 insert into reward
 (Re_No,Pro_No,Re_Money,Re_Title,Re_Item,Re_delivery,Re_Limite)

@@ -25,8 +25,10 @@
 	
 	<!-- support 페이지 -->
 	<definition name=".support1" extends=".main">
-		<!-- extends: 부모definition에 정의된 put value를 사용하겠다! -->
 		<put name="body" value="/project/pledge/proPledge.jsp"></put>
+	</definition>
+	<definition name=".support2" extends=".main">
+		<put name="body" value="/project/pledge/proPay.jsp"></put>
 	</definition>
 	
 	
