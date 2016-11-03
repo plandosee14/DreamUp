@@ -8,7 +8,7 @@
 </head>
 <body>
 상세페이지입니다!
-제목:
+제목: ${project.pro_title}
 비디오 :
 
 리워드 : 
