@@ -16,8 +16,9 @@ public class ProUpAction extends Action{
 	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		ProjectDAO dao = new ProjectDAO();
-		dao.submitProject();
-		Integer.parseInt(request.getParameter("pro_no"));
+
+		int pro_no = Integer.parseInt(request.getParameter("pro_no"));
+		dao.submitProject(pro_no);
 		
 		
 		return super.execute(mapping, form, request, response);
