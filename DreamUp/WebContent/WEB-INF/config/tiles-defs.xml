@@ -32,7 +32,7 @@
 		<put name="body" value="/project/pledge/proPay.jsp"></put>
 	</definition>
 	<!-- su: 결제체크 -->
-	<definition name=".support2" extends=".main">
+	<definition name=".support3" extends=".main">
 		<put name="body" value="/project/pledge/proPayCheck.jsp"></put>
 	</definition>
 	

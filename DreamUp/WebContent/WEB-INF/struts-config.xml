@@ -83,6 +83,10 @@
 		<action path="/suRewardSend" type="com.dreamup.support.actions.SuRewardSendAction">
 			<forward name="scs" path="/support_pay.do" />
 		</action>
+		<!-- 서포트 결제정보 전달, 성공: 결제정보체크폼 -->
+		<action path="/suPaySend" type="com.dreamup.support.actions.SuPaySendAction">
+			<forward name="scs" path="/support_payCheck.do" />
+		</action>
 
 
 
