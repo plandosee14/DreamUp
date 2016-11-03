@@ -10,7 +10,7 @@
 
  $(document).ready(function(){
     $(':button').click(function() {
-        var result = confirm('저장하시겠습니다?'+$('#pro_no').val());
+        var result = confirm('저장하시겠습니까?'+$('#pro_no').val());
 	
         if(result) {
            //yes
@@ -33,8 +33,17 @@ $(':button').click(function(){//id=b1을 포함한 엘리먼트를 클릭했다�
 <title>Insert title here</title>
 </head>
 <body>
-뭐먹지?
-미리보기페이지입니다~!
+<center>
+		<ul class="pagination">
+	    <li ><a href="#">기본정보</a></li>
+	    <li><a href="#">리워즈</a></li>
+	    <li><a href="#">스토리</a></li>
+	    <li><a href="#">계좌</a></li>
+   	    <li><a href="#">프로필</a></li>	
+	    <li class="active"><a href="#">미리보기</a></li>
+	    <li><a href="#">등록</a></li>
+	</ul>
+		<hr>
 ${project.pro_no}
 
 <br>   
@@ -61,5 +70,6 @@ ${project.pro_no}
 현재까지 후원된 금액 : ${project.now_amount}<br>
 <input type="hidden" value="${project.pro_no}" name="pro_no" id="pro_no">
 <input type="button" value="등록" id="reg">
+</center>
 </body>
 </html>

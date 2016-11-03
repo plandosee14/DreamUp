@@ -6,8 +6,6 @@
 
 	<!-- 로그인한 사용자의 정보와 배송지 정보가 다를 경우 -->
 	<insert id="insertSupport" parameterClass="support">
-
-
 		insert into support
 		(su_no,m_id,pro_no,re_no,su_money,su_name, su_address,
 		su_zip,su_phone,paymentPlan,su_refundAccount,su_refundBank,su_date)		
@@ -16,6 +14,10 @@
 		#su_zip#,#su_phone#,#paymentPlan#,#su_refundAccount#,#su_refundBank#,sysdate)
 
 	</insert>
+	
+	<select id="selectProNo" parameterClass="int" resultClass="int">
+		select pro_no from support where su_no = #su_no#
+	</select>
 	
 	<!-- 후원정보 수정 -->
 	<update id="updateSupport" parameterClass="support">

@@ -32,16 +32,16 @@ $(function(){
 </head>
 <body>
 	<center>
-			<div>
-				<input type="button" style="font-size: 10px" value="기본정보"> <input
-					type="button" style="font-size: 10px" value="리워즈"> <input
-					type="button" style="font-size: 10px" value="스토리"> <input
-					type="button" style="font-size: 10px" value="프로필"> <input
-					type="button" style="font-size: 10px" value="계좌"> &nbsp;
-				&nbsp; <input type="button" style="font-size: 10px" value="미리보기">
-				<input type="button" style="font-size: 10px" value="등록">
-
-			</div>
+		<ul class="pagination">
+	    <li ><a href="#">기본정보</a></li>
+	    <li ><a href="#">리워즈</a></li>
+	    <li><a href="#">스토리</a></li>
+	    <li class="active"><a href="#">계좌</a></li>
+  	    <li><a href="#">프로필</a></li>
+	    <li><a href="#">미리보기</a></li>
+	    <li><a href="#">등록</a></li>
+	</ul>
+	<hr>
 
 			<br>
 			<div>프로필</div>

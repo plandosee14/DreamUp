@@ -32,6 +32,15 @@ $(function(){
 });//ready
 
 </script>
+<style type="text/css">
+.select{
+	background-color: aqua;
+}
+.preView{
+	margin-left: 10px;
+}
+
+</style>
 </head>
 <body>
 	<%-- 	<c:if test="${empty login_id }">
@@ -41,7 +50,7 @@ $(function(){
 	<br> --%>
 
 	<center>
-		<div>
+<!-- 		<div>
 			<input type="button" style="font-size: 10px" value="기본정보"> <input
 				type="button" style="font-size: 10px" value="리워즈"> <input
 				type="button" style="font-size: 10px" value="스토리"> <input
@@ -49,8 +58,19 @@ $(function(){
 				type="button" style="font-size: 10px" value="계좌"> &nbsp;
 			&nbsp; <input type="button" style="font-size: 10px" value="미리보기">
 			<input type="button" style="font-size: 10px" value="등록">
-		</div>
-
+		</div> -->
+		
+	<ul class="pagination">
+	    <li class="active"><a href="#">기본정보</a></li>
+	    <li ><a href="#">리워즈</a></li>
+	    <li><a href="#">스토리</a></li>
+	    <li><a href="#">계좌</a></li>
+   		<li><a href="#">프로필</a></li>
+	    <li><a href="#">미리보기</a></li>
+	    <li><a href="#">등록</a></li>
+	</ul>
+	<hr>
+  
 		<br>
 		<div>
 			<h3>기본정보</h3>

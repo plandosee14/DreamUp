@@ -17,7 +17,6 @@ public class SupportDAO {
 	// 후원정보 입력 ok
 	public boolean insertSupport(SupportDTO support) {
 
-		
 		try {
 			System.out.println("before insert to support : " + support.toString());
 			sqlMap.insert("support.insertSupport", support);
@@ -29,15 +28,13 @@ public class SupportDAO {
 		return false;
 	}
 
-	
-	
 	// 업데이트 ok
 	public boolean updateSupport(SupportDTO support) {
 
 		try {
 			int result;
-			result = sqlMap.update("support.updateSupport",support);
-			if(result ==1){
+			result = sqlMap.update("support.updateSupport", support);
+			if (result == 1) {
 				return true;
 			}
 		} catch (SQLException e) {
@@ -45,11 +42,11 @@ public class SupportDAO {
 		}
 		return false;
 	}
-	
-	//후원목록 삭제 ok
+
+	// 후원목록 삭제 ok
 	public boolean deleteSupport(int suNO) {
 		int result;
-		
+
 		try {
 			result = sqlMap.delete("support.delete", suNO);
 			return true;
@@ -60,10 +57,9 @@ public class SupportDAO {
 		return false;
 	}
 
-	
 	// 프로젝트 후원한 서포터즈 목록 ok
 	public List<SupportDTO> selectSupporter(int pro_no) {
-		
+
 		try {
 			List<SupportDTO> supportlist;
 			supportlist = sqlMap.queryForList("support.selectSupporter", pro_no);
@@ -74,8 +70,8 @@ public class SupportDAO {
 		}
 		return null;
 	}
-	
-	//모든 서포터즈 수
+
+	// 모든 서포터즈 수
 	public List<SupportDTO> selectAllSupporter() {
 		try {
 			List list;
@@ -85,20 +81,30 @@ public class SupportDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		return null;
+	}
+	
+	public int selectProNo(int su_no){
+		try {
+			int pro_no = (int) sqlMap.queryForObject("support.selectProNo",su_no);
+			return pro_no;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return 0;
 	}
 
 	public boolean upProjectSupporter(int pNo) {
-		
+
 		return false;
 	}
 
 	public boolean upUserSupporter(int pNo) {
 
 		return false;
-		
-		
+
 	}
 
 	public boolean upUserSupporting(String id) {

@@ -83,7 +83,8 @@ public class SupportTest {
 		
 		
 		
-		
+		int pro_no = dao.selectProNo(1);
+		System.out.println(pro_no);
 		
 
 	}

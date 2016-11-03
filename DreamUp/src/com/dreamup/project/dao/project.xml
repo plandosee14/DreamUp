@@ -138,6 +138,10 @@
 		select m_name, m_email from member where m_id = (select
 		m_id from project where pro_no = #pro_no#)
 	</select>
+	
+	<update id="updateProgress" parameterClass="java.util.Map">
+		update project set now_amount = #now_amount# where pro_no = #pro_no#
+	</update>
 
 
 

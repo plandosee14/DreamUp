@@ -91,17 +91,20 @@ $(function() {
 </head>
 <!-- changeUsingDom.html -->
 <body>
-	<center>
-		<ul id="progressbar">
-			<!--<li class="active">Account Setup</li>  -->
-			<li>기본정보</li>
-			<li class="active">리워즈</li>
-			<li>스토리</li>
-			<li>프로필</li>
-			<li>계좌</li>
-		</ul>
 
+	<center>
+		<ul class="pagination">
+	    <li ><a href="#">기본정보</a></li>
+	    <li class="active"><a href="#">리워즈</a></li>
+	    <li><a href="#">스토리</a></li>
+	    <li><a href="#">계좌</a></li>
+   	    <li><a href="#">프로필</a></li>
+	    <li><a href="#">미리보기</a></li>
+	    <li><a href="#">등록</a></li>
+	</ul>
+	<hr>
 		${pro_No}
+		<!-- 하은아 이거뭐얌 -->
 
 		<form name="reward" action="pro_reward.do" method="post">
 

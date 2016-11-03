@@ -92,6 +92,10 @@
 	<definition name=".memberInfoView" extends=".main">
 		<put name="body" value="/user/info/memberInfoView.jsp"></put>
 	</definition>
+	<!-- 회원 수정 완료 화면 -->
+	<definition name=".memberInfoOk" extends=".main">
+		<put name="body" value="/user/info/memberInfoOk.jsp"></put>
+	</definition>
 
 
 

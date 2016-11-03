@@ -61,18 +61,31 @@ select * from member;
 update project set now_amount=2000
 
 	
-select * from project;
+select pro_no, now_amount from project where pro_no =54;
+delete from project where pro_no = 51;
+select re_no from reward where pro_no = 51;
+delete from reward where re_no =32;
+select * from reward where re_no = 34;
 
-alter table project drop (pro_image)
+select * from support where re_no =34;
+
+delete from support where re_no = (select re_no from reward where pro_no =51 );
+
+alter table project drop (pro_image)	
 ALTER TABLE TABLE_NAME  DROP(columnName );
 
-
+select * from project where pro_no = 53;
 
 select (now_amount/pro_goal)*100 as goal from project where pro_no = #pro_no#
 select (pro_end - pro_start) from project
 
 select pro_goal, pro_end, pro_thumbnail, pro_title, trunc((now_amount/pro_goal)*100) as goal, round(pro_end - pro_start)as duedate from project;
-
+		select
+		trunc((now_amount/pro_goal)*100) as progress, pro_goal, pro_end,
+		pro_thumbnail, pro_title, round(pro_end - pro_start) as due_date
+		,pro_no from project
+		
+		select now_amount, pro_goal from project
 	
 	select pro_video,su_count,now_amount,pro_goal,
 		Pro_fileImage,Pro_fileIntro,Pro_fileSns,
@@ -86,9 +99,16 @@ select pro_goal, pro_end, pro_thumbnail, pro_title, trunc((now_amount/pro_goal)*
 		from project
 		where upper(pro_title) like upper('%D%')
 		
-		
+				update project set now_amount = 50000 where pro_no = 29
 		select pro_no,pro_video,su_count,now_amount,pro_goal,
 		Pro_fileImage,Pro_fileIntro,Pro_fileSns
 		from
 		project
 		where pro_no=4
+		
+		
+		
+		
+		
+		select * from project
+		select * from support

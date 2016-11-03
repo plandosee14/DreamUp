@@ -8,6 +8,8 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
+import com.dreamup.project.dao.ProjectDAO;
+import com.dreamup.project.dao.ProjectListDAO;
 import com.dreamup.support.dao.SupportDAO;
 import com.dreamup.support.dto.SupportDTO;
 
@@ -37,6 +39,10 @@ public class SuInsertAction extends Action{
 		
 		if(dao.insertSupport(support)){
 			forward = mapping.findForward("scs");
+			//입력 성공시 후원금액을 프로그레스 바에 반영
+			ProjectDAO pdao = new ProjectDAO();
+			pdao.proSupportMoney(support);
+			
 		}else{
 			forward = mapping.findForward("fail");
 			

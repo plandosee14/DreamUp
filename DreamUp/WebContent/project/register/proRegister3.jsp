@@ -25,16 +25,27 @@
 		});//click event
 	});//ready
 </script>
+<style type="text/css">
+.ir1{
+margin: 10%;
+}
+
+</style>
 </head>
 <body>
-여기는 스토리 입력입니다~!!
+
 
 <center>
-<input type="button" style="font-size:10px" value="기본정보">
-<input type="button" style="font-size:10px" value="리워즈">
-<input type="button" style="font-size:10px" value="스토리">
-<input type="button" style="font-size:10px" value="프로필">
-<input type="button" style="font-size:10px" value="계좌">
+		<ul class="pagination">
+	    <li ><a href="#">기본정보</a></li>
+	    <li><a href="#">리워즈</a></li>
+	    <li  class="active"><a href="#">스토리</a></li>
+	    <li><a href="#">계좌</a></li>
+   	    <li><a href="#">프로필</a></li>	
+	    <li><a href="#">미리보기</a></li>
+	    <li><a href="#">등록</a></li>
+	</ul>
+		<hr>
 <br>
 <br>
 <br>
@@ -47,8 +58,9 @@
 비디오: <input type="file" name="myfile" id="file">
 
 <br>
-내용 : <br>
+<center>
 <textarea name="content" id="ir1" rows="10" cols="100" style="width:766px; height:412px; display:none;"></textarea>
+</center>
 링크 : <input type="text" name="link" id="link">
 <input type="button" id="save" value="다음단계"/>
 

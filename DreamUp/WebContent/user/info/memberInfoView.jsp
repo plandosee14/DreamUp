@@ -16,7 +16,7 @@
 		<h2>회원가입폼</h2>
 		<hr>
 		</center>
-			<form class="form-horizontal" action="login-ing.do" method="get">
+			<form class="form-horizontal" action="memberInfoUpdate.do" method="get">
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="email">아이디 :</label>
 				<div class="col-sm-3">
@@ -43,9 +43,10 @@
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="pass">이  름 :</label>
 				<div class="col-sm-3">
-					<input type="password" class="form-control" id="name" name="name"
+					<input type="text" class="form-control" id="name" name="name"
 						placeholder="이름을 입력하세요">
 				</div>
+	
 			</div>
 			
 			<div class="form-group">
@@ -61,7 +62,7 @@
 			</div>
 			<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">
-					<input class="btn btn-default" type="submit" value="회원가입"> 
+					<input class="btn btn-default" type="submit" value="수정"> 
 					<input class="btn btn-default" type="reset" value="취소">
 				</div>
 			</div>

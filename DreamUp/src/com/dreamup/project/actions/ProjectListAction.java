@@ -23,6 +23,11 @@ public class ProjectListAction extends Action {
 		List<ProjectListDTO> projectList;
 		projectList = dao.projectListData();
 		request.setAttribute("projectList", projectList);
+		
+		for (int i = 0; i < projectList.size(); i++) {
+			projectListDTO = projectList.get(i);
+			System.out.println(projectListDTO.toString());
+		}
 
 		ActionForward actionForward;
 		actionForward = mapping.findForward("success");

@@ -52,7 +52,7 @@
 		<h1>${project.pro_title}</h1>
 		<h2>프로젝트 번호 : ${project.pro_no}</h2>
 
-		<center>
+
 			<div class="row">
 				<div class="col-sm-6" style="background-color: white;">
 					<embed src="video/${project.pro_video }" width="600" height="400"
@@ -60,20 +60,24 @@
 				</div>
 
 				<div class="col-sm-3" style="background-color: white;">
-					<b>${project.su_count}</b><br>후원자수<br> <b>현재 후원액 :
-						${project.now_amount}</b><br>목표액:${proDetail.pro_goal}<br> <b>${proDetail.due_date}일</b><br>잔여기간<br>
+					<b>${project.su_count}</b><br>후원자수<br> 
+					<b>현재 후원액 :${project.now_amount}</b><br>
+					목표액:${proDetail.pro_goal}<br>
+					<b>${proDetail.due_date}일</b><br>
+					잔여기간<br>
 					<b>마감일 : ${proDetail.pro_end}</b>
 				</div>
 			</div>
-		</center>
+
 		<div class="row">
 
 			<div class="col-sm-3" style="background-color: white;">
-				<img src="img/profile/${project.pro_fileImage}"
-					alt="${project.pro_fileImage}" width="150" height="200">
+				<img src="img/profile/${project.pro_fileImage}" alt="${project.pro_fileImage}" width="150" height="200">
 			</div>
-			<div class="col-sm-3" style="background-color: white;">${member.m_name }<br>
-				${member.m_email }<br>${project.pro_fileSns}</div>
+			<div class="col-sm-3" style="background-color: white;">
+			${member.m_name }<br>
+			<span class="glyphicon glyphicon-envelope"></span> ${member.m_email }<br>
+			${project.pro_fileSns}</div>
 			<div class="col-sm-3" style="background-color: white;">${project.pro_fileIntro}</div>
 		</div>
 

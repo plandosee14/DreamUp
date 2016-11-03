@@ -62,6 +62,11 @@
 			<forward name="success" path="/memberInfoView.do"></forward>
 		</action>
 		
+		<!-- 회원정보 수정 -->
+		<action path="/memberInfoUpdate" type="com.dreamup.member.actions.MemberUpdateAction">
+			<forward name="scs" path="/memberInfoOk.do"></forward>
+		</action>
+		
 		
 		
 		<!-- 메인뷰 프로젝트 리스트 -->

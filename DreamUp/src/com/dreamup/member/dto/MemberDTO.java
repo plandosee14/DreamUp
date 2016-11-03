@@ -30,6 +30,17 @@ public class MemberDTO {
 	public MemberDTO() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	// 회원가입 오버로딩 생성자
+	public MemberDTO(String m_id, String m_password, String m_email, String m_name) {
+		super();
+		this.m_id = m_id;
+		this.m_password = m_password;
+		this.m_email = m_email;
+		this.m_name = m_name;
+	}
+
+
 	public MemberDTO(int m_no, String m_id, String m_password, String m_email, String m_name, Date m_date,
 			String m_phone, String m_zip, String m_address, String m_post, String m_supportingCount,
 			String m_supportedCount, String m_account, String m_bankName) {

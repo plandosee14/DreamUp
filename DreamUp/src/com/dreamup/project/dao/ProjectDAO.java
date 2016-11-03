@@ -2,7 +2,9 @@ package com.dreamup.project.dao;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -258,6 +260,23 @@ public class ProjectDAO {
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	public boolean updateProgress(int pro_no, int su_money) {
+		Map<String, Integer> map = new HashMap<>();
+		map.put("pro_no", pro_no);
+		map.put("su_money", su_money);
+		
+		try {
+			int result = sqlMap.update("project.updateProgress", map);
+			if (result == 1) {
+				return true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
 	}
 
 	/* public List<ProjectDTO> searchProjectBy */
