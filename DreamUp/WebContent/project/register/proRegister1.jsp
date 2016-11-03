@@ -1,32 +1,47 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 
-<script type="text/javascript" src="js/suery-1.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.min.js"></script>
 <script type="text/javascript">
+/* 	$('input[name=myfile]').change(fucntion(){
+alert($('input[name=myfile]').val();
+}); */
 $(function(){
-	$('input[name=myfile]').change(fucntion(){
-		alert($('input[name=myfile]').val();
-	});
+	$('#basicOk').click(function(){
+		if($('#pro_title').val()==""){
+			alert('프로젝트 제목을 입력하세요');
+			$('#pro_title').focus();
+			alert($('#insertDay').val());
+			return false;
+		} else if($('#inputDay').val()=="" || $('#insertDay').val()==""){
+			alert($('#inputDay').val());
 
+			alert('프로젝트 종료기간을 설정하세요');
+			$('#inputDay').focus();
+			return false;y
+		} else if ($('#pro_goal').val()=="") {
+			alert('목표 금액을 입력하세요');
+			return false;
+		}
+	});
 });
 
 </script>
 </head>
 <body>
-<c:if test="${empty login_id }">
-	
-</c:if>
+<%-- 	<c:if test="${empty login_id }">
+
+	</c:if>
 	여기는 프로젝트 만들것입니다~!
-	<br>
+	<br> --%>
 
 	<center>
-
 		<div>
 			<input type="button" style="font-size: 10px" value="기본정보"> <input
 				type="button" style="font-size: 10px" value="리워즈"> <input
@@ -35,40 +50,31 @@ $(function(){
 				type="button" style="font-size: 10px" value="계좌"> &nbsp;
 			&nbsp; <input type="button" style="font-size: 10px" value="미리보기">
 			<input type="button" style="font-size: 10px" value="등록">
-
 		</div>
 
 		<br>
-		<div>기본정보</div>
-
-
-		<br> <br>
+		<div><h3>기본정보</h3></div>
+		<hr>
+		<br><br>
 
 		<form action="pro_basic.do" method="post"
 			enctype="multipart/form-data">
-
 			<table border="1" width="400" height="100">
 				<tr>
-					<td>&nbsp;&nbsp; 타이틀 사진 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 파일: <input
-						type="file" name="myfile"> <br> <%--    <input type="text" name="m_id" value="${login_id}"> --%>
-						등록자 ID : ${login_id} <input type="hidden" name="m_id"
+					<td>&nbsp;&nbsp; <b>타이틀 사진</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						파일:<input type="file" name="myfile"> <br>파일
+						</div> 등록자 ID : ${login_id} <input type="hidden" name="m_id"
 						value="${login_id}">
-
-
 					</td>
 				</tr>
 			</table>
-
 
 			<table border="1" width="400" height="30">
 				<tr>
-					<td>&nbsp;&nbsp; 제목 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input
-						type="text" size="10" name="pro_title">
-					</td>
+					<td><b>제목</b><input id="pro_title" type="text" size="10"
+						name="pro_title"></td>
 				</tr>
 			</table>
-
-
 
 			<table border="1" width="400" height="30">
 				<tr>
@@ -90,27 +96,18 @@ $(function(){
 			<table border="1" width="400" height="100">
 				<tr>
 					<td>&nbsp;&nbsp;
-						<div>후원기간</div> 기간<input type="Radio" size="2" name="day-type"
-						value="days"> <input type="text" name="pro_days" size=10><br>
-
-						마감일<input type="Radio" checked="checked" size="2" name="day-type" value="end-day">
-						<input type="date" name="pro_End" size=10><br>
+						<div><b>후원기간</b></div> 
+						기간 : <input type="Radio" size="2"  name="day-type" value="days"> 
+						<input type="text" name="pro_days" size=10 id="inputDay"><br> 
+						마감일 : <input type="Radio" checked="checked" size="2"  name="day-type" value="end-day">
+						<input type="date" name="pro_End" size=10 id="insertDay"><br>
 					</td>
-
-
-
-
-
-
-
 				</tr>
 			</table>
 
 			<table border="1" width="400" height="30">
 				<tr>
-					<td>목표금액 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text"
-						size="50" name="pro_goal"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
+					<td>목표금액 : <input type="text" size="30" name="pro_goal" id="pro_goal">
 					</td>
 				</tr>
 			</table>
@@ -119,8 +116,8 @@ $(function(){
 
 			<table width="400" height="30">
 				<tr>
-					<td align="right"><input type="submit" size="2" value="다음단계">
-					</td>
+					<td align="right"><input id="basicOk" type="submit" size="2"
+						value="다음단계"></td>
 				</tr>
 			</table>
 
