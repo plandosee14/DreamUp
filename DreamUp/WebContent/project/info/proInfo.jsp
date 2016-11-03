@@ -19,7 +19,7 @@
 	$(function() {
 		$('#supponrt').click(function() {
 			alert($('#pro_no').val());
-			location.replace('supportForm.do?pro_no=' + $('#pro_no').val());
+			location.replace('suReward.do?pro_no=' + $('#pro_no').val());
 		});//click event
 	});//ready
 </script>
