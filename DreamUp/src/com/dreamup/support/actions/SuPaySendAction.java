@@ -15,7 +15,7 @@ public class SuPaySendAction extends Action{
 	@Override
 	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
-		  
+		     
 		SupportDTO support = new SupportDTO();
 		support.setM_id("¾ÆÀÌµð: "+request.getSession().getAttribute("login_id"));
 		support.setPro_no(Integer.parseInt(request.getParameter("pro_no")));
