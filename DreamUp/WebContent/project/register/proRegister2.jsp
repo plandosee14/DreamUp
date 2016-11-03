@@ -81,8 +81,11 @@
 
 			<div id="itemList"></div>
 <input type="button" value="추가"
-				onclick="addItem()"> <input type="button" value="다음단계"
-				onclick="nextStep()">
+				onclick="addItem()"> 
+				<input type="hidden" value="" name="cnt">
+				<input type="hidden" value="" name="deleteList">
+				<input type="hidden" value="${login_id}" name="m_id">
+				<input type="button" value="다음단계" onclick="nextStep()">
 
 		</form>
 
