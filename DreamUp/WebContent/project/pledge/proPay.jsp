@@ -10,6 +10,9 @@
   <h3>프로젝트 후원(개인정보입력) 폼</h3>
  <hr>
  <form>
+ <input type="text" name="re_no" value=""><br>
+ <input type="text" name="pro_no" value=""><br>
+ <input type="text" name="su_money" value=""><br>
     <input type="radio" name="person" value="1">새로입력
     <input type="radio" name="person" value="2">회원정보와동일<br>
    이름: <input type="text" name="name" size="6"><br>

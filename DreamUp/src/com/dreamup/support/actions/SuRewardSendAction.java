@@ -8,6 +8,11 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
+import com.dreamup.project.dao.ProjectDAO;
+import com.dreamup.project.dto.ProjectDTO;
+import com.dreamup.reward.dao.RewardDAO;
+import com.dreamup.reward.dto.RewardDTO;
+
 public class SuRewardSendAction extends Action{
 
 	@Override
@@ -17,6 +22,18 @@ public class SuRewardSendAction extends Action{
 		System.out.println("리워드 번호: "+request.getParameter("re_no"));
 		System.out.println("아이디: "+request.getSession().getAttribute("login_id"));
 		System.out.println("입력금액:"+ request.getParameter("re_money"));
+		
+		ProjectDAO pdao = new ProjectDAO();
+		ProjectDTO project = new ProjectDTO();
+		project = pdao.selectProject(Integer.parseInt(request.getParameter("pro_no")));
+		
+		RewardDTO reward = new RewardDTO();
+		RewardDAO rdao = new RewardDAO();
+		reward = rdao.selectReward(Integer.parseInt(request.getParameter("re_no")));
+		
+		request.setAttribute("reward", reward);
+		request.setAttribute("project", project);
+		request.setAttribute("re_money", request.getParameter("re_money"));
 		
 		return mapping.findForward("scs");
 	}

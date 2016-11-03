@@ -18,7 +18,7 @@
 					<table align="center" >
 						<tr>
 							<td>보상 없는 후원</td>
-						<input type="hidden" name="pro_no" value="${project.pro_no }">
+						<input type="hidden" name="pro_no" value="${project.pro_no}">
 						</tr>
 						<tr>
 							금액 :
