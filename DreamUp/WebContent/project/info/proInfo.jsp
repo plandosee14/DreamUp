@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-상세페이지입니다!
-제목: ${project.pro_title}
+상세페이지입니다!<br>
+제목: ${project.pro_title}<br>
 비디오 :
 
 리워드 : 
