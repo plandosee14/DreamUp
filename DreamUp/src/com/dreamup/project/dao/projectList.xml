@@ -3,7 +3,7 @@
 <sqlMap namespace="projectList">
 <typeAlias alias="projectList" type="com.dreamup.project.dto.ProjectListDTO"/>
 	<select id="projectListData" resultClass="projectList">
-	select trunc((now_amount/pro_goal)*100), pro_goal, pro_end, pro_thumbnail, pro_title, round(pro_end - pro_start),pro_no from project
+	select trunc((now_amount/pro_goal)*100) as progress, pro_goal, pro_end, pro_thumbnail, pro_title, round(pro_end - pro_start) as due_date ,pro_no from project
 	</select>
 	
 </sqlMap>
