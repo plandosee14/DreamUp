@@ -48,7 +48,7 @@
 		
 		<!-- 프로젝트 등록 -->
 		<action path="/confirmPro" type="com.dreamup.project.actions.ProUpAction">
-			<forward name="scs" path="/register_6.do" redirect="true"/>
+			<forward name="scs" path="/project.do" redirect="true"/>
 		</action>
 
 

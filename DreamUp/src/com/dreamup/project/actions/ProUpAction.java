@@ -21,6 +21,6 @@ public class ProUpAction extends Action{
 		dao.submitProject(pro_no);
 		
 		
-		return super.execute(mapping, form, request, response);
+		return mapping.findForward("scs");
 	}
 }
