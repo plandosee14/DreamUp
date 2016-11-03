@@ -36,6 +36,11 @@
 
 .col-sm-6 {
 	margin-right: 30px;
+	
+}
+
+.content > p > img{
+	width: 400px;
 }
 </style>
 </head>
@@ -73,7 +78,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-sm-6" style="background-color: white;">${project.pro_content}</div>
+			<div id="content" class="col-sm-6" style="background-color: white;">${project.pro_content}</div>
 
 			<div class="col-sm-3" style="background-color: white;">
 				<center>
