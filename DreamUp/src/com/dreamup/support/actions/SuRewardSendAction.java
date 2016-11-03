@@ -33,7 +33,7 @@ public class SuRewardSendAction extends Action{
 		
 		request.setAttribute("reward", reward);
 		request.setAttribute("project", project);
-		request.setAttribute("re_money", request.getParameter("re_money"));
+		request.setAttribute("su_money", request.getParameter("re_money"));
 		
 		return mapping.findForward("scs");
 	}

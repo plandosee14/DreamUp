@@ -10,11 +10,19 @@
   <h3>프로젝트 후원(개인정보입력) 폼</h3>
  <hr>
  <form>
- <input type="text" name="re_no" value=""><br>
- <input type="text" name="pro_no" value=""><br>
- <input type="text" name="su_money" value=""><br>
+<h3> 프로젝트 제목 : ${project.pro_title}</h3> <br>
+[리워즈]<br>
+후원금액 : ${su_money}<br>
+ 리워즈 금액:  ${reward.re_money}<br>
+ 리워즈 아이템: ${reward.re_item}<br>
+상품도착예정일: ${reward.re_delivery}<br>
+ 
+ <input type="hidden" name="pro_no" value="${project.pro_no }"><br>
+ <input type="text" name="su_money" value="${su_money}"><br>
+ 
     <input type="radio" name="person" value="1">새로입력
-    <input type="radio" name="person" value="2">회원정보와동일<br>
+<!--     <input type="radio" name="person" value="2">회원정보와동일 -->
+    <br><br>
    이름: <input type="text" name="name" size="6"><br>
   배송주소: <input type="text" name="add1" size="4">-
   <input type="text" name="add2" size="4">

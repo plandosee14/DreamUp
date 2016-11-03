@@ -14,14 +14,14 @@
 
 				<center>
 			  <form action="suRewardSend.do">
-				
+				     <h4>보상없는 후원</h4><br>
 					<table align="center" >
 						<tr>
-							<td>보상 없는 후원</td>
-						<input type="hidden" name="pro_no" value="${project.pro_no}">
+							<td>
+						<input type="hidden" name="pro_no" value="${project.pro_no}"></td>
 						</tr>
 						<tr>
-							금액 :
+							서약 금액 :
 							<input type="text" name="re_money" id="re_money">원
 							
 						</tr>
@@ -33,13 +33,14 @@
 				</center>
 				<c:forEach items="${rewardList}" var="rewardList">
 					
-					
+					  <br>
+					  <br>
 					<center>
 					<form action="suRewardSend.do">
 						<input type="hidden" name="re_no" value="${rewardList.re_no }">
 						<input type="hidden" name="pro_no" value="${project.pro_no }">
-						${rewardList.re_title}<br>
-					<table align="center" >
+						<h4>${rewardList.re_title}</h4><br>
+					    <table align="center" >
 						<tr>
 						<td>보상 품목 : ${rewardList.re_item}</td>
 						</tr>
@@ -47,7 +48,7 @@
 						<tr><td> 남은 수량 : ${rewardList.re_limite}</td></tr>
 						
 						<tr><td>
-						<input type="text" name="re_money" id="re_money" value="${rewardList.re_money}">원
+						서약금액: <input type="text" name="re_money" id="re_money" value="${rewardList.re_money}">원
 						</td></tr>
 						<tr><td>
 						<input type="submit" name="next" id="next" value="계속하기">
