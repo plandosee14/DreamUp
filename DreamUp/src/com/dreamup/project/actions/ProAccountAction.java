@@ -31,7 +31,7 @@ public class ProAccountAction extends Action{
 			
 			project = dao.selectProject(pro_no);
 			System.out.println(project.toString());
-			//request.setAttribute("project", dao.selectProject(pro_no));
+			request.setAttribute("project", dao.selectProject(pro_no));
 		}else{
 			forward = mapping.findForward("fail");
 		}
