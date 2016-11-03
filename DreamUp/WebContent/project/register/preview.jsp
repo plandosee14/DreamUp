@@ -4,6 +4,32 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <script type="text/javascript" 
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+
+ $(document).ready(function(){
+    $(':button').click(function() {
+        var result = confirm('저장하시겠습니다?'+$('#pro_no').val());
+	
+        if(result) {
+           //yes
+            location.replace('confirmPro.do?pro_no='+$('#pro_no').val());
+        } else {
+            //no
+        }
+    });
+}); 
+/* $(function(){
+	$('#reg').click(function(){
+
+	});
+}); */
+
+$(':button').click(function(){//id=b1을 포함한 엘리먼트를 클릭했다면
+	  location.replace('');
+});
+</script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -20,7 +46,7 @@ ${project.pro_no}
 프로젝트 끝날짜: ${project.pro_end}<br>
 비디오: 
 <embed src="video/${project.pro_video }" width="500" height="700" showstatusbar="1">
-
-<input type="button" value="등록" onclick="">
+<input type="hidden" value="${project.pro_no}" name="pro_no" id="pro_no">
+<input type="button" value="등록" id="reg">
 </body>
 </html>
