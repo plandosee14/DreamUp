@@ -58,7 +58,7 @@
 	<div class="container-fluid text-center bg-grey">
 		<h2>프로젝트 소개</h2>
 		<br>
-		<c:forEach items="${projectList }" var="projectList">
+		<c:forEach items="${projectList}" var="projectList">
 			<div class="row text-center">
 				<div class="col-sm-4">
 					<div class="thumbnail">
@@ -68,7 +68,7 @@
 							<div class="progress">
 								<div class="progress-bar progress-bar-striped active"
 									role="progressbar" aria-valuenow="${projectList.progress}" aria-valuemin="0"
-									aria-valuemax="100" style="width: 50%">${projectList.progress}%</div>
+									aria-valuemax="100" style="width: ${projectList.progress}%">${projectList.progress}%</div>
 							</div>
 						</div>
 
