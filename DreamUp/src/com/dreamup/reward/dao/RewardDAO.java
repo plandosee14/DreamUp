@@ -47,11 +47,12 @@ public class RewardDAO {
 		List<RewardDTO> rewardlist=null;
 		try {
 			rewardlist=sqlMap.queryForList("reward.selectProReward", pro_no);
+			return rewardlist;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return rewardlist;
+		return null;
 	}
 
 	public boolean updateReward(RewardDTO reward) { //리워드업데이트
