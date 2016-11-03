@@ -18,14 +18,29 @@
 	margin-left: 38%;
 }
 </style>
+<script type="text/javascript" src="js/jquery-1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#login').click(function() {
+			if ($('#id').val() == "") {
+				alert('아이디를 입력하세요');
+				$('#id').focus();
+				return false;
+			} else if ($('#pass').val() == "") {
+				alert('비밀번호를 입력하세요');
+				$('#pass').focus();
+				return false;
+			}
+		});//click event
+	});//ready
+</script>
 </head>
 <body>
-	<c:if test="${login-fail}=='fail'">
+	<%-- 	<c:if test="${login-fail}=='fail'">
 		<script type="text/javascript">
 			alert("로그인 실패라네여~");
 		</script>
-
-	</c:if>
+	</c:if> --%>
 	<!-- 
 	여기는 로그인 페이지입니다
 	<h3>로그인 폼</h3>
@@ -53,7 +68,7 @@
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="pass">비밀번호 :</label>
 				<div class="col-sm-4">
-					<input type="password" class="form-control" id="pwd" name="pass"
+					<input type="password" class="form-control" id="pass" name="pass"
 						placeholder="비밀번호를 입력하세요">
 				</div>
 			</div>
@@ -62,8 +77,8 @@
 			</div>
 			<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">
-					<input class="btn btn-default" type="submit" value="로그인"> <input
-						class="btn btn-default" type="button" value="회원가입"
+					<input id="login" class="btn btn-default" type="submit" value="로그인">
+					<input class="btn btn-default" type="button" value="회원가입"
 						onclick="location='join.do'">
 				</div>
 			</div>
