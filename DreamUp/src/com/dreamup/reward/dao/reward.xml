@@ -12,10 +12,21 @@
 		#re_title#,#re_item#,#re_delivery#,#re_limite#)
 	</insert>
 	
-<!-- 	<select id="selectReward" parameterClass="">
-		select 
-		from reward
-		where 
-	</select> -->
+	<select id="selectReward" parameterClass="int" resultClass="dto">
+	select * from reward where re_no=#re_no#
+	</select>	
+	
+	<select id="selectProReward" resultClass="dto" parameterClass="int">
+	select * from reward where pro_no=#pro_no#
+	</select>
+	
+	<update id="updateReward" parameterClass="dto">
+	update reward set re_no=#re_no#,pro_no=#pro_no#,re_money=#re_money#,
+	re_title=#re_title#,re_item=#re_item#,re_delivery=#re_delivery#,re_limite=#re_limite#
+	</update>
+	
+	<delete id="deleteReward" parameterClass="int"> <!--삭제  -->
+	delete from reward where re_no=#re_no#
+	</delete>
 	
 </sqlMap>
