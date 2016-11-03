@@ -27,10 +27,11 @@
 <form action="pro_story.do"method="post" 
          enctype="multipart/form-data" id="frm">
          <br><br>
-등록자 아이디 : ${login_id} <br>
+등록자 아이디 : ${login_id} <br><br>
 <input type="hidden" value="${login_id }" name="login_id">
-비디오: <input type="file" name="myfile"><br>
+비디오: <input type="file" name="myfile">
 
+<br>
 내용 : <br>
 <textarea name="content" id="ir1" rows="10" cols="100" style="width:766px; height:412px; display:none;"></textarea>
 
@@ -58,11 +59,11 @@ nhn.husky.EZCreator.createInIFrame({
 //textArea에 이미지 첨부
 function pasteHTML(filepath){
     var sHTML = '<img src="<%=request.getContextPath()%>/img/pro_img/'+filepath+'">';
-	alert('들어옴: '+ sHTML);
+	
     
 	oEditors.getById["ir1"].exec("PASTE_HTML", [sHTML]);
     
-    alert('붙여넣기 끝')
+   
 }
 
 /* function pasteHTML(filepath){ 
