@@ -3,7 +3,7 @@ create table support(
 	Su_No			integer			primary key, --후원번호
 	Pro_No			integer		not null references project(Pro_No), --후원하는 프로젝트 번호
 	M_Id			varchar2(20)  	not null references member(M_id), --후원한 사람 ID
-	Re_No			integer		not null references reward(Re_No), -- 후원시 받을 리워즈번호
+	Re_No			integer		references reward(Re_No), -- 후원시 받을 리워즈번호
 	
 	Su_Money		integer		not null, --후원금액
 	Su_Name			varchar2(20)	not null, -- 배송 받을 사람 이름
@@ -29,7 +29,8 @@ insert into support (su_no,m_id,pro_no,re_no,su_money,su_name, su_address,
 		             '34012','01084685154','현금','23112312','국민은행',sysdate);
 		
              
-            
+           ALTER TABLE support  DROP(columnName );
+           alter table support MODIFY (Re_No integer);
 		             
 drop sequence support_seq;
 create sequence support_seq
