@@ -28,6 +28,7 @@ public class ProStoryAction extends Action{
 	    				new DefaultFileRenamePolicy());
 	     String filename=mr.getFilesystemName("myfile");
 	    
+	     
 		System.out.println(filename);
 		System.out.println("링크가져오기: "+mr.getParameter("link"));
 		
@@ -35,6 +36,7 @@ public class ProStoryAction extends Action{
 		
 		
 		ProjectDAO dao = new ProjectDAO();
+		
 		int pro_No = dao.selectinsertingProjectNo(mr.getParameter("login_id"));
 
 		ProjectDTO project = new ProjectDTO();

@@ -28,6 +28,7 @@
          enctype="multipart/form-data" id="frm">
          <br><br>
 등록자 아이디 : ${login_id} <br>
+<input type="hidden" value="${login_id }" name="login_id">
 비디오: <input type="file" name="myfile"><br>
 
 내용 : <br>
