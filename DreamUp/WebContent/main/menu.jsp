@@ -80,7 +80,7 @@ menu.jsp
 							<li><a href="#">결제 내역</a></li>
 							<li><a href="#">내정보 수정</a></li>
 							<li class="divider"></li>
-							<li><a>로그아웃</a></li>
+							<li><a href="logout.do">로그아웃</a></li>
 							</ul>
 						</div>
 					</c:if>

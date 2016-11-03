@@ -19,7 +19,12 @@
 			<forward name="scs" path="/main.do" redirect="true" />
 			<forward name="fail" path="/login.do" redirect="true" />
 		</action>
-
+		
+		<!-- 로그아웃 -->
+		<action path="/logout" type="com.dreamup.member.actions.LogoutAction">
+		<forward name="scs" path="/main.do" redirect="true"></forward>
+		
+		</action>
 		<!-- 프로젝트 등록 step -->
 		<!-- 기본정보 등록 -->
 		<action path="/pro_basic" type="com.dreamup.project.actions.ProBasicAction">
