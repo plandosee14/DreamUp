@@ -15,7 +15,7 @@
 	 <select id="selectReward" parameterClass="int" resultClass="reward">
 	select * from reward where re_no=#re_no#
 	</select>	
-	
+
 	
 	<select id="selectProReward" resultClass="reward" parameterClass="int">
 	select * from reward where pro_no=#pro_no#

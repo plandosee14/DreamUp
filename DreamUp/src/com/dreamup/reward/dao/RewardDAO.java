@@ -41,7 +41,7 @@ public class RewardDAO {
 		}
 		return null;
 	}
-	
+
 	//한 프로젝트에서 제공하는 리워드 리스트(where절 프로젝트 번호일치시)
 	public List<RewardDTO> selectProReward(int pro_no) {
 		List<RewardDTO> rewardlist;
