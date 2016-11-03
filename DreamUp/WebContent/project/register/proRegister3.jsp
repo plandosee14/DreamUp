@@ -12,8 +12,10 @@
 <script type="text/javascript" src="js/jquery-1.min.js"></script>
 <script type="text/javascript">
 	$(function() {
-		$('#register').click(function() {
-			if ($('#id').val() == "") {
+		$('#save').click(function() {
+			if(!$('#file').val(){
+				alert('영상 업로드는 필수 사항입니다.');
+			} else if ($('#id').val() == "") {
 				alert('아이디를 입력하세요');
 				$('#id').focus();
 				return false;
@@ -22,7 +24,6 @@
 				$('#pass').focus();
 				return false;
 			}
-
 		});//click event
 	});//ready
 </script>
@@ -45,7 +46,7 @@
          <br><br>
 등록자 아이디 : ${login_id} <br><br>
 <input type="hidden" value="${login_id }" name="login_id">
-비디오: <input type="file" name="myfile">
+비디오: <input type="file" name="myfile" id="file">
 
 <br>
 내용 : <br>
