@@ -33,7 +33,7 @@
   <input type="text" name="phone2" size="3">-
   <input type="text" name="phone3" size="3"><br>
   <hr>
-  <input type="radio" name="pay" value="1">신용카드
+  <input type="radio" name="pay" value="1" checked="checked">신용카드
     <input type="radio" name="pay" value="2">무통장입금<br>
   입금은행:<select name="bank">
        <option>신한</option>

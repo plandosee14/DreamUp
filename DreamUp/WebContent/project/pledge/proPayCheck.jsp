@@ -41,7 +41,7 @@
 		 환불은행 : ${support.su_refundAccount } <br>
 		 환불계좌: ${support.su_refundBank} <br>
 		 
-		 <input type="hidden" name="pro_no" value="${support.su_no}">
+		 <input type="hidden" name="pro_no" value="${support.pro_no}">
 		 <input type="hidden" name="re_no" value="${support.re_no}">
 		 <input type="hidden" name="su_money" value="${support.su_money}">
 		 <input type="hidden" name="su_name" value="${support.su_name}">
@@ -49,9 +49,9 @@
 		 <input type="hidden" name="su_address" value="${support.su_address}">
 		 <input type="hidden" name="su_phone" value="${support.su_phone}">
 		 <input type="hidden" name="su_paymentPlan" value="${support.paymentPlan}">
-		<input type="submit" value="결제하기"><br>
 		 <input type="hidden" name="su_refundAccount" value="${support.su_refundAccount}">
 		 <input type="hidden" name="su_refundBank" value="${support.su_refundBank}">
+		<input type="submit" value="결제하기"><br>
 		
 	</form>
 	</center>
