@@ -56,17 +56,18 @@
 				<div class="col-sm-3" style="background-color: yellow;">
 					<b>${project.su_count}</b><br>후원자수<br> <b>현재 후원액 :
 						${project.now_amount}</b><br>목표액:${proDetail.pro_goal}<br>
-					<b>${proDetail.due_date}일</b><br>잔여기간
+					<b>${proDetail.due_date}일</b><br>잔여기간<br><b>마감일 : ${proDetail.pro_end}</b>
 				</div>
 			</div>
 		</center>
 		<div class="row">
 
-			<div class="col-sm-6" style="background-color: pink;">
+			<div class="col-sm-3" style="background-color: pink;">
 				<img src="img/profile/${project.pro_fileImage}"
-					alt="${project.pro_fileImage}" width="100" height="150">${member.m_name }<br>
-					${member.m_email }<br>${project.pro_fileSns}
+					alt="${project.pro_fileImage}" width="100" height="150">
 			</div>
+			<div class="col-sm-3" style="background-color: pink;">${member.m_name }<br>
+					${member.m_email }<br>${project.pro_fileSns}</div>
 			<div class="col-sm-3" style="background-color: pink;">${project.pro_fileIntro}</div>
 		</div>
 

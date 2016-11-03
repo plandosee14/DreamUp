@@ -135,7 +135,8 @@
 
 	<select id="selectProjectRegister" parameterClass="int"
 		resultClass="member">
-		select * from member where pro_no = #pro_no#
+		select m_name, m_email from member where m_id = (select
+		m_id from project where pro_no = #pro_no#)
 	</select>
 
 
