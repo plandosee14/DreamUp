@@ -12,7 +12,7 @@
 		#re_title#,#re_item#,#re_delivery#,#re_limite#)
 	</insert>
 	
-	<select id="selectReward" parameterClass="int" resultClass="dto">
+	<!-- <select id="selectReward" parameterClass="int" resultClass="dto">
 	select * from reward where re_no=#re_no#
 	</select>	
 	
@@ -25,8 +25,8 @@
 	re_title=#re_title#,re_item=#re_item#,re_delivery=#re_delivery#,re_limite=#re_limite#
 	</update>
 	
-	<delete id="deleteReward" parameterClass="int"> <!--삭제  -->
+	<delete id="deleteReward" parameterClass="int"> 
 	delete from reward where re_no=#re_no#
 	</delete>
-	
+	 -->
 </sqlMap>
