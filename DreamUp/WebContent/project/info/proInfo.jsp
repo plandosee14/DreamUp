@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -13,6 +13,15 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#supponrt').click(function() {
+			alert($('#pro_no').val());
+			location.replace('supportForm.do?pro_no='+$('#pro_no').val());
+		});//click event
+	});//ready
+</script>
 <style type="text/css">
 .pro-info {
 	margin: 5%;
@@ -23,21 +32,23 @@
 .row {
 	margin-bottom: 5%
 }
-.col-sm-6{
+
+.col-sm-6 {
 	margin-right: 30px;
 }
 </style>
 </head>
 <body>
-
+	<input type="button" name="supponrt" id="supponrt" value="후원하기">
+	<input type="hidden" name="pro_no" id="pro_no" value="3">
 	<div class="pro-info">
 		<h1>${project.pro_title}</h1>
-
+		
 		<center>
 			<div class="row">
-				<div class="col-sm-6" style="background-color: yellow;">동영상</div>
-			
-				<div class="col-sm-3" style="background-color: yellow;">프로젝트
+				<div class="col-sm-6" style="background-color: yellow;">동영상pro_video</div>
+
+				<div class="col-sm-3" style="background-color: yellow;">su_count
 					정보</div>
 			</div>
 			<div class="row">
@@ -49,7 +60,7 @@
 			<div class="row">
 				<div class="col-sm-6" style="background-color: yellow;">프로젝트
 					소개 정보</div>
-			
+
 				<div class="col-sm-3" style="background-color: yellow;">리워드 정보
 				</div>
 			</div>
