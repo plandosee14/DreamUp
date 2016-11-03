@@ -7,6 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+상세페이지입니다!
+제목:
+비디오 :
+
+리워드 : 
+내용 :
 
 </body>
 </html>

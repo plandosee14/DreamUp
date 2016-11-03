@@ -16,6 +16,13 @@
 		<!-- extends: 부모definition에 정의된 put value를 사용하겠다! -->
 		<put name="body" value="/project/list/list.jsp"></put>
 	</definition>
+	
+	<!-- project상세페이지 -->
+	<definition name=".proDetail" extends=".main">
+		<!-- extends: 부모definition에 정의된 put value를 사용하겠다! -->
+		<put name="body" value="/project/info/proInfo.jsp"></put>
+	</definition>	
+	
 
 	<!-- project등록 -->
 	<definition name=".menu2" extends=".main">

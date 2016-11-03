@@ -10,7 +10,8 @@ public class ProjectListDTO {
 	private String pro_thumbnail; // 프로젝트 썸네일이미지
 	private String pro_title; // 프로젝트 제목
 	private int due_date;// 잔여기간
-
+	private int pro_no;
+	
 	public ProjectListDTO() {
 		// TODO Auto-generated constructor stub
 	}
@@ -24,6 +25,16 @@ public class ProjectListDTO {
 		this.pro_thumbnail = pro_thumbnail;
 		this.pro_title = pro_title;
 		this.due_date = due_date;
+	}
+	
+	
+
+	public int getPro_no() {
+		return pro_no;
+	}
+
+	public void setPro_no(int pro_no) {
+		this.pro_no = pro_no;
 	}
 
 	public int getProgress() {
@@ -77,7 +88,10 @@ public class ProjectListDTO {
 	@Override
 	public String toString() {
 		return "ProjectListDTO [progress=" + progress + ", pro_goal=" + pro_goal + ", pro_end=" + pro_end
-				+ ", pro_thumbnail=" + pro_thumbnail + ", pro_title=" + pro_title + ", due_date=" + due_date + "]";
+				+ ", pro_thumbnail=" + pro_thumbnail + ", pro_title=" + pro_title + ", due_date=" + due_date
+				+ ", pro_no=" + pro_no + "]";
 	}
+
+	
 
 }
