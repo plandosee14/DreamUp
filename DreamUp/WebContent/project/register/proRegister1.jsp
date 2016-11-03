@@ -5,6 +5,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+
+<script type="text/javascript" src="js/suery-1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('input[name=myfile]').change(fucntion(){
+		alert($('input[name=myfile]').val();
+	});
+
+});
+
+</script>
 </head>
 <body>
 	여기는 프로젝트 만들것입니다~!
