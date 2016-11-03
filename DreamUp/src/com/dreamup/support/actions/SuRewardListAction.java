@@ -30,6 +30,10 @@ public class SuRewardListAction extends Action{
 		
 		List<RewardDTO> rewardList;
 		rewardList = rdao.selectProReward(pro_no);
+		for (int i = 0; i < rewardList.size(); i++) {
+			System.out.println(rewardList.get(i).toString());
+		}
+		
 		request.setAttribute("rewardList", rewardList);
 		
 		return mapping.findForward("scs");
