@@ -37,7 +37,7 @@ $(':button').click(function(){//id=b1을 포함한 엘리먼트를 클릭했다�
 미리보기페이지입니다~!
 ${project.pro_no}
 
-<br>
+<br>   
 프로젝트 제목: ${project.pro_title}<br>
 프로젝트 썸네일: <img src="img/thumnail/${project.pro_thumbnail}" alt="${project.pro_thumbnail}" width="300px"
 							height="200px"><br>
