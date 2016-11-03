@@ -8,8 +8,23 @@
 <!-- Smart Editor -->
 <script type="text/javascript" src="<%=request.getContextPath()%>/project/se2/js/HuskyEZCreator.js" charset="utf-8"></script>
 <!-- <script type="text/javascript" src="../se2/photo_uploader/plugin/hp_SE2M_AttachQuickPhoto.js" charset="utf-8"></script> -->
- <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
- 
+<!--  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.min.js"></script>  -->
+<script type="text/javascript" src="js/jquery-1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#save').click(function() {
+			if(!$('#file').val()){
+				alert('동영상 업로드는 필수사항입니다. 50mb이하 영상을 업로드하세요');
+				return false;
+			} else if($('#link').val()==""){
+				alert('프로젝트 관련 link주소를 입력하세요');
+				$('#link').focus();
+				return false;
+			}
+	         $("#frm").submit();
+		});//click event
+	});//ready
+</script>
 </head>
 <body>
 여기는 스토리 입력입니다~!!
@@ -29,20 +44,17 @@
          <br><br>
 등록자 아이디 : ${login_id} <br><br>
 <input type="hidden" value="${login_id }" name="login_id">
-비디오: <input type="file" name="myfile">
+비디오: <input type="file" name="myfile" id="file">
 
 <br>
 내용 : <br>
 <textarea name="content" id="ir1" rows="10" cols="100" style="width:766px; height:412px; display:none;"></textarea>
-
-링크 : <input type="text" name="link">
-
-
+링크 : <input type="text" name="link" id="link">
 <input type="button" id="save" value="다음단계"/>
 
 
 </form>
-</center>
+</center> 
 
 <script type="text/javascript">
 
@@ -89,12 +101,8 @@ function submitContents(elClickedObj) {
 	
 	 $("#save").click(function(){
          oEditors.getById["ir1"].exec("UPDATE_CONTENTS_FIELD", []);
-         $("#frm").submit();
+
      });    
- 
-
-
-
 
 </script>
 

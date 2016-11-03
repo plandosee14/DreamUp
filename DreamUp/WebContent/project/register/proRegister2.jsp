@@ -5,7 +5,35 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-1.min.js"></script>
 <script type="text/javascript">
+$(function() {
+	$('#rewardOk').click(function() {
+		if ($('#re_money').val() == "") {
+			alert('서약금액을 입력하세요');
+			$('#re_money').focus();
+			return false;
+		}  else if ($('#title').val() == "") {
+			alert('리워드 타이틀을 입력하세요');
+			$('#title').focus();
+			return false;
+		} else if ($('#item').val() == "") {
+			alert('리워드 아이템을 입력하세요');
+			$('#item').focus();
+			return false;
+		} else if ($('#duedate').val() == "") {
+			alert('배송 예정일을 입력하세요');
+			$('#duedate').focus();
+			return false;
+		} else if ($('#amount').val() == "") {
+			alert('리워드 한정수량을 입력하세요');
+			$('#amount').focus();
+			return false;
+		} 
+		nextStep();
+	});//click event
+});
+
 	var cnt = 0;
 	var i = 0;
 	var deleteList = [];
@@ -23,7 +51,7 @@
 				+ '<label for="name">제목:</label>'
 				+ '<input type="text" id="title" name="title'+cnt+'"><br>'
 				+ '<label for="name">아이템:</label>'
-				+ '<input type="text" id="id" name="item'+cnt+'"><br>'
+				+ '<input type="text" id="item" name="item'+cnt+'"><br>'
 				+ '<label for="name">배송예정일:</label>'
 				+ '<input type="date" id="duedate" name="duedate'+cnt+'"><br>'
 				+ '<label for="name">한정수량:</label>'
@@ -49,7 +77,6 @@
 		// itemList.removeChild(delNode);
 		delDiv.parentNode.removeChild(delDiv);
 	}
-
 	function nextStep() {
 
 		document.reward.cnt.value = cnt;
@@ -80,12 +107,11 @@
 
 
 			<div id="itemList"></div>
-<input type="button" value="추가"
-				onclick="addItem()"> 
-				<input type="hidden" value="" name="cnt">
-				<input type="hidden" value="" name="deleteList">
-				<input type="hidden" value="${login_id}" name="m_id">
-				<input type="button" value="다음단계" onclick="nextStep()">
+			<input type="button" value="추가" onclick="addItem()"> 
+			<input type="hidden" value="" name="cnt"> 
+			<input type="hidden" value="" name="deleteList"> 
+			<input type="hidden" value="${login_id}" name="m_id"> 
+			<input id="rewardOk" type="button" value="다음단계">
 
 		</form>
 
