@@ -16,7 +16,6 @@ $(function(){
 			return false;
 		} else if($('#pro_title').val()==""){
 			alert('프로젝트 제목을 입력하세요');
-			//alert($('#'))
 			$('#pro_title').focus();
 			return false;
 		} else if($('#inputDay').val()=="" || $('#insertDay').val()==""){
@@ -25,6 +24,7 @@ $(function(){
 			return false;y
 		} else if ($('#pro_goal').val()=="") {
 			alert('목표 금액을 입력하세요');
+			$('#pro_goal').focus();
 			return false;
 		}
 	});//click
@@ -116,8 +116,7 @@ $(function(){
 
 			<table width="400" height="30">
 				<tr>
-					<td align="right"><input id="basicOk" type="submit" size="2"
-						value="다음단계"></td>
+					<td align="right"><input id="basicOk" type="submit" size="2" value="다음단계"></td>
 				</tr>
 			</table>
 		</form>
