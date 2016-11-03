@@ -22,9 +22,7 @@
 	<h3>프로젝트 후원(결제정보확인)</h3>
 	<hr>
 
-	<div class="outerProvision">
-	1111
-	</div>
+
 	
 	<p class="checkPayInfo">
 	<form>

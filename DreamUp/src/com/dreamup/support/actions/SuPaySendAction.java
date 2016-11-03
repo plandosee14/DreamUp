@@ -31,6 +31,7 @@ public class SuPaySendAction extends Action{
 		
 		System.out.println(support.toString());
 
+		
 		return mapping.findForward("scs");
 	}
 }
