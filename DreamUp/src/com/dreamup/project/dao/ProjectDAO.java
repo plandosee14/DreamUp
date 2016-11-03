@@ -190,10 +190,10 @@ public class ProjectDAO {
 	
 	
 	//등록버튼 눌렀을때 state를 1로 바꿈 ok
-	public boolean submitProject(){
+	public boolean submitProject(int pro_no){
 		int result;
 		try {
-			result = sqlMap.update("project.submitProject");
+			result = sqlMap.update("project.submitProject",pro_no);
 			if (result == 1) {
 				System.out.println("성공");
 				return true;

@@ -23,8 +23,6 @@ public class ProjectDetailAction extends Action{
 		
 		request.setAttribute("project", project );
 		
-		
-		
 		return mapping.findForward("scs");
 	}
 

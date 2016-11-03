@@ -108,9 +108,10 @@
 		where pro_state=0 and m_id=#m_id#
 	</select>
 
-	<update id="submitProject">
+	<update id="submitProject" parameterClass="int">
 		update project set
 		Pro_state = 1
+		where pro_np = #pro_no#
 	</update>
 	
 	<!-- 현재 프로젝트가 후원받은 수 카운트 -->
