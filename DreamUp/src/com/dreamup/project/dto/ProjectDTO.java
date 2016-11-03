@@ -19,12 +19,12 @@ public class ProjectDTO {
 	private String pro_content;
 	private String pro_link;
 
-	private String Pro_fileImage;
-	private String Pro_fileIntro;
-	private String Pro_address;
-	private String Pro_fileSns;
+	private String pro_fileImage;
+	private String pro_fileIntro;
+	private String pro_address;
+	private String pro_fileSns;
 
-	private String Pro_bank;
+	private String pro_bank;
 	private String pro_account;
 
 	private int su_count;
@@ -53,11 +53,11 @@ public class ProjectDTO {
 		this.pro_video = pro_video;
 		this.pro_content = pro_content;
 		this.pro_link = pro_link;
-		Pro_fileImage = pro_fileImage;
-		Pro_fileIntro = pro_fileIntro;
-		Pro_address = pro_address;
-		Pro_fileSns = pro_fileSns;
-		Pro_bank = pro_bank;
+		this.pro_fileImage = pro_fileImage;
+		this.pro_fileIntro = pro_fileIntro;
+		this.pro_address = pro_address;
+		this.pro_fileSns = pro_fileSns;
+		this.pro_bank = pro_bank;
 		this.pro_account = pro_account;
 		this.su_count = su_count;
 		this.pro_state = pro_state;
@@ -162,43 +162,43 @@ public class ProjectDTO {
 
 
 	public String getPro_fileImage() {
-		return Pro_fileImage;
+		return pro_fileImage;
 	}
 
 	public void setPro_fileImage(String pro_fileImage) {
-		Pro_fileImage = pro_fileImage;
+		this.pro_fileImage = pro_fileImage;
 	}
 
 	public String getPro_fileIntro() {
-		return Pro_fileIntro;
+		return pro_fileIntro;
 	}
 
 	public void setPro_fileIntro(String pro_fileIntro) {
-		Pro_fileIntro = pro_fileIntro;
+		this.pro_fileIntro = pro_fileIntro;
 	}
 
 	public String getPro_address() {
-		return Pro_address;
+		return pro_address;
 	}
 
 	public void setPro_address(String pro_address) {
-		Pro_address = pro_address;
+		this.pro_address = pro_address;
 	}
 
 	public String getPro_fileSns() {
-		return Pro_fileSns;
+		return pro_fileSns;
 	}
 
 	public void setPro_fileSns(String pro_fileSns) {
-		Pro_fileSns = pro_fileSns;
+		this.pro_fileSns = pro_fileSns;
 	}
 
 	public String getPro_bank() {
-		return Pro_bank;
+		return pro_bank;
 	}
 
 	public void setPro_bank(String pro_bank) {
-		Pro_bank = pro_bank;
+		this.pro_bank = pro_bank;
 	}
 
 	public String getPro_account() {
@@ -238,9 +238,9 @@ public class ProjectDTO {
 		return "ProjectDTO [pro_no=" + pro_no + ", m_id=" + m_id + ", pro_thumbnail=" + pro_thumbnail + ", pro_title="
 				+ pro_title + ", pro_catagory=" + pro_catagory + ", pro_start=" + pro_start + ", pro_end=" + pro_end
 				+ ", pro_goal=" + pro_goal + ", pro_days=" + pro_days + ", pro_video=" + pro_video + ", pro_content="
-				+ pro_content + ", pro_link=" + pro_link + ", Pro_fileImage=" + Pro_fileImage + ", Pro_fileIntro="
-				+ Pro_fileIntro + ", Pro_address=" + Pro_address + ", Pro_fileSns=" + Pro_fileSns + ", Pro_bank="
-				+ Pro_bank + ", pro_account=" + pro_account + ", su_count=" + su_count + ", pro_state=" + pro_state
+				+ pro_content + ", pro_link=" + pro_link + ", Pro_fileImage=" + pro_fileImage + ", Pro_fileIntro="
+				+ pro_fileIntro + ", Pro_address=" + pro_address + ", Pro_fileSns=" + pro_fileSns + ", Pro_bank="
+				+ pro_bank + ", pro_account=" + pro_account + ", su_count=" + su_count + ", pro_state=" + pro_state
 				+ ", now_amount=" + now_amount + "]";
 	}
 

@@ -41,10 +41,10 @@
 	<!--프로젝트 프로필 정보 입력 -->
 	<update id="updateProfile" parameterClass="project">
 		update project set
-		Pro_fileImage=#Pro_fileImage#,
-		Pro_fileIntro=#Pro_fileIntro#,
-		Pro_address=#Pro_address#,
-		Pro_fileSns=#Pro_fileSns#
+		Pro_fileImage=#pro_fileImage#,
+		Pro_fileIntro=#pro_fileIntro#,
+		Pro_address=#pro_address#,
+		Pro_fileSns=#pro_fileSns#
 		where
 		pro_no=#pro_no#
 	</update>
