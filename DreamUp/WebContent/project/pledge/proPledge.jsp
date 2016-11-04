@@ -20,11 +20,11 @@
 							<td>
 						<input type="hidden" name="pro_no" value="${project.pro_no}"></td>
 						</tr>
-						<tr>
+						<td>
 							서약 금액 :
 							<input type="text" name="re_money" id="re_money">원
-							
-						</tr>
+						    <input type="hidden" name="reCheck" value="false">	
+						</td>
 						<tr>
 							<input type="submit" name="next" id="next" value="계속하기">
 						</tr>
@@ -39,6 +39,7 @@
 					<form action="suRewardSend.do">
 						<input type="hidden" name="re_no" value="${rewardList.re_no }">
 						<input type="hidden" name="pro_no" value="${project.pro_no }">
+						<input type="hidden" name="reCheck" value="true">
 						<h4>${rewardList.re_title}</h4><br>
 					    <table align="center" >
 						<tr>

@@ -89,6 +89,10 @@
 	</center> -->
 	<div class="container">
 		<h2>마이페이징</h2>
+		<br>
+		<br>
+		${login_id}
+		
 		<ul class="nav nav-tabs">
 			<li class="active"><a data-toggle="tab" href="#home">등록 프로젝트</a></li>
 			<li><a data-toggle="tab" href="#menu1">후원 프로젝트</a></li>

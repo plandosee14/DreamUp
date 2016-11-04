@@ -25,7 +25,6 @@ public class SuInsertAction extends Action{
 		
 		support.setM_id((String)request.getSession().getAttribute("login_id"));
 		support.setPro_no(Integer.parseInt(request.getParameter("pro_no")));
-		support.setRe_no(Integer.parseInt(request.getParameter("re_no")));
 		support.setSu_money(Integer.parseInt(request.getParameter("su_money")));
 		support.setSu_name(request.getParameter("su_name"));
 		support.setSu_zip(request.getParameter("su_zip"));
@@ -35,6 +34,10 @@ public class SuInsertAction extends Action{
 		support.setSu_refundAccount(request.getParameter("su_refundAccount"));
 		support.setSu_refundBank(request.getParameter("su_refundBank"));
 		System.out.println("잘 전달되었나요?: "+support.toString());
+		
+		if(request.getParameter("rewardCheck").equals("true")){
+			support.setRe_no(Integer.parseInt(request.getParameter("re_no")));			
+		}
 		
 		SupportDAO dao = new SupportDAO();
 		ProjectDAO pdao = new ProjectDAO();

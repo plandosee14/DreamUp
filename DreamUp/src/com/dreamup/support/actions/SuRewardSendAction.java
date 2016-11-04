@@ -29,8 +29,13 @@ public class SuRewardSendAction extends Action{
 		
 		RewardDTO reward = new RewardDTO();
 		RewardDAO rdao = new RewardDAO();
-		reward = rdao.selectReward(Integer.parseInt(request.getParameter("re_no")));
 		
+		if(request.getParameter("reCheck").equals("true")){
+			reward = rdao.selectReward(Integer.parseInt(request.getParameter("re_no")));
+		}else{
+			//보상없는 후원일경우 reward = null;
+			reward=null;		
+		}
 		request.setAttribute("reward", reward);
 		request.setAttribute("project", project);
 		request.setAttribute("su_money", request.getParameter("re_money"));

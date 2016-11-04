@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,14 +12,24 @@
  <hr>
  <form action="suPaySend.do" method="post">
 <h3> 프로젝트 제목 : ${project.pro_title}</h3> <br>
+<!-- taglib if 문들어가야할듯 리워드 있으면 찍고 없으면 안찍고 -->
+
+<c:if test="${reward}==null">
+[보상없는 후원]
+<input type="hidden" name="rewardCheck" value="false">
+</c:if>
+
+<c:if test="${reward}!=null">
 [리워즈]<br>
 후원금액 : ${su_money}<br>
  리워즈 금액:  ${reward.re_money}<br>
  리워즈 아이템: ${reward.re_item}<br>
 상품도착예정일: ${reward.re_delivery}<br>
+<input type="hidden" name="rewardCheck" value="true">
+<input type="hidden" name="re_no" value="${reward.re_no}"><br>
+</c:if>
  
  <input type="hidden" name="pro_no" value="${project.pro_no }"><br>
- <input type="hidden" name="re_no" value="${reward.re_no}"><br>
  <input type="text" name="su_money" value="${su_money}"><br>
  
     <input type="radio" name="person" value="1">새로입력

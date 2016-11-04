@@ -21,7 +21,6 @@ public class SuPaySendAction extends Action{
 		SupportDTO support = new SupportDTO();
 		support.setM_id((String)request.getSession().getAttribute("login_id"));
 		support.setPro_no(Integer.parseInt(request.getParameter("pro_no")));
-		support.setRe_no(Integer.parseInt(request.getParameter("re_no")));
 		support.setSu_money(Integer.parseInt(request.getParameter("su_money")));
 		support.setSu_name(request.getParameter("name"));
 		support.setSu_zip(request.getParameter("add1")+"-"+request.getParameter("add2"));
@@ -31,12 +30,16 @@ public class SuPaySendAction extends Action{
 		support.setSu_refundAccount(request.getParameter("account"));
 		support.setSu_refundBank(request.getParameter("bank"));
 		
-		RewardDTO reward = new RewardDTO();
-		RewardDAO rdao = new RewardDAO();
-		reward = rdao.selectReward(Integer.parseInt(request.getParameter("re_no")));
+		//reward가 true 일경우에만 리워드 넘김!
+		if(request.getParameter("rewardCheck").equals("true")){
+			support.setRe_no(Integer.parseInt(request.getParameter("re_no")));
 
+			RewardDTO reward = new RewardDTO();
+			RewardDAO rdao = new RewardDAO();
+			reward = rdao.selectReward(Integer.parseInt(request.getParameter("re_no")));
+			request.setAttribute("reward", reward);
+		}
 		request.setAttribute("support", support);
-		request.setAttribute("reward", reward);
 		return mapping.findForward("scs");
 	}
 }

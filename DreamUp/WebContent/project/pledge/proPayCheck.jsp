@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -26,12 +27,21 @@
 	<p class="checkPayInfo">
 <center>
 	<form action="supportInsert.do" method="post">
+<c:if test="${reward}==null">
+[보상없는 후원]
+<input type="hidden" name="rewardCheck" value="false">
+</c:if>
 
+<c:if test="${reward}!=null">
 		[리워즈]<br>
  후원금액 : ${support.su_money}<br>
  리워즈 금액:  ${reward.re_money}<br>
  리워즈 아이템: ${reward.re_item}<br>
  상품도착예정일: ${reward.re_delivery}<br><br>
+ <input type="hidden" name="rewardCheck" value="true">
+<input type="hidden" name="re_no" value="${support.re_no}">
+ </c:if>
+ 
 		[결제정보]
 		이름: ${support.su_name}
 		<br> 배송우편번호: ${support.su_zip } <br>
@@ -42,7 +52,6 @@
 		 환불계좌: ${support.su_refundBank} <br>
 		 
 		 <input type="hidden" name="pro_no" value="${support.pro_no}">
-		 <input type="hidden" name="re_no" value="${support.re_no}">
 		 <input type="hidden" name="su_money" value="${support.su_money}">
 		 <input type="hidden" name="su_name" value="${support.su_name}">
 		 <input type="hidden" name="su_zip" value="${support.su_zip}">
