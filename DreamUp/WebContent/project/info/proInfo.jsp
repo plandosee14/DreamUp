@@ -69,14 +69,22 @@
                   showstatusbar="1" autoplay="false">
             </div>
 
-            <div class="col-sm-1" style="background-color: white;">
-               <br><b>후원자수: ${project.su_count}</b><br>
-               <b>현재 후원액 :${project.now_amount}</b><br>
-               목표액:${proDetail.pro_goal}<br>
-               <b>${proDetail.due_date}일</b><br>
-               잔여기간<br>
-               <b>마감일 : ${proDetail.pro_end}</b>
-               <input type="button" name="supponrt" id="supponrt" value="후원하기" class="btn btn-success">
+            <div class="col-sm-3" style="background-color: white;">
+               <center>
+               <font size="5px"><b>${project.su_count}</b></font><br>
+               후원자수<br><br>
+               <font size="5px"><b>${project.now_amount}</b></font><br>
+               현재 후원액 <br><br>
+               <font size="5px"><b>${proDetail.pro_goal}</b></font><br>
+               목표액 <br><br>
+               <font size="5px"><b>${proDetail.due_date}</b></font><br>
+               잔여기간 <br><br>
+               <font size="5px"><b>${proDetail.pro_end}</b></font><br>
+               마감일 <br><br>
+               
+   
+               <input type="button" name="supponrt" id="supponrt" value="후원하기">
+               </center> 
             </div>
          </div>
 
@@ -108,6 +116,7 @@
                      <input type="text" name="re_money" id="re_money">원
                      <br>
                   <tr>
+                  
                </table>
             </center>
             <c:forEach items="${rewardList}" var="rewardList">
