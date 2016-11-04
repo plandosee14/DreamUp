@@ -79,6 +79,12 @@
 		<action path="/projectList" type="com.dreamup.project.actions.ProjectListAction">
 			<forward name="success" path="/project.do"></forward>
 		</action>
+		
+		<!-- 마이페이지 후원 프로젝트 리스트 -->
+		<action path="/supportProList" type="com.dreamup.project.actions.SupportProList">
+			<forward name="scs" path="/project/list/supportProList.jsp"></forward>
+		</action>
+		
 		<!-- 프로젝트 상세  페이지-->
 		<action path="/projectView" type="com.dreamup.project.actions.ProjectDetailAction">
 			<forward name="scs" path="/projectDetail.do"></forward>

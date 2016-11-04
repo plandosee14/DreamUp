@@ -13,6 +13,20 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 <script type="text/javascript" src="js/jquery-1.min.js"></script>
 <script type="text/javascript">
+
+$(function(){
+	$('#supportProList').click(function(){
+		$.ajax({
+			url : 'supportProList.do?m_id='+$('#loginId').val(),
+/* 			data : $('#loginId').val(),
+			type : 'POST', */
+			success : function(supportProList){
+				alert(supportProList);
+				$('#resultView').html(supportProList);
+			}
+		});//ajax
+	});//click event
+});//ready
 /* 	$(function() {
 		$('#memberInfo').click(function() {
 				alert('11');
@@ -89,35 +103,17 @@
 	</center> -->
 	<div class="container">
 		<h2>마이페이징</h2>
-		<br>
-		<br>
-		${login_id} 아이디 잘 찍히나???
-		
 		<ul class="nav nav-tabs">
-			<li class="active"><a data-toggle="tab" href="#home">등록 프로젝트</a></li>
-			<li><a data-toggle="tab" href="#menu1">후원 프로젝트</a></li>
-			<li><a data-toggle="tab" href="#menu2">결제 목록</a></li>
+			<li class="active"><a>등록 프로젝트</a></li>
+			<li id="supportProList"><a>후원 프로젝트</a></li>
+			<li><a>결제 목록</a></li>
 			<li id="memberInfo"><a href="checkPwdView.do">내정보
 					수정
 			</a></li>
 		</ul>
 <!-- 		<ul><li><a href="checkPwdView.do">비밀번호 재입력창</a></li></ul> -->
-		<div class="tab-content">
-			<!-- 			<div id="home" class="tab-pane fade in active">
-				<h3>HOME</h3>
-				등록 프로젝트 출력 // 마감된 등록 프로젝트 목록 출력 // 등록프로젝트가 없을시 등록중인 프로젝트 목록
-				출력(max(su_date?))
-			</div>
-			<div id="menu1" class="tab-pane fade">
-				<h3>Menu 1</h3>
-				후원 프로젝트 목록 출력
-			</div>
-			<div id="menu2" class="tab-pane fade">
-				<h3>Menu 2</h3>
-				결제 목록 출력 // 금액 정보 및 프로젝트 사진or타이틀 컬럼에 링크삽입하여 해당 링크 클릭시 프로젝트 상세조회 화면으로
-				이동
-			</div> -->
-			<div id="resultView" class="tab-pane fade"></div>
+<input type="hidden" id="loginId" value="${login_id }">
+			<div id="resultView" ></div>
 		</div>
 	</div>
 </body>
