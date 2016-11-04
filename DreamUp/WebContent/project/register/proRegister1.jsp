@@ -18,7 +18,7 @@ $(function(){
 			alert('프로젝트 제목을 입력하세요');
 			$('#pro_title').focus();
 			return false;
-		} else if($('#inputDay').val()=="" || $('#insertDay').val()==""){
+		} else if(!(($('#inputDay').val()=="" && $('#insertDay').val()!="")||($('#inputDay').val()!="" && $('#insertDay').val()==""))){
 			alert('프로젝트 종료기간을 설정하세요');
 			$('#inputDay').focus();
 			return false;y

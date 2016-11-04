@@ -16,7 +16,7 @@
 
 $(function(){
 	$('#supportProList').click(function(){
-		
+		$(this).
 		$.ajax({
 			url : 'supportProList.do?m_id='+$('#loginId').val(),
 /* 			data : $('#loginId').val(),
@@ -27,6 +27,7 @@ $(function(){
 		});//ajax
 	});//click event
 });//ready
+
 /* 	$(function() {
 		$('#memberInfo').click(function() {
 				alert('11');
@@ -103,6 +104,12 @@ $(function(){
 	</center> -->
 	<div class="container">
 		<h2>마이페이징</h2>
+		<ul class="nav nav-pills">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Menu 1</a></li>
+  <li><a href="#">Menu 2</a></li>
+  <li><a href="#">Menu 3</a></li>
+</ul>
 		<ul class="nav nav-tabs">
 			<li class="active"><a>등록 프로젝트</a></li>
 			<li id="supportProList"><a>후원 프로젝트</a></li>
