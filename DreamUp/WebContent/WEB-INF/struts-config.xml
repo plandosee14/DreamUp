@@ -27,10 +27,15 @@
 		</action>
 		<!-- 프로젝트 등록 step -->
 		<!-- 기본정보 등록 -->
+	 	<action path="/project_up" type="com.dreamup.project.actions.ProSessionCheck">
+			<forward name="scs" path="/menu2.do" redirect="true" />
+			<forward name="fail" path="/login.do" redirect="true" />
+		</action>
+		
 		<action path="/pro_basic" type="com.dreamup.project.actions.ProBasicAction">
 			<forward name="scs" path="/register_2.do" redirect="true" />
-
 		</action>
+		
 		<!-- 리워드 등록 -->
 		<action path="/pro_reward" type="com.dreamup.reward.actions.RewardAddAction">
 			<forward name="scs" path="/register_3.do" redirect="true" />

@@ -52,7 +52,7 @@ menu.jsp
 
 			<ul class="nav navbar-nav">
 				<li><a href="projectList.do">프로젝트 보기</a></li>
-				<li><a href="menu2.do">프로젝트 등록</a></li>
+				<li><a href="project_up.do">프로젝트 등록</a></li>
 			</ul>
 			<div>
 				<!-- <form class="form-inline">
