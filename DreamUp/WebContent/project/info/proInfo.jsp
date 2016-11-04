@@ -22,6 +22,7 @@
             alert('자신의 프로젝트를 후원하실 수 없습니다');
             return false;
          }
+      
          location.replace('suReward.do?pro_no=' + $('#pro_no').val());
       });//click event
       
@@ -41,7 +42,7 @@
 }
 
 .col-sm-6 {
-   margin-right: 30px;
+   margin-right: 100px;
    
 }
 
@@ -68,14 +69,14 @@
                   showstatusbar="1" autoplay="false">
             </div>
 
-            <div class="col-sm-3" style="background-color: white;">
+            <div class="col-sm-1" style="background-color: white;">
                <br><b>후원자수: ${project.su_count}</b><br>
                <b>현재 후원액 :${project.now_amount}</b><br>
                목표액:${proDetail.pro_goal}<br>
                <b>${proDetail.due_date}일</b><br>
                잔여기간<br>
                <b>마감일 : ${proDetail.pro_end}</b>
-               <input type="button" name="supponrt" id="supponrt" value="후원하기">
+               <input type="button" name="supponrt" id="supponrt" value="후원하기" class="btn btn-success">
             </div>
          </div>
 
@@ -107,12 +108,10 @@
                      <input type="text" name="re_money" id="re_money">원
                      <br>
                   <tr>
-                  <tr>
-                     <input type="button" name="next" id="next" value="계속하기">
-                  <tr>
                </table>
             </center>
             <c:forEach items="${rewardList}" var="rewardList">
+               <form>
                <%-- <table>
                   <tr>
                      <th><input type="text" name="re_money" id="re_money">원</th><br>
@@ -127,15 +126,16 @@
                </table> --%>
                <table align="center">
                   <center>${rewardList.re_title}<br>
-                  </center>
                   보상 품목 : ${rewardList.re_item}
                   <br> 배송 예정일 : ${rewardList.re_delivery}
                   <br> 남은 수량 : ${rewardList.re_limite}
                   <br>
-                  <input type="text" name="re_money" id="re_money">원
+                  <input type="text" name="re_money" id="re_money" value="${rewardList.re_money}">원
                   <br>
-                  <input type="button" name="next" id="next" value="계속하기">
+                  </center>
+                  
                </table>
+               </form>
             </c:forEach>
          </div>
       </div>

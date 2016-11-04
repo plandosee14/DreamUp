@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<center>
   <h3>프로젝트 후원(개인정보입력) 폼</h3>
  <hr>
  <form action="suPaySend.do" method="post">
@@ -66,6 +67,6 @@
   <input type="submit" value="다음"><br>
   
  </form>
-
+</center>
 </body>
 </html>
