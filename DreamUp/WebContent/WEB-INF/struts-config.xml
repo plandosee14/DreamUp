@@ -94,6 +94,7 @@
 		<!-- 서포트리워드 리스트 -->
 		<action path="/suReward" type="com.dreamup.support.actions.SuRewardListAction">
 			<forward name="scs" path="/support_reward.do" />
+			<forward name="fail" path="/login.do" />
 		</action>
 		
 		<!-- 서포트 리워드 전달, 성공: 결제정보 폼 -->
