@@ -45,7 +45,30 @@ $(function(){
 
 			<br>
 			<div>프로필</div>
-
+			<div class="container">
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>은행</th>
+								<th><select name="bank">
+							<option>신한은행</option>
+							<option>국민은행</option>
+							<option>농협은행</option>
+							<option>우리은행</option>
+							<option>하나/외한은행</option>
+							</select> <input type="hidden" value="${login_id}" name="m_id"> 
+							</th>
+							</tr>
+							<tr>
+								<th>계좌</th>
+								<th><input type="text" name="account" id="account"></th>
+							</tr>
+							
+						</thead>
+					</table>
+				</div>
+			</div>
 			<form action="pro_file.do" method="post" enctype="multipart/form-data" id="frm">
 			<br><br>
 				<table border="1" width="400" height="100">

@@ -21,4 +21,6 @@
 			<td>${supportProList.su_count}</td>
 		</tr>
 	</c:forEach>
+	<img src="img/thumnail/Logo.png" alt="${projectList.pro_thumbnail}" width="100" height="150"></a>
+	${projectList.pro_thumbnail}
 </table>

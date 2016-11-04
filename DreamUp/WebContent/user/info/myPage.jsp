@@ -16,12 +16,12 @@
 
 $(function(){
 	$('#supportProList').click(function(){
+		
 		$.ajax({
 			url : 'supportProList.do?m_id='+$('#loginId').val(),
 /* 			data : $('#loginId').val(),
 			type : 'POST', */
 			success : function(supportProList){
-				alert(supportProList);
 				$('#resultView').html(supportProList);
 			}
 		});//ajax
