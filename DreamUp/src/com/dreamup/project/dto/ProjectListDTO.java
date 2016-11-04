@@ -11,13 +11,18 @@ public class ProjectListDTO {
 	private String pro_title; // 프로젝트 제목
 	private int due_date;// 잔여기간
 	private int pro_no;
+	private int su_count;
 	
 	public ProjectListDTO() {
 		// TODO Auto-generated constructor stub
 	}
 
+	
+	
+	
+
 	public ProjectListDTO(int progress, int pro_goal, Date pro_end, String pro_thumbnail, String pro_title,
-			int due_date) {
+			int due_date, int pro_no, int su_count) {
 		super();
 		this.progress = progress;
 		this.pro_goal = pro_goal;
@@ -25,9 +30,13 @@ public class ProjectListDTO {
 		this.pro_thumbnail = pro_thumbnail;
 		this.pro_title = pro_title;
 		this.due_date = due_date;
+		this.pro_no = pro_no;
+		this.su_count = su_count;
 	}
-	
-	
+
+
+
+
 
 	public int getPro_no() {
 		return pro_no;
@@ -85,12 +94,23 @@ public class ProjectListDTO {
 		this.due_date = due_date;
 	}
 
+	
+	public int getSu_count() {
+		return su_count;
+	}
+
+	public void setSu_count(int su_count) {
+		this.su_count = su_count;
+	}
+
 	@Override
 	public String toString() {
 		return "ProjectListDTO [progress=" + progress + ", pro_goal=" + pro_goal + ", pro_end=" + pro_end
 				+ ", pro_thumbnail=" + pro_thumbnail + ", pro_title=" + pro_title + ", due_date=" + due_date
-				+ ", pro_no=" + pro_no + "]";
+				+ ", pro_no=" + pro_no + ", su_count=" + su_count + "]";
 	}
+
+	
 
 	
 

@@ -13,7 +13,7 @@
 		select
 		trunc((now_amount/pro_goal)*100) as progress, pro_goal, pro_end,
 		pro_thumbnail, pro_title, round(pro_end - pro_start) as due_date
-		,pro_no from project
+		,pro_no,su_count from project
 	</select>
 
 
