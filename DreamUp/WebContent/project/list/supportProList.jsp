@@ -13,14 +13,13 @@
 	<c:forEach items="${supportProList }" var="supportProList">
 		<tr>
 			<td><a href="projectView.do?pro_no=${supportProList.pro_no}"><img
-					src="img/thumnail/${supportProList.pro_thumbnail}alt="
-					${projectList.pro_thumbnail}" width="100" height="150"></a></td>
+					src="img/thumnail/${supportProList.pro_thumbnail}" alt="
+					${supportProList.pro_thumbnail}" width="100" height="150"></a></td>
 			<td>${supportProList.pro_title}</td>
 			<td>${supportProList.pro_catagory}</td>
 			<td>${supportProList.pro_end}</td>
 			<td>${supportProList.su_count}</td>
 		</tr>
 	</c:forEach>
-	<img src="img/thumnail/Logo.png" alt="${projectList.pro_thumbnail}" width="100" height="150"></a>
-	${projectList.pro_thumbnail}
+
 </table>

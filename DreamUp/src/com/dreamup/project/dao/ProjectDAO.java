@@ -125,9 +125,6 @@ public class ProjectDAO {
 		List<ProjectDTO> projcetList;
 		try {
 			projcetList = sqlMap.queryForList("project.selectProjectById", m_id);
-			for (int i = 0; i < projcetList.size(); i++) {
-				System.out.println(projcetList.toString());
-			}
 			return projcetList;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

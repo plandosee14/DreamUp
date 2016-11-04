@@ -66,7 +66,7 @@
 
 	<select id="selectProjectById" parameterClass="String"
 		resultClass="project">
-		select pro_no,pro_thumbnail,pro_title
+		select *
 		from project
 		where
 		m_id=#m_id#

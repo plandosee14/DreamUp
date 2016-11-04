@@ -23,6 +23,12 @@ public class SupportProList extends Action{
 			ProjectDAO dao = new ProjectDAO();
 			List<ProjectDTO> supportProList;
 			supportProList = dao.selectProjectById(m_id);
+			for (int i = 0; i < supportProList.size(); i++) {
+				System.out.println("여기라고 ");
+				ProjectDTO project = new ProjectDTO();
+				project = supportProList.get(i);
+				System.out.println(project.toString());
+			}
 			request.setAttribute("supportProList", supportProList);
 		return mapping.findForward("scs");
 	}
