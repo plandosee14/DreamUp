@@ -66,9 +66,9 @@
 
 	<select id="selectProjectById" parameterClass="String"
 		resultClass="project">
-		select *
+			select *
 		from project
-		where pro_no = (select pro_no from support where m_id = #m_id#)
+		where pro_no  in (select pro_no from support where m_id = #m_id#)
 	</select>
 
 	<select id="selectProjectByTitle" parameterClass="String"

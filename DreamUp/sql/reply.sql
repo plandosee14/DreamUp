@@ -21,3 +21,15 @@ create sequence reply_seq
 		trunc((now_amount/pro_goal)*100) as progress, pro_goal, pro_end,
 		pro_thumbnail, pro_title, round(pro_end - pro_start) as due_date
 		,pro_no,su_count from project where pro_state = 1 order by pro_start desc;
+		
+		
+		
+			select *
+		from project
+		where pro_no  in (select pro_no from support where m_id = 'kancho33')
+		
+		select project.pro_no
+		from project ,support
+		where project.pro_no = support.pro_no and m_id = 'kancho33';
+		
+		select pro_no from support where m_id = 'kancho33';

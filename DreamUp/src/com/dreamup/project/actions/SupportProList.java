@@ -18,6 +18,7 @@ public class SupportProList extends Action{
 	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		
+		System.out.println("들어오나");
 			String m_id = request.getParameter("m_id");
 			System.out.println("m_id " + m_id );
 			ProjectDAO dao = new ProjectDAO();

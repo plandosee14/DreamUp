@@ -46,7 +46,8 @@ menu.jsp
 				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="main.do">DreamUp</a>
+<!-- 			<a class="navbar-brand" href="main.do">DreamUp</a>
+			111 -->
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 

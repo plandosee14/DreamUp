@@ -13,7 +13,7 @@
 </head>
 <body>
 	<center>
-		<h2>회원가입폼</h2>
+		<h2>회원정보 변경</h2>
 		<hr>
 		</center>
 			<form class="form-horizontal" action="memberInfoUpdate.do" method="get">
@@ -21,6 +21,7 @@
 				<label class="control-label col-sm-2" for="email">아이디 :</label>
 				<div class="col-sm-3">
 					${memberInfo.m_id}
+					<input type="hidden" value="${memberInfo.m_id}" name="m_id">
 				</div>
 			</div>
 			
@@ -43,7 +44,7 @@
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="pass">이  름 :</label>
 				<div class="col-sm-3">
-					<input type="text" class="form-control" id="name" name="name"
+					<input type="text" class="form-control" id="name" name="m_name"
 						placeholder="이름을 입력하세요">
 				</div>
 	

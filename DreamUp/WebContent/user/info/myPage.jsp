@@ -15,9 +15,19 @@
 <script type="text/javascript">
 
 $(function(){
+	$('#supportProList').removeClass("active");
+	$('#payList').removeClass("active");
+	$.ajax({ 
+		url : 'myProject.do?m_id='+$('#loginId').val(),
+		success : function(myProject){
+			$('#resultView').html(myProject);
+		}		
+	});//ajax
+	
 	$('#supportProList').click(function(){
 		$(this).addClass("active");
 		$('#myProject').removeClass("active");
+		$('#payList').removeClass("active");
 		$.ajax({
 			url : 'supportProList.do?m_id='+$('#loginId').val(),
 /* 			data : $('#loginId').val(),
@@ -36,8 +46,20 @@ $(function(){
 			success : function(myProject){
 				$('#resultView').html(myProject);
 			}		
-		});
+		});//ajax
 	});//click event
+	
+	$('#payList').click(function(){
+		$(this).addClass("active");
+		$('#supportProList').removeClass("active");
+		$('#myProject').removeClass("active");
+		$.ajax({ 
+			url : 'payList.do?m_id='+$('#loginId').val(),
+			success : function(myProject){
+				$('#resultView').html(myProject);
+			}		
+		});//ajax
+	});//click
 });//ready
 </script>
 <!-- <style>
@@ -97,7 +119,7 @@ $(function(){
 		<ul class="nav nav-tabs">
 			<li id="myProject" class="active"><a>등록 프로젝트</a></li>
 			<li id="supportProList"><a>후원 프로젝트</a></li>
-			<li><a>결제 목록</a></li>
+			<li id="payList"><a>결제 목록</a></li>
 			<li id="memberInfo"><a href="checkPwdView.do">내정보
 					수정
 			</a></li>

@@ -3,15 +3,16 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <h3>후원 프로젝트 목록</h3>
-<table border="1">
-	<tr>
-		
+ <table class="table table-striped">
+    <thead>
+      <tr>
 		<th>#</th>
 		<th>타이틀</th>
 		<th>카테고리</th>
 		<th>마감일</th>
 		<th>후원자수</th>
 	</tr>
+	</thead>
 	<c:forEach items="${supportProList }" var="supportProList">
 		<tr>
 			<td><a href="projectView.do?pro_no=${supportProList.pro_no}"><img

@@ -35,11 +35,11 @@ public class JoinAction extends Action {
 		if(dao.insert(member)){
 			forward = mapping.findForward("scs");
 		}else{
+			request.setAttribute("msg", "이미있는 아이디입니다.");
 			forward = mapping.findForward("fail");
 			
 		}
-
-		return mapping.findForward("scs");
+		return forward;
 	}
 
 }

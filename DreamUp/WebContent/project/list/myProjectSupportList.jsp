@@ -35,8 +35,9 @@
 	</c:forEach> --%>
 
 <h3>후원 프로젝트 목록</h3>
-<table border="1">
-	<tr>
+ <table class="table table-striped">
+    <thead>
+      <tr>
 
 		<th>#</th>
 		<th>타이틀</th>
@@ -44,6 +45,7 @@
 		<th>마감일</th>
 		<th>후원자수</th>
 	</tr>
+	</thead>
 
 	<c:if test="${!empty myProject.pro_no}">
 		<tr>
@@ -60,14 +62,16 @@
 
 </table>
 
-<table border="1">
-	<tr>
+ <table class="table table-striped">
+    <thead>
+      <tr>
 
 		<th>후원자</th>
 		<th>후원금액</th>
 		<th>배송주소</th>
 		<th>후원일자</th>
 	</tr>
+	</thead>
 	<c:forEach items="${supportMoneyList}" var="supportMoneyList">
 		<tr>
 			<th>${supportMoneyList.su_name}</th>

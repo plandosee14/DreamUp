@@ -142,4 +142,17 @@ public class SupportDAO {
 		}
 		return null;
 	}
+	
+	   public List<SupportDTO> selectMysupport(String m_id){
+		   List<SupportDTO> supportList;
+		   try {
+			supportList = sqlMap.queryForList("support.selectMysupport", m_id);
+			return supportList;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		   return null;
+	   }
+
 }

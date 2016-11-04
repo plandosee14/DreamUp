@@ -120,7 +120,7 @@ public class ProjectDAO {
 		return null;
 	}
 
-	// 마이페이지 자신의 아이디로 등록한 프로젝트 목록ok
+	// 마이페이지 자신의 아이디로 후원 프로젝트 목록ok
 	public List<ProjectDTO> selectProjectById(String m_id) {
 		List<ProjectDTO> projcetList;
 		try {
@@ -304,6 +304,7 @@ public class ProjectDAO {
 		      }
 		      return result;
 		   }
+	   
 
 	/* public List<ProjectDTO> searchProjectBy */
 }

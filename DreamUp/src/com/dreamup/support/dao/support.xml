@@ -63,6 +63,10 @@
 	<select id="myProjectSupportInfo" resultClass="support">
 		select su_name, su_money,su_address,su_date from support where pro_no = #pro_no#
 	</select>
+	
+	<select id="selectMysupport" parameterClass="String" resultClass="support">
+		select su_no , pro_no, su_money, su_name, su_address, su_state from support where m_id =#m_id#
+	</select>
 
 	
 </sqlMap>
