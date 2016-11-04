@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<div class="container-fluid text-center bg-grey">
+
+<%-- <div class="container-fluid text-center bg-grey">
 	<h2>프로젝트 소개</h2>
 	<br>
 	<c:forEach items="${projectList}" var="projectList">
@@ -31,4 +32,47 @@
 					<p>후원자 수 : ${projectList.su_count} 명</p>
 				</div>
 			</div>
+	</c:forEach> --%>
+
+<h3>후원 프로젝트 목록</h3>
+<table border="1">
+	<tr>
+
+		<th>#</th>
+		<th>타이틀</th>
+		<th>카테고리</th>
+		<th>마감일</th>
+		<th>후원자수</th>
+	</tr>
+
+	<c:if test="${!empty myProject.pro_no}">
+		<tr>
+			<td><a href="projectView.do?pro_no=${myProject.pro_no}"><img
+					src="img/thumnail/${myProject.pro_thumbnail}"
+					alt="
+					${myProject.pro_thumbnail}" width="100" height="150"></a></td>
+			<td>${myProject.pro_title}</td>
+			<td>${myProject.pro_catagory}</td>
+			<td>${myProject.pro_end}</td>
+			<td>${myProject.su_count}</td>
+		</tr>
+	</c:if>
+
+</table>
+
+<table border="1">
+	<tr>
+
+		<th>후원자</th>
+		<th>후원금액</th>
+		<th>배송주소</th>
+		<th>후원일자</th>
+	</tr>
+	<c:forEach items="${supportMoneyList}" var="supportMoneyList">
+		<tr>
+			<th>${supportMoneyList.su_name}</th>
+			<th>${supportMoneyList.su_money}</th>
+			<th>${supportMoneyList.su_address}</th>
+			<th>${supportMoneyList.su_date}</th>
+		</tr>
 	</c:forEach>

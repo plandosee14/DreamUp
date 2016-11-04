@@ -27,12 +27,13 @@ public class SupportDAO {
 		}
 		return false;
 	}
+
 	public boolean insertSupportNoRe(SupportDTO support) {
-		
+
 		try {
 			System.out.println("before insert to support : " + support.toString());
 			sqlMap.insert("support.insertSupportNoRe", support);
-			
+
 			return true;
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -96,10 +97,10 @@ public class SupportDAO {
 
 		return null;
 	}
-	
-	public int selectProNo(int su_no){
+
+	public int selectProNo(int su_no) {
 		try {
-			int pro_no = (int) sqlMap.queryForObject("support.selectProNo",su_no);
+			int pro_no = (int) sqlMap.queryForObject("support.selectProNo", su_no);
 			return pro_no;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -122,5 +123,23 @@ public class SupportDAO {
 	public boolean upUserSupporting(String id) {
 
 		return false;
+	}
+
+	public List<SupportDTO> myProjectSupportInfo(int pro_no) {
+		List<SupportDTO> myProjectSupportInfo;
+		System.out.println("pro_no ?? " + pro_no);
+		try {
+			myProjectSupportInfo = (List<SupportDTO>) sqlMap.queryForList("support.myProjectSupportInfo", pro_no);
+			for (int i = 0; i < myProjectSupportInfo.size(); i++) {
+				SupportDTO support = new SupportDTO();
+				support = myProjectSupportInfo.get(i);
+				System.out.println(support.toString());
+			}
+			return myProjectSupportInfo;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 	}
 }

@@ -36,5 +36,18 @@ public class ProjectListDAO {
 		}
 		return null;
 	}
+	
+	public ProjectListDTO myProjectInfo(String m_id){
+		ProjectListDTO myProject;
+		try {
+			myProject = (ProjectListDTO) sqlMap.queryForObject("projectList.myProjectInfo",m_id);
+			return myProject;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
 
 }

@@ -68,8 +68,7 @@
 		resultClass="project">
 		select *
 		from project
-		where
-		m_id=#m_id#
+		where pro_no = (select pro_no from support where m_id = #m_id#)
 	</select>
 
 	<select id="selectProjectByTitle" parameterClass="String"
@@ -142,7 +141,9 @@
 	<update id="updateProgress" parameterClass="java.util.Map">
 		update project set now_amount = #now_amount# where pro_no = #pro_no#
 	</update>
-
-
+	
+	<select id="myProject" parameterClass="String" resultClass="project">
+	select pro_no, m_id, pro_thumbnail, pro_title, pro_catagory, pro_end, su_count from project where m_id =#m_id# and pro_state =1
+	</select>
 
 </sqlMap>

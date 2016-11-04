@@ -59,6 +59,10 @@
 		select su_no,m_id,pro_no,re_no,su_money,su_name, su_address,
 		su_zip,su_phone,paymentPlan,su_refundAccount,su_refundBank,su_date from support
 	</select>
+	
+	<select id="myProjectSupportInfo" resultClass="support">
+		select su_name, su_money,su_address,su_date from support where pro_no = #pro_no#
+	</select>
 
 	
 </sqlMap>

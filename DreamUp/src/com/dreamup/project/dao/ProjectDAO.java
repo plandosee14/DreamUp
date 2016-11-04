@@ -265,7 +265,7 @@ public class ProjectDAO {
 		Map<String, Integer> map = new HashMap<>();
 		map.put("pro_no", pro_no);
 		map.put("su_money", su_money);
-		
+
 		try {
 			int result = sqlMap.update("project.updateProgress", map);
 			if (result == 1) {
@@ -276,6 +276,19 @@ public class ProjectDAO {
 			e.printStackTrace();
 		}
 		return false;
+	}
+
+	public ProjectDTO myProject(String m_id) {
+		ProjectDTO project;
+		try {
+			project = (ProjectDTO) sqlMap.queryForObject("project.myProject", m_id);
+			return project;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+
 	}
 
 	/* public List<ProjectDTO> searchProjectBy */

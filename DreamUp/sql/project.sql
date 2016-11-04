@@ -107,11 +107,18 @@ select pro_goal, pro_end, pro_thumbnail, pro_title, trunc((now_amount/pro_goal)*
 		project
 		where pro_no=4
 		
-		
+		select
+		trunc((now_amount/pro_goal)*100) as progress, pro_goal, pro_end,
+		pro_thumbnail, pro_title, round(pro_end - pro_start) as due_date
+		,pro_no,su_count from project where m_id = 'kancho33' and pro_state = 1
 		
 		
 		
 		select * from project where pro_no = 59
 		select * from support
+		
+		select *
+		from project
+		where pro_no = (select pro_no from support where m_id = 'kancho33')
 		
 		

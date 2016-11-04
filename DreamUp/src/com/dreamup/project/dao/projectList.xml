@@ -16,5 +16,12 @@
 		,pro_no,su_count from project
 	</select>
 
+	<select id="myProjectInfo" parameterClass="String" resultClass="projectList">
+		select
+		trunc((now_amount/pro_goal)*100) as progress, pro_goal, pro_end,
+		pro_thumbnail, pro_title, round(pro_end - pro_start) as due_date
+		,pro_no,su_count from project where m_id = #m_id# and pro_state = 1
+	</select>
+	
 
 </sqlMap>

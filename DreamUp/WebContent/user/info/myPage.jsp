@@ -16,7 +16,8 @@
 
 $(function(){
 	$('#supportProList').click(function(){
-		$(this).
+		$(this).addClass("active");
+		$('#myProject').removeClass("active");
 		$.ajax({
 			url : 'supportProList.do?m_id='+$('#loginId').val(),
 /* 			data : $('#loginId').val(),
@@ -26,35 +27,18 @@ $(function(){
 			}
 		});//ajax
 	});//click event
-});//ready
-
-/* 	$(function() {
-		$('#memberInfo').click(function() {
-				alert('11');
-			 $.ajax({
-				url : 'memberInfoView.do',
-				success : function(memberInfo){
-					$('#memberInfo').html(memberInfo);
-				};//성공시 데이터 뿌리기 
-			});//ajax 사용자 정보 뿌리기
-		});//memberInfo click event
-	});//ready */
-	/* $(function(){
-		$('#memberInfo').click(function(){
-			//alert($('#m_id').val());
-			 $.ajax({
-				url : 'checkPwdView.do',
-				data : {
-					m_id : $('#m_id').val()
-				},
-				type : 'POST',
-				success : function(checkPwdView){
-					alert(checkPwdView);
-					$('#resultView').html(checkPwdView);
-				}//success
-			});//ajax 
+	
+	$('#myProject').click(function(){
+		$(this).addClass("active");
+		$('#supportProList').removeClass("active");
+		$.ajax({ 
+			url : 'myProject.do?m_id='+$('#loginId').val(),
+			success : function(myProject){
+				$('#resultView').html(myProject);
+			}		
 		});
-	}); */
+	});//click event
+});//ready
 </script>
 <!-- <style>
 .container {
@@ -104,14 +88,14 @@ $(function(){
 	</center> -->
 	<div class="container">
 		<h2>마이페이징</h2>
-		<ul class="nav nav-pills">
+<!-- 		<ul class="nav nav-pills">
   <li class="active"><a href="#">Home</a></li>
   <li><a href="#">Menu 1</a></li>
   <li><a href="#">Menu 2</a></li>
   <li><a href="#">Menu 3</a></li>
-</ul>
+</ul> -->
 		<ul class="nav nav-tabs">
-			<li class="active"><a>등록 프로젝트</a></li>
+			<li id="myProject" class="active"><a>등록 프로젝트</a></li>
 			<li id="supportProList"><a>후원 프로젝트</a></li>
 			<li><a>결제 목록</a></li>
 			<li id="memberInfo"><a href="checkPwdView.do">내정보

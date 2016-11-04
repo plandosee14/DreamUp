@@ -14,3 +14,5 @@ create sequence reply_seq
 	increment by 1
 	nocycle
 	nocache;
+	
+	select * from project where m_id ='kancho33' and pro_state =1 ;
