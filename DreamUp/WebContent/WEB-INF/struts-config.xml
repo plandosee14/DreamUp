@@ -89,7 +89,7 @@
 		<action path="/projectView" type="com.dreamup.project.actions.ProjectDetailAction">
 			<forward name="scs" path="/projectDetail.do"></forward>
 		</action>
-		
+		   
 		<!-- 후원 step -->
 		<!-- 서포트리워드 리스트 -->
 		<action path="/suReward" type="com.dreamup.support.actions.SuRewardListAction">
