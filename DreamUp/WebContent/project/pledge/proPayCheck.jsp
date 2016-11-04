@@ -28,7 +28,8 @@
 <center>
 	<form action="supportInsert.do" method="post">
 <c:if test="${reward==null}">
-[보상없는 후원]
+[보상없는 후원]<br>
+ 후원금액 : ${support.su_money}<br>
 <input type="hidden" name="rewardCheck" value="false">
 </c:if>
 

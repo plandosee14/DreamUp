@@ -50,19 +50,38 @@ public class SuInsertAction extends Action{
 		//내가 후원하는 카운트+1(내 아이디)
 		//후원받는 카운트+1 (프로젝트 올린사람)
 		
-		
-		if(dao.insertSupport(support) && mdao.addSupportingCount((String)request.getSession().getAttribute("login_id")) 
-				&& mdao.updateSupportedCount(m_id)){
-			forward = mapping.findForward("scs");
-			//입력 성공시 후원금액을 프로그레스 바에 반영
-			
-			pdao.proSupportMoney(support);
-			
+		if(request.getParameter("rewardCheck").equals("true")){
+			if(dao.insertSupport(support) && mdao.addSupportingCount((String)request.getSession().getAttribute("login_id")) 
+					&& mdao.updateSupportedCount(m_id)){
+				forward = mapping.findForward("scs");
+				//입력 성공시 후원금액을 프로그레스 바에 반영
+				
+				pdao.proSupportMoney(support);
+				
+				
+			}else{
+				forward = mapping.findForward("fail");
+				
+			}
 			
 		}else{
-			forward = mapping.findForward("fail");
+			if(dao.insertSupportNoRe(support) && mdao.addSupportingCount((String)request.getSession().getAttribute("login_id")) 
+					&& mdao.updateSupportedCount(m_id)){
+				forward = mapping.findForward("scs");
+				//입력 성공시 후원금액을 프로그레스 바에 반영
+				
+				pdao.proSupportMoney(support);
+				
+				
+			}else{
+				forward = mapping.findForward("fail");
+				
+			}
 			
 		}
+		
+		
+		
 		return forward;
 	}
 }

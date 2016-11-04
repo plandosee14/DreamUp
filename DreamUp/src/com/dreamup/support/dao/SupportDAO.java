@@ -27,6 +27,18 @@ public class SupportDAO {
 		}
 		return false;
 	}
+	public boolean insertSupportNoRe(SupportDTO support) {
+		
+		try {
+			System.out.println("before insert to support : " + support.toString());
+			sqlMap.insert("support.insertSupportNoRe", support);
+			
+			return true;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
 
 	// 업데이트 ok
 	public boolean updateSupport(SupportDTO support) {

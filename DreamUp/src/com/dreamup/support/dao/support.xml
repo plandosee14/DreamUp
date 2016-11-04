@@ -15,6 +15,16 @@
 
 	</insert>
 	
+		<insert id="insertSupportNoRe" parameterClass="support">
+		insert into support
+		(su_no,m_id,pro_no,su_money,su_name, su_address,
+		su_zip,su_phone,paymentPlan,su_refundAccount,su_refundBank,su_date)		
+		values		
+		(support_seq.nextval,#m_id#,#pro_no#,#su_money#,#su_name#,#su_address#,
+		#su_zip#,#su_phone#,#paymentPlan#,#su_refundAccount#,#su_refundBank#,sysdate)
+
+	</insert>
+	
 	<select id="selectProNo" parameterClass="int" resultClass="int">
 		select pro_no from support where su_no = #su_no#
 	</select>
