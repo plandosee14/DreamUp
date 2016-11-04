@@ -60,7 +60,7 @@
 				</div>
 
 				<div class="col-sm-3" style="background-color: white;">
-					<b>${project.su_count}</b><br>후원자수<br> 
+					<br>후원자수<br><b>${project.su_count}</b>
 					<b>현재 후원액 :${project.now_amount}</b><br>
 					목표액:${proDetail.pro_goal}<br>
 					<b>${proDetail.due_date}일</b><br>
