@@ -30,6 +30,7 @@
 	 	<action path="/project_up" type="com.dreamup.project.actions.ProSessionCheck">
 			<forward name="scs" path="/menu2.do" redirect="true" />
 			<forward name="fail" path="/login.do" redirect="true" />
+			<forward name="profail" path="/mypage.do" redirect="true" />
 		</action>
 		
 		<action path="/pro_basic" type="com.dreamup.project.actions.ProBasicAction">

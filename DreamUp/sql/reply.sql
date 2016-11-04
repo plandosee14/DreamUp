@@ -16,3 +16,8 @@ create sequence reply_seq
 	nocache;
 	
 	select * from project where m_id ='kancho33' and pro_state =1 ;
+	
+			select
+		trunc((now_amount/pro_goal)*100) as progress, pro_goal, pro_end,
+		pro_thumbnail, pro_title, round(pro_end - pro_start) as due_date
+		,pro_no,su_count from project where pro_state = 1 order by pro_start desc;

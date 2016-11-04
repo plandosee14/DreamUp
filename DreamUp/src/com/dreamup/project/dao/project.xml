@@ -145,5 +145,10 @@
 	<select id="myProject" parameterClass="String" resultClass="project">
 	select pro_no, m_id, pro_thumbnail, pro_title, pro_catagory, pro_end, su_count from project where m_id =#m_id# and pro_state =1
 	</select>
+	
+	   <!-- 현재 등록된 프로젝트가 있는지 -->
+   <select id="selectProjectIng" parameterClass="String" resultClass="int">
+      select count(*) from project where m_id=#m_id#
+   </select>
 
 </sqlMap>

@@ -290,6 +290,20 @@ public class ProjectDAO {
 		return null;
 
 	}
+	
+	   public int selectProjectIng(String m_id){
+		      int result=0;
+		      
+		      try {
+		         result = (int) sqlMap.queryForObject("project.selectProjectIng", m_id);         
+		         return result;
+		         
+		      } catch (SQLException e) {
+		         // TODO Auto-generated catch block
+		         e.printStackTrace();
+		      }
+		      return result;
+		   }
 
 	/* public List<ProjectDTO> searchProjectBy */
 }
