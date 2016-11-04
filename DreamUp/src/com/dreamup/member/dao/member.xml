@@ -125,10 +125,10 @@
 	</update>
 
 	<!-- 내 프로젝트 총 후원합계 -->
-	<update id="updateSupportedCount" parameterClass="member">
+	<update id="updateSupportedCount" parameterClass="String">
 		update member
 		set
-		m_supportedCount=#m_supportedCount#
+		m_supportedCount=m_supportedCount+1
 		where m_id= #m_id#
 	</update>
 

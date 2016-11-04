@@ -242,10 +242,10 @@ public class MemberDAO {
 		return false;
 	}
 
-	public boolean updateSupportedCount(MemberDTO member) {
+	public boolean updateSupportedCount(String m_id) {
 		int result;
 		try {
-			result = sqlMap.update("member.updateSupportedCount", member);
+			result = sqlMap.update("member.updateSupportedCount", m_id);
 			return true;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block.9

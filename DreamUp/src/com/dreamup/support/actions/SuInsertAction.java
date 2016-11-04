@@ -8,6 +8,7 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
+import com.dreamup.member.dao.MemberDAO;
 import com.dreamup.project.dao.ProjectDAO;
 import com.dreamup.project.dao.ProjectListDAO;
 import com.dreamup.support.dao.SupportDAO;
@@ -36,12 +37,24 @@ public class SuInsertAction extends Action{
 		System.out.println("잘 전달되었나요?: "+support.toString());
 		
 		SupportDAO dao = new SupportDAO();
+		ProjectDAO pdao = new ProjectDAO();
+		pdao.proSupportingCount(Integer.parseInt(request.getParameter("pro_no")));
+		//프로젝트 등록자 id
+		String m_id = pdao.selectProject(Integer.parseInt(request.getParameter("pro_no"))).getM_id();
 		
-		if(dao.insertSupport(support)){
+		MemberDAO mdao = new MemberDAO();
+		
+		//내가 후원하는 카운트+1(내 아이디)
+		//후원받는 카운트+1 (프로젝트 올린사람)
+		
+		
+		if(dao.insertSupport(support) && mdao.addSupportingCount((String)request.getSession().getAttribute("login_id")) 
+				&& mdao.updateSupportedCount(m_id)){
 			forward = mapping.findForward("scs");
 			//입력 성공시 후원금액을 프로그레스 바에 반영
-			ProjectDAO pdao = new ProjectDAO();
+			
 			pdao.proSupportMoney(support);
+			
 			
 		}else{
 			forward = mapping.findForward("fail");
