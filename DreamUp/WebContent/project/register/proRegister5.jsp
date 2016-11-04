@@ -35,8 +35,8 @@ margin-right :30%;
 	    <li ><a href="#">기본정보</a></li>
 	    <li ><a href="#">리워즈</a></li>
 	    <li><a href="#">스토리</a></li>
-	    <li class="active"><a href="#">계좌</a></li>
 	    <li><a href="#">프로필</a></li>
+	    <li class="active"><a href="#">계좌</a></li>
 	    <li><a href="#">미리보기</a></li>
 	    <li><a href="#">등록</a></li>
 	</ul>
@@ -47,20 +47,6 @@ margin-right :30%;
 
 		<br> <br>
 		<form action="pro_account.do">
-			<table border="1" width="400" height="30">
-				<tr>
-					<td>계좌등록	은행 <select name="bank">
-							<option>신한은행</option>
-							<option>국민은행</option>
-							<option>농협은행</option>
-							<option>우리은행</option>
-							<option>하나/외한은행</option>
-					</select> <input type="hidden" value="${login_id}" name="m_id"> 
-					<input type="text" name="account" id="account">
-					</td>
-
-				</tr>
-			</table>
 			<center>
 			<div class="container">
 				<div class="table-responsive">
@@ -73,11 +59,13 @@ margin-right :30%;
 							<option>국민은행</option>
 							<option>농협은행</option>
 							<option>우리은행</option>
-							<option>하나/외한은행</option></th>
+							<option>하나/외한은행</option>
+							</select> <input type="hidden" value="${login_id}" name="m_id"> 
+							</th>
 							</tr>
 							<tr>
 								<th>계좌</th>
-								<th><input type="text"></th>
+								<th><input type="text" name="account" id="account"></th>
 							</tr>
 							
 						</thead>
