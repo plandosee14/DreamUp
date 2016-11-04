@@ -56,7 +56,7 @@
 			<div class="row">
 				<div class="col-sm-6" style="background-color: white;">
 					<embed src="video/${project.pro_video }" width="600" height="400"
-						showstatusbar="1">
+						showstatusbar="1" autoplay="false">
 				</div>
 
 				<div class="col-sm-3" style="background-color: white;">

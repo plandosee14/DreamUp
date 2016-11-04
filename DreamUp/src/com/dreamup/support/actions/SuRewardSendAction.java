@@ -27,6 +27,7 @@ public class SuRewardSendAction extends Action{
 		ProjectDTO project = new ProjectDTO();
 		project = pdao.selectProject(Integer.parseInt(request.getParameter("pro_no")));
 		
+		
 		RewardDTO reward = new RewardDTO();
 		RewardDAO rdao = new RewardDAO();
 		
