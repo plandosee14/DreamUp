@@ -16,7 +16,7 @@ create table project(
 	--프로젝트 기본 정보 입력시 필요 컬럼
 	
 	Pro_Video		varchar2(2000), -- 프로젝트 비디오 url
-	Pro_Content		varchar2(2000), -- 프로젝트 소개 내용
+	Pro_Content		long, -- 프로젝트 소개 내용
 	Pro_link		varchar2(2000), -- 프로젝트 관련 링크 url
  	--프로젝트 스토리 정보 입력시 필요 컬럼
 	
@@ -47,7 +47,8 @@ create sequence project_seq
 
 alter table project ADD(pro_link varchar2(255));
 alter table project ADD(pro_sns varchar2(255));
-alter table project MODIFY (pro_fileImage varchar2(2000));
+alter table project MODIFY (Pro_Content long);
+
 
 desc project;
 insert into project
@@ -110,5 +111,7 @@ select pro_goal, pro_end, pro_thumbnail, pro_title, trunc((now_amount/pro_goal)*
 		
 		
 		
-		select * from project
+		select * from project where pro_no = 59
 		select * from support
+		
+		
