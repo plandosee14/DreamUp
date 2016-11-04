@@ -84,6 +84,7 @@
 						<p>종료 기간 : ${projectList.pro_end}</p>
 						<p>잔여 기간 : ${projectList.due_date}일</p>
 						<p>현재 달성률 : ${projectList.progress}%</p>
+						<p>후원자 수 : ${projectList.su_count}%</p>
 						
 					</div>
 				</div>
