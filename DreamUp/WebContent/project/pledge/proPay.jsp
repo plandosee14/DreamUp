@@ -14,12 +14,13 @@
  <h3> 프로젝트 제목 : ${project.pro_title}</h3> <br>
  <!-- taglib if 문들어가야할듯 리워드 있으면 찍고 없으면 안찍고 -->
 
-<c:if test="${reward}==null">
+<c:if test="${reward==null}">
 [보상없는 후원]
 <input type="hidden" name="rewardCheck" value="false">
+
 </c:if>
 
-<c:if test="${reward}!=null">
+<c:if test="${reward!=null}">
 [리워즈]<br>
 후원금액 : ${su_money}<br>
  리워즈 금액:  ${reward.re_money}<br>

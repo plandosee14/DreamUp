@@ -27,12 +27,12 @@
 	<p class="checkPayInfo">
 <center>
 	<form action="supportInsert.do" method="post">
-<c:if test="${reward}==null">
+<c:if test="${reward==null}">
 [보상없는 후원]
 <input type="hidden" name="rewardCheck" value="false">
 </c:if>
 
-<c:if test="${reward}!=null">
+<c:if test="${reward!=null}">
 		[리워즈]<br>
  후원금액 : ${support.su_money}<br>
  리워즈 금액:  ${reward.re_money}<br>

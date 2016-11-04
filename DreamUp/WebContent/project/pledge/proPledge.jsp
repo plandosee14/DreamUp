@@ -20,13 +20,15 @@
 							<td>
 						<input type="hidden" name="pro_no" value="${project.pro_no}"></td>
 						</tr>
-						<td>
+						    <td>
 							서약 금액 :
 							<input type="text" name="re_money" id="re_money">원
 						    <input type="hidden" name="reCheck" value="false">	
-						</td>
+						    </td>
 						<tr>
+						<td>
 							<input type="submit" name="next" id="next" value="계속하기">
+						</td>
 						</tr>
 					</table>
 				 </form>
