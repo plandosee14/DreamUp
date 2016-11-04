@@ -35,8 +35,8 @@ public class SuRewardSendAction extends Action{
 		}else{
 			//보상없는 후원일경우 reward = null;
 			reward=null;		
+			request.setAttribute("reward", reward);
 		}
-		request.setAttribute("reward", reward);
 		request.setAttribute("project", project);
 		request.setAttribute("su_money", request.getParameter("re_money"));
 		

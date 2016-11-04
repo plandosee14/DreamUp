@@ -11,8 +11,8 @@
   <h3>프로젝트 후원(개인정보입력) 폼</h3>
  <hr>
  <form action="suPaySend.do" method="post">
-<h3> 프로젝트 제목 : ${project.pro_title}</h3> <br>
-<!-- taglib if 문들어가야할듯 리워드 있으면 찍고 없으면 안찍고 -->
+ <h3> 프로젝트 제목 : ${project.pro_title}</h3> <br>
+ <!-- taglib if 문들어가야할듯 리워드 있으면 찍고 없으면 안찍고 -->
 
 <c:if test="${reward}==null">
 [보상없는 후원]
