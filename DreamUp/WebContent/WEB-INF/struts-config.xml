@@ -57,6 +57,7 @@
 		</action>
 
 
+		<!-- 마이페이지 -->
 		<!-- 회원정보 수정 폼 -->
 		<action path="/checkPwd" type="com.dreamup.member.actions.MemberInfoAction">
 			<forward name="success" path="/memberInfoView.do"></forward>

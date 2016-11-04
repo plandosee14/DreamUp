@@ -91,7 +91,7 @@
 		<h2>마이페이징</h2>
 		<br>
 		<br>
-		${login_id}
+		${login_id} 아이디 잘 찍히나???
 		
 		<ul class="nav nav-tabs">
 			<li class="active"><a data-toggle="tab" href="#home">등록 프로젝트</a></li>
