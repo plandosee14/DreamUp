@@ -21,6 +21,14 @@ public class SuRewardListAction extends Action{
 	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		
+		ActionForward forward;
+		if(request.getSession().getAttribute("login_id")==null){
+			forward = mapping.findForward("fail");
+		}else{
+			
+			
+		
+		
 	    int pro_no = Integer.parseInt(request.getParameter("pro_no"));
 		ProjectDAO pdao = new ProjectDAO();
 	    ProjectDTO project = pdao.selectProject(pro_no);
@@ -35,7 +43,8 @@ public class SuRewardListAction extends Action{
 		}
 		
 		request.setAttribute("rewardList", rewardList);
-		
-		return mapping.findForward("scs");
+		forward = mapping.findForward("scs");
+		}
+		return forward;
 	}
 }
