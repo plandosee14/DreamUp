@@ -41,6 +41,7 @@ $(function(){
 	$('#myProject').click(function(){
 		$(this).addClass("active");
 		$('#supportProList').removeClass("active");
+		$('#payList').removeClass("active");
 		$.ajax({ 
 			url : 'myProject.do?m_id='+$('#loginId').val(),
 			success : function(myProject){

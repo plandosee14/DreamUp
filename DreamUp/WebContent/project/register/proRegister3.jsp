@@ -26,9 +26,7 @@
 	});//ready
 </script>
 <style type="text/css">
-.ir1{
-margin: 10%;
-}
+
 
 </style>
 </head>
@@ -58,9 +56,8 @@ margin: 10%;
 비디오: <input type="file" name="myfile" id="file">
 
 <br>
-<center>
+
 <textarea name="content" id="ir1" rows="10" cols="100" style="width:766px; height:412px; display:none;"></textarea>
-</center>
 링크 : <input type="text" name="link" id="link">
 <input type="button" id="save" value="다음단계"/>
 

@@ -6,13 +6,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#tess').click(function(){
+		alert($('#re_money').val());
+	});//change
+});//ready
+</script>
 
 </head>
 <body>
   <h3>프로젝트 후원(리워드) 폼</h3>
  <hr>
- ${project.pro_title}
-
+<h4> ${project.pro_title} </h4>
 				<center>
 			  <form action="suRewardSend.do">
 				     <h4>보상없는 후원</h4><br>
@@ -28,6 +35,7 @@
 						    </td>
 						<tr>
 						<td>
+						<input type="button" name="next" id="tess" value="tess">
 							<input type="submit" name="next" id="next" value="계속하기">
 						</td>
 						</tr>

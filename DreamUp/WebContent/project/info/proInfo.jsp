@@ -79,8 +79,10 @@
 					잔여기간 <br>
 					<br> <font size="5px"><b>${proDetail.pro_end}</b></font><br>
 					마감일 <br>
+					<%-- <c:if test="${login_id} ${project.m_id}"> --%>
 					<br> <input type="button" name="supponrt" id="supponrt"
 						value="후원하기" class="btn btn-warning">
+<%-- 					</c:if> --%>
 				</center>
 			</div>
 		</div>
@@ -96,7 +98,7 @@
 					class="glyphicon glyphicon-envelope"></span> ${member.m_email }<br>
 				${project.pro_fileSns}
 			</div>
-			<div class="col-sm-3" style="background-color: white;">${project.pro_fileIntro}</div>
+			<div class="col-sm-3" style="background-color: yellow;">${project.pro_fileIntro}</div>
 		</div>
 
 		<div class="row">

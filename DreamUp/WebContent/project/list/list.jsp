@@ -16,6 +16,7 @@
 /* .container-fluid {
 	padding: 60px 50px;
 } */
+
 /* 전체 배경화면 색 */
 .bg-grey {
 	background-color: white;
@@ -56,11 +57,20 @@
 </style>
 </head>
 
-
 <body>
 	<div class="container-fluid text-center bg-grey">
 		<h2>프로젝트 소개</h2>
 		<br>
+		
+		<div style="border: 1px black solid">
+			여기는 카테고리
+			<input type="button" value="음식">
+			<input type="button" value="음악">
+			<input type="button" value="힐링">
+			<input type="button" value="과학">
+			<input type="button" value="게임">
+		</div>
+		
 		<c:forEach items="${projectList}" var="projectList">
 			<div class="row text-center">
 				<div class="col-sm-4">
@@ -139,7 +149,6 @@
 			</div>
 		</div> -->
 	</div>
-
 
 </body>
 

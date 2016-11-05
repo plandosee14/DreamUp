@@ -34,7 +34,7 @@
 			</div>
 	</c:forEach> --%>
 
-<h3>후원 프로젝트 목록</h3>
+<h3>등록 프로젝트 목록</h3>
  <table class="table table-striped">
     <thead>
       <tr>
@@ -52,7 +52,7 @@
 			<td><a href="projectView.do?pro_no=${myProject.pro_no}"><img
 					src="img/thumnail/${myProject.pro_thumbnail}"
 					alt="
-					${myProject.pro_thumbnail}" width="100" height="150"></a></td>
+					${myProject.pro_thumbnail}" width="150" height="150"></a></td>
 			<td>${myProject.pro_title}</td>
 			<td>${myProject.pro_catagory}</td>
 			<td>${myProject.pro_end}</td>

@@ -17,7 +17,7 @@
 		<tr>
 			<td><a href="projectView.do?pro_no=${supportProList.pro_no}"><img
 					src="img/thumnail/${supportProList.pro_thumbnail}" alt="
-					${supportProList.pro_thumbnail}" width="100" height="150"></a></td>
+					${supportProList.pro_thumbnail}" width="150" height="150"></a></td>
 			<td>${supportProList.pro_title}</td>
 			<td>${supportProList.pro_catagory}</td>
 			<td>${supportProList.pro_end}</td>
