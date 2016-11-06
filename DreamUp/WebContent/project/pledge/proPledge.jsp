@@ -8,11 +8,55 @@
 <title>Insert title here</title>
 <script type="text/javascript" src="js/jquery-1.min.js"></script>
 <script type="text/javascript">
+
 $(function(){
-	$('#tess').click(function(){
-		alert($('#re_money').val());
+	$('#re_money').keyup(function(){
+		//alert($('#re_money').val());
+		//var re_money = comma($(this).val());// +"원";
+		var re_money = viewKorean(uncomma($(this).val()));
+		$('#checkingMoney').text(re_money);
+		//$('#re_money').val(re_money);
 	});//change
+	
+/* 	$( "input" ).keyup(function() {
+	    var value = $( this ).val();
+	    $( "p" ).text( value );
+	  }).keyup(); */
 });//ready
+	
+	function comma(str) {
+	    str = String(str);
+	    return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+	}
+	
+	function uncomma(str) {
+	    str = String(str);
+	    return str.replace(/[^\d]+/g, '');
+	}
+	
+	function inputNumberFormat(str) {
+		    str.value = comma(uncomma(str.value));
+	}
+
+	function viewKorean(num) {	
+	    var hanA = new Array("","일","이","삼","사","오","육","칠","팔","구","십 ");
+	    var danA = new Array("","십","백","천","","십","백","천","","십","백","천","","십","백","천");
+	    var result = "";
+		for(i=0; i<num.length; i++) {		
+			str = "";
+			han = hanA[num.charAt(num.length-(i+1))];
+			if(han != "")
+				str += han+danA[i];
+			if(i == 4) str += "만";
+			if(i == 8) str += "억";
+			if(i == 12) str += "조";
+			result = str + result;
+		}
+		if(num != 0)
+			result = result + "원";
+	    return result ;
+	}
+
 </script>
 
 </head>
@@ -30,7 +74,9 @@ $(function(){
 						</tr>
 						    <td>
 							서약 금액 :
-							<input type="text" name="re_money" id="re_money">원
+							<!-- <input type="text" name="re_money" id="re_money">원 -->
+							<input type="text" name="re_money" id="re_money" onkeyup="inputNumberFormat(this)">원
+							<p style="font-weight: bold;" id="checkingMoney"></p>
 						    <input type="hidden" name="reCheck" value="false">	
 						    </td>
 						<tr>
