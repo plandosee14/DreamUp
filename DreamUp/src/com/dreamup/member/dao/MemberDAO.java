@@ -16,13 +16,14 @@ public class MemberDAO {
 
 	// 회원가입ok
 	public boolean insert(MemberDTO member) {
-		int result;
+		
 		try {
 			System.out.println("before insert to member : " + member.toString());
-			result = (int) sqlMap.insert("member.insert", member);
-			if (result == 1) {
+			System.out.println("sqlmap: "+sqlMap);
+			sqlMap.insert("member.insert", member);
+			
 				return true;
-			}
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
