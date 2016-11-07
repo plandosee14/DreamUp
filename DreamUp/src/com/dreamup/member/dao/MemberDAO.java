@@ -35,6 +35,7 @@ public class MemberDAO {
 		int result;
 		try {
 			result = sqlMap.update("member.encrytionPwd", bcryptPwd);
+			
 			if (result == 1) {
 				return true;
 			}
